@@ -13,9 +13,15 @@ Download a patch before open it in Pure Data. If you are working locally you can
 2.
 
 a) Start the Pure Data application
+
 b) Navigate to the help browser
+
 c) Double click on "Pure Data" -> the file browser opens
+
 d) Copy the complete PD Tutorial folder into the opened folder
+
 e) Close the windows and start the application.
+
 f) The tutorial can be found in the menu "Help/Browser" under "Pure Data/PD-Tutorial".
+
 (If you click the the document "index.htm" from here your browser will start with it.)
