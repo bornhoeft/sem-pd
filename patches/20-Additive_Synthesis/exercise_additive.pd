@@ -1,0 +1,11 @@
+#N canvas 291 86 672 317 12;
+#X text 44 131 1 message harmonics;
+#X text 45 157 2 unpack;
+#X text 44 213 4 pack;
+#X text 44 242 5 sinesum message;
+#X text 41 28 Make a patch using one of the possibilities for Additive
+Synthesis with 8 to 12 harmonics. Make an abstraction which controls
+smooth transitions of the fundamental frequency and the overtone amplitudes
+with [line]. Play some of this abstractions with different settings
+and timings. The abstraction can be build the following way p.e:;
+#X text 44 185 3 line objects;

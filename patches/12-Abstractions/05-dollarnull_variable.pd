@@ -1,0 +1,28 @@
+#N canvas 276 49 685 451 12;
+#X text 43 26 using \$0 as an automatic (incrementing) local variable
+;
+#X text 156 104 see the difference of the \$0 argument in the abstraction
+;
+#X obj 506 144 loadbang;
+#X floatatom 506 205 5 0 0 0 - - -, f 5;
+#X obj 506 174 f \$0;
+#X text 173 205 setting the \$0 argument of this patch ->;
+#X text 172 225 as \$1 argument in the abstraction;
+#X symbolatom 41 383 0 0 0 0 - - -;
+#X obj 41 345 makefilename soundfile-%d.aif;
+#X obj 40 251 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X floatatom 40 314 5 0 0 0 - - -, f 5;
+#X obj 40 278 v 1-dolnull;
+#X text 137 277 get the \$0 argument from an instance of an abstraction
+with the \$1 argument of the instance. NOTE: If there are more than
+one instance open then the first opened is taken.;
+#X obj 44 82 dollarnull 1;
+#X obj 40 202 dollarnull 3 \$0;
+#X obj 42 130 dollarnull 2;
+#X connect 2 0 4 0;
+#X connect 4 0 3 0;
+#X connect 8 0 7 0;
+#X connect 9 0 11 0;
+#X connect 10 0 8 0;
+#X connect 11 0 10 0;

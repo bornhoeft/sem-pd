@@ -1,0 +1,56 @@
+#N canvas 254 88 552 471 12;
+#X msg 225 136 stop;
+#X msg 230 163 0;
+#X obj 156 231 metro 1000;
+#X obj 157 259 print A;
+#X msg 156 123 1;
+#X msg 375 147 1000;
+#X msg 391 177 2000;
+#X msg 354 87 500;
+#X obj 319 291 print B;
+#X text 152 99 start;
+#X text 225 112 stop;
+#X obj 319 225 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 173 176 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 167 150 53;
+#X obj 69 273 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 106 353 + 100;
+#X obj 69 403 metro;
+#X obj 69 299 t f b;
+#X text 43 12 Periodical bangs with metro;
+#X text 43 37 The metro object sends a series of bangs at a constant
+rate which is defined in milliseconds at the right inlet or in the
+creation argument.;
+#X obj 106 327 random 1901;
+#X text 151 378 random metro produces bangs between 100 and 2000 milliseconds
+;
+#X obj 67 428 bng 15 100 25 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X floatatom 106 378 5 0 0 0 - - -, f 5;
+#X obj 319 254 metro;
+#X obj 375 118 loadbang;
+#X floatatom 356 219 5 0 0 0 - - -, f 5;
+#X connect 0 0 2 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 4 0 2 0;
+#X connect 5 0 26 0;
+#X connect 6 0 26 0;
+#X connect 7 0 26 0;
+#X connect 11 0 24 0;
+#X connect 12 0 2 0;
+#X connect 13 0 2 0;
+#X connect 14 0 17 0;
+#X connect 15 0 23 0;
+#X connect 16 0 20 0;
+#X connect 16 0 22 0;
+#X connect 17 0 16 0;
+#X connect 17 1 20 0;
+#X connect 20 0 15 0;
+#X connect 23 0 16 1;
+#X connect 24 0 8 0;
+#X connect 25 0 5 0;
+#X connect 26 0 24 1;

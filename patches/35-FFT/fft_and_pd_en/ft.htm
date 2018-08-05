@@ -1,0 +1,81 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="marius schebella">
+   <title>introduction</title>
+</head>
+<body>
+
+<blockquote>
+  <blockquote>
+    <h2>&nbsp;</h2>
+  </blockquote>
+
+<blockquote>
+<blockquote>
+
+<h2>
+2. Fourier-Transformation</h2>
+</blockquote>
+Of the various forms of Fourier-Transformations I will mainly talk about the
+Discrete (dealing with digitized signals) Real Fourier-Transformation (only
+sometimes, however, about the Complex DFT), and additionally, - for reasons of
+calculation-time - about the Fast Fourier-Transformation or simply the FFT.
+<p>
+<br>The Fourier-Transformation is a mathematical function that breaks down a
+signal (like sound) into its frequency-spectrum as a set of sinusoidal
+components, converting it from the Time Domain to the Frequency Domain.</p>
+</blockquote>
+
+<blockquote>In the Time Domain the signal x[ ] consists of N samples, labeled
+  from 0 to N-1. In the Frequency Domain the RFFT produces two signals (signalvectors),
+  treated as complex numbers representing the Real Part: Re X[ ] and the
+  Imaginary Part: Im X[ ]. They are seen as the Cosine- und Sine-Components of
+  the base frequencies. Each of these two signals contains one more sample than
+  the half of the original signal: N/2
++ 1 samples. (this results from the fact, that the sine-components of the first
+  frequency (0) and the last (nyquist, N/2) are always 0). With the complex Fourier-Transformation
+  N complexe values are transformed to N new complex values. For both it applies
+  to: the Frequency Domain contains exactly the same information as the
+  Time-Domain.
+<br>&nbsp;
+<br>&nbsp;
+<br>
+<center>
+<p><img SRC="time2frq.jpg" height=272 width=600></center>
+
+<p><font size=-1>Fig. 1</font>
+<br><font size=-1>Transformation from&nbsp; Time to Frequency Domain
+[1]</font>
+<br>&nbsp;
+<br>&nbsp;<p>A Real FFT over 64 samples produces values for 33 cosine- and 33 sine-wave-amplitudes
+with the frequencies 0, 1, 2, 3,
+..., 30, 31, 32. The first value (frequency 0) is the DC (direct current), the
+other values have to be seen in practice as factors of a fundamental-frequency
+which can be calculated by dividing samplerate by windowsize. The highest
+frequency is the nyquist-frequency (samplerate/2).<p>&nbsp;
+  <p>
+
+<br><a href="fft_und_pd_en.htm">Contents</a>
+<br><a href="introduction.htm">1. Introduction</a>
+<br><a href="ft.htm">2. Fourier Transformation</a>
+<br><a href="basefreq.htm">3. Base Frequencies</a>
+<br><a href="conversion.htm">4. Conversions Polar to Rectangular View</a>
+<br><a href="convolution.htm">5. Convolution</a>
+<br><a href="hannings.htm">6. Effects of Hanning-Windows</a>
+<br><a href="frequencies.htm">7. &quot;Frequencies between&quot;</a>
+<br><a href="pvoc_en.htm">8. Phase-Vocoder</a>
+<br><a href="phlocked_en.htm">9. Phase-locked Vocoder</a>
+<br><a href="convo_filter_en.htm">10. Convolution-Filter</a>
+<br><a href="random_pha_en.htm">11. Randomgenerated Phases</a>
+<br><a href="biblio.htm">12. Bibliography</a>
+
+  </p>
+</blockquote>
+
+</blockquote>
+
+
+</body>
+</html>

@@ -1,0 +1,4 @@
+1-fader 127 1000; 1-number 127; 2-fader 80 500; 2-number 80;
+2000 1-fader 40 700; 1-number 40; 2-fader 120 1500; 2-number 120;
+1000 1-fader 90 100; 1-number 90; 2-fader 30 300; 2-number 30;
+500 1-fader 0 500; 1-number 0; 2-fader 0 500; 2-number 0;

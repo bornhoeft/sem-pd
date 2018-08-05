@@ -1,0 +1,74 @@
+#N canvas 257 142 715 563 12;
+#X obj 266 134 *;
+#X obj 287 112 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0
+1;
+#X msg 53 116 0.5 1000;
+#X obj 53 220 spigot;
+#X obj 74 259 print;
+#X msg 75 167 walk the cat;
+#X msg 65 142 bang;
+#X text 120 197 control: nonzero to pass messages \, zero to stop them
+;
+#X text 29 284 [spigot] works essentially like a doorway. When the
+door is open \, messages can pass through. When the door is closed
+\, messages are ignored. By default \, the door is always closed!;
+#X text 39 21 [spigot] passes messages from its left inlet to its outlet
+\, as long as a nonzero number is sent to its right inlet. When its
+right inlet gets zero \, incoming messages are "blocked" (i.e. ignored).
+;
+#X obj 98 198 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 1 1
+;
+#X floatatom 266 85 5 0 0 0 - - -, f 5;
+#X floatatom 266 163 5 0 0 0 - - -, f 5;
+#X text 302 134 A simple door for numbers only;
+#X obj 101 495 spigot;
+#X floatatom 37 522 5 0 0 0 - - -, f 5;
+#X floatatom 101 521 5 0 0 0 - - -, f 5;
+#X obj 37 375 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0 1
+;
+#X obj 38 398 metro 200;
+#X obj 146 446 expr 1-$f1;
+#X obj 37 495 spigot;
+#X obj 146 419 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 37 426 random 10;
+#X text 163 417 Open and close the gates.;
+#X text 33 344 Using spigot to create a gate:;
+#X obj 383 410 osc~ 800;
+#X obj 383 463 *~;
+#X obj 383 521 dac~;
+#X obj 383 492 *~ 0.05;
+#X obj 404 440 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 421 438 (Turn on audio computation first);
+#X text 378 383 Switch oscillator on and off;
+#X obj 53 261 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 146 390 loadbang;
+#X obj 146 472 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X connect 0 0 12 0;
+#X connect 1 0 0 1;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 3 0 32 0;
+#X connect 5 0 3 0;
+#X connect 6 0 3 0;
+#X connect 10 0 3 1;
+#X connect 11 0 0 0;
+#X connect 14 0 16 0;
+#X connect 17 0 18 0;
+#X connect 18 0 22 0;
+#X connect 19 0 34 0;
+#X connect 20 0 15 0;
+#X connect 21 0 19 0;
+#X connect 21 0 20 1;
+#X connect 22 0 14 0;
+#X connect 22 0 20 0;
+#X connect 25 0 26 0;
+#X connect 26 0 28 0;
+#X connect 28 0 27 0;
+#X connect 28 0 27 1;
+#X connect 29 0 26 1;
+#X connect 33 0 21 0;
+#X connect 34 0 14 1;

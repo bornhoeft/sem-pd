@@ -1,0 +1,12 @@
+#N canvas 651 502 773 176 12;
+#X obj 38 109 dac~;
+#X text 255 23 Navigation:;
+#X text 254 85 1-9 and ⌧ (10) \, = (11) and / (12): Execute the corresponding
+line.;
+#X text 254 63 - and backspace: Execute previous line.;
+#X text 254 44 + and space: Execute next line.;
+#X obj 38 40 soundfiles soundfiles.txt;
+#X obj 38 70 playhd~;
+#X connect 5 0 6 0;
+#X connect 6 0 0 0;
+#X connect 6 0 0 1;

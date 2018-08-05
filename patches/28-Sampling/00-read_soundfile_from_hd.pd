@@ -1,0 +1,46 @@
+#N canvas 681 157 547 546 12;
+#X obj 45 148 tgl 20 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0.992126
+0.992126;
+#X obj 45 189 t f b;
+#X obj 46 492 dac~;
+#X obj 46 455 *~;
+#X floatatom 67 377 5 0 0 1 volume - -, f 5;
+#X obj 70 354 hsl 101 15 0 1 0 0 empty set-vol empty -2 -6 0 8 -262144
+-1 -1 9100 1;
+#X obj 137 285 print didit;
+#X text 136 320 when the soundfile is done.;
+#X text 134 305 last outlet gives a "bang";
+#X obj 340 129 loadbang;
+#X msg 340 156 \; pd dsp 1 \; set-vol 0.5 \;;
+#X text 29 19 Read soundfile from Harddisk;
+#X obj 46 252 readsf~ 1;
+#X text 125 252 arg: number of channels;
+#X text 296 219 open before play;
+#X msg 79 148 1;
+#X text 113 147 loop;
+#X text 27 41 The readsf~ object reads a soundfile into its signal
+outputs. You must open the soundfile in advance using the "open" message.
+The object immediately starts reading from the file \, but output will
+only appear after you send a "1" to start (restart) playback. A "0"
+stops it.;
+#X obj 115 287 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 82 220 open ../99-Sounds/1-4.wav;
+#X obj 67 427 line;
+#X obj 67 401 pack 0 10;
+#X connect 0 0 1 0;
+#X connect 1 0 12 0;
+#X connect 1 1 19 0;
+#X connect 3 0 2 0;
+#X connect 3 0 2 1;
+#X connect 4 0 21 0;
+#X connect 5 0 4 0;
+#X connect 9 0 10 0;
+#X connect 12 0 3 0;
+#X connect 12 1 6 0;
+#X connect 12 1 15 0;
+#X connect 12 1 18 0;
+#X connect 15 0 1 0;
+#X connect 19 0 12 0;
+#X connect 20 0 3 1;
+#X connect 21 0 20 0;

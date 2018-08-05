@@ -1,0 +1,65 @@
+#N canvas 224 22 541 742 12;
+#X obj 69 154 float 5.5;
+#X obj 69 129 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X floatatom 69 187 5 0 0 0 - - -, f 5;
+#X text 22 71 Here \, the argument of "5.5" makes this [float] store
+the value 5.5 by default. Clicking the bang makes [float] output the
+value that it is currently storing:;
+#X floatatom 209 631 5 0 0 0 - - -, f 5;
+#X symbolatom 264 659 10 0 0 0 - - -, f 10;
+#X obj 154 633 bng 15 250 50 0 empty empty bang -6 23 1 12 -262144
+-1 -1;
+#X obj 154 600 route bang float symbol list;
+#X obj 209 661 bng 15 250 50 0 empty empty float -4 23 1 12 -262144
+-1 -1;
+#X obj 264 689 bng 15 250 50 0 empty empty symbol -12 23 1 12 -262144
+-1 -1;
+#X obj 319 629 bng 15 250 50 0 empty empty list -2 23 1 12 -262144
+-1 -1;
+#X msg 52 552 bang;
+#X msg 110 553 5;
+#X msg 154 553 symbol word;
+#X msg 270 554 list one two three;
+#X text 25 491 Some objects can accept many arguments at the same time.
+For example \, you need to tell [route] what kind of data you want
+\, and it will sort it based on the data type:;
+#X obj 197 417 select 5;
+#X floatatom 258 450 5 0 0 1 everything_else - -, f 5;
+#X obj 197 450 bng 20 250 50 0 empty empty matched -80 9 0 16 -262144
+-1 -1;
+#X msg 197 384 5;
+#X msg 142 384 3;
+#X msg 251 384 7;
+#X text 22 325 Some objects need to have some arguments in order to
+do anything useful. For example \, you can tell [select] which number
+to look for with an argument:;
+#X text 26 11 Creation Arguments;
+#X text 25 36 Many objects can accept "arguments" to define their behavior.
+;
+#X obj 280 243 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 280 268 metro 1000;
+#X obj 280 302 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 37 215 The [metro] object is initialised with 1000 The [toggle]
+switches it on and off.;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 4 0 8 0;
+#X connect 5 0 9 0;
+#X connect 7 0 6 0;
+#X connect 7 1 4 0;
+#X connect 7 2 5 0;
+#X connect 7 3 10 0;
+#X connect 11 0 7 0;
+#X connect 12 0 7 0;
+#X connect 13 0 7 0;
+#X connect 14 0 7 0;
+#X connect 16 0 18 0;
+#X connect 16 1 17 0;
+#X connect 19 0 16 0;
+#X connect 20 0 16 0;
+#X connect 21 0 16 0;
+#X connect 25 0 26 0;
+#X connect 26 0 27 0;

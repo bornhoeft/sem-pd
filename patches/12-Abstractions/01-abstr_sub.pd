@@ -1,0 +1,40 @@
+#N canvas 1035 285 629 413 12;
+#X floatatom 78 74 5 0 0 0 - - -, f 5;
+#X floatatom 125 75 5 0 0 0 - - -, f 5;
+#X floatatom 78 129 5 0 0 0 - - -, f 5;
+#N canvas 0 22 458 308 add 1;
+#X obj 101 46 inlet;
+#X obj 100 201 outlet;
+#X obj 106 123 +;
+#X obj 169 47 inlet;
+#X obj 132 84 t b f;
+#X connect 0 0 2 0;
+#X connect 2 0 1 0;
+#X connect 3 0 4 0;
+#X connect 4 0 2 0;
+#X connect 4 1 2 1;
+#X restore 79 341 pd add;
+#X floatatom 79 315 5 0 0 0 - - -, f 5;
+#X floatatom 124 295 5 0 0 0 - - -, f 5;
+#X floatatom 79 369 5 0 0 0 - - -, f 5;
+#X text 115 156 any number of instances;
+#X floatatom 78 189 5 0 0 0 - - -, f 5;
+#X text 75 23 Abstraction: seperate pd file \, accessible from all
+patches on the same directory level \, changes affect all instances
+;
+#X text 73 226 Subpatch: no seperate pd file \, accessible only within
+this patch (subpatches in this patch) \, changes affect only the subpatch
+in which the changes are made.;
+#X text 115 101 abstraction (add.pd);
+#X text 141 341 subpatch [pd add];
+#X obj 78 158 add;
+#X obj 78 102 add;
+#X connect 0 0 14 0;
+#X connect 1 0 13 1;
+#X connect 1 0 14 1;
+#X connect 2 0 13 0;
+#X connect 3 0 6 0;
+#X connect 4 0 3 0;
+#X connect 5 0 3 1;
+#X connect 13 0 8 0;
+#X connect 14 0 2 0;

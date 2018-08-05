@@ -1,0 +1,3 @@
+#N canvas 322 178 632 123 16;
+#X text 27 30 write a program that prints "test: 1" every 2 seconds.
+Use the [metro] object for it.;

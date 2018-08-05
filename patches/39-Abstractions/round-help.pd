@@ -1,0 +1,17 @@
+#N canvas 448 412 450 300 10;
+#X floatatom 149 195 10 0 0 0 - - -, f 10;
+#X msg 149 105 0.123457;
+#X text 66 14 [runden] rundet auf bestimmte anzahl von kommastellen
+;
+#X text 68 37 USE: arg for number of decimal places;
+#X floatatom 222 196 10 0 0 0 - - -, f 10;
+#X obj 149 169 round 2;
+#X obj 222 170 round 4;
+#X obj 81 169 round 1;
+#X floatatom 81 196 10 0 0 0 - - -, f 10;
+#X connect 1 0 5 0;
+#X connect 1 0 6 0;
+#X connect 1 0 7 0;
+#X connect 5 0 0 0;
+#X connect 6 0 4 0;
+#X connect 7 0 8 0;

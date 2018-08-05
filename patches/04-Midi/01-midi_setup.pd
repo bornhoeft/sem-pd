@@ -1,0 +1,12 @@
+#N canvas 295 173 661 431 12;
+#X text 41 33 MIDI Setup;
+#X text 41 78 With SimpleSynth:;
+#X text 41 116 1) Under PD -> Media -> Midi Settings change output
+device to SimpleSynth virtual input;
+#X text 40 170 2) Open SimpleSynth and eventually change the Midi Source
+to SimpleSynth virtual input;
+#X text 44 244 With Midi Piano (only in 4010):;
+#X text 45 291 1) Connect the Computer with the midi piano. Put the
+midi piano on. (Black box under the right side of the keyboard.;
+#X text 48 349 2) Under PD -> Media -> Midi Settings change output
+and input device to xxx.;

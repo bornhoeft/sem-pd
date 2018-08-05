@@ -1,0 +1,21 @@
+#N canvas 481 270 389 247 12;
+#X obj 42 143 mtof;
+#X obj 42 193 osc~ \$1;
+#X obj 42 217 dac~;
+#X obj 89 82 keyup;
+#X msg 89 106 0;
+#X obj 42 35 key;
+#X floatatom 42 59 4 0 0 0 - - -, f 4;
+#X text 79 58 Keynumber;
+#X obj 183 82 loadbang;
+#X obj 183 111 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X msg 183 139 \; pd dsp \$1 \;;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 3 0 4 0;
+#X connect 4 0 0 0;
+#X connect 5 0 6 0;
+#X connect 6 0 0 0;
+#X connect 8 0 9 0;
+#X connect 9 0 10 0;

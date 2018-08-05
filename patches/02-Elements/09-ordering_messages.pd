@@ -1,0 +1,42 @@
+#N canvas 214 34 632 538 12;
+#X text 42 449 look here for the result -->;
+#X text 30 64 Officially \, the execution order in Pd is undefined.
+;
+#X text 30 90 The [trigger] object allows you to specify the order
+of messages are sent. If you need to make sure that one thing runs
+before another \, use [trigger]:;
+#X msg 485 298 now;
+#X msg 411 299 this;
+#X msg 337 300 makes;
+#X msg 264 301 sense;
+#X msg 192 302 !;
+#X obj 337 358 symbol;
+#X msg 193 163 bang;
+#X msg 337 233 bang;
+#X msg 338 389 add2 \$1;
+#X msg 560 298 set;
+#X obj 193 195 trigger bang bang bang bang bang bang;
+#X msg 338 450 sense now this;
+#X text 39 492 !!Audio messages are computed simultaneously!!;
+#X text 31 23 Ordering messages;
+#X connect 3 0 8 0;
+#X connect 4 0 8 0;
+#X connect 5 0 8 0;
+#X connect 6 0 8 0;
+#X connect 7 0 8 0;
+#X connect 8 0 11 0;
+#X connect 9 0 13 0;
+#X connect 10 0 5 0;
+#X connect 10 0 7 0;
+#X connect 10 0 12 0;
+#X connect 10 0 6 0;
+#X connect 10 0 3 0;
+#X connect 10 0 4 0;
+#X connect 11 0 14 0;
+#X connect 12 0 14 0;
+#X connect 13 0 7 0;
+#X connect 13 1 6 0;
+#X connect 13 2 5 0;
+#X connect 13 3 4 0;
+#X connect 13 4 3 0;
+#X connect 13 5 12 0;

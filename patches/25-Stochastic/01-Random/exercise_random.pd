@@ -1,0 +1,5 @@
+#N canvas 454 514 616 192 12;
+#X text 63 100 Erstellen Sie ein patch das Zufallswerte zwischen -50
+und 50 mit 2 Nachkommastellen erzeugt.;
+#X text 64 45 Write a patch that returns random numbers between -50
+and 50 with 2 decimals.;

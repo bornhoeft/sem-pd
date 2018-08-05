@@ -1,0 +1,71 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="marius schebella">
+   <title>introduction</title>
+</head>
+<body>
+
+<blockquote>
+  <blockquote>
+<blockquote>
+<h2>
+&nbsp;</h2>
+<h2>
+5. Convolution</h2>
+</blockquote>
+
+<p><br>One of the most frequent applications in the frequency domain is the
+Convolution. If you tried to calculate it in the time domain, you would need a
+multiple of arithmetic operations. In the frequency domain it is simply a
+multiplication... This phenomenon appears also conversly: a multiplication in
+the time domain causes a convolution in the frequency domain, which takes
+influence
+among other things on the use of Hanning(and other)-Windows. A consequence is
+that each frequency-peak broadens by the windowing, which can have advantages,
+but also disadvantages, read <a href="hannings.htm">&quot;Effects of
+Hanning-Windows&quot;</a>.
+<p>For an understanding of the Convolution of two signal you can think of the
+reverberation of one signal by another. A large hall, like in a church,
+influences every sound you produce, in fact at every time, at every pitch and
+frequency range. It applies a kind of fade out tail to the signal. Technically
+you can look at the reverb as a hall-sample, doing the following to all
+frequencies: in the beginning loud, and then gradully fading out, which is -
+white noise shaped by a simple envelope.</p>
+<p>Wanting to calculate this mathematically, you would have one sample after the
+other to multiplicate with each sample of the hallsignal/hallsample and finally
+add all particular signals.&nbsp;<p>The same effect is reached by a
+multiplication of the corresponding Frequencies in the frequency domain. You
+merely have to pay attention to the correct handling of the complex numbers.
+<p align="center"><img border="0" src="complmult4.jpg" width="267" height="21"><p>That´s
+how this looks in Pd:
+<center>
+<p><img SRC="multiplikation.jpg" height=245 width=190></center>
+
+<p><font size=-1>Fig. 16</font>
+<br><font size="-1">Multiplication of two signals in the frequency domain</font>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+
+<br><a href="fft_und_pd_en.htm">Contents</a>
+<br><a href="introduction.htm">1. Introduction</a>
+<br><a href="ft.htm">2. Fourier Transformation</a>
+<br><a href="basefreq.htm">3. Base Frequencies</a>
+<br><a href="conversion.htm">4. Conversions Polar to Rectangular View</a>
+<br><a href="convolution.htm">5. Convolution</a>
+<br><a href="hannings.htm">6. Effects of Hanning-Windows</a>
+<br><a href="frequencies.htm">7. &quot;Frequencies between&quot;</a>
+<br><a href="pvoc_en.htm">8. Phase-Vocoder</a>
+<br><a href="phlocked_en.htm">9. Phase-locked Vocoder</a>
+<br><a href="convo_filter_en.htm">10. Convolution-Filter</a>
+<br><a href="random_pha_en.htm">11. Randomgenerated Phases</a>
+<br><a href="biblio.htm">12. Bibliography</a>
+
+
+  </blockquote>
+</blockquote>
+
+
+</body>
+</html>

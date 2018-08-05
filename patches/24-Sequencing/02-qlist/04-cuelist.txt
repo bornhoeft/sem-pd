@@ -1,0 +1,8 @@
+section <<Reset>>; cue Cue_00; send1 0 50; send2 1 150; 
+0 section Section_01; cue Cue_01; send1 1 50; send2 2 250;
+0 section Section_01; cue Cue_02; send1 2 50; send2 3 100;
+0 section Section_01; cue Cue_03; send1 3 50; send2 4 200;
+0 section Section_02; cue Cue_04; send1 4 50; send2 5 400;
+0 section Section_02; cue Cue_05; send1 5 50; send2 6 350;
+0 section Section_03; cue Cue_06; send1 6 50; send2 7 100;
+0 section Section_03; cue Cue_07; send1 7 50; send2 8 250;

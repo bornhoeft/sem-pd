@@ -1,0 +1,28 @@
+#N canvas 587 61 414 422 10;
+#X floatatom 117 127 5 0 0 0 amplitude-> - -, f 5;
+#X floatatom 168 126 5 0 0 1 <-phase - -, f 5;
+#X floatatom 117 207 5 0 0 0 real-> - -, f 5;
+#X floatatom 162 207 5 0 0 1 <-imaginary - -, f 5;
+#X obj 51 31 poltocar;
+#X text 115 31 polar to cartesian conversion;
+#X obj 117 182 poltocar;
+#X obj 121 302 hsl 128 15 -1 1 0 0 empty empty x-axis 133 7 1 10 -262144
+-1 -1 6350 1;
+#X obj 177 243 vsl 15 128 -1 1 0 0 empty empty y-axis -6 -9 1 10 -262144
+-1 -1 0 1;
+#X obj 168 144 t b f;
+#X obj 119 73 hsl 128 15 -1 1 0 0 empty empty amplitude 6 7 1 10 -261681
+-1 -1 0 1;
+#X obj 171 97 hsl 128 15 0 6.28318 0 0 empty empty phase 7 7 1 10 -225280
+-1 -1 12700 1;
+#X text 305 95 (0 to 2pi);
+#X connect 0 0 6 0;
+#X connect 1 0 9 0;
+#X connect 2 0 8 0;
+#X connect 3 0 7 0;
+#X connect 6 0 2 0;
+#X connect 6 1 3 0;
+#X connect 9 0 0 0;
+#X connect 9 1 6 1;
+#X connect 10 0 0 0;
+#X connect 11 0 1 0;

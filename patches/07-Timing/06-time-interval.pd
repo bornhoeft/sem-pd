@@ -1,0 +1,20 @@
+#N canvas 465 279 294 349 12;
+#X obj 134 116 timer;
+#X obj 134 143 t f f;
+#X obj 113 195 -;
+#X msg 91 115 0;
+#X obj 91 64 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X floatatom 93 289 10 0 0 0 - - -, f 10;
+#X obj 171 80 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 44 22 Calculating time intervals;
+#X connect 0 0 1 0;
+#X connect 1 0 2 1;
+#X connect 1 1 2 0;
+#X connect 2 0 5 0;
+#X connect 3 0 2 1;
+#X connect 3 0 5 0;
+#X connect 4 0 3 0;
+#X connect 4 0 0 0;
+#X connect 6 0 0 1;

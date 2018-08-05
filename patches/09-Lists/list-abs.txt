@@ -1,0 +1,2 @@
+For additional list operations see:
+https://puredata.info/downloads/list-abs

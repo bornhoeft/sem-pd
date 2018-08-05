@@ -1,0 +1,12 @@
+#N canvas 455 344 663 296 12;
+#X text 63 29 Write 50 random values between 50 and 1500 in an array.
+Read this array with a loop in a repeated pattern. Add a slider that
+transposes the complete material up- and downwards and one to control
+the reading speed of the array. This values are used to control a generator
+p.e. [osc~];
+#X text 62 147 Schreiben Sie 50 Randomwerte zwischen 50 und 1500 in
+ein array. Lesen Sie das array in einer loop mit einem wiederholten
+rhythmischen Muster aus und fügen dabei einen Slider ein der das gesamte
+Material auf- und abwärts transponiert und einen der die Auslesegeschwindigkeit
+steuert. Diese Werte sollen als Frequenzen für einen Generator z.B.
+[osc~] dienen.;

@@ -1,0 +1,18 @@
+#N canvas 291 198 541 395 12;
+#X text 47 132 rounding errors;
+#X floatatom 58 280 12 999900 1e+06 0 - - -, f 12;
+#X text 47 242 Pd can only display 6 significant digits:;
+#X text 49 320 If you are fortunate enough to have a 64-bit system
+\, then you can have much longer numbers.;
+#X floatatom 59 210 12 0 0 0 - - -, f 12;
+#X text 169 166 999999 + 999999 = 1 \, 999 \, 998;
+#X msg 59 157 999999;
+#X obj 59 184 + 999999;
+#X text 47 70 Computers use floating point numbers to try to represent
+real numbers (a real number is any number that could be plotted on
+a line).;
+#X text 184 278 <-- scroll up to see;
+#X text 193 211 == 2 \, OOO \, OOO;
+#X text 50 31 Number limitations;
+#X connect 6 0 7 0;
+#X connect 7 0 4 0;

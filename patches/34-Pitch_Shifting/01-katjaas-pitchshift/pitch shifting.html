@@ -1,0 +1,1041 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+  <meta content="text/html; charset=windows-1252" http-equiv="Content-Type">
+  <title>pitch shifting</title>
+  <meta content="katja" name="author">
+  
+  
+</head>
+<body>
+<a name="topofpage">
+</a><br>
+<div class="right">
+<a href="http://www.katjaas.nl/home/home.html"> &lt;&lt;home</a>&nbsp;
+<a href="http://www.katjaas.nl/beatdetection/instantslice.html"> &lt;&lt;previous</a>&nbsp;
+<a href="http://www.katjaas.nl/pitchshift/soundtouch%7E.html">next&gt;&gt;</a>
+</div>
+<br>
+<h1>Pitch Shifting</h1>
+<br>
+<br>
+<p>I have just
+started learning about pitch shifting, and built my first pitch
+shifters in Pure Data object classes. This page will be dedicated
+to illustrations which pinpoint at typical bottlenecks of the topic. <br>
+</p>
+<p>Expanding or compressing a signal on the time-axis is a sure way to
+alter pitch. All frequency components are slowed down or sped up
+with the same <span style="font-style: italic;">ratio</span>, and this
+will preserve their harmonic relations. This happens for example when
+playing a
+tape at slower or faster speed. Here is a visual impression of slowing
+down a waveform:<br>
+</p>
+
+<br>
+<br>
+<table>
+  <tbody>
+    <tr>
+      <td style="text-align: left;"><img style="width: 520px; height: 175px;" alt="originalwave" src="originalwave.gif"><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<p>original wave<br>
+</p>
+<br>
+<table>
+  <tbody>
+    <tr>
+      <td style="text-align: left;"><img style="width: 691px; height: 171px;" alt="sloweddownwave" src="sloweddownwave.gif"></td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<p>the same wave played at 3/4 of the speed<br>
+</p>
+<br>
+<br>
+<p>Time duration of this slowed down wave is extended to a factor
+4/3, the inverse of the speed factor. In case such stretching is done
+in digital domain, samples are inserted to produce the longer signal
+length (upsampling).<br>
+</p>
+<p>In many practical situations however,
+we want time stretching OR
+pitch shifting, and not both. Time stretching is popularly understood
+as a change in time duration with preservation of pitch. Pitch shifting
+is then the opposite: a change in pitch without altering the time
+duration. While it is still clear what time duration means in this
+sense (the length of a played sound expressed in seconds or
+milliseconds), what is actually pitch? The fundamental frequency of a
+harmonic sound is called it's pitch. Does it mean that inharmonic
+sounds and noises can not be pitch shifted? Possibly. Anyway, a
+signal's period or fundamental frequency (if present or expected),
+should be the elementary unit of concern, as it transfers the pitch
+sensation. <br>
+</p>
+<p>Pitch shifting is in fact a combination of time stretching and up-
+or downsampling. Let's first look at an ideal case of time stretching.
+The original signal from the above example will be stretched to 4/3 of
+it's length, while preserving the pitch. By coincidence, this can
+conveniently be done by adding one period: <br>
+</p>
+<br>
+<table>
+  <tbody>
+    <tr>
+      <td style="text-align: left;"><img style="width: 520px; height: 175px;" alt="originalwave" src="originalwave.gif"><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p><br>
+original wave<br>
+</p>
+<br>
+<table>
+  <tbody>
+    <tr>
+      <td style="text-align: left;"><img style="width: 689px; height: 171px;" alt="stretchedwave" src="stretchedwave.gif"><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p><br>
+the same wave time-stretched to 4/3 of it's length by adding one period<br>
+</p>
+
+<p>In this time-stretched wave, the time duration is expanded while the
+pitch is preserved. Subsequently, the time-stretched wave can become
+pitch-shifted wave by reading it at faster speed. In digital domain
+this means leaving out samples, downsampling:<br>
+</p>
+<p><br>
+<br>
+</p>
+<br>
+<table>
+  <tbody>
+    <tr>
+      <td style="text-align: left;"><img style="width: 516px; height: 172px;" alt="downsampledwave" src="downsampledwave.gif"><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p><br>
+time-stretched-and-downsampled wave: raised pitch<br>
+</p>
+
+<p><br>
+With respect to the original wave, the length is retained while the
+pitch is raised. Here is the original wave once more for comparison:<br>
+</p>
+<br>
+<br>
+<table>
+  <tbody>
+    <tr>
+      <td style="text-align: left;"><img style="width: 520px; height: 175px;" alt="originalwave" src="originalwave.gif"><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p><br>
+original wave<br>
+</p>
+
+<p><br>
+It may be confusing that a raised pitch is associated with an expanded
+time duration and also with downsampling. That is just how it is. The
+opposite is also true: to lower a pitch sensation, you will need to
+take away some of the original sound's periods, and then upsample. Why
+not do an illustration of that as well. Here is the original wave
+'time-stretched' to 2/3 of it's length (it has shrunk rather, but that
+is not part of the terminology):<br>
+</p>
+<br>
+<table>
+  <tbody>
+    <tr>
+      <td style="text-align: left;"><img style="width: 346px; height: 174px;" alt="stretchedwave2" src="stretchedwave2.gif"><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p>&nbsp;<br>
+wave reduced to 2/3 of it's length by cutting one period<br>
+</p>
+
+<p>Now upsample this wave till it has the original length, and the
+effect is a lowered pitch:<br>
+</p>
+<br>
+<br>
+<table>
+  <tbody>
+    <tr>
+      <td style="text-align: left;"><img style="width: 516px; height: 173px;" alt="upsampledwave" src="upsampledwave.gif"><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p><br>
+time-reduced-and-upsampled wave: lowered pitch<br>
+</p>
+
+<p>From these examples, it becomes clear that pitch shifting is a
+matter
+of taking away samples at some points and adding in samples somewhere
+else. The net
+result has identical size, but
+the trick is to remove and insert at the proper places. Time stretching
+is a matter of removing or inserting larger sections while keeping
+periods intact. Resampling is a matter of removing or inserting samples
+as spreaded and smooth as possible, while expanding or contracting the
+periods.<br>
+</p>
+<p>I have
+illustrated that time stretching should preferrably be done by adding
+or removing
+full periods, but this is not always possible. Some signals, or regions
+in it, are not periodic. Even when a signal is periodic, finding and
+using that information may be troublesome. In real life, pitch
+shifting is as easy as folding a sphere from a piece of cardboard.
+Without decent analysis, adding
+or removing portions of the signal
+could look like this:<br>
+</p>
+
+<br>
+<table>
+  <tbody>
+    <tr>
+      <td style="text-align: left;"><img style="width: 200px; height: 172px;" alt="grain1" src="grain1.gif"><img style="width: 203px; height: 172px;" alt="grain2" src="grain2.gif"><img style="width: 199px; height: 171px;" alt="grain3" src="grain3.gif"><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<br>
+<table>
+  <tbody>
+    <tr>
+      <td style="text-align: left;"><img style="width: 176px; height: 173px;" alt="grain1a" src="grain1a.gif"><img style="width: 177px; height: 171px;" alt="grain2a" src="grain2a.gif"><img style="width: 176px; height: 173px;" alt="grain3a" src="grain3a.gif"><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<p></p>
+<p>Such microscopic cut &amp; splice technique requires at least some
+amplitude
+crossfading, to avoid clicks at the joints. I found it fun to learn
+that electro-mechanincal machines for time stretching and pitch
+shifting were already
+invented and produced decades ago.<br>
+</p>
+<br>
+<h1>rotating tape heads<br>
+</h1>
+<p><br>
+One typical situation where tempo and pitch must be controlled
+independently, is when recorded radio interviews must be sped up, while
+the pitch of the voices should remain unaltered. Around the 1960's, the
+Springer Tempophon with rotating tape heads was developed, and could do
+such jobs. Several composers, notably Stockhausen, were fascinated by
+this machine and used it in electronic composition.<br>
+</p>
+<p>The rotating tape heads read the signal at a speed independent from
+the tape playback speed. The tape speed relative to the machine
+determines the time duration, while the playback head speed relative to
+the tape determines the pitch. The heads can move along with the tape
+direction
+for lower pitch, or move in the opposite direction for higher pitch.
+Six tape heads in a drum were used in this mechanical construction. I
+have never seen a Tempophon with my own eyes, but from descriptions I
+derived it's working principle. Here is a graphical impression:<br>
+</p>
+<p><br>
+<br>
+</p>
+<br>
+<table>
+  <tbody>
+    <tr>
+      <td style="text-align: left;"><img style="width: 500px; height: 375px;" alt="tempophonpict" src="tempophonpict.gif"><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br>
+<br>
+</p>
+<p>It is comparatively simple to emulate a basic rotating tape head
+machine
+in digital domain. Since there are no physical constraints forcing
+virtual tape heads to be round, only two of them are needed, instead of
+six. Below, it is done as a Pure Data patch:<br>
+</p>
+<br>
+<br>
+<table>
+  <tbody>
+    <tr>
+      <td style="text-align: left;"><img style="width: 491px; height: 608px;" alt="tempophon" src="tempophon.gif"><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<p>The signal buffer is read by two reading objects (tabread4~).
+Reading can be done at fractional (= slower or faster) speed. An index
+represents the 'tape position'. The two 'playback heads' have
+fluctuating offsets from this index, in alternating phases. These
+phases have overlap, so most of the time you hear both playback heads.
+The offset fluctuates linearly between zero and a defined maximum. The
+offset maximum is 2205 samples in the patch, but that could have been a
+different amount, like 1000. The offset maximum is sort of equivalent
+to the distance between playback head centers in the rotating drum.<br>
+</p>
+<p>It is also possible to skip variable playback speed and do realtime
+pitch shifting on an input stream, using a delay with two taps reading
+at variable speed. Below is a simple Pure Data patch for doing that.
+For simplicity, the maximum delay time is fixed again, to 50
+milliseconds:<br>
+</p>
+<p><br>
+<br>
+</p>
+<br>
+<table>
+  <tbody>
+    <tr>
+      <td style="text-align: left;"><img style="width: 402px; height: 422px;" alt="simplepitch~" src="simplepitch.gif"><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<p><br>
+The playback outputs are subjected to smooth amplitude
+regulation, very similar to the method of window and overlap used in
+Short Time
+Fourier Transform. Signals are read in overlapping
+frames while being multiplied with a window function, a 'raised cosine'
+in most cases. I have copied the following graph from the page '<a href="http://www.katjaas.nl/FFTwindow/FFTwindow&amp;filtering.html">window &amp; spectral
+filtering</a>' to illustrate the window and overlap principle:<br>
+</p>
+<br>
+<br>
+<table>
+  <tbody>
+    <tr>
+      <td style="text-align: left;"><img style="width: 500px; height: 220px;" alt="overlap" src="overlap.gif"><br>
+      <br>
+overlapping frames with Hann windowing<br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<br>
+<p>In the case of Short Time Fourier Transform, the input signal is
+normally read at unity speed, and window &amp; overlap is only required
+to relieve the 'boundary effects'. Details of these effects are
+illustrated on the <a href="http://www.katjaas.nl/FFTwindow/FFTwindow&amp;filtering.html">forementioned
+page</a>. The sum of windowed and overlapped input frames is identical
+to the input signal in the case of Fourier Transform. Here is an
+impression:<br>
+</p>
+<br>
+<br>
+<table>
+  <tbody>
+    <tr>
+      <td style="text-align: left;"><img style="width: 500px; height: 298px;" alt="windowoverlap" src="windowoverlap.gif"><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<br>
+<p>With the rotating tape head principle, things are sligthly
+different. Although the sudden jumps of the frame stitches are now at
+the window's zero points, the phases in the two playback signals
+do not necessarily coincide. That is because the frames were resampled
+at a speed different from the original. Very
+few frequencies will be exactly in phase, and the rest will be out of
+phase to some degree. This results in phase cancellations which are
+prominent in the region of maximum overlap. The most unfavourable phase
+condition is with the window size being an odd multiple of an input
+frequency. Here is an example:<br>
+</p>
+<p>&nbsp;<br>
+</p>
+<br>
+<table>
+  <tbody>
+    <tr>
+      <td style="text-align: left;"><img style="width: 600px; height: 201px;" alt="oddmultiple" src="oddmultiple.gif"><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<br>
+<p>The window type makes a difference for the overall result. For
+Fourier Transform, the Hann window is one of the favourites. The sum of
+overlapping Hann windows is always a constant. For a Tempophon
+emulation with it's phase-incoherences, we may prefer another window
+function.
+When two signals with independent phase relations are summed, the
+magnitude is not doubled, but increased to 1.4 instead. This holds for
+the pitch-shifted frames as well. Therefore, when using Hann windows,
+there are overall sound level dips at the locations of maximum overlap.
+<br>
+</p>
+<p>Positive sine windows do not sum to a constant, but produce peaks at
+the locations of maximum overlap, and these peaks do exactly compensate
+for the statistical loss of energy caused by phase cancellation. It is
+the same amplitude curve as found in the crossfader section of a DJ
+mixer. Here is a plot, showing overlapping sine windows and their sum:<br>
+</p>
+
+<br>
+<table>
+  <tbody>
+    <tr>
+      <td style="text-align: left;"><img style="width: 500px; height: 272px;" alt="rectcos" src="rectsine.gif"><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<br>
+<br>
+<p>This window type produces less overall amplitude modulation when
+overlapping unrelated phases, therefore it is better suited for the
+Tempophon emulator. Notice however, that it will produce <span style="font-style: italic;">more</span> amplitude modulation when
+phases happen to coincide. Thus, amplitude modulation is not eliminated
+with this window type, only statistically reduced.<br>
+</p>
+<p>Because the frames were taken at different moments in time, overlap
+areas actually present repetitions, smoothed by the window
+functions. Apart from spurious modulation, a general comb-filter effect
+is perceived. Specially with pitch factors above 1, it has the
+acoustics of a small room with tiled
+walls. I want to return to the Hann window for a moment,
+because this window type has relatively little overlap area:<br>
+</p>
+<br>
+<br>
+<table>
+  <tbody>
+    <tr>
+      <td style="text-align: left;"><img style="width: 490px; height: 212px;" alt="Hannsum" src="Hannsum.gif"><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<br>
+<p>With less overlap area, there is also noticably less comb filter
+effect. Is there not a window type combining the good aspects of both,
+while leaving out the disadvantages? I was thinking of something like
+this:<br>
+</p>
+
+<br>
+<table>
+  <tbody>
+    <tr>
+      <td style="text-align: left;"><img style="width: 500px; height: 163px;" alt="anotherwindow" src="anotherwindow.gif"><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p></p>
+
+<p><br>
+This fantasy window is not a mathematical function, and I have partly
+drawn it by hand. But the crossover region has sinusoidal curves again.
+This window can be constructed in parts from mathematical functions.
+The window has 6/6 parts, and is non-zero over 4/6th of it's
+periodicity:<br>
+</p>
+
+<br>
+<table>
+  <tbody>
+    <tr>
+      <td style="text-align: left;"><img style="width: 500px; height: 240px;" alt="anotherwindow2" src="anotherwindow2.gif"><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<p><br>
+<br>
+</p>
+<p>I have built the delay lines and two different windows into one Pure
+Data object [tempophon~], to check the effects. Below, you can see
+typical modulation patterns resulting from the window types. Although
+the magnitude dips are equally deep in both cases, the minimum-overlap
+window leaves a larger area untouched. This reduces the 'echoic chamber
+effect' somewhat. At the same time it creates extra (but not per se
+louder) modulation frequencies because of it's more complex shape.<br>
+</p>
+<br>
+<br>
+<table>
+  <tbody>
+    <tr>
+      <td style="text-align: left;"><img style="width: 636px; height: 339px;" alt="modulations" src="modulations.gif"><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<br>
+<br>
+<p>So far I am demonstrating and stressing the most problematic
+frequencies everytime, but there are also frequencies which come
+perfectly steady through the pitch shifter. The Tempophon emulator is a
+'dumb' pitch shifter, it does not try to tune it's process to the input
+frequencies. With the above window types, it is even the case that when
+a frequency comes through unmodulated, it's first overtone would suffer
+the heaviest modulation. Here is an illustration:<br>
+</p>
+
+<br>
+<table>
+  <tbody>
+    <tr>
+      <td style="text-align: left;"><img style="width: 631px; height: 299px;" alt="harmonics" src="harmonics.gif"><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<br>
+<p>Allmost any sound material will be degraded by
+this simple pitch shifter process. Due to unconditional processing, and
+the window type being optimized to inconsistent phases, harmonic sounds
+will be affected as much as any other sound. Below is a typical result
+plotted
+for a harmonic test signal: <br>
+</p>
+
+<br>
+<table>
+  <tbody>
+    <tr>
+      <td style="text-align: left;"><img style="width: 624px; height: 187px;" alt="segment4" src="segment4.gif"><br>
+      <br>
+sum of two harmonics transposed with pitch factor 0.7<br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<p>To get better results, the signal content must be analysed in some
+way, and the microscopic cut &amp; splice actions should match the
+signal's waveshape whenever possible. Several time domain methods
+exist, each analysing the signal in a different way. Unfortunately,
+such methods are way more complicated than the basic window &amp;
+overlap principle itself, and they can not be reproduced with a couple
+of Pure Date objects. <br>
+</p>
+<p>PSOLA, Pitch Synchronous&nbsp; Overlap Add, tries to find the pitch
+of the input signal, and apply a grain size of 2 or 4 times the
+fundamental frequency. Finding a signal's pitch is a hazardous job.
+Polyphonic sounds or sounds with 'missing fundamental' can give erratic
+analysis results.<br>
+</p>
+<p>WSOLA, Waveform Similarity/Synchronized Overlap Add, does not need
+knowledge about fundamental frequency or
+harmonic content. Instead, it keeps the grain size fixed, while the
+best locations for overlap are found by moving the grains and computing
+the cross-correlation. Like playing
+around with jigsaw-puzzle pieces and finding out how they fit best. The
+method was proposed by Verhelst &amp; Roelands, see for example <a href="http://docs.google.com/viewer?a=v&amp;q=cache:C-nMyWCy25kJ:citeseerx.ist.psu.edu/viewdoc/download%3Fdoi%3D10.1.1.128.7991%26rep%3Drep1%26type%3Dpdf+wsola+roelands+verhelst&amp;hl=en&amp;pid=bl&amp;srcid=ADGEESg1Hp2pIdkEYL82VYADI_47CZciyeo_0Ay_LjgBXL1758mT0NPoWrBHHkycaQEOKLYve5-VIfoKl2R6xA-7TRcD92RX4snuw8YEEe9xl69VLUOTBfZ_NGfnO_0QKoz9JNPWxWws&amp;sig=AHIEtbTk0_BItrcxHu54lcn6eqKUOm1VIQ">[this
+link</a>]. <br>
+</p>
+<p>Olli Parviainen has published an open source C++ library for time
+stretching and pitch shifting, using a WSOLA-like stretching algorithm.
+This is the SoundTouch library, incorporated in many packages amongst
+which Ardour and Audacity. There is also an example utility
+SoundStretch for audio file conversion (pitch, timebase and playback
+rate). Source code and binaries, together with a comprehensive article
+on time/pitch shifting basics, are on <a href="http://www.surina.net/soundtouch/index.html">http://www.surina.net/soundtouch/index.html</a>.
+I have built SoundTouch into a Pure Data external [soundtouch~].<br>
+</p>
+<p>Compare the test plot below with the equivalent test from
+[tempophon~] above. The waveform similarity based method
+is a great improvement on the elementary rotating tape head emulator.<br>
+</p>
+<br>
+<br>
+<table>
+  <tbody>
+    <tr>
+      <td style="text-align: left;"><img style="width: 633px; height: 285px;" alt="soundtouchtest" src="soundtouchtest.gif"><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br>
+<br>
+</p>
+<p>With harmonic sounds, the SoundTouch routines can find spots of best
+match for overlapping. With inharmonic combinations, this is virtually
+impossible because the waveform shows no repetition, at least not
+within the short time frame where SoundTouch must find it. This is not
+a defect of SoundTouch, but an inherent aspect of time domain pitch
+shifting. Therefore,
+the method does not work equally well for any arbitrary sound material.
+It works best for speech, monophonic instruments, and music with simple
+harmonic ratios or low complexity. Being a time domain method,
+SoundTouch shows some other side effects of cutting / inserting signal
+fragments: with downward pitch shifting, short attacks can easily get
+lost, while upward pitch shifting can induce audible repetition. With
+modest transposition rates, these effects are of course less prominent
+than with extreme settings.<br>
+</p>
+<p>The SoundTouch library is well commented and user-friendly. The code
+is efficient: realtime pitch shifting with SoundTouch is responsible
+for only 1% CPU time on my 2 GHz MacBook. Building a C++ library into
+Pure Data, which is pure C, is however not completely straightforward.
+This topic is described on the next page, <a href="http://www.katjaas.nl/pitchshift/soundtouch%7E.html">[soundtouch~]
+for Pure Data</a>.<br>
+<br>
+</p>
+<h1><br>
+</h1>
+<h1>frequency domain method<br>
+</h1>
+<p><br>
+In frequency domain, a completely different handling of phase
+inconsistencies is possible. From Stephan Bernsee's comprehensive
+explanation on <a href="http://www.dspdimension.com/admin/pitch-shifting-using-the-ft/">www.dspdimension.com</a>,
+I learned how to do pitch shifting in frequency domain. It is quite
+abstract matter, and I always need a lot of illustrations to get hold
+on the elusive sinusoids. Let me illustrate the actual problem once
+more with a graphical
+example. Here, the overlapping segments of a stretched sinusoid are not
+windowed, to clearly show a phase shift:<br>
+</p>
+<br>
+<table>
+  <tbody>
+    <tr>
+      <td style="text-align: left;"><img style="width: 500px; height: 174px;" alt="phaseincoherence" src="phaseincoherence.gif"><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<br>
+<p>Can we not just force the phases of successive signal segments to
+neatly coincide? This would be possible when all frequency components
+are isolated. A time shift has different phase shift effect for each
+frequency, therefore they must be treated separately. With all
+frequencies isolated, their phases could be registered, and the phase
+in
+the actual frame be synchronized with the preceding frame.<br>
+</p>
+<p>Isolating frequency components and shifting their phases, means to
+analyse, break up,and
+resynthesize the signal. To do that, we need to go to 'frequency
+domain', by applying Fast Fourier Transform,
+FFT. Lots of illustrations on this topic can be found in the FFT
+section, starting with the page <a href="http://www.katjaas.nl/fourier/fourier.html">Fourier
+Matrix</a>. Complex numbers are also part of this story, and they are
+introduced on the page <a href="http://www.katjaas.nl/complane/complexplane.html">Trip to
+the Complex Plane</a>.<br>
+</p>
+<p>Superficially, it could seem that pitch transposition in frequency
+domain is quite simple: just tranfer the FFT bin contents to other
+bins, depending on the pitch factor. Like shrinking or expanding the
+spectrum:<br>
+</p>
+<br>
+<table>
+  <tbody>
+    <tr>
+      <td style="text-align: left;"><img style="width: 500px; height: 238px;" alt="spectrum" src="spectrum.gif"><br>
+      <br>
+very crude representation of transposed frequencies<br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br>
+<br>
+</p>
+<p>This view is not complete nonsense, but in practice, things are
+complicated. Be prepared for loads of details. A spectrum does not hold
+frequencies! It holds complex numbers, which can be mapped to other
+complex numbers, telling amplitude and phase of the initial complex
+numbers. The FFT bin numbers represent harmonic frequencies wich served
+as correlation functions to calculate the spectrum. For realistic FFT
+sizes, these bin harmonics are some ten, twenty, or fourty Hz apart
+from each other. So how do we get informed about precise frequencies? <br>
+</p>
+<p>If you would plot real and imaginary coefficients of one FFT bin for
+successive frames, you would see a kind of clock. When a steady
+sinusoid is correlated by that bin, the clock ticks at a regular speed.
+For successive, non-overlapping FFT-frames, a non-zero speed indicates
+by
+definition a frequency correlation which deviates from the FFT bin
+center frequency. Here is a visual impression on the complex plane:<br>
+</p>
+
+<br>
+<table>
+  <tbody>
+    <tr>
+      <td style="text-align: left;"><img style="width: 400px; height: 399px;" alt="phaseclock" src="phaseclock.gif"><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<p>If the above stated sounds rather vague, it is because I am trying
+to express things carefully. Frequency domain information is not that
+straightforward. Framewise Discrete Fourier Transform brings spectral
+leakage, and the correlation of one single input frequency is spreaded
+to some extent over all FFT bins. Therefore, the data should be
+interpreted with reserve. Here is a (full complex) spectrum
+illustration, copied from the page <a href="http://www.katjaas.nl/FFToutput/FFToutput.html">FFT Output</a>, showing an example
+of spectral leakage from one single input sinusoid:<br>
+</p>
+<br>
+<table>
+  <tbody>
+    <tr>
+      <td style="text-align: left;"><img style="width: 300px; height: 240px;" alt="phase0" src="phase0.gif"><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<p><br>
+The plot has a lot of coefficients, suggesting the presence of
+frequencies which were not actually there. Still they are all
+representatives of the input signal, in a way. Now imagine we employ
+the clock phenomenon, the phase increments, as an indicator of input
+frequency. This would give a lot of different answers.<br>
+</p>
+<p>To reduce ambiguity, an increased FFT frame overlap is recommended,
+with 4 times overlap as a minimum. Why does that help? Let me try if I
+can put that to words, and pictures. The clockwise or anti-clockwise
+rotation of the
+spectrum coefficients in their first appearance as [x+iy] coordinates
+give them room to express a phase-shift inbetween +/- pi radian, being
++/- half a cycle. To the earlier example, I have added a green pair of
+points, showing a clockwise rotation which is by convention called
+negative:<br>
+</p>
+<br>
+<table>
+  <tbody>
+    <tr>
+      <td style="text-align: left;"><img style="width: 400px; height: 397px;" alt="phaseclock2" src="phaseclock2.gif"><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<br>
+<p>This +/- half cycle room must be interpreted respective to the shift
+of the FFT bin center frequency over successive FFT frames. With no
+frame overlap, the bin center frequencies themselves will shift by
+multiples of a full cycle. The 'phase clock' can express a deviation
+within the bin, below or above the bin center frequency, and it has a
+total range of one cycle as well. For example, if the clock in bin nr
+10 shifted half a cycle in positive direction, this indicates a
+frequency of 10.5, expressed in unit bins or FFT frame harmonics.
+Because of the spectral leakage, many coefficients have too little room
+to express the input frequency, as they can only express what fits in
+their particular bin. <br>
+</p>
+
+<br>
+<br>
+<table>
+  <tbody>
+    <tr>
+      <td style="text-align: left;"><img style="width: 500px; height: 204px;" alt="fftbins" src="fftbins.gif"><br>
+      <br>
+shift range with no overlap<br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<br>
+<p>With four times FFT frame overlap, the bin center frequencies will
+shift multiples of only a quarter-cycle, respective to the input
+signal. Here is an impression in time domain:<br>
+</p>
+
+<br>
+<table>
+  <tbody>
+    <tr>
+      <td style="text-align: left;"><img style="width: 510px; height: 238px;" alt="overlap4" src="overlap4.gif"><br>
+      <br>
+FFT with four times overlap<br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<p>But
+the coefficients still have the +/- half cycle range at their disposal,
+and they can now express a shift up to four times the bin center
+frequency shift. This means that they can express frequencies which
+belong in other bins!</p>
+<br>
+<table>
+  <tbody>
+    <tr>
+      <td style="text-align: left;"><img style="width: 491px; height: 281px;" alt="fftbins2" src="fftbins2.gif"><br>
+      <br>
+shift range with four times overlap<br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<br>
+<p>The corrected phase shift (in cycles) and with overlap = 4 is now
+expressed this way:<br>
+</p>
+<p>step 1: phase-shift (in cycles) - (bin nr / 4)<br>
+step 2: wrap result in the +/- 0.5 cycle interval<br>
+step 3: multiply by 4<br>
+</p>
+<p>And the frequency, expressed in the form of FFT harmonics or unit
+bins, is this sum:<br>
+</p>
+
+<br>
+<table>
+  <tbody>
+    <tr>
+      <td style="text-align: left;"><img style="width: 500px; height: 110px;" alt="frequency" src="frequency.gif"><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<p><br>
+<br>
+</p>
+<p>If a frequency is computed this way, it can be simply multiplied by
+the pitch shift factor to find the new frequency. This new frequency
+has to be transferred to the appropriate FFT bin, together with it's
+amplitude information. To find the new bin, the original bin nr is also
+multiplied by the pitch shift factor. Bin numbers can only be integers,
+and must be rounded in the direction of zero.<br>
+</p>
+<p>When the pitch-transposed frequency is in it's new bin, all the
+correction steps should be undone, now with the new bin harmonic number
+as a reference. This would mean: <br>
+</p>
+<p>step 1: subtract the bin harmonic number<br>
+step 2: divide by overlap<br>
+step 3: add the bin center frequency's phase shift<br>
+step 4: wrap into the +/- 0.5 bin interval<br>
+</p>
+<p>By the way, there happens to be a lot of mathematical redundancy in
+these steps. Never mind. The result expresses a phase shift again,
+still expressed in unit bins. Now comes the crucial step. The original
+phase shifts were actually result of phase differentiation. Now, to
+build the new spectrum, the transposed shifts or differences must be
+integrated with the transposed shifts of the preceding frame. Recall
+what happens with differentiation: the constant is lost. In this case,
+the constant was the absolute phase position, and it is lost. That was
+exactly the intention.<br>
+</p>
+<p>The integrated transposed phases, together with the amplitude
+information, can be converted to real and imaginary parts in the
+regular fashion with cosine and sine functions (which want phases
+expressed in radians of course). And then finally, back to time domain
+with inverse FFT.<br>
+</p>
+<p>This was a long journey to get the phases neatly glued together, and
+I have even omitted some practical details. The method is
+CPU-intensive, not so much because of the FFT's, which are efficient
+enough, but because of the trigonometric functions atan2, sin and cos.
+There is also an option to do the actual transposition in time domain,
+with fractional reading speed like in the rotating tape head recorder,
+and do the phase integration in frequency domain. This approach is
+described for Max/Msp by Richard Dudas and Cort Lippe on <a href="http://cycling74.com/2006/11/02/the-phase-vocoder-%3F-part-i/">http://cycling74.com/2006/11/02/the-phase-vocoder-–-part-i/</a>.
+<br>
+</p>
+<p>More than about CPU-load, I am concerned about the result. I have
+built the frequency domain pitch shifter into a Pure Data object
+[pitchshift~], so why not repeat the harmonic cosines test? The plots
+below show no amplitude modulation, and this holds for most
+frequencies. Instead, another unwelcome 'feature' has appeared: some
+frequencies are almost killed. <br>
+</p>
+
+<br>
+<br>
+<table>
+  <tbody>
+    <tr>
+      <td style="text-align: left;"><img style="width: 629px; height: 348px;" alt="pitchshift~" src="pitchshift.gif"><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<br>
+<br>
+<p>Does it indicate some bug in my code? I do not think so. The
+amplitude differences are a notorious
+side-effect of elementary frequency-domain pitch shifting. What is the
+cause of
+it? </p>
+<p>When starting up the pitch shifter, the phase
+integrator buffer is initialized with zero's for all bins. After all,
+there is no
+information yet at that moment, no preceding frame. If there is no
+significant input signal, there may be some noise, and the phase
+integrator buffer content gets randomized. When I start sending the
+test cosine in, the integrated phase differences make a reasonably neat
+pitch-shifted cosine output. But the phases have inherited the
+randomness of the preceding noise. The bins that should together
+reproduce the full cosine, may now partly phase-cancel each other! Look
+how orderly a cosine's phase spectrum normally is. We can not randomize
+this with impunity:<br>
+</p>
+<br>
+<br>
+<br>
+<table>
+  <tbody>
+    <tr>
+      <td style="text-align: left;"><img style="width: 400px; height: 320px;" alt="phases" src="phases.gif"><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<br>
+<p><br>
+With the phase-diffentiator-integrator model, the output sounds inherit
+their absolute phase positions from their predecessors, not from the
+sound source. Therefore, it is not predictable what amplitude effects a
+frequency will suffer. This is illustrated by the patch below, where
+one cosine test signal is used, and the only difference is the moment
+when I start to send the signal to the pitch shifter. The output
+amplitude is different at every restart.<br>
+</p>
+<br>
+<br>
+<table>
+  <tbody>
+    <tr>
+      <td style="text-align: left;"><img style="width: 633px; height: 326px;" alt="ampdiff" src="ampdiff.gif"><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<br>
+<br>
+<p>The randomisation of absolute phase, and resulting amplitude
+effects, induce the sound character of comb filtering. Nothing can be
+done about this with simple means. In fact, what we want is to start a
+pitch-shifted sound with absolute phases, and then continue it with
+relative phases. Finding start-points, and keeping together all the
+bins that correlate one sound source, is really complicated stuff. For
+the
+moment, it is too difficult and time-consuming for me to explore. But
+at least, doing all these illustrations gave me a better understanding
+of the issues. It all boils down to the fact that FFT can not resolve
+single frequencies without spectral leakage.<br>
+</p>
+<p>Some detailed articles presenting frequency domain solutions are
+published. There is a comprehensible text by Axel Roebel on <a href="http://www.mp3-tech.org/programmer/docs/dafx32.pdf">http://www.mp3-tech.org/programmer/docs/dafx32.pdf</a>.
+An open source library for frequency domain pitch shifting with
+phase-resynchronisation is available from <a href="http://rubberbandaudio.com/">rubberbandaudio.com</a>. <br>
+</p>
+<p>A different approach is developed by Stephan Bernsee in his work for
+Prosoniq and his own Dirac library. From minuscule snippets of
+information, I gather that these methods operate in time/frequency
+domain, employing complex-valued wavelets. It would be fascinating to
+learn more about that. Unfortunately, these inventions are too precious
+to be shared in the public domain. The same holds for the widely
+praised Elastique technology from zplane. These are closed source
+libraries which you can get
+(Dirac LE) or buy, not learn from.<br>
+</p>
+
+<h1>conclusion</h1>
+<p><br>
+By definition, it is mathematically impossible to perfectly isolate
+frequencies within a real-world signal. Therefore, perfect pitch
+shifting seems to be a mission impossible, no less than building a
+perpetuum mobile. A simple, brilliant solution will probably not be
+found. Instead, advanced methods focus on many details of analysis in
+order to approximate the ideal result. All together, good quality pitch
+shifting techniques go far beyond
+the dsp hobbyist level. Considering these circumstances, it is
+fortunate that at least a few people have published the source code of
+their time stretch / pitch shift routines, so we can build it into
+applications of choice. The next page describes how Olli Parviainen's
+SoundTouch library can be built into the real time dsp environment Pure
+Data.<br>
+</p>
+<table>
+  <tbody>
+    <tr>
+      <td style="text-align: left;"><br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<table>
+  <tbody>
+    <tr>
+      <td style="text-align: left;"><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<table>
+  <tbody>
+    <tr>
+      <td style="text-align: left;">
+      <div class="right"><a href="#topofpage">^top</a>&nbsp; <a href="http://www.katjaas.nl/home/home.html"> &lt;&lt;home</a>&nbsp; <a href="http://www.katjaas.nl/beatdetection/instantslice.html"> &lt;&lt;previous</a>&nbsp; <a href="http://www.katjaas.nl/pitchshift/soundtouch%7E.html">next&gt;&gt;</a> </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<br>
+
+
+</body></html>

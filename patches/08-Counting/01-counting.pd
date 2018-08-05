@@ -1,0 +1,74 @@
+#N canvas 110 23 700 786 12;
+#X obj 155 111 + 1;
+#X obj 260 259 + 1;
+#X obj 210 260 f 0;
+#X obj 270 111 + 1;
+#X obj 227 111 f 0;
+#X obj 65 111 float 0;
+#X text 198 110 ==;
+#X text 309 114 ~=;
+#X obj 382 111 + 1;
+#X obj 342 111 f;
+#X text 62 142 Every bang sent to the float will first output the current
+value of the float to its outlet and to the [+ 1] \, which then adds
+1 to the internally stored value of the float *without* outputting
+it immediatly.;
+#X text 65 319 The new value will be emitted on the next bang.;
+#X floatatom 209 290 5 0 0 0 current_output - -, f 5;
+#X msg 210 229 bang;
+#X floatatom 260 288 5 0 0 1 next_output - -, f 5;
+#X obj 206 443 f 0;
+#X floatatom 206 476 5 0 0 0 current_output - -, f 5;
+#X msg 206 384 bang;
+#X floatatom 257 476 5 0 0 1 next_output - -, f 5;
+#X msg 224 411 0;
+#X obj 238 667 + 1;
+#X obj 182 666 f 0;
+#X floatatom 181 699 5 0 0 0 current_output - -, f 5;
+#X msg 203 638 0;
+#X obj 295 668 mod 4;
+#X text 61 53 Counting in Pd doesn't require externals \, you can also
+count with the builtin objects. The basic idiom to remember is [f 0]
+x [+ 1]:;
+#X text 343 668 <= count from 0 to 3 (where 3 == 4 - 1);
+#X text 63 342 To start over \, send the new starting value to the
+right outlet of the float:;
+#X text 259 408 <= RESET using right inlet of float;
+#X text 65 508 If you want to count from 0 to a max-value and then
+start over \, use a "Modulo N" counter. Note \, that the [mod] is inserted
+*between* the [+ 1] and the float. To count until N use a [mod N-1]
+object:;
+#X floatatom 295 699 5 0 0 1 next_output - -, f 5;
+#X text 409 21 (C) Frank Barknecht;
+#X text 63 20 Counting;
+#X floatatom 238 699 5 0 0 0 - - -, f 5;
+#X obj 182 590 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 182 614 metro 500;
+#X obj 257 444 + 1;
+#X connect 0 0 5 1;
+#X connect 1 0 2 1;
+#X connect 1 0 14 0;
+#X connect 2 0 1 0;
+#X connect 2 0 12 0;
+#X connect 3 0 4 1;
+#X connect 4 0 3 0;
+#X connect 5 0 0 0;
+#X connect 8 0 9 1;
+#X connect 9 0 8 0;
+#X connect 13 0 2 0;
+#X connect 15 0 16 0;
+#X connect 15 0 36 0;
+#X connect 17 0 15 0;
+#X connect 19 0 15 1;
+#X connect 20 0 33 0;
+#X connect 20 0 21 1;
+#X connect 20 0 24 0;
+#X connect 21 0 20 0;
+#X connect 21 0 22 0;
+#X connect 23 0 21 1;
+#X connect 24 0 30 0;
+#X connect 34 0 35 0;
+#X connect 35 0 21 0;
+#X connect 36 0 15 1;
+#X connect 36 0 18 0;

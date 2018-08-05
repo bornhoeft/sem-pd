@@ -1,0 +1,61 @@
+#N canvas 315 286 702 200 10;
+#X obj 516 45 namecanvas \$0-thiscnv;
+#X obj 100 50 tgl 8 0 \$0-label-show \$0-label-show-r empty -22 5 0
+10 -228856 -1 -1 1 1;
+#X obj 100 50 cnv 8 8 8 \$0-label \$0-label-r empty 4 8 0 10 -1 -1
+0;
+#X obj 212 46 inlet;
+#X obj 212 100 outlet;
+#X obj 517 74 loadbang;
+#X obj 517 120 s \$0-label-show-r;
+#X msg 517 97 1;
+#N canvas 97 115 1045 452 toggle-object-size 0;
+#X obj 87 246 s \$0-label-show-r;
+#X obj 180 28 r \$0-label-show;
+#X obj 180 76 sel 0 1;
+#X obj 67 307 s \$0-label-r;
+#X obj 427 310 s \$0-label-r;
+#X obj 48 181 t b b b;
+#X obj 48 377 s \$0-thiscnv;
+#X text 750 221 tglx tgly tglw tglh;
+#X obj 447 246 s \$0-label-show-r;
+#X obj 408 181 t b b b;
+#X text 749 284 cnvw cnvh cnvs cnvx cnvy;
+#X obj 408 377 s \$0-thiscnv;
+#X obj 180 52 change;
+#X text 749 352 yto yfrom xto yfrom gop - - - w h mx my;
+#X msg 405 50 donecanvasdialog <x-units> <y-units> <gop> <x-from> <y-from>
+<x-to> <y-to> <x-size> <y-size> <x-margin> <y-margin>;
+#X text 467 181 small;
+#X text 110 180 normal;
+#X msg 87 221 pos 127 53 10 10 \, size 10;
+#X msg 48 352 donecanvasdialog 1 -1 1 1 -1 1 1 40 16 100 50 \, dirty
+0;
+#X msg 447 221 pos 100 50 2 2 \, size 8 \, label;
+#X msg 408 353 donecanvasdialog 1 -1 2 1 -1 1 1 8 8 100 50 \, dirty
+0;
+#X msg 427 283 vis_size 8 8 \, size 8 \, pos 100 50 \, color -1 -1
+-1;
+#X msg 67 284 vis_size 8 8 \, size 8 \, pos 128 54 \, color -1 -1 -1
+;
+#X connect 1 0 12 0;
+#X connect 2 0 5 0;
+#X connect 2 1 9 0;
+#X connect 5 0 18 0;
+#X connect 5 1 22 0;
+#X connect 5 2 17 0;
+#X connect 9 0 20 0;
+#X connect 9 1 21 0;
+#X connect 9 2 19 0;
+#X connect 12 0 2 0;
+#X connect 17 0 0 0;
+#X connect 18 0 6 0;
+#X connect 19 0 8 0;
+#X connect 20 0 11 0;
+#X connect 21 0 4 0;
+#X connect 22 0 3 0;
+#X restore 356 45 pd toggle-object-size;
+#X connect 3 0 4 0;
+#X connect 5 0 7 0;
+#X connect 7 0 6 0;
+#X coords 0 -1 1 1 8 8 2 100 50;

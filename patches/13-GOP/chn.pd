@@ -1,0 +1,36 @@
+#N canvas 56 74 690 593 12;
+#X obj 5 5 cnv 15 90 200 empty \$1-channel \$2 20 20 1 14 -228856 -66577
+0;
+#X obj 183 89 *~;
+#X obj 183 143 dac~ \$1;
+#X text 178 171 The input with the number of the first;
+#X text 178 189 argument is routed to the corresponding;
+#X text 178 207 output;
+#X text 178 4 This abstraction is called by "chn.pd";
+#X text 21 228 To create an area which is displayed in the main patch
+click anywhere on the canvas of this patch an select "properties".
+Mark the flag "graph on parent" and define the margins (distance from
+the upper left corner) and the size of the area to display in x and
+y values. A rectangle with a thin red line appears on the canvas. This
+is the area which is displayed in the main patch. Put everything you
+want to have displayed in this area. Note: Only graphical obejects
+are displayed \, no cords \, no objects \, etc.! To cover the name
+of this area you can marke "hide object name and arguments" or create
+a canvas (in this case a grey one) with the same dimensions and put
+it exactly between the thin red lines. Optionally you can name this
+canvas (resp. channel) with the second argument by putting \$2 in the
+"name" field in "properties" (see "labeling.pd" in the Tutorial).;
+#X obj 204 38 adc~ \$1;
+#X obj 27 43 vsl 15 119 0 1 0 0 xxxs dummy empty 0 -9 0 10 -191407
+-1 -1 2500 1;
+#X obj 47 43 vu 15 120 empty empty -1 -8 0 10 -66577 -1 0 0;
+#X obj 219 76 env~;
+#X obj 219 99 - 99;
+#X floatatom 27 170 4 0 0 0 - xxxs xxxr, f 4;
+#X connect 1 0 2 0;
+#X connect 1 0 11 0;
+#X connect 8 0 1 1;
+#X connect 9 0 1 0;
+#X connect 11 0 12 0;
+#X connect 12 0 10 0;
+#X coords 0 -1 1 1 90 200 2 5 5;

@@ -1,0 +1,4 @@
+#N canvas 483 450 366 206 10;
+#X obj 91 128 hnslider;
+#X obj 92 74 hnslider;
+#X text 88 31 a horizontal slider with number display;

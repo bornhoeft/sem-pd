@@ -1,0 +1,7 @@
+#N canvas 670 177 306 192 10;
+#X obj 74 71 expr~ ($v1 + 1)/2;
+#X obj 74 39 inlet~;
+#X obj 74 107 outlet~;
+#X text 69 156 (c) 2015 Achim Bornhoeft \, SEM;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;

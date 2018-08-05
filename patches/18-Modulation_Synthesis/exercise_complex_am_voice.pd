@@ -1,0 +1,18 @@
+#N canvas 574 379 627 378 12;
+#X text 29 36 Make a patch with 4 [osc~] generators in form of a complex
+serial amplitude modulation (classical AM). Search for at least 5 different
+interesting sounds. Make them playable in random triggerd by the space-bar
+with the [key] object. Ringmodulate the output of this with an [adc~]
+p.e. voice input.;
+#X text 28 142 Erstellen Sie ein patch mit 4 [osc~] Generatoren in
+Form einer komplexen AM-Modulation (klassische AM). Suchen Sie nach
+mindestens 5 verschiedenen interessanten Klängen damit. Machen Sie
+diese zufällig spielbar mit der Leertaste und dem [key] Objekt. Ringmodulieren
+Sie das Ergebnis zusätzlich mit dem Mikrophoneingang.;
+#X obj 30 262 key;
+#X floatatom 30 292 5 0 0 0 - - -, f 5;
+#X text 65 262 Press any key to see which number is associated with
+it.;
+#X text 81 289 Betätigen Sie eine beliebige Taste um die korrespondierende
+Nummer zu sehen.;
+#X connect 2 0 3 0;

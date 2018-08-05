@@ -1,0 +1,35 @@
+#N canvas 287 35 633 441 10;
+#X obj 60 197 osc~;
+#X obj 46 60 tgl 15 0 empty empty empty 0 -6 0 10 -262144 -1 -1 1 1
+;
+#X obj 59 113 metro 1000;
+#X obj 60 167 + 100;
+#X obj 59 142 random 1000;
+#X obj 32 401 dac~;
+#X obj 32 370 *~;
+#X msg 308 102 \; set -2 -1 0 1 2 5000 \;;
+#X msg 308 232 \; set -14 -7 0 7 14 1000 \;;
+#X msg 308 189 \; set -0.2 -0.1 0 0.1 0.2 500 \;;
+#X obj 308 65 loadbang;
+#X text 283 363 message consists of 5 semitone transpositions and one
+glissando duration in milliseconds;
+#X text 98 395 (c) 2008 Achim Bornhoeft;
+#X msg 310 277 \; set -24 -22 -20 -18 -16 1000 \;;
+#X msg 310 325 \; set 24 22 20 18 16 2000 \;;
+#X msg 308 144 \; set -24 -12 0 12 24 1000 \;;
+#X text 53 24 5 voice classic rotating-tape-head style pitch shifter
+;
+#X obj 243 197 r set;
+#X obj 60 226 5tape_pitchshifter 1 0 100 0;
+#X connect 0 0 18 0;
+#X connect 1 0 2 0;
+#X connect 1 0 6 1;
+#X connect 2 0 4 0;
+#X connect 3 0 0 0;
+#X connect 3 0 2 1;
+#X connect 4 0 3 0;
+#X connect 6 0 5 0;
+#X connect 6 0 5 1;
+#X connect 10 0 7 0;
+#X connect 17 0 18 1;
+#X connect 18 0 6 0;

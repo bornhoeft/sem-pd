@@ -1,0 +1,11 @@
+#N canvas 0 22 402 228 10;
+#X obj 202 100 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 118 41 Reversed toggle: 0 -> 1 \, 1 -> 0;
+#X obj 202 128 rtgl;
+#X obj 202 156 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 202 74 loadbang;
+#X connect 0 0 2 0;
+#X connect 2 0 3 0;
+#X connect 4 0 0 0;

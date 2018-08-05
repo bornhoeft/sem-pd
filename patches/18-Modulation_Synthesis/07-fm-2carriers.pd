@@ -1,0 +1,76 @@
+#N canvas 395 37 506 603 12;
+#X text 43 548 Copyright (C) 2002 Maurizio Umberto Puxeddu;
+#X obj 20 89 cnv 15 360 120 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 35 124 nbx 5 14 -1e+37 1e+37 0 0 \$0-F \$0-F Frequency 0 -6
+0 10 -233017 -1 -1 0 256;
+#X obj 104 124 nbx 5 14 -1e+37 1e+37 0 0 \$0-C1 \$0-C1 C1 0 -6 0 10
+-233017 -1 -1 0 256;
+#X obj 173 124 nbx 5 14 -1e+37 1e+37 0 0 \$0-M \$0-M M 0 -6 0 10 -233017
+-1 -1 0 256;
+#X obj 243 124 nbx 5 14 -1e+37 1e+37 0 0 \$0-I1 \$0-I1 I1 0 -6 0 10
+-233017 -1 -1 0 256;
+#X obj 312 124 nbx 5 14 -1e+37 1e+37 0 0 \$0-G \$0-G Gain 0 -6 0 10
+-233017 -1 -1 0 256;
+#X obj 122 498 dac~;
+#X obj 133 250 r \$0-F;
+#X obj 158 273 r \$0-M;
+#X obj 133 448 *~ 0;
+#X obj 162 420 r \$0-G;
+#X obj 105 160 nbx 5 14 -1e+37 1e+37 0 0 \$0-C2 \$0-C2 C2 0 -6 0 10
+-233017 -1 -1 0 256;
+#X obj 243 157 nbx 5 14 -1e+37 1e+37 0 0 \$0-I2 \$0-I2 I2 0 -6 0 10
+-233017 -1 -1 0 256;
+#X obj 133 394 fm3~ 0 0 0 0 0 0;
+#X obj 183 296 r \$0-C1;
+#X obj 208 321 r \$0-C2;
+#X obj 233 344 r \$0-I1;
+#X obj 258 367 r \$0-I2;
+#X text 16 42 Complex Frequency Modulation (2 Carriers + 1 Modulator
+;
+#N canvas 0 22 450 300 initialize 0;
+#X obj 21 15 inlet;
+#X obj 32 177 f 220;
+#X obj 87 165 f 1;
+#X obj 227 169 f 3;
+#X obj 30 248 s \$0-F;
+#X obj 196 252 s \$0-M;
+#X obj 175 182 f 2.3;
+#X obj 365 149 f 0.1;
+#X obj 382 224 s \$0-G;
+#X obj 21 69 trigger b b b b b b b;
+#X obj 254 250 s \$0-I1;
+#X obj 316 246 s \$0-I2;
+#X obj 132 172 f 1.5;
+#X obj 312 202 f 4.5;
+#X obj 88 246 s \$0-C1;
+#X obj 153 278 s \$0-C2;
+#X connect 0 0 9 0;
+#X connect 1 0 4 0;
+#X connect 2 0 14 0;
+#X connect 3 0 10 0;
+#X connect 6 0 5 0;
+#X connect 7 0 8 0;
+#X connect 9 0 1 0;
+#X connect 9 1 2 0;
+#X connect 9 2 12 0;
+#X connect 9 3 6 0;
+#X connect 9 4 3 0;
+#X connect 9 5 13 0;
+#X connect 9 6 7 0;
+#X connect 12 0 15 0;
+#X connect 13 0 11 0;
+#X restore 275 477 pd initialize;
+#X obj 275 432 bng 32 250 50 0 empty empty empty 0 -6 0 8 -233017 -258113
+-1;
+#X connect 8 0 14 0;
+#X connect 9 0 14 1;
+#X connect 10 0 7 0;
+#X connect 10 0 7 1;
+#X connect 11 0 10 1;
+#X connect 14 0 10 0;
+#X connect 15 0 14 2;
+#X connect 16 0 14 3;
+#X connect 17 0 14 4;
+#X connect 18 0 14 5;
+#X connect 21 0 20 0;

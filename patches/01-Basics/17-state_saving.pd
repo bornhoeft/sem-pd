@@ -1,0 +1,63 @@
+#N canvas 176 22 536 832 12;
+#X floatatom 31 124 5 0 0 0 - - -, f 5;
+#X obj 32 71 loadbang;
+#X obj 32 98 f 3;
+#X text 27 44 this is to initialize simple default values;
+#X obj 33 212 loadbang;
+#X msg 33 237 \; number1 5490;
+#X text 26 147 and these options take up less space \, because you
+can put the loadbang and message anywhere in your patch (in subpatches
+\, etc);
+#X msg 122 415 121;
+#X msg 122 389 set \$1;
+#X floatatom 233 415 5 0 0 0 - - -, f 5;
+#X obj 233 441 s saveme;
+#X obj 122 359 r saveme;
+#X obj 32 360 loadbang;
+#X obj 233 385 r saved;
+#X obj 122 442 s saved;
+#X text 25 314 if you want to initialize a number box with the last
+number in the box before it was saved \, you can do this:;
+#X obj 414 610 r saveme2;
+#X text 476 642 etc;
+#X msg 257 663 89;
+#X msg 258 635 set \$1;
+#X obj 158 606 loadbang;
+#X obj 258 607 r saveme2;
+#X msg 257 691 \; saved2 \$1;
+#X text 20 767 finally \, don't forget if you want the patch to save
+the numbers \, you have to save the patch.;
+#X obj 29 618 vsl 15 128 0 127 0 0 saveme2 saved2 empty 0 -8 0 8 -262144
+-1 -1 8900 1;
+#X text 15 547 for cosmetic or other reasons you may find these variants
+more suitable based on your needs (i also replaced the number box with
+a slider \, you can use any control you want);
+#X obj 414 642 + 100;
+#X floatatom 413 673 5 0 0 0 - - -, f 5;
+#X text 51 730 <- look at properties;
+#X text 27 19 Set and restore default values;
+#X text 16 472 when writing a patch \, you either creat a blank message
+box \, or put a initial value (here 121) in the box (it doesn't matter
+because it will change as soon as you change the value of the number
+box);
+#X floatatom 168 206 5 0 0 0 - number1 -, f 5;
+#X text 178 229 or;
+#X text 229 205 <-- look at properties;
+#X obj 168 254 r number1;
+#X floatatom 168 285 5 0 0 0 - - -, f 5;
+#X connect 1 0 2 0;
+#X connect 2 0 0 0;
+#X connect 4 0 5 0;
+#X connect 7 0 14 0;
+#X connect 8 0 7 0;
+#X connect 9 0 10 0;
+#X connect 11 0 8 0;
+#X connect 12 0 7 0;
+#X connect 13 0 9 0;
+#X connect 16 0 26 0;
+#X connect 18 0 22 0;
+#X connect 19 0 18 0;
+#X connect 20 0 18 0;
+#X connect 21 0 19 0;
+#X connect 26 0 27 0;
+#X connect 34 0 35 0;

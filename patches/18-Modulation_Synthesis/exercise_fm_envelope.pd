@@ -1,0 +1,16 @@
+#N canvas 696 298 625 363 12;
+#X text 62 193 Make a patch in form of a complex frequency modulation
+(more than one modulator modulate \, one carrier). Control the frequency
+and/or the index of the carrier/modulators by several fixed settings.
+Make a stepper which cycles through the different sounds controlled
+by the space bar. Shape the sound with different ASR-Envelopes. Write
+an abstraction where Attack/Sustain and Release are set by variables.
+;
+#X text 63 30 Erstellen Sie ein patch in Form einer komplexen Frequenzmodulation
+(mehr als ein Modulator \, ein Carrier). Kontrollieren Sie die Frequenz
+und/oder den Index des Carriers/der Modulatoren mit einigen fixierten
+Einstellungen. Erstellen Sie einen Mechanismus \, der mit der Leertaste
+zyklisch die Klänge abruft. Formen Sie den Klang mit verschiedenen
+ASR-Hüllkurven. Schreiben Sie dazu eine Abstraction \, in der Sie
+Einschwing- \, Abkling- \, und Ausschwingzeit mit Variablen setzen
+können.;

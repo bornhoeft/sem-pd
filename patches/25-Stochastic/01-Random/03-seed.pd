@@ -1,0 +1,35 @@
+#N canvas 760 227 697 487 12;
+#X obj 64 271 random 10;
+#X msg 64 40 10;
+#X obj 64 335 list trim;
+#X msg 64 425 7 3 9 1 1 0 8 8 8 4 9 3 1 7 7 2 2 9 5 9;
+#X obj 64 303 list prepend;
+#X msg 110 209 add2;
+#X obj 64 133 until;
+#X msg 134 377 set;
+#X obj 64 88 t f b b b;
+#X msg 104 40 20;
+#X msg 87 174 seed 123;
+#X text 172 85 Seed What is normally called a random number sequence
+in reality is a "pseudo-random" number sequence because the values
+are computed using a deterministic algorithm and probability plays
+no real role. The "seed" is a starting point for the sequence and the
+guarantee is that if you start from the same seed you will get the
+same sequence of numbers. This is very useful for example for debugging
+(when you are looking for an error in a program you need to be able
+to reproduce the problem and study it \, a non-deterministic program
+would be much harder to debug because every run would be different).
+;
+#X connect 0 0 4 0;
+#X connect 1 0 8 0;
+#X connect 2 0 3 0;
+#X connect 4 0 2 0;
+#X connect 5 0 4 1;
+#X connect 6 0 0 0;
+#X connect 7 0 3 0;
+#X connect 8 0 6 0;
+#X connect 8 1 10 0;
+#X connect 8 2 5 0;
+#X connect 8 3 7 0;
+#X connect 9 0 8 0;
+#X connect 10 0 0 0;

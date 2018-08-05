@@ -1,0 +1,21 @@
+#N canvas 16 37 579 416 12;
+#X text 30 142 Before using a network port for your application \,
+you should check to make sure that it isn't already used. You can see
+a list of registered ports in a file called "services". On UNIX-based
+systems \, its located in /etc/services. On Windows \, its located
+in C:/WINDOWS/system32/drivers/etc/services;
+#X text 29 241 On UNIX-based systems \, ports 0-1024 can only be used
+by the administrator account "root". Windows does not have this restriction.
+Most of the ports below 1024 are claimed anyway \, so its best to use
+port numbers higher than 1024;
+#X text 28 341 root-only;
+#X text 120 340 often used;
+#X text 274 340 mostly available;
+#X text 25 358 0.......1024............10000..........................65535
+;
+#X text 34 24 network ports;
+#X text 31 58 In computer speak \, a "port" is an interface thru which
+data is sent and received. Network ports are numbered \, and can be
+1-65535. Network services are usually registered to use a specific
+network port. HTTP uses port 80 \, sending email uses port 25 \, IMAP
+uses port 143 \, etc.;

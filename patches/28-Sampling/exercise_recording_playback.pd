@@ -1,0 +1,12 @@
+#N canvas 398 323 589 303 12;
+#X text 37 166 Create an abstraction which records chunks of 1000 msecs
+from the microphone input into a table. Take 2 instances of it and
+make them recording between every 2 and 3 seconds randomly. Play these
+tables continuously in random or sequence (table1 - left \, table2
+- right). Additionally write 30 seconds of it to disk.;
+#X text 43 24 Erstellen Sie eine Abstraktion \, die kurze Abschnitte
+von 1 Sekunde Länge vom Mikrofoneingang in einen Table liest. Nehmen
+Sie 2 Instanzen davon und lassen Sie diese zufällig alle 2 - 3 Sekunden
+aufnehmen. Lassen Sie diese Tables kontinuierlich entweder zufällig
+oder sequenziert abspielen (Table 1 - links \, Table 2 - rechts). Zusätzlich
+schreiben Sie davon 30 sec auf die Harddisk.;

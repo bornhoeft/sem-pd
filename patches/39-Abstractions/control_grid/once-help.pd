@@ -1,0 +1,18 @@
+#N canvas 565 459 374 266 10;
+#X text 18 16 once;
+#X text 74 17 only the first message passes through;
+#X obj 100 148 once;
+#X obj 100 74 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 100 195 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 125 72 hello;
+#X obj 134 195 print;
+#X obj 121 125 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 152 124 reset;
+#X connect 2 0 4 0;
+#X connect 2 0 6 0;
+#X connect 3 0 2 0;
+#X connect 5 0 2 0;
+#X connect 7 0 2 1;

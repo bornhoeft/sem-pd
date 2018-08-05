@@ -1,0 +1,21 @@
+#N canvas 396 67 496 270 12;
+#X text 24 74 float values are automatically initialized to 0 in Pd.
+;
+#X obj 195 166 +;
+#X obj 135 166 *;
+#X obj 73 165 float;
+#X obj 250 165 trigger f;
+#X msg 195 128 bang;
+#X msg 135 128 bang;
+#X msg 73 128 bang;
+#X msg 250 128 bang;
+#X obj 162 221 print;
+#X text 26 31 Init to zero;
+#X connect 1 0 9 0;
+#X connect 2 0 9 0;
+#X connect 3 0 9 0;
+#X connect 4 0 9 0;
+#X connect 5 0 1 0;
+#X connect 6 0 2 0;
+#X connect 7 0 3 0;
+#X connect 8 0 4 0;

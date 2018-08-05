@@ -1,0 +1,180 @@
+#N canvas 282 144 715 586 10;
+#X floatatom 164 124 5 0 0 0 - - -, f 5;
+#X obj 247 124 / 127;
+#X obj 246 175 t f f f f;
+#X obj 245 297 f;
+#X obj 206 273 f;
+#X obj 179 248 f;
+#X obj 153 224 f;
+#X obj 194 364 change;
+#X obj 202 436 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 194 384 sel 1;
+#X text 30 63 2nd-arg chn.nr \; (entspricht den fadernummern);
+#X text 32 201 knob;
+#X text 32 250 rec;
+#X text 32 269 solo;
+#X text 33 288 mute;
+#X text 33 307 sel;
+#X obj 194 456 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 218 438 nur trig;
+#X text 210 457 tgl;
+#X text 190 477 misc;
+#X text 29 400 fader;
+#X obj 76 172 ctlin 16 1;
+#X obj 164 104 notein 1;
+#X obj 80 353 ctlin 7 1;
+#X obj 72 191 cnv 22 40 40 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 76 194 knob 32 32 0 127 0 0 empty empty empty 0 -8 0 8 -262144
+-1 -1 0 1;
+#X obj 72 234 cnv 22 40 110 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 81 242 tgl 22 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 81 266 tgl 22 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 81 290 tgl 22 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 81 314 tgl 22 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 72 374 cnv 22 40 150 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 80 385 vsl 22 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 334 457 cnv 39 70 70 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 336 459 knob 66 66 0 127 0 0 empty empty empty 0 -8 0 8 -262144
+-1 -1 0 1;
+#X obj 336 435 ctlin 60 1;
+#X text 340 533 <---Jog--->;
+#X floatatom 357 176 5 0 0 0 - - -, f 5;
+#X obj 437 176 / 127;
+#X obj 481 261 f;
+#X obj 432 260 f;
+#X obj 383 260 f;
+#X obj 337 262 f;
+#X obj 336 283 change;
+#X obj 336 303 sel 1;
+#X obj 357 156 notein 1;
+#X obj 358 197 sel 96 97 98 99 100;
+#X obj 526 262 f;
+#X obj 436 219 t f f f f f;
+#X obj 385 282 change;
+#X obj 385 302 sel 1;
+#X obj 431 281 change;
+#X obj 431 301 sel 1;
+#X obj 482 282 change;
+#X obj 482 302 sel 1;
+#X obj 527 282 change;
+#X obj 527 302 sel 1;
+#X obj 339 343 cnv 39 60 60 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 344 366 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 362 384 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 362 366 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 380 366 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 362 348 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#N canvas 859 286 464 404 info 0;
+#X obj 62 99 ctlin;
+#X floatatom 62 125 5 0 0 0 - - -, f 5;
+#X floatatom 76 145 5 0 0 0 - - -, f 5;
+#X floatatom 92 163 5 0 0 0 - - -, f 5;
+#X text 101 98 Inlets: none. Reads data directly from the MIDI port
+;
+#X text 101 112 Outlets:;
+#X text 151 126 1st (leftmost): Controller value;
+#X text 153 142 Middle: controller number;
+#X text 153 162 rightmost: Channel number;
+#X text 59 17 alle knobs/fader/buttons können auf diese weise verwendet
+werden;
+#X text 165 247 inlets : none;
+#X text 166 272 outlets:;
+#X text 166 292 left: MIDI note number;
+#X text 167 313 middle: velocity;
+#X text 165 337 right: MIDI channel number;
+#X obj 66 246 notein;
+#X floatatom 67 295 5 0 0 0 - - -, f 5;
+#X floatatom 84 316 5 0 0 0 - - -, f 5;
+#X floatatom 104 338 5 0 0 0 - - -, f 5;
+#X text 62 72 fader/knobs:;
+#X text 66 224 buttons:;
+#X connect 0 0 1 0;
+#X connect 0 1 2 0;
+#X connect 0 2 3 0;
+#X connect 15 0 16 0;
+#X connect 15 1 17 0;
+#X connect 15 2 18 0;
+#X restore 33 95 pd info;
+#X obj 80 536 print;
+#X obj 338 556 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X text 114 187 press;
+#X text 112 197 knob;
+#X obj 162 146 sel 0 8 16 24 32;
+#X obj 116 216 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 31 17 QConPro anschalten und "MIDI learn mode" auswählen (wenn
+nicht im display angezeigt \; (mode kann nur beim einschalten gesetzt
+werden);
+#X connect 0 0 68 0;
+#X connect 1 0 2 0;
+#X connect 2 0 6 1;
+#X connect 2 1 5 1;
+#X connect 2 2 4 1;
+#X connect 2 3 3 1;
+#X connect 3 0 30 0;
+#X connect 4 0 29 0;
+#X connect 5 0 28 0;
+#X connect 6 0 7 0;
+#X connect 6 0 27 0;
+#X connect 7 0 9 0;
+#X connect 9 0 8 0;
+#X connect 9 0 16 0;
+#X connect 21 0 25 0;
+#X connect 22 0 0 0;
+#X connect 22 1 1 0;
+#X connect 23 0 32 0;
+#X connect 32 0 64 0;
+#X connect 34 0 65 0;
+#X connect 35 0 34 0;
+#X connect 37 0 46 0;
+#X connect 38 0 48 0;
+#X connect 39 0 53 0;
+#X connect 40 0 51 0;
+#X connect 41 0 49 0;
+#X connect 42 0 43 0;
+#X connect 43 0 44 0;
+#X connect 44 0 62 0;
+#X connect 45 0 37 0;
+#X connect 45 1 38 0;
+#X connect 46 0 42 0;
+#X connect 46 1 41 0;
+#X connect 46 2 40 0;
+#X connect 46 3 39 0;
+#X connect 46 4 47 0;
+#X connect 47 0 55 0;
+#X connect 48 0 42 1;
+#X connect 48 1 41 1;
+#X connect 48 2 40 1;
+#X connect 48 3 39 1;
+#X connect 48 4 47 1;
+#X connect 49 0 50 0;
+#X connect 50 0 59 0;
+#X connect 51 0 52 0;
+#X connect 52 0 58 0;
+#X connect 53 0 54 0;
+#X connect 54 0 61 0;
+#X connect 55 0 56 0;
+#X connect 56 0 60 0;
+#X connect 68 0 6 0;
+#X connect 68 1 5 0;
+#X connect 68 2 4 0;
+#X connect 68 3 3 0;
+#X connect 68 4 69 0;

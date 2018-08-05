@@ -1,0 +1,23 @@
+#N canvas 241 90 569 369 12;
+#X obj 114 193 hsl 128 15 -1 2 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 111 246 wrap;
+#X floatatom 111 276 5 0 0 0 - - -, f 5;
+#X floatatom 111 220 5 0 0 0 - - -, f 5;
+#X obj 421 227 wrap~;
+#X text 255 229 for audio see also:;
+#X text 52 22 Wrapping numbers;
+#X text 50 53 [wrap] gives the difference between the input and the
+largest integer not exceeding it (for positive numbers this is the
+fractional part) \, somehow a float-capable modulo-function with some
+extensions.;
+#X obj 111 136 loadbang;
+#X msg 111 164 0;
+#X obj 114 309 hsl 128 15 -1 2 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 4233 1;
+#X connect 0 0 3 0;
+#X connect 1 0 2 0;
+#X connect 2 0 10 0;
+#X connect 3 0 1 0;
+#X connect 8 0 9 0;
+#X connect 9 0 0 0;

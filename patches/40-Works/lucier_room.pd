@@ -1,0 +1,18 @@
+#N canvas 183 126 625 483 16;
+#X obj 140 429 dac~;
+#X obj 165 92 adc~;
+#X text 49 39 Alvin Lucier's "I am sitting in a room";
+#X text 43 56 (original patch by Christopher Burns);
+#X text 49 22 simple realization of;
+#X obj 55 223 delwrite~ left-delay 10000;
+#X obj 322 222 delwrite~ right-delay 10000;
+#X obj 51 291 delread~ left-delay 10000;
+#X obj 309 290 delread~ right-delay 10000;
+#X msg 453 123 \; pd dsp \$1;
+#X obj 452 90 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0 1
+;
+#X connect 1 0 5 0;
+#X connect 1 1 6 0;
+#X connect 7 0 0 0;
+#X connect 8 0 0 1;
+#X connect 10 0 9 0;

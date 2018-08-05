@@ -1,0 +1,61 @@
+#N canvas 586 178 721 530 12;
+#X floatatom 381 237 0 0 0 0 - - -;
+#X obj 380 287 line~;
+#X obj 359 328 *~;
+#X text 170 304 audio in;
+#X obj 381 260 pack 0 50;
+#X obj 381 101 vsl 15 128 0 1 0 0 empty feedback empty 0 -8 0 8 -262144
+-1 -1 0 1;
+#X obj 348 400 dac~;
+#X obj 184 324 adc~;
+#X obj 242 101 vsl 15 128 0 5000 0 0 empty delay-length empty 0 -8
+0 8 -262144 -1 -1 2540 1;
+#X text 350 480 write to delay line;
+#X text 239 66 delay length;
+#X text 241 81 msec;
+#X text 359 67 feedback;
+#X text 367 81 0 - 1;
+#X obj 163 481 delwrite~ delay02 5000;
+#X floatatom 242 239 0 0 0 0 - - -;
+#X floatatom 466 240 0 0 0 0 - - -;
+#X obj 465 102 vsl 15 128 0 1 0 0 empty amplitude empty 0 -8 0 8 -262144
+-1 -1 1270 1;
+#X obj 358 368 *~;
+#X obj 467 289 line;
+#X floatatom 84 230 0 0 0 0 - - -;
+#X obj 83 280 line~;
+#X obj 163 355 *~;
+#X obj 84 94 vsl 15 128 0 1 0 0 empty feedback empty 0 -8 0 8 -262144
+-1 -1 0 1;
+#X text 442 70 output;
+#X text 72 69 input;
+#X text 262 436 add delayed to the original signal: feedback;
+#X obj 85 253 pack 0 50;
+#X msg 467 264 \$1 50;
+#X obj 547 47 loadbang;
+#X text 81 32 Delay with feedback;
+#X msg 548 82 \; pd dsp 1 \; delay-length 1000 \; feedback 0 \; amplitude
+0.1 \;;
+#X obj 242 261 delread~ delay02;
+#X connect 0 0 4 0;
+#X connect 1 0 2 1;
+#X connect 2 0 14 0;
+#X connect 4 0 1 0;
+#X connect 5 0 0 0;
+#X connect 7 0 22 1;
+#X connect 8 0 15 0;
+#X connect 15 0 32 0;
+#X connect 16 0 28 0;
+#X connect 17 0 16 0;
+#X connect 18 0 6 0;
+#X connect 18 0 6 1;
+#X connect 19 0 18 1;
+#X connect 20 0 27 0;
+#X connect 21 0 22 0;
+#X connect 22 0 14 0;
+#X connect 23 0 20 0;
+#X connect 27 0 21 0;
+#X connect 28 0 19 0;
+#X connect 29 0 31 0;
+#X connect 32 0 2 0;
+#X connect 32 0 18 0;

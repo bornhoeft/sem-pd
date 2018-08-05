@@ -1,0 +1,25 @@
+#N canvas 434 110 532 536 12;
+#X msg 243 207 Hello world!;
+#X text 251 255 <-- connection \, aka "cord";
+#X text 25 72 In Pd \, programming is done with boxes which are connected
+together. The boxes have "inlets" and "outlets" \, where they are connected.
+;
+#X text 155 292 inlet-->;
+#X text 156 193 inlet-->;
+#X text 147 215 outlet-->;
+#X obj 243 304 print;
+#X text 300 304 <-- object box;
+#X text 30 355 Now look in the Pd window to see the result.;
+#X text 371 205 <-- message box;
+#X text 109 151 Click on the box with "Hello world!" in it:;
+#X obj 157 31 print;
+#X text 222 31 prints to the Pd window.;
+#X text 26 31 Hello World;
+#X msg 238 458 42;
+#X obj 238 492 print meaning-of-life;
+#X text 30 377 Whenever you see the [print] box \, that means that
+stuff will be printed to the Pd window.;
+#X text 27 424 You can supply any name as an argument to the print
+object:;
+#X connect 0 0 6 0;
+#X connect 14 0 15 0;

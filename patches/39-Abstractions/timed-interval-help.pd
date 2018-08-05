@@ -1,0 +1,15 @@
+#N canvas 561 352 391 188 10;
+#X obj 53 56 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 134 58 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 53 81 timed-interval;
+#X floatatom 53 138 12 0 0 0 - - -, f 12;
+#X obj 67 110 print msecs;
+#X text 48 18 Calculating the time intervals (msecs) between bangs
+starting from 0;
+#X text 157 58 reset to 0;
+#X connect 0 0 2 0;
+#X connect 1 0 2 1;
+#X connect 2 0 3 0;
+#X connect 2 0 4 0;

@@ -1,0 +1,49 @@
+#N canvas 626 222 530 450 12;
+#X text 17 54 Unlike message processing \, which is always running
+\, audio processing can be switched on and off. This is also known
+as "DSP" or Digital Signal Processing.;
+#X msg 22 289 \; pd dsp 0;
+#X msg 131 290 \; pd dsp 1;
+#X text 22 259 off (0);
+#X text 131 260 on (1);
+#X msg 226 288 \; pd dsp \$1;
+#X obj 226 261 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0
+1;
+#X text 251 260 use a toggle;
+#X text 106 350 Key commands:;
+#X text 44 409 GNU/Linux and Windows:;
+#X text 133 380 Mac OS X:;
+#X text 228 350 (off);
+#X text 340 350 (on);
+#X text 228 408 Ctrl-.;
+#X text 228 379 Cmd-.;
+#X text 340 408 Ctrl-/;
+#X text 340 379 Cmd-/;
+#X text 17 25 DSP Processing;
+#X text 17 115 There are many ways to control the DSP:;
+#X text 17 144 - There is a checkbox in the Pd window;
+#X text 17 173 - you can send Pd a dsp message;
+#X text 15 226 - there are key commands;
+#X text 15 199 - there are high-level objects \, like [pddp/dsp].;
+#N canvas 0 22 288 364 4'33" 0;
+#X obj 40 108 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 40 127 \; pd dsp 1;
+#X msg 40 306 \; pd dsp 0;
+#X obj 40 171 bang~;
+#X floatatom 40 255 5 0 0 0 - - -, f 5;
+#X msg 40 199 1;
+#X obj 40 228 +;
+#X obj 39 75 block~ 64;
+#X text 36 43 silence_computated@SR44100;
+#X obj 40 279 sel 188115;
+#X text 37 20 hommage à john cage;
+#X connect 0 0 1 0;
+#X connect 3 0 5 0;
+#X connect 4 0 6 1;
+#X connect 4 0 9 0;
+#X connect 5 0 6 0;
+#X connect 6 0 4 0;
+#X connect 9 0 2 0;
+#X restore 406 266 pd 4'33";
+#X connect 6 0 5 0;

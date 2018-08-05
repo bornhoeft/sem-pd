@@ -1,0 +1,81 @@
+
+/* ::::: http://mathworld.wolfram.com/css/mathworld.css ::::: */
+
+body { margin: 0px 0px 10px; background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); }
+.title, h1, h1 a:visited { font-family: Verdana,Arial,Helvetica,sans-serif; font-size: 24px; font-weight: normal; color: rgb(0, 166, 166); white-space: nowrap; }
+p, blockquote, .entry, .entry td, li, td, th { font-family: Arial,Verdana,Helvetica,sans-serif; font-size: 12px; line-height: 1.5em; }
+.mathworldtable, .mathworldtable tr, .mathworldtable td { border: 1px solid rgb(224, 224, 224); padding: 5px; border-collapse: collapse; }
+.letters a { font-family: Verdana,Arial,Helvetica,sans-serif; font-size: 24px; }
+a, .index a, .index td { text-decoration: none; color: rgb(0, 153, 153); }
+a:hover, .index a:hover { color: rgb(0, 204, 204); }
+a:visited { color: rgb(0, 102, 153); }
+hr { height: 1px; color: rgb(187, 187, 187); }
+.last-updated, .last-updated a { color: rgb(153, 153, 153); font-size: 10px; line-height: 1.1em; }
+.index a, .index td { font-family: Verdana,Arial,Helvetica,sans-serif; line-height: 16px; font-size: 12px; white-space: nowrap; }
+h4, h5, h6 { font-family: Verdana,Arial,Helvetica,sans-serif; font-weight: normal; color: rgb(20, 106, 104); }
+h2 { font-family: Verdana,Arial,Helvetica,sans-serif; font-weight: normal; color: rgb(20, 106, 104); font-size: 20px; }
+h3 { font-family: Verdana,Arial,Helvetica,sans-serif; font-weight: normal; color: rgb(20, 106, 104); font-size: 16px; }
+h3, .references-head { font-family: Verdana,Arial,Helvetica,sans-serif; font-size: 12px; font-weight: bold; color: rgb(20, 106, 104); }
+.smalltext { font-size: 10px; }
+.nowrap { white-space: nowrap; }
+.subjectnavbar { font-family: Arial,Verdana,Helvetica,sans-serif; font-size: 10px; line-height: 14px; }
+.subjectnavbar a, .subjectnavbar a:visited { color: rgb(105, 105, 105); }
+.subjectnavbar a:hover { color: rgb(153, 153, 153); }
+.references, .references p, .citation, .citation p { font-size: 10px; }
+.p2 { font-family: Verdana,Arial,Helvetica,sans-serif; font-size: 11px; line-height: 14px; text-decoration: none; }
+.numberedequation, .displayformula { padding-bottom: 5px; }
+p.Text {  }
+p.Reference { font-size: 10px; }
+.register { font-family: Verdana,Arial,Helvetica,sans-serif; font-size: 9px; color: rgb(153, 153, 153); }
+.register a, .register a:visited { color: rgb(153, 153, 153); }
+.register a:hover { color: rgb(153, 153, 153); }
+div.versionlink { text-align: right; }
+td.letters { text-align: center; }
+img.inlineformula { vertical-align: middle; }
+li.new { color: rgb(254, 184, 35); }
+li.mod { color: rgb(153, 153, 153); }
+li.subj { color: rgb(0, 255, 0); }
+.crosslinkheader { border-bottom: 3px solid rgb(221, 246, 184); font-family: 'Lucida Grande',Tahoma,Verdana,Helvetica,sans-serif; font-size: 11px; font-weight: bold; color: rgb(20, 106, 104); line-height: 19px; }
+.mainindices a, .mainindices a:link { color: rgb(0, 0, 0); font-family: Tahoma,Verdana,Arial,'Lucida Grande',Helvetica,sans-serif; font-size: 10px; line-height: 160%; margin-left: 20px; white-space: nowrap; }
+.mainindices a:hover { color: rgb(0, 204, 204); }
+.subindices a, .subindices a:link { color: rgb(102, 102, 102); font-family: Tahoma,Verdana,Arial,'Lucida Grande',Helvetica,sans-serif; font-size: 10px; line-height: 160%; padding-left: 20px; white-space: nowrap; }
+.subindices a:hover { color: rgb(0, 204, 204); }
+.rightline { border-style: solid none none; border-color: rgb(103, 178, 208); border-width: 1px; margin-top: 5px; margin-bottom: 5px; margin-left: 4px; }
+.rightline-sub { border-style: solid none none; border-color: rgb(198, 227, 219); border-width: 1px; margin-top: 5px; margin-bottom: 5px; margin-left: 4px; width: 200px; }
+.divider { border-style: solid none none; border-color: rgb(224, 243, 205); border-width: 1px; margin-top: 3px; margin-bottom: 5px; }
+.othersite, .othersite a { font-family: Arial,Tahoma,Verdana,'Lucida Grande',Helvetica,sans-serif; margin-bottom: 6px; font-size: 10px; line-height: 1.2em; color: rgb(0, 0, 0); }
+.othersite_heading { font-family: Arial,Tahoma,Verdana,'Lucida Grande',Helvetica,sans-serif; margin-top: 6px; margin-bottom: 6px; font-size: 10px; color: rgb(0, 153, 153); font-weight: bold; }
+.borderImage img { border: 1px solid rgb(0, 0, 0); }
+.borderImage:hover img { border: 1px solid rgb(0, 204, 204); }
+.ad { padding: 2px; font-family: Arial,Tahoma,Verdana,'Lucida Grande',Helvetica,sans-serif; margin-top: 6px; margin-bottom: 6px; font-size: 10px; line-height: 1.3em; }
+.adtable { border: 1px solid rgb(215, 243, 234); padding: 5px 5px 5px 0px; margin-top: 15px; margin-right: 10px; margin-left: 30px; }
+.news { font-weight: bold; font-size: 10px; }
+.leftshadow { background-image: url('side_shadow.jpg'); background-repeat: repeat-y; }
+.bottomshadow { background-image: url('bot_shadow.jpg'); background-repeat: no-repeat; }
+.centertable { border-style: solid; border-color: rgb(171, 230, 104) rgb(215, 243, 234) rgb(215, 243, 234); border-width: 5px 1px 1px; padding: 10px 40px; margin-left: 9px; }
+.footer { padding: 0px 5px 0px 20px; margin-left: 9px; font-size: 10px; }
+.righttable { border-style: solid; border-color: rgb(171, 230, 104) rgb(215, 243, 234) rgb(215, 243, 234); border-width: 5px 1px 1px; padding: 10px 5px 5px 0px; margin-left: 30px; margin-right: 10px; }
+.leftsidebar { border-style: solid; border-color: rgb(171, 230, 104) rgb(215, 243, 234) rgb(215, 243, 234); border-width: 5px 1px 1px; background: rgb(243, 255, 217) none repeat; padding-top: 10px; padding-bottom: 10px; padding-right: 5px; }
+.leftsidebar2 { border-style: solid; border-color: rgb(171, 230, 104) rgb(215, 243, 234) rgb(215, 243, 234); border-width: 1px; background: rgb(243, 255, 217) none repeat; padding-top: 10px; padding-bottom: 10px; padding-right: 5px; }
+.leftsidebarfooter { padding-top: 10px; padding-bottom: 10px; margin-left: 20px; }
+.searchbox { border: 0px none ; width: 12px; height: 8px; padding-left: 3px; padding-right: 3px; }
+a.chevron { color: rgb(255, 150, 0); margin-left: 3px; }
+.chevron { color: rgb(255, 150, 0); margin-left: 3px; }
+.searchboxsub { border: 0px none white; margin: 0px; padding: 1px 0px 0px 3px; font-family: Geneva,Helvetica,Arial,sans-serif; font-size: 9px; color: rgb(153, 153, 153); height: 14px; width: 150px; }
+.searchboxsub-on { border: 0px none white; margin: 0px; padding: 0px 0px 0px 3px; font-family: Geneva,Helvetica,Arial,sans-serif; font-size: 11px; color: rgb(0, 0, 0); height: 14px; width: 150px; }
+.searchboxborder { border: 2px solid rgb(174, 230, 108); padding: 0px; background-color: rgb(255, 255, 255); margin-left: 8px; margin-top: 0px; }
+.formwrapper { position: absolute; left: 660px; top: 10px; }
+.demonstrations { border-style: solid; border-color: rgb(171, 230, 104); border-width: 2px 1px 1px; background: rgb(249, 252, 231) none repeat; margin-top: 15px; margin-left: 30px; margin-right: 10px; }
+.demonstrationsborder { border-style: solid none none; border-color: rgb(171, 230, 104); border-width: 1px; margin: 0px; }
+.demonstrationsline { border-style: solid none none; border-color: rgb(171, 230, 104); border-width: 1px; margin: 0px 10px; }
+.demoheader { margin: 0px; font-family: Arial,Tahoma,Verdana,'Lucida Grande',Helvetica,sans-serif; font-size: 10px; color: rgb(0, 0, 0); }
+.demofooter { margin: 2px 10px; font-family: Arial,Tahoma,Verdana,'Lucida Grande',Helvetica,sans-serif; font-size: 10px; color: rgb(0, 0, 0); }
+.leftmargin { margin-left: 20px; }
+.NS_Co .NS { display: none; }
+.NS_Ex .more { display: none; }
+.NS { padding-top: 1px; }
+.NotesSectionGroupCollapsed, .NotesSectionGroupC { display: none; }
+.NSSpan { border: 1px solid rgb(242, 155, 34); padding: 0px 3px 2px; background-color: rgb(248, 248, 229); color: rgb(242, 156, 34); font-weight: bold; margin-bottom: 2px; }
+.NSH, .NSH_MI6, .NotesSection, .ExtensionsSectionH { font-family: Verdana,Arial,Helvetica,sans-serif; font-size: 9px; letter-spacing: 0.05em; margin-bottom: 2px; margin-top: 0px; text-transform: uppercase; }
+.NS_Co .NSH_MI6 { background-color: rgb(255, 253, 224); color: green; }
+.NSHHighlight { color: red; }

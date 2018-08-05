@@ -1,0 +1,20 @@
+#N canvas 730 574 450 300 12;
+#X msg 185 43 50;
+#X obj 185 86 t b f;
+#X obj 185 180 <;
+#X obj 185 211 sel 1;
+#X obj 185 245 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 185 125 random 100;
+#X floatatom 185 155 5 0 0 0 - - -, f 5;
+#X msg 229 43 100;
+#X msg 140 43 5;
+#X connect 0 0 1 0;
+#X connect 1 0 5 0;
+#X connect 1 1 2 1;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 5 0 6 0;
+#X connect 6 0 2 0;
+#X connect 7 0 1 0;
+#X connect 8 0 1 0;

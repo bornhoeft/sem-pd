@@ -1,0 +1,566 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="de">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Studio f&uuml;r Elektronische Musik - Universit&auml;t Mozarteum Salzburg - Pure Data Reference</title>
+
+<body style="text-align:justify; FONT-FAMILY: Arial, Verdana, Sans-Serif; text-decoration: none; FONT-SIZE:12px; ">
+<h2 style="text-align:left">Pure Data Tutorial</h2>
+
+<p>
+This is a collection of Pure Data patches listed by topic. (Copyrights and references are included.)<br>
+</p>
+
+<h2><a name="installation" >Installation</a></h2>
+
+<p>
+The whole Pure Data Tutorial can be downloaded as a  <a target="main" href="http://sem-mozarteum.at/sem/content/lehre/lib/PD-Tutorial/PD-Tutorial.zip">ZIP archive</a>.<br>
+After unpacking it there are several way to work with it:<br>
+<ol>
+
+<li>
+
+Simply start the document "index.htm" in your browser. <br>
+Download a patch before open it in Pure Data.<br> If you are working locally you can configure your browser (Preferences -> Data Types) to open patches automatically in Pure Data by clicking them. Alternatively (Mac OS) you can drag any link to a Pure Data file (.pd) directly on the program icon in your Dock. 
+<br><br>
+<li>
+MAC:<br>
+<ol>
+
+<li>Right-click the Pure Data app to view the contents using "Show Package Contents". Navigate to the "Contents/Resources" folder.
+<li>Delete the folder "po". (This makes the application using English as the default language independently on you system language.)
+<li>Copy the whole tutorial folder into "doc".
+<li>Close the windows and start the application.
+<li>The tutorial can be found in the menu "Help/Browser" under "Pure Data/PD-Tutorial".
+(If you click the the document "index.htm" from here your browser will start with it.)
+</ol><br>
+WINDOWS:<br>
+<ol>
+<li>Start the Pure Data application
+<li>Navigate to the help browser
+<li>Double click on "Pure Data" -> the file browser opens
+<li>Copy the complete PD Tutorial folder into the opened folder
+<li>Close the windows and start the application.
+<li>The tutorial can be found in the menu "Help/Browser" under "Pure Data/PD-Tutorial".
+(If you click the the document "index.htm" from here your browser will start with it.)
+</ol>
+</ol>
+
+</p>
+
+<h2><a name="basics" >Basics</a></h2>
+<p>
+<a target="main" href="./patches/01-Basics/01-edit_mode.pd">01-edit_mode.pd</a><br>
+<a target="main" href="./patches/01-Basics/02-basic_elements.pd">02-basic_elements.pd</a><br>
+<a target="main" href="./patches/01-Basics/03-connections.pd">03-connections.pd</a><br> 
+<a target="main" href="./patches/01-Basics/04-hello_world.pd">04-hello_world.pd</a><br>
+<a target="main" href="./patches/01-Basics/05-getting_help.pd">05-getting_help.pd</a><br>
+<a target="main" href="./patches/01-Basics/06-pdobjects.pdf">06-pdobjects.pdf</a><br>  
+<a target="main" href="./patches/01-Basics/07-bang_means_Do_it.pd">07-bang_means_Do_it.pd</a><br>
+<a target="main" href="./patches/01-Basics/08-event_driven_processing.pd">08-event_driven_processing.pd</a><br>
+<a target="main" href="./patches/01-Basics/09-toggles.pd">09-toggles.pd</a><br> 
+<a target="main" href="./patches/01-Basics/10-hot_and_cold_inlets.pd">10-hot_and_cold_inlets.pd</a><br>
+<a target="main" href="./patches/01-Basics/11-first_created_first.pd">11-first_created_first.pd</a><br>
+<a target="main" href="./patches/01-Basics/12-right_to_left_order.pd">12-right_to_left_order.pd</a><br>
+<a target="main" href="./patches/01-Basics/13-trigger_conversion.pd">13-trigger_conversion.pd</a><br>
+<a target="main" href="./patches/01-Basics/14-depth_first.pd">14-depth_first.pd</a><br> 
+<a target="main" href="./patches/01-Basics/15-typing_conventions.pd">15-typing_conventions.pd</a><br> 
+<a target="main" href="./patches/01-Basics/16-pdconv.pdf">16-pdconv.pdf</a><br> 
+<a target="main" href="./patches/01-Basics/17-state_saving.pd">17-state_saving.pd</a><br>
+ 
+<div> <a style="color:red;" href="./patches/01-Basics/exercise_metro_print.pd" >Exercise</a><br>
+<!-- <a href="./exercises/solutions/exercise_metro_print-s.pd">Solution</a> --> </div>
+</p>
+
+<h2><a name="elements" >Elements</a></h2>
+<p>
+<a target="main" href="./patches/02-Elements/01-atoms.pd">01-atoms.pd</a><br> 
+</p>
+
+<h3><a name="objects" >Objects</a></h3>
+<p><a target="main" href="./patches/02-Elements/02-objects.pd">02-objects.pd</a><br>
+<a target="main" href="./patches/02-Elements/03-storage_objects.pd">03-storage_objects.pd</a><br> 
+<a target="main" href="./patches/02-Elements/04-creation_arguments.pd">04-creation_arguments.pd</a><br>
+<a target="main" href="./patches/02-Elements/05-init_to_0.pd">05-init_to_0.pd</a><br> 
+
+</p>
+
+<h3><a name="messages" >Messages</a></h3>
+<p>
+<a target="main" href="./patches/02-Elements/06-messages.pd">06-messages.pd</a><br> 
+<a target="main" href="./patches/02-Elements/07-building_messages.pd">07-building_messages.pd</a><br>
+<a target="main" href="./patches/02-Elements/08-multiple_messages.pd">08-multiple_messages.pd</a><br> 
+<a target="main" href="./patches/02-Elements/09-ordering_messages.pd">09-ordering_messages.pd</a><br>
+</p>
+
+<h3><a name="numbers" >Numbers</a></h3>
+<p>
+<a target="main" href="./patches/02-Elements/10-numbers.pd">10-numbers.pd</a><br>
+<a target="main" href="./patches/02-Elements/11-number_limitations.pd">11-number_limitations.pd</a><br>
+<a target="main" href="./patches/02-Elements/12-storing_a_number_globally.pd">12-storing_a_number_globally.pd</a><br> 
+</p>
+
+<h3><a name="symbols" >Symbols</a></h3>
+<p>
+<a target="main" href="./patches/02-Elements/13-symbols.pd">13-symbols.pd</a><br> 
+<a target="main" href="./patches/02-Elements/14-symbol_construction.pd">14-symbol_construction.pd</a><br>  
+</p>
+
+<h2><a name="guiobjects" >Graphical Objects</a></h2>
+<p>
+<a target="main" href="./patches/03-Graphical_Objects/01-builtin_gui_objects.pd">01-builtin_gui_objects.pd</a><br> 
+<a target="main" href="./patches/03-Graphical_Objects/02-properties.pd">02-properties.pd</a><br>
+<a target="main" href="./patches/03-Graphical_Objects/03-sliders.pd">03-sliders.pd</a><br>
+<a target="main" href="./patches/03-Graphical_Objects/04-gui_properties.txt">04-gui_properties.txt</a>
+</p>
+
+<h2><a name="midi" >Midi</a></h2>
+<p>
+<a target="main" href="./patches/04-Midi/01-midi_setup.pd">01-midi_setup.pd</a><br>
+<a target="main" href="./patches/04-Midi/02-midi_notes.pd">02-midi_notes.pd</a><br>
+<a target="main" href="./patches/04-Midi/03-midinote-numbers.pdf">03-midinote-numbers.pdf</a><br>
+<a target="main" href="./patches/04-Midi/04-midi_ctl.pd">04-midi_ctl.pd</a><br>
+<a target="main" href="./patches/04-Midi/05-midi-controller-numbers.pdf">05-midi-controller-numbers.pdf</a><br>
+<a target="main" href="./patches/04-Midi/06-midi_pgm.pd">06-midi_pgm.pd</a><br>
+<a target="main" href="./patches/04-Midi/07-midicontrol.pd">07-midicontrol.pd</a><br>
+<a target="main" href="./patches/04-Midi/08-midi-quartett.pd">08-midi-quartett.pd</a><br>
+<a target="main" href="./patches/04-Midi/09-midipiano.pd">09-midipiano.pd</a><br>
+
+<div><a style="color:red;" href="./patches/04-Midi/exercise_slider_midinotes.pd">Exercise</a><br>
+<!-- <a href="./exercises/solutions/exercise_slider_midinotes-s.pd">Solution</a> --> </div>
+</p>
+
+<h2><a name="mathematics" >Mathematics</a></h2>
+<p>
+<a target="main" href="./patches/07-Mathematics/01-arithmetic_objects.pd">01-arithmetic_objects.pd</a><br> 
+<a target="main" href="./patches/07-Mathematics/02-comparing_numbers.pd">02-comparing_numbers.pd</a><br> 
+<a target="main" href="./patches/07-Mathematics/03-min_and_max.pd">03-min_and_max.pd</a><br> 
+<a target="main" href="./patches/07-Mathematics/04-mod_and_div.pd">04-mod_and_div.pd</a><br> 
+<a target="main" href="./patches/07-Mathematics/05-math_expr.pd">05-math_expr.pd</a><br>
+<a target="main" href="./patches/07-Mathematics/06-random_numbers.pd">06-random_numbers.pd</a><br>
+<a target="main" href="./patches/07-Mathematics/07-clip_numbers.pd">07-clip_numbers.pd</a><br>
+<a target="main" href="./patches/07-Mathematics/08-runden.pd">08-runden.pd</a><br>
+<a target="main" href="./patches/07-Mathematics/09-wrapping.pd">09-wrapping.pd</a><br>
+</p>
+
+<h2><a name="conditionals" >Conditionals</a></h2>
+<p><a target="main" href="./patches/08-Conditionals/01-selecting_events.pd">01-selecting_events.pd</a><br>  
+<a target="main" href="./patches/08-Conditionals/02-part_number_streams.pd">02-part_number_streams.pd</a><br>
+<a target="main" href="./patches/08-Conditionals/03-routing_messages.pd">03-routing_messages.pd</a><br>  
+<a target="main" href="./patches/08-Conditionals/04-doors.pd">04-doors.pd</a><br> 
+<a target="main" href="./patches/08-Conditionals/05-sorting_messages_by_type.pd">05-sorting_messages_by_type.pd</a><br>
+
+<div><a style="color:red;" href="./patches/08-Conditionals/exercise_temperature.pd" >Exercise</a><br>
+<!-- <a href="./patches/08-Conditionals/exercise_temperature-s.pd">Solution</a> --></div>
+</p>
+
+<h2><a name="timing" >Timing</a></h2>
+<p>
+<a target="main" href="./patches/05-Timing/01-using_metro.pd">01-using_metro.pd</a><br>
+<a target="main" href="./patches/05-Timing/02-delay_bang.pd">02-delay_bang.pd</a><br>
+<a target="main" href="./patches/05-Timing/03-metronome.pd">03-metronome.pd</a><br> 
+<a target="main" href="./patches/05-Timing/04-measure_time.pd">04-measure_time.pd</a><br> 
+<a target="main" href="./patches/05-Timing/05-delay_number_streams.pd">05-delay_number_streams.pd</a>
+<a target="main" href="./patches/05-Timing/06-time-interval.pd">06-time-interval.pd</a>
+<a target="main" href="./patches/05-Timing/07-accelerando-ritardando.pd">07-accelerando-ritardando.pd</a>
+</p>
+
+<h2><a name="counting" >Counting</a></h2>
+<p>
+<a target="main" href="./patches/06-Counting/01-counting.pd">01-counting.pd</a><br> 
+<a target="main" href="./patches/06-Counting/02-counting_updown.pd">02-counting_updown.pd</a><br>
+<a target="main" href="./patches/06-Counting/03-accumulation.pd">03-accumulation.pd</a><br> 
+<a target="main" href="./patches/06-Counting/04-metro_looping.pd">04-metro_looping.pd</a><br> 
+<a target="main" href="./patches/06-Counting/05-loop_until.pd">05-loop_until.pd</a><br>  
+<a target="main" href="./patches/06-Counting/06-ramping_up_and_down.pd">06-ramping_up_and_down.pd</a><br>
+
+<div><a style="color:red;" href="./patches/04-Midi/exercise_chord_in_rhythm.pd">Exercise</a><br>
+<!-- <a href="./exercises/solutions/exercise_chord_in_rhythm-s.pd">Solution</a> --> </div>
+</p>
+
+<h2><a name="lists" >Lists</a></h2>
+<p>
+Lists can be build in different ways:<br>
+<a href="patches/09-Lists/building_lists.pd">building_lists.pd</a><br>
+<a target="main" href="./patches/09-Lists/unpack_lists.pd">unpack_lists.pd</a><br> 
+The [list append] (short [list]) object ist used to build and concatenate lists:<br>
+<a href="patches/09-Lists/append_lists.pd">append_lists.pd</a><br>
+<a href="patches/09-Lists/list_length.pd">list_length.pd</a><br>
+[list split] splits a list in two:<br>
+<a href="patches/09-Lists/splitting_lists.pd">splitting_lists.pd</a><br>
+[list-len] is an abstraction to get the list length (number of elements in a list):<br>
+<a target="main" href="./patches/09-Lists/list_conversion.pd">list_conversion.pd</a>
+</p>
+
+<h2><a name="cordless-connections" >Cordless Connections</a></h2>
+<p>
+<a target="main" href="./patches/10-Chordless_Connections/chordless_value_setting.pd">chordless_value_setting.pd</a><br>
+<a target="main" href="./patches/10-Chordless_Connections/send_and_receive.pd">send_and_receive.pd</a><br>
+<a target="main" href="./patches/10-Chordless_Connections/GUI_send_and_receive.pd">GUI_send_and_receive.pd</a><br> 
+
+<div><a class="exrc" href="./exercises/exercise_loop_notelists.pd" >Exercise</a><br>
+<!-- <a class="exrc" href="./exercises/solutions/exercise_loop_notelists-s.pd">Solution</a> --></div>
+</p>
+
+<h2><a name="subpatch" >Subpatches</a></h2>
+<p>
+<a target="main" href="./patches/11-Subpatches/subpatches.pd">subpatches.pd</a><br> 
+<a target="main" href="./patches/11-Subpatches/outlet_order.pd">outlet_order.pd</a><br> 
+</p>
+
+<h2><a name="abstraction" >Abstractions</a></h2>
+<p>
+<a target="main" href="./patches/12-Abstractions/abstr_sub.pd">abstr_sub.pd</a>, <a target="main" href="./patches/12-Abstractions/add.pd">(add.pd)</a><br>
+
+<a target="main" href="./patches/12-Abstractions/abstractions.pd">abstractions.pd</a>, <a target="main" href="./patches/12-Abstractions/sec2sr.pd">(sec2sr.pd)</a><br>
+<a target="main" href="./patches/12-Abstractions/abstractions_with_arguments.pd">abstractions_with_arguments.pd</a>, <a target="main" href="./patches/12-Abstractions/dollarsign.pd">(dollarsign.pd)</a>, <a target="main" href="./patches/12-Abstractions/scaler.pd">(scaler.pd)</a><br>
+<a target="main" href="./patches/12-Abstractions/local_sends_and_receive.pd">local_sends_and_receive.pd</a>, <a target="main" href="./patches/12-Abstractions/dollarsign.pd">(local_send.pd)</a><br>
+<a target="main" href="./patches/12-Abstractions/dollarnull_variable.pd">dollarnull_variable.pd</a>, <a target="main" href="./patches/12-Abstractions/dollarnull.pd">(dollarnull.pd)</a><br>
+
+<div><a class="exrc" href="./exercises/exercise_player_abstractions.pd" >Exercise</a><br>
+<!-- <a class="exrc" href="./exercises/solutions/exercise_player_abstractions-s.pd">Solution</a>--> </div>
+</p>
+
+<h2><a name="gui" >GUI</a></h2>
+<p>
+<a target="main" href="./patches/13-GUI/GOP_abstraction.pd">GOP_abstraction.pd</a>, <a target="main" href="./patches/13-GUI/chn.pd">(chn.pd)</a><br>
+<a target="main" href="./patches/13-GUI/labeling.pd">labeling.pd</a><br>
+<div><a class="exrc" href="./exercises/exercise_gui.pd">Exercise</a><br>
+<!-- <a class="exrc" href="./exercises/solutions/exercise_gui-s1.pd">Solution 1</a><br>
+<a class="exrc" href="./exercises/solutions/exercise_gui-s2.pd">Solution 2</a> --></div>
+</p>
+
+<h2><a name="audio" >Audio</a></h2>
+<p>
+<a target="main" href="./patches/14-Audio/digital_audio.pd">digital_audio.pd</a><br>
+<a target="main" href="./patches/14-Audio/dsp_processing.pd">dsp_processing.pd</a><br>
+<a target="main" href="./patches/14-Audio/in-output.pd">in-output.pd</a><br>
+<a target="main" href="./patches/14-Audio/cords.pd">cords.pd</a><br>
+<a target="main" href="./patches/14-Audio/audio_math.pd">audio_math.pd</a><br>
+<a target="main" href="./patches/14-Audio/control_audio_conversion.pd">control_audio_conversion.pd</a><br>
+<a target="main" href="./patches/14-Audio/acoustic_conversions.pd">acoustic_conversions.pd</a><br>
+<a target="main" href="./patches/14-Audio/receive_multiple_sends.pd">receive_multiple_sends.pd</a><br>
+<a target="main" href="./patches/14-Audio/microphone_input.pd">microphone_input.pd</a> (PD Extended)
+</p>
+
+<h2><a name="generators" >Generators</a></h2>
+<p>
+<a target="main" href="./patches/15-Generators/waveforms.pd">waveforms.pd</a><br>
+<a target="main" href="./patches/15-Generators/triangle.pd">triangle.pd</a><br>
+<a target="main" href="./patches/15-Generators/noises.pd">noises.pd</a> (PD Extended)<br>
+</p>
+
+<h2><a name="envelopes" >Envelopes</a></h2>
+<p>
+<a target="main" href="./patches/16-Envelopes/ramping_up_and_down.pd">ramping_up_and_down.pd</a><br> 
+<a target="main" href="./patches/16-Envelopes/envelope_with_line.pd">envelope_with_line.pd</a><br>
+<a target="main" href="./patches/16-Envelopes/control_line_envelopes.pd">control_line_envelopes.pd</a><br>
+<a target="main" href="./patches/16-Envelopes/curved_ramps.pd">curved_ramps.pd</a><br>
+<a target="main" href="./patches/16-Envelopes/env_types.pd">env_types.pd</a> (<a target="main" href="./patches/16-Envelopes/env_formulas.pd">env_formulas.pd</a>)<br>
+<a target="main" href="./patches/16-Envelopes/phasor2env.pd">phasor2env.pd</a><br>
+<div><a class="exrc" href="./exercises/exercise_audio.pd" >Exercise</a><br>
+<!-- <a class="exrc" href="./exercises/solutions/exercise_audio-s.pd">Solution</a> -->
+</div>
+
+</p>
+
+<h2><a name="arrays" >Arrays &amp; Tables</a></h2>
+<p><a target="main" href="./patches/17-Arrays/arrays-graphs-tables.pd">arrays-graphs-tables.pd</a><br> 
+<a target="main" href="./patches/17-Arrays/working_with_arrays.pd">working_with_arrays.pd</a><br>
+<a target="main" href="./patches/17-Arrays/read_write_array.pd">read_write_array.pd</a><br>
+<a target="main" href="./patches/17-Arrays/draw_sound.pd">draw_sound.pd</a><br>
+<div><a class="exrc" href="./exercises/exercise_read_array.pd" >Exercise</a><br>
+<!-- <a class="exrc" href="./exercises/solutions/exercise_read_array-s.pd">Solution</a>--> </div>
+</p>
+
+<h2><a name="modulation">Modulation Synthesis</a></h2>
+
+<h3><a name="am" >Amplitude Modulation</a></h3>
+<p>
+<a target="main" href="./patches/18-Modulation_Synthesis/classical_am_modulation.pd">classical_am_modulation.pd</a><br> 
+<a target="main" href="./patches/18-Modulation_Synthesis/ring_modulation.pd">ring_modulation.pd</a><br>
+<a target="main" href="./patches/18-Modulation_Synthesis/complex_serial_am_synthesis.pd">complex_serial_am_synthesis.pd</a><br>
+<a target="main" href="./patches/18-Modulation_Synthesis/ring_modulated_voice.pd">ring_modulated_voice.pd</a><br> 
+<div><a class="exrc" href="./exercises/exercise_complex_am_voice.pd" >Exercise</a><br>
+<!-- <a class="exrc" href="./exercises/solutions/exercise_complex_am_voice-s.pd">Solution</a> -->
+</div>
+</p>
+
+<h3><a name="fm" >Frequency Modulation</a></h3>
+<p>
+<a target="main" href="./patches/18-Modulation_Synthesis/frequency_modulation.pd">frequency_modulation.pd</a><br> 
+<a target="main" href="./patches/18-Modulation_Synthesis/complex-fm.pd">complex-fm.pd</a> <br>
+<a target="main" href="./patches/18-Modulation_Synthesis/fm-2carriers.pd">fm-2carriers.pd</a><br>
+<div><a class="exrc" href="./exercises/exercise_fm_envelope.pd" >Exercise</a><br>
+<!-- <a class="exrc" href="./exercises/solutions/exercise_fm_envelope-s.pd">Solution</a> --></div> 
+</p>
+
+<h2><a name="subtractive" >Subtractive Synthesis</a></h2>
+<p>
+<a target="main" href="./patches/19-Subtractive_Synthesis/filters.pd">filters.pd</a><br> 
+<a target="main" href="./patches/19-Subtractive_Synthesis/highpass_filter.pd">highpass_filter.pd</a> 
+<a target="main" href="./patches/19-Subtractive_Synthesis/4pol_hip.pd">4pol_hip.pd</a><br> 
+<a target="main" href="./patches/19-Subtractive_Synthesis/lowpass_filter.pd">lowpass_filter.pd</a> 
+<a target="main" href="./patches/19-Subtractive_Synthesis/4pol_lop.pd">4pol_lop.pd</a> <br> 
+<a target="main" href="./patches/19-Subtractive_Synthesis/bandpass_filter.pd">bandpass_filter.pd</a>  
+<a target="main" href="./patches/19-Subtractive_Synthesis/4pol_bp.pd">4pol_bp.pd</a> <br>
+<a target="main" href="./patches/19-Subtractive_Synthesis/bandpass-construction.pd">bandpass-construction.pd</a><br> 
+<a target="main" href="./patches/19-Subtractive_Synthesis/voltage_controlled_filter.pd">voltage_controlled_filter.pd</a><br>
+<a target="main" href="./patches/19-Subtractive_Synthesis/noise-synthesis.pd">noise-synthesis.pd</a><br> 
+<a target="main" href="./patches/19-Subtractive_Synthesis/formant_synthesis.pd">formant_synthesis.pd</a> (PD Extended)
+<div><a class="exrc" href="./exercises/exercise_subtractive.pd" >Exercise</a><br>
+<!-- <a class="exrc" href="./exercises/solutions/exercise_subtractive-s.pd">Solution</a>-->
+</div>
+</p>
+
+<h2><a name="additive" >Additive Synthesis</a></h2>
+<p> 
+<a target="main" href="./patches/20-Additive_Synthesis/overtones_harmonics.pd">overtones_harmonics.pd</a><br>
+<a target="main" href="./patches/20-Additive_Synthesis/sinesum.pd">sinesum.pd</a><br>
+<a target="main" href="./patches/20-Additive_Synthesis/building_waveforms_with_sines.pd">building_waveforms_with_sines.pd</a><br>
+<a target="main" href="./patches/20-Additive_Synthesis/random-timbre.pd">random-timbre.pd</a><br>
+<a target="main" href="./patches/20-Additive_Synthesis/risset_bell.pd">risset_bell.pd</a> (PD Extended)<br>
+<div><a class="exrc" href="./exercises/exercise_additive.pd">Exercise</a><br>
+<!-- <a class="exrc" href="./exercises/solutions/exercise_additive-s.pd">Solution</a> -->
+</div>
+</p>
+
+<h2><a name="waveshaping" >Waveshaping</a></h2>
+<p> 
+<a target="main" href="../../lib/pd/patches/21-Waveshaping/waveshaping.pd">waveshaping.pd</a> (<a target="main" href="../../lib/pd/patches/21-Waveshaping/waveshaper~.pd">waveshaper~.pd</a>)<br>
+</p>
+
+<h2><a name="sequencing" >Sequencing</a></h2>
+<p>
+Sequencing messages from a text file with the [qlist] object either manually or automatically (time tagged in msecs): <a target="main" href="./patches/22-Sequencing/qlist_sequencing.pd">qlist_sequencing.pd</a>, <a target="main" href="./patches/22-Sequencing/step.txt">(step.txt)</a><br>
+<br>
+<a target="main" href="./patches/22-Sequencing/envelope_qlist.pd">envelope_qlist.pd</a>, <a target="main" href="./patches/22-Sequencing/werte.txt">(werte.txt)</a><br>
+<br>
+Control different instances of abstractions with a [qlist] by naming the [receive] objects with variables:<br>
+<a target="main" href="./patches/22-Sequencing/qlist_abstractions.pd">qlist_abstractions.pd</a>, <a target="main" href="./patches/22-Sequencing/qlist2.txt">(qlist2.txt)</a><br>
+<br>
+Recording and playing sequences with [textfile]:<br>
+ <a target="main" href="./patches/22-Sequencing/textfile_sequencing.pd">textfile_sequencing.pd</a>, <a target="main" href="./patches/22-Sequencing/lists.txt">(lists.txt)</a>
+
+<div><a class="exrc" href="./exercises/exercise_qlist.pd" >Exercise</a><br>
+<!-- <a class="exrc" href="./exercises/solutions/exercise_qlist-s.pd">Solution</a> --></div>
+</p>
+
+<h2><a name="stochastic" >Stochastic</a></h2>
+<ul>
+<li><h3>Random</h3>
+<p>
+<a target="main" href="./patches/23-Stochastic/weighted_random.pd">weighted_random.pd</a><br>
+<br>
+Floating point random generator abstraction with setable min and max value and number of digits:<br>
+<a target="main" href="./patches/23-Stochastic/frandom-help.pd">frandom-help.pd</a>, (<a target="main" href="./patches/23-Stochastic/frandom.pd">frandom.pd</a>)
+</p>
+
+<li><h3><a name="chance">Chance</a></h3>
+<p>
+The clasical chance operation is the urn-model:
+<a target="main" href="patches/23-Stochastic/urn-prob.pd">urn-prob.pd</a> (PD Extended)
+</p>
+
+<li><h3>Tendency Masks</h3>
+<p>Tendency masks are a way to control the minimum and the maximum boundaries of random processes. There are several ways to implement those masks:<Br>
+<br>
+<a target="main" href="patches/23-Stochastic/sym-tendency.pd">sym-tendency.pd</a><br>
+<a target="main" href="patches/23-Stochastic/asym-tendency.pd">asym-tendency.pd</a><br>
+<a target="main" href="patches/23-Stochastic/fixed-tendency.pd">fixed-tendency.pd</a><br>
+<div><a class="exrc" href="./exercises/exercise_tendency.pd">Exercise</a><br><!--<a class="exrc" href="./exercises/solutions/exercise_tendency-s.pd">Solution</a>--></div>
+</p>
+
+<li><h3>Markov Chains</h3>
+<p>A <a target="main" href="./text/markov.pdf">Markov chain</a>, named after Andrey Markov, is a mathematical system that undergoes transitions from one state to another, between a finite or countable number of possible states:
+<a target="main" href="./patches/23-Stochastic/markov.chain.pd">markov.chain.pd</a><br>
+<br>
+The [prob] object utilizes the creation of first order markov chains:
+<a target="main"href="patches/23-Stochastic/markov-prob.pd">markov-prob.pd</a> (PD Extended)<br>
+</p>
+</ul>
+
+<h2><a name="pathnames" >Pathnames</a></h2>
+<p>
+<a target="main" href="./patches/25-Pathnames/making-filenames.pd">making-filenames.pd</a>
+<a target="main" href="./patches/25-Pathnames/list-folder.pd">list-folder.pd</a> (PD Extended)
+</p>
+
+<h2><a name="recording" >Recording</a></h2>
+<p> 
+<a target="main" href="./patches/26-Recording/recording.pd">recording.pd</a><br>
+<a target="main" href="./patches/26-Recording/timed_recording.pd">timed_recording.pd</a><br> 
+<a target="main" href="./patches/26-Recording/read_soundfile_from_hd.pd">read_soundfile_from_hd.pd</a>  <br>
+<div><a class="exrc" href="./exercises/exercise_recording.pd" >Exercise</a><br><!--
+<a class="exrc" href="./exercises/solutions/exercise_recording-s.pd">Solution</a>--></div>
+
+</p>
+
+<h2><a name="sampling" >Sampling</a></h2>
+<p>
+<a target="main" href="./patches/27-Sampling/playing_samples_1.pd">playing_samples_1.pd</a><br> 
+<a target="main" href="./patches/27-Sampling/playing_samples_2.pd">playing_samples_2.pd</a><br>
+<div><a class="exrc" href="./exercises/exercise_recording_playback.pd" >Exercise</a><br><!--
+<a class="exrc" href="./exercises/solutions/exercise_recording_playback-s
+.pd">Solution</a>--></div><br>
+<a target="main" href="./patches/27-Sampling/timed-buffer-rec.pd">timed-buffer-rec.pd</a><br>
+<a target="main" href="./patches/27-Sampling/playing_samples_3.pd">playing_samples_3.pd</a><br>
+<br>
+<div><a class="exrc" href="./exercises/exercise_playing_samples.pd" >Exercise</a><br><!--
+<a class="exrc" href="./exercises/solutions/exercise_playing_samples-s.pd">Solution</a>--></div>
+</p>
+
+<h2><a name="granular" >Granular Synthesis</a></h2>
+<p>
+<a target="main" href="./patches/28-Granular_Synthesis/envelope.pd">envelope.pd</a><br>
+<a target="main" href="./patches/28-Granular_Synthesis/vline_sampleplay.pd">vline_sampleplay.pd</a><br>
+<a target="main" href="./patches/28-Granular_Synthesis/single-grain-stream1.pd">single-grain-stream1.pd</a> 
+(<a target="main" href="./patches/28-Granular_Synthesis/grain-stream1.pd">grain-stream1.pd</a>)<br>
+<a target="main" href="./patches/28-Granular_Synthesis/single-grain-stream2.pd">single-grain-stream2.pd</a>
+(<a target="main" href="./patches/28-Granular_Synthesis/grain-stream2.pd">grain-stream2.pd</a>)<br>
+<a target="main" href="./patches/28-Granular_Synthesis/3grainstreams.pd">3grainstreams.pd</a>
+(<a target="main" href="./patches/28-Granular_Synthesis/grain-stream.pd">grain-stream.pd</a>)<br>
+<div><a class="exrc" href="./exercises/exercise_granular_synthesis.pd" >Exercise</a><br><!--
+<a class="exrc" href="./exercises/">Solution</a>--></div>
+</p>
+
+<h2><a name="delays" >Delays</a></h2>
+<p><a target="main" href="./patches/29-Delays/delay_with_feedback.pd">delay_with_feedback.pd</a><br>
+<a target="main" href="./patches/29-Delays/roomecho.pd">roomecho.pd</a><br> 
+<a target="main" href="./patches/29-Delays/interpolating_delay.pd">interpolating_delay.pd</a><br>
+<a target="main" href="./patches/29-Delays/control-blocksize.pd">control-blocksize.pd</a> (pulse-train)<br>
+<div><a class="exrc" href="./exercises/exercise_delay_room.pd" >Exercise</a><br><!--
+<a class="exrc" href="./exercises/">Solution</a>--></div>
+</p>
+
+<h2><a name="spatialisation" >Spatialisation</a></h2>
+<p>
+<a target="main" href="./patches/30-Spatialisation/panning.pd">panning.pd</a><br> 
+<a target="main" href="./patches/30-Spatialisation/equal_power_pan.pd">equal_power_pan.pd</a><br> 
+<a target="main" href="./patches/30-Spatialisation/basic_reverb.pd">basic_reverb.pd</a><br> 
+<a target="main" href="./patches/30-Spatialisation/freeverb~-help.pd">freeverb~-help.pd</a> (PD Extended)<br>
+<a target="main" href="./patches/30-Spatialisation/graphics-quad.pd">graphics-quad.pd</a> (PD Extended)<br>
+<a target="main" href="./patches/30-Spatialisation/4ch-qlist-grid.pd">4ch-qlist-grid.pd</a> (PD Extended)<br>
+<div><a class="exrc" href="./exercises/exercise_auto_panning.pd" >Exercise</a><br><!--
+<a class="exrc" href="./exercises/solutions/exercise_auto_panning-s.pd">Solution</a>--></div>
+</p>
+
+<h2><a name="amplitude-detection" >Amplitude Detection</a></h2>
+<p>
+<a target="main" href="./patches/31-Amplitude_Detection/attack_detection.pd">attack_detection.pd</a><br> 
+<a target="main" href="./patches/31-Amplitude_Detection/toggle_with_bonk.pd">toggle_with_bonk.pd</a><br>
+<a target="main" href="./patches/31-Amplitude_Detection/envelope_follower.pd">envelope_follower.pd</a>
+<br>
+<div><a class="exrc" href="./exercises/exercise_triggered_recording.pd" >Exercise</a><br><!--
+<a class="exrc" href="./exercises/solutions/exercise_triggered_recording-s.pd">Solution</a>--></div>
+</p>
+
+<h2><a name="pitch-tracking" >Pitch Tracking</a></h2>
+<p>
+<a target="main" href="./patches/32-Pitchtracking/pitch_tracking.pd">pitch_tracking.pd</a><br> 
+<a target="main" href="./patches/32-Pitchtracking/voice_am.pd">voice_am.pd</a><br>
+<a target="main" href="./patches/32-Pitchtracking/voice_fm.pd">voice_fm.pd</a><br>
+<a target="main" href="./patches/32-Pitchtracking/sigmund2additive.pd">sigmund2additive.pd</a><br> 
+<a target="main" href="./patches/32-Pitchtracking/sigmund2subtractive.pd">sigmund2subtractive.pd</a><br>
+<div><a class="exrc" href="./exercises/exercise_pitch_tracking.pd" >Exercise</a><br><!--
+<a class="exrc" href="./exercises/solutions/exercise_pitch_tracking-s.pd">Solution</a>--></div>
+</p>
+
+<h2><a name="pitch-shifting" >Pitch Shifting</a></h2>
+<p>
+
+An explanation is found here: <a href="http://www.katjaas.nl/pitchshift/pitchshift.html">http://www.katjaas.nl/pitchshift/pitchshift.html</a><br>
+<a href="./patches/33-Pitch_Shifting/rotarytapehead11.png">The Springer Tempophon</a> (png)<br>
+<a target="main" href="./patches/33-Pitch_Shifting/tempophon.pd">tempophon.pd</a><br> 
+<a target="main" href="./patches/33-Pitch_Shifting/rotating_tape_heads.pd">rotating_tape_heads.pd</a><br> 
+<a target="main" href="./patches/33-Pitch_Shifting/ssb_modulation.pd">ssb_modulation.pd</a>
+
+<div><a class="exrc" href="./exercises/exercise-pitchshifter.pd" >Exercise 1</a><br><!--
+<a class="exrc" href="./exercises/">Solution</a>--><br>
+<a class="exrc" href="./exercises/exercise_find_frequencies.pd" >Exercise 2</a><br><!--
+<a class="exrc" href="./exercises/">Solution</a>--></div>
+</p>
+
+<h2><a name="fft" >Fourier Analysis and Transformation</a></h2>
+<p>
+<a target="main" href="./patches/34-FFT/fft_and_pd_en/fft_und_pd_en.htm">FFT & PD</a> by Marius Schebella<br>
+<br>
+This next patches are taken from: <a href="http://www.pd-tutorial.com/english/ch03s08.html">http://www.pd-tutorial.com/english/ch03s08.html</a><br>
+<a target="main" href="./patches/34-FFT/filterbank_analysis.pd">filterbank_analysis.pd</a><br>
+<a target="main" href="./patches/34-FFT/fft_principles.pd">fft_principles.pd</a><br>
+<a target="main" href="./patches/34-FFT/fft_windowed.pd">fft_windowed.pd</a><br>
+<a target="main" href="./patches/34-FFT/fft_subpatch.pd">fft_subpatch.pd</a><br>
+<a target="main" href="./patches/34-FFT/fft_filter.pd">fft_filter.pd</a>
+</p>
+
+<h2><a name="interfaces" >Interface Devices</a></h2>
+<p>
+<ul>
+<li><h3><a name="keyboard" >Keyboard</a></h3>
+<p><a target="main" href="./patches/35-Interface_Devices/grabbing_keystrokes.pd">grabbing_keystrokes.pd</a><br>
+<a target="main" href="./patches/35-Interface_Devices/keybd_play.pd">keybd_play.pd</a><br>
+<a target="main" href="./patches/35-Interface_Devices/kbstep.pd">kbstep.pd</a>,
+(<a target="main" href="./patches/35-Interface_Devices/kbstep-help.pd">kbstep-help.pd</a>)<br>
+<a target="main" href="./patches/35-Interface_Devices/selective_counter.pd">selective_counter.pd</a>,
+(<a target="main" href="./patches/35-Interface_Devices/sel-count.pd">sel-count.pd</a>)<br>
+<a target="main" href="./patches/35-Interface_Devices/entry-object.pd">entry-object.pd</a> (PD Extended)
+</p>
+
+<li><h3><a name="mouse" >Mouse</a></h3>
+<p>
+<a target="main" href="./patches/35-Interface_Devices/mouse_mapping.pd">mouse_mapping.pd</a> (PD Extended)
+</p>
+</ul>
+
+<h2><a name="system" >System</a></h2>
+<p>
+<a target="main" href="./patches/36-System/random_play_folder.pd">random_play_folder.pd</a> (PD Extended)<br>
+<a target="main" href="./patches/36-System/shell_interaction.pd">shell_interaction.pd</a> (PD Extended)
+</p>
+
+<h2><a name="network" >Network</a></h2>
+<p><a target="main" href="./patches/37-Network/network_ports.pd">network_ports.pd</a><br>
+<a target="main" href="./patches/37-Network/tcp_and_udp.pd">tcp_and_udp.pd</a><br>
+<a target="main" href="./patches/37-Network/netsend_netreceive.pd">netsend_netreceive.pd</a><br>
+<a target="main" href="./patches/37-Network/identification_sender.pd">identification_sender.pd</a> and <a target="main" href="./patches/37-Network/identification_receiver.pd">identification_receiver.pd</a><br>
+(To easy check your ip address use a program like <a target="main" href="http://www.macupdate.com/app/mac/16607/bwanadik">BwanaDik</a>.)<br>
+<a target="main" href="./patches/37-Network/chat-client.pd">chat-client.pd</a><br>
+<a target="main" href="./patches/37-Network/chat-server.pd">chat-server.pd</a><br>
+<a target="main" href="./patches/37-Network/netserver_and_netclient.pd">netserver_and_netclient.pd</a> (PD Extended)
+</p>
+
+<h2><a name="patch-design" >Patch Design</a></h2>
+<p>
+<a target="main" href="./patches/39-Patch_Design/Patch_Design.rtf">Patch_Design.rtf</a><br>
+<a target="main" href="./patches/39-Patch_Design/cpu-optimisation.txt">cpu-optimisation.txt</a><br>
+<br>
+<a target="main" href="./patches/39-Patch_Design/main.pd">main.pd</a> with:
+<ul>
+<li>2 x <a target="main" href="./patches/39-Patch_Design/abs/output-help.pd">output.pd</a> (stereo output)
+<li><a target="main" href="./patches/39-Patch_Design/abs/clock-help.pd">clock.pd</a> (clock with minutes and seconds)
+<li><a target="main" href="./patches/39-Patch_Design/abs/dspp.pd">dspp.pd</a> (cpu meter)<br>
+<br>
+and 2 channel abstractions containing different modules (GUI abstractions):<br>
+<br>
+<li><a target="main" href="./patches/39-Patch_Design/abs/chan1.pd">chan1.pd</a>
+<ul>
+<li><a target="main" href="./patches/39-Patch_Design/abs/5tape_pitchshifter-help.pd">5tape_pitchshifter.pd</a> (5 voice pitch shifter)
+</ul><br>
+<li><a target="main" href="./patches/39-Patch_Design/abs/chan2.pd">chan2.pd</a>
+<ul>
+<li><a target="main" href="./patches/39-Patch_Design/abs/delmod-help.pd">delmod.pd</a> (modulated delay)
+</ul>
+<br>
+Both channels have:
+<ul>
+<li><a target="main" href="./patches/39-Patch_Design/abs/input-help.pd">input.pd</a> (channel input)
+<li><a target="main" href="./patches/39-Patch_Design/abs/panning.pd">panning.pd</a> (stereo panning)
+<li><a target="main" href="./patches/39-Patch_Design/abs/qlstp-help.pd">qlstp.pd</a> ( cuelist stepper)
+</ul>
+</ul>
+To save a patch as an application open the mainpatch in PD-Extended and select "File -> Make app from folder ...". Choose a name and save it. (This may take some time.)
+</p>
+
+ </body>
+ </html>

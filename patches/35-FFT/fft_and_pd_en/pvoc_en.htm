@@ -1,0 +1,260 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="marius schebella">
+   <meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+   <title>Phasen-Vocoder</title>
+</head>
+<body>
+
+<blockquote>
+
+<blockquote>
+<blockquote>
+<h2 align="left">
+&nbsp;</h2>
+<h2 align="left">
+8. Phase Vocoder</h2>
+</blockquote>
+
+<p><br>The algorithm of the phase-vocoder is based on the following assumptions [2], [3], [4]:<p>In
+each frequency channel there is only one sine-wave with a constant frequency and
+amplitude. For the analysis of the spectra an FFT is used, processed for two
+positions, with an offset of a certain &quot;hop-size&quot; which allows to
+calculate the phase change over the time.<p>This value can be expressed as a
+complex number. Therefore both signals are multiplicated, afterwards the Real
+and Imaginary Part is divided by the appropriate amplitude and the result is the
+amplitude and phase-change encoded as a single complex number. (Fig. 20, this
+time without Hanning-Window).
+<br>&nbsp;
+<br>&nbsp;
+<center><table>
+<tr>
+<td><img SRC="phfort.jpg" height=469 width=535>
+<br><font size=-1>Abb. 20</font>
+<br><font size=-1>Calculation of amplitude and phase change as a complex number.
+  rsqrt~ is the reciprocal squareroot.</font></td>
+</tr>
+</table></center>
+
+<br>&nbsp;
+<br>&nbsp;
+<center><table>
+<tr>
+<td VALIGN=TOP>
+<center><img SRC="phfortgr.jpg" height=419 width=630></center><font size=-1>Abb.
+21</font>
+<br><font size=-1>Graphs of the two incoming signals and the detected difference&nbsp;
+(delta-signal)</font></td>
+</tr>
+</table></center>
+
+<br>&nbsp;<p>For illustration here are the graphs of the phases and amplitudes.
+All phases are shown here, so don´t be confused, some big phase values belong
+to very small amplitudes. For us only amplitudes and phases around the third
+frequency channel are of interest. &quot;in&quot; is the actual signal,
+&quot;last&quot; the previously recorded signal (offset by 64 samples) and
+&quot;delta&quot; is the difference between them.&nbsp;&nbsp;
+<p>&nbsp;
+<center><table BORDER CELLSPACING=2 CELLPADDING=3 >
+<tr>
+<td>
+<font size=-1>f-channel</font>
+</td>
+
+<td>
+<center><font size=-1>pha-in</font></center>
+</td>
+
+<td>
+<center><font size=-1>pha-last</font></center>
+</td>
+
+<td ALIGN=CENTER>
+<center><font size=-1>pha-delta</font></center>
+</td>
+</tr>
+
+<tr ALIGN=CENTER>
+<td ALIGN=RIGHT><font size=-1>0</font>
+<br><font size=-1>1</font>
+<br><font size=-1>2</font>
+<br><font size=-1>3</font>
+<br><font size=-1>4</font>
+<br><font size=-1>5</font>
+<br><font size=-1>6</font>
+<br><font size=-1>7</font>
+<br><font size=-1>8</font>
+<br><font size=-1>9</font>
+<br><font size=-1>10</font>
+<br><font size=-1>11</font>
+<br><font size=-1>12</font>
+<br><font size=-1>13</font>
+<br><font size=-1>14</font>
+<br><font size=-1>15</font>
+<br><font size=-1>16</font>
+<br><font size=-1>17</font>
+<br><font size=-1>18</font>
+<br><font size=-1>19</font>
+<br><font size=-1>20</font>
+<br><font size=-1>21</font>
+<br><font size=-1>22</font>
+<br><font size=-1>23</font>
+<br><font size=-1>24</font>
+<br><font size=-1>25</font>
+<br><font size=-1>26</font>
+<br><font size=-1>27</font>
+<br><font size=-1>28</font>
+<br><font size=-1>29</font>
+<br><font size=-1>30</font>
+<br><font size=-1>31</font></td>
+
+<td ALIGN=LEFT><font size=-1>0</font>
+<br><font size=-1>0.931098</font>
+<br><font size=-1>1.14991</font>
+<br><font size=-1>1.20504</font>
+<br><font size=-1>1.21035</font>
+<br><font size=-1>-1.94697</font>
+<br><font size=-1>-1.97347</font>
+<br><font size=-1>-2.0062</font>
+<br><font size=-1>-2.04285</font>
+<br><font size=-1>-2.08211</font>
+<br><font size=-1>-2.12321</font>
+<br><font size=-1>-2.16566</font>
+<br><font size=-1>-2.2091</font>
+<br><font size=-1>-2.25333</font>
+<br><font size=-1>-2.29813</font>
+<br><font size=-1>-2.34343</font>
+<br><font size=-1>-2.38912</font>
+<br><font size=-1>-2.43512</font>
+<br><font size=-1>-2.48137</font>
+<br><font size=-1>-2.52774</font>
+<br><font size=-1>-2.5746</font>
+<br><font size=-1>-2.62139</font>
+<br><font size=-1>-2.66835</font>
+<br><font size=-1>-2.71541</font>
+<br><font size=-1>-2.76256</font>
+<br><font size=-1>-2.8098</font>
+<br><font size=-1>-2.8571</font>
+<br><font size=-1>-2.9045</font>
+<br><font size=-1>-2.95165</font>
+<br><font size=-1>-2.99918</font>
+<br><font size=-1>-3.04664</font>
+<br><font size=-1>-3.09412</font></td>
+
+<td ALIGN=LEFT><font size=-1>3.14159</font>
+<br><font size=-1>2.98151</font>
+<br><font size=-1>2.82358</font>
+<br><font size=-1>2.66971</font>
+<br><font size=-1>2.52134</font>
+<br><font size=-1>-0.762201</font>
+<br><font size=-1>-0.897283</font>
+<br><font size=-1>-1.02547</font>
+<br><font size=-1>-1.14703</font>
+<br><font size=-1>-1.26238</font>
+<br><font size=-1>-1.37207</font>
+<br><font size=-1>-1.47665</font>
+<br><font size=-1>-1.57668</font>
+<br><font size=-1>-1.67267</font>
+<br><font size=-1>-1.76512</font>
+<br><font size=-1>-1.85443</font>
+<br><font size=-1>-1.941</font>
+<br><font size=-1>-2.02517</font>
+<br><font size=-1>-2.10722</font>
+<br><font size=-1>-2.18729</font>
+<br><font size=-1>-2.26613</font>
+<br><font size=-1>-2.34329</font>
+<br><font size=-1>-2.41935</font>
+<br><font size=-1>-2.49426</font>
+<br><font size=-1>-2.56826</font>
+<br><font size=-1>-2.64148</font>
+<br><font size=-1>-2.71407</font>
+<br><font size=-1>-2.78598</font>
+<br><font size=-1>-2.85812</font>
+<br><font size=-1>-2.92912</font>
+<br><font size=-1>-3.00003</font>
+<br><font size=-1>-3.07087</font></td>
+
+<td ALIGN=LEFT><font size=-1>3.14159</font>
+<br><font size=-1>2.05041</font>
+<br><font size=-1>1.67368</font>
+<br><font size=-1>1.46467</font>
+<br><font size=-1>1.31098</font>
+<br><font size=-1>1.18477</font>
+<br><font size=-1>1.07619</font>
+<br><font size=-1>0.980731</font>
+<br><font size=-1>0.895823</font>
+<br><font size=-1>0.819725</font>
+<br><font size=-1>0.751138</font>
+<br><font size=-1>0.689003</font>
+<br><font size=-1>0.632417</font>
+<br><font size=-1>0.580658</font>
+<br><font size=-1>0.533013</font>
+<br><font size=-1>0.488996</font>
+<br><font size=-1>0.448111</font>
+<br><font size=-1>0.409948</font>
+<br><font size=-1>0.374156</font>
+<br><font size=-1>0.340448</font>
+<br><font size=-1>0.308462</font>
+<br><font size=-1>0.278104</font>
+<br><font size=-1>0.249001</font>
+<br><font size=-1>0.221145</font>
+<br><font size=-1>0.1943</font>
+<br><font size=-1>0.168317</font>
+<br><font size=-1>0.143022</font>
+<br><font size=-1>0.118516</font>
+<br><font size=-1>0.0935346</font>
+<br><font size=-1>0.0700654</font>
+<br><font size=-1>0.0466057</font>
+<br><font size=-1>0.0232525</font></td>
+</tr>
+</table></center>
+
+<p>&nbsp;<p>(by the way, some of the figures were created before I was really
+accurate with the size of the graphs. there should be 32 samples in the
+analyzing graphs, as I know now...)<p>In doing so always new values for the resynthesis can be calculated.
+This method is often applied to play a sample slower, but with constant pitch.
+There are algorithms which process this effect in the time domain. But using a
+phase-vocoder you effectuate a steadier signal. A part of a sample is read for
+the FFT processing (lets say samplenumbers 1001 to 1512) on which the FFT is
+calculated. Directly afterwards the next piece of data is read - depending on
+the tempo may be the samplenumbers 1101 to 1612, and so on. From those two
+window-values it is possible to calculate the phase change which is added to the
+newly calculated FFT and from that value and the last one a new cahnge is
+calculated, which is added again to the new data and so on. The sound is
+smoother and the result sounds better.&nbsp;
+<br>&nbsp;
+<br>
+<br>
+<center>
+<p><img SRC="pvocherz.jpg" height=615 width=621></center><font size=-1>Fig. 22</font>
+<br><font size=-1>The heart of the phase-vocoder in Pd</font>
+<br>&nbsp;<p>An addition to this example, FFT-values always have to be
+normalized before the resynthesis. This is done by dividing the amplitudes by
+the particular windowsize. A second thing is that you feed a minimal amount of
+signal before the reciprocal squareroot to prevent a division by zero. And ther
+is another multiplication with the hanning window (because of the &quot;block~
+... 4&quot;).
+<br>&nbsp;
+<p>
+
+<br><a href="fft_und_pd_en.htm">Contents</a>
+<br><a href="introduction.htm">1. Introduction</a>
+<br><a href="ft.htm">2. Fourier Transformation</a>
+<br><a href="basefreq.htm">3. Base Frequencies</a>
+<br><a href="conversion.htm">4. Conversions Polar to Rectangular View</a>
+<br><a href="convolution.htm">5. Convolution</a>
+<br><a href="hannings.htm">6. Effects of Hanning-Windows</a>
+<br><a href="frequencies.htm">7. &quot;Frequencies between&quot;</a>
+<br><a href="pvoc_en.htm">8. Phase-Vocoder</a>
+<br><a href="phlocked_en.htm">9. Phase-locked Vocoder</a>
+<br><a href="convo_filter_en.htm">10. Convolution-Filter</a>
+<br><a href="random_pha_en.htm">11. Randomgenerated Phases</a>
+<br><a href="biblio.htm">12. Bibliography</a>
+  </blockquote>
+
+</blockquote>
+
+</body>
+</html>

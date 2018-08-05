@@ -1,0 +1,12 @@
+#N canvas 660 380 649 337 12;
+#X text 34 39 Create a patch in which the frequency of the signal coming
+from a microphone is analysed with FFT and continuously displayed in
+an array. Additionaly add the functionality to look up the magnitude
+of specific frequencies p.e. scroll through the table indexes with
+a slider to display the according magnitudes..;
+#X text 34 150 Erstellen Sie ein Patch in dem die Frequenz des Mikrofonsignals
+mit einer FFT analysiert und kontinuierlich in einem Array abgebildet
+wird. Fuegen Sie zusaetzlich eine Funktion hinzu \, mit der man die
+Lautstaerke einer spezifischen Frequenz nachschauen kann z.B. mit einem
+Slider \, der die Table IDs durchsucht und die Magnitudenwerte wiedergibt.
+;

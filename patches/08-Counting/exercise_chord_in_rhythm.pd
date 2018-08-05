@@ -1,0 +1,5 @@
+#N canvas 550 317 548 180 12;
+#X text 67 53 Create a patch that produces a broken triad every second
+on random pitches between 50 and 70 in the rhythm 1/16 \, 1/16 \, 1/8
+(1/16 in tempo 60 MM = 250 msec). Use [pipe] for rhythmic construction.
+;

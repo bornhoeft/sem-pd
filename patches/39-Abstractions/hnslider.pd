@@ -1,0 +1,11 @@
+#N canvas 541 344 207 182 10;
+#X obj 3 0 hsl 128 15 0 127 0 0 \$0-send-label \$0-receive-label 49
+50 8 0 10 -262144 -1 -258113 4900 1;
+#X msg 58 96 label \$1;
+#X obj 58 71 makefilename %i;
+#X obj 57 43 r \$0-send-label;
+#X obj 58 122 s \$0-receive-label;
+#X connect 1 0 4 0;
+#X connect 2 0 1 0;
+#X connect 3 0 2 0;
+#X coords 0 -1 1 1 133 15 2 0 0;

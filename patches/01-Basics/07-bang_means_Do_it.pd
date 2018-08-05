@@ -1,0 +1,29 @@
+#N canvas 72 22 641 339 12;
+#X msg 185 172 Gotcha!;
+#X obj 185 209 print;
+#X obj 506 209 print y;
+#X msg 371 129 bang;
+#X obj 335 209 print x;
+#X obj 185 128 bng 22 250 50 0 empty empty empty 0 -6 0 10 -262144
+-1 -1;
+#X obj 336 129 bng 22 250 50 0 empty empty empty 0 -6 0 10 -262144
+-1 -1;
+#X obj 506 129 bng 22 250 50 0 empty empty empty 0 -6 0 10 -262144
+-1 -1;
+#X obj 506 170 bng 22 250 50 0 empty empty empty 0 -6 0 10 -262144
+-1 -1;
+#X text 64 257 [print] can have an additional argument (here x and
+y) to distinguish different instances.;
+#X text 64 51 In Pd \, "bang" means "do it". What that "it" is depends
+on the object receiving the bang.;
+#X obj 71 130 bng 22 250 50 0 empty empty empty 0 -6 0 10 -262144 -1
+-1;
+#X obj 71 207 tgl 22 0 empty empty empty 0 -6 0 10 -262144 -1 -1 0
+1;
+#X connect 0 0 1 0;
+#X connect 3 0 4 0;
+#X connect 5 0 0 0;
+#X connect 6 0 4 0;
+#X connect 7 0 8 0;
+#X connect 8 0 2 0;
+#X connect 11 0 12 0;

@@ -1,0 +1,116 @@
+#N canvas 129 22 972 816 12;
+#X obj 330 525 soundfiler;
+#X text 84 49 Read a (portion of a) soundfile into an array \, and
+use it as a wavetable (one cycle of a waveform) for an oscillator.
+;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X array waveform 11 float 1;
+#A 0 0 0 0 0 0 0 0 0 0 0 0;
+#X coords 0 1 10 -1 258 201 1;
+#X restore 551 582 graph;
+#X text 535 169 The purpose of the soundfiler object is to read sound
+from a soundfile on the hard disk and put it in an array \, or to get
+the sound from an array and write it to a soundfile on the hard disk.
+This message gives the command 'read' \, the name of the file (which
+must be in a findable directory) \, and the name of the array in which
+to put the sound data.;
+#X text 417 419 In order to be used by tabosc4~ as a wavetable \, the
+array must have a number of samples that is a power of 2 \, plus 3
+This array has 515 samples (2 to the 9th power plus 3).;
+#X obj 85 169 tabosc4~ waveform;
+#X obj 74 281 dac~;
+#X obj 85 254 *~;
+#X text 319 97 We've made a small soundfile in advance that has 512
+samples representing one cycle of a recorded electric guitar note \,
+plus 3 extra samples for use in the four-point interpolation of tabosc4~.
+;
+#X obj 596 11 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 596 36 \; pd dsp \$1;
+#X obj 88 109 hsl 128 15 1 2000 1 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 2100 1;
+#X floatatom 85 139 5 0 0 0 - - -, f 5;
+#X obj 76 425 osc~ 6;
+#X obj 57 476 +~;
+#X obj 58 530 tabosc4~ waveform;
+#X obj 142 427 tabosc4~ waveform;
+#X obj 47 636 dac~;
+#X obj 58 609 *~;
+#X obj 56 391 sig~ 220;
+#X obj 75 450 *~ 5;
+#X obj 58 498 *~;
+#X text 189 530 carrier oscillator;
+#X obj 103 201 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 103 222 * 0.7;
+#X obj 77 560 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 77 581 * 0.7;
+#X obj 58 346 hsl 128 15 2 2000 1 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 9400 1;
+#X obj 363 391 pow;
+#X obj 362 340 t b f;
+#X msg 362 366 2;
+#X obj 363 421 + 3;
+#X floatatom 362 450 5 0 0 0 - - -, f 5;
+#X msg 363 477 \; waveform resize \$1;
+#X msg 354 220 8;
+#X obj 322 195 t a b;
+#X obj 334 273 t a b;
+#X obj 145 376 hsl 128 15 0.2 200 1 0 empty empty empty -2 -8 0 10
+-262144 -1 -1 8500 1;
+#X floatatom 142 399 5 0 0 0 - - -, f 5;
+#X text 44 662 This instrument has a carrier oscillator reading through
+the array cyclically to create a complex tone. The frequency of that
+oscillator is modulated by a sinusoid at 6 Hz to create a vibrato effect.
+The amplitude of the waveform is modulated with the same table from
+sub-audio to audio rate;
+#X msg 542 323 \; waveform sinesum 512 0.2 0.2 0.4 0.2;
+#X msg 543 375 \; waveform cosinesum 512 0.2 0.2 0.2 0.2;
+#X msg 322 171 read snd/gtr515.aif waveform;
+#X msg 334 247 read snd/1-4.wav waveform;
+#X msg 542 273 \; waveform cosinesum 512 0.1 -0.1 0.1 -0.1 0.1 -0.1
+0.1;
+#X text 753 513 read values from file;
+#X msg 550 490 \; waveform const 0 \; waveform read file.txt \; waveform
+resize 11 \;;
+#X text 84 21 Wavetable Synthesis;
+#X text 104 477 fm;
+#X text 103 497 am;
+#X msg 366 304 17;
+#X connect 5 0 7 0;
+#X connect 7 0 6 0;
+#X connect 7 0 6 1;
+#X connect 9 0 10 0;
+#X connect 11 0 12 0;
+#X connect 12 0 5 0;
+#X connect 13 0 20 0;
+#X connect 14 0 21 0;
+#X connect 15 0 18 0;
+#X connect 16 0 21 1;
+#X connect 18 0 17 0;
+#X connect 18 0 17 1;
+#X connect 19 0 14 0;
+#X connect 20 0 14 1;
+#X connect 21 0 15 0;
+#X connect 23 0 24 0;
+#X connect 24 0 7 1;
+#X connect 25 0 26 0;
+#X connect 26 0 18 1;
+#X connect 27 0 19 0;
+#X connect 28 0 31 0;
+#X connect 29 0 30 0;
+#X connect 29 1 28 1;
+#X connect 30 0 28 0;
+#X connect 31 0 32 0;
+#X connect 32 0 33 0;
+#X connect 34 0 29 0;
+#X connect 35 0 0 0;
+#X connect 35 1 34 0;
+#X connect 36 0 0 0;
+#X connect 36 1 50 0;
+#X connect 37 0 38 0;
+#X connect 38 0 16 0;
+#X connect 42 0 35 0;
+#X connect 43 0 36 0;
+#X connect 50 0 29 0;

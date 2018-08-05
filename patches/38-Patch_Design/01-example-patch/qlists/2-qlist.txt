@@ -1,0 +1,130 @@
+# <Title> for <Instruments>
+# <Name> (c) <Year>
+
+# qlist file for Channel 2, Stimme;
+
+# ------------------------------------------------------------------------------
+
+# Start/Reset - Cue_00 set with key "r";
+
+pd dsp 0; 
+2-section Start/Reset; 
+2-cue Cue_00;
+
+2-gain 0 100; 2-limiter 0; 2-in-rec 0; 2-pitch-det 0; 2-amp-env 0;
+2-5pitch 0 0 0 0 0 100;
+2-pan 0.5 100;
+1-compressor 0; 1-volume 0 100;
+2-compressor 0; 2-volume 0 100;
+clock 3;
+
+# ------------------------------------------------------------------------------
+
+# <Title> - Section_01 - Cue_01 - BEGIN;
+
+0
+pd dsp 1;
+2-section Section_01; 
+2-cue Cue_01;
+
+2-gain 1 100; 2-limiter 1; 2-in-rec 0; 2-pitch-det 0; 2-amp-env 0;
+2-5pitch -12 -5 0 5 12 100;
+2-pan 1 1000;
+1-compressor 0; 1-volume 1 100;
+2-compressor 0; 2-volume 1 100;
+clock 1;
+
+# ------------------------------------------------------------------------------
+
+# <Title> - Section_01 - Cue_02 - <Info>;
+
+0
+pd dsp 1;
+2-section Section_01; 
+2-cue Cue_02;
+
+2-gain 1 100; 2-limiter 1; 2-in-rec 0; 2-pitch-det 0; 2-amp-env 0;
+2-5pitch -6 -5 0 5 6 1000;
+2-pan 1 1000;
+1-compressor 0; 1-volume 1 100;
+2-compressor 0; 2-volume 1 100;
+
+# ------------------------------------------------------------------------------
+
+# <Title> - Section_02 - Cue_03 - <Info>;
+
+0
+pd dsp 1;
+2-section Section_02; 
+2-cue Cue_03;
+
+2-gain 1 100; 2-limiter 1; 2-in-rec 0; 2-pitch-det 0; 2-amp-env 0;
+2-5pitch -1 -0.5 0 0.5 0.1 3000;
+2-pan 1 1000;
+1-compressor 0; 1-volume 1 100;
+2-compressor 0; 2-volume 1 100;
+
+# ------------------------------------------------------------------------------
+
+# <Title> - Section_02 - Cue_04 - <Info>;
+
+0
+pd dsp 1;
+2-section Section_02; 
+2-cue Cue_04;
+
+2-gain 1 100; 2-limiter 1; 2-in-rec 0; 2-pitch-det 0; 2-amp-env 0;
+2-5pitch 7 7.1 7.2 7.3 7.4 1000;
+2-pan 1 1000;
+1-compressor 0; 1-volume 1 100;
+2-compressor 0; 2-volume 1 100;
+
+# ------------------------------------------------------------------------------
+
+# <Title> - Section_03 - Cue_05 - <Info>;
+
+0
+pd dsp 1;
+2-section Section_03; 
+2-cue Cue_05;
+
+2-gain 1 100; 2-limiter 1; 2-in-rec 0; 2-pitch-det 0; 2-amp-env 0;
+2-5pitch -2 -2 0 2 2 1000;
+2-pan 0 6000;
+1-compressor 0; 1-volume 1 100;
+2-compressor 0; 2-volume 1 100;
+
+# ------------------------------------------------------------------------------
+
+# <Title> - Section_03 - Cue_06 - END;
+
+0
+pd dsp 1;
+2-section Section_03; 
+2-cue Cue_05;
+
+2-gain 1 100; 2-limiter 1; 2-in-rec 0; 2-pitch-det 0; 2-amp-env 0;
+2-5pitch -2 -2 0 2 2 1000;
+2-pan 0 6000;
+1-compressor 0; 1-volume 0 10000;
+
+# ------------------------------------------------------------------------------
+
+# <Title> - Section_03 - Cue_06 - END;
+
+0
+pd dsp 1;
+2-section End; 
+2-cue Cue_05;
+
+2-gain 1 100; 2-limiter 1; 2-in-rec 0; 2-pitch-det 0; 2-amp-env 0;
+2-5pitch -2 -2 0 2 2 1000;
+2-pan 0 6000;
+1-compressor 0; 1-volume 0 10000;
+clock 2;
+
+# ------------------------------------------------------------------------------
+
+
+
+

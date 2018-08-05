@@ -1,0 +1,79 @@
+#N canvas 581 270 986 569 12;
+#X text 336 17 Acoustic Conversions;
+#X obj 144 242 snapshot~;
+#X obj 35 96 metro 100;
+#X floatatom 144 267 0 0 0 0 - - -;
+#X obj 145 139 snapshot~;
+#X floatatom 146 63 0 0 0 0 - - -;
+#X floatatom 145 166 0 0 0 0 - - -;
+#X obj 35 26 loadbang;
+#X msg 50 53 \; pd dsp 1;
+#X obj 146 87 sig~;
+#X obj 145 193 sig~;
+#X obj 144 485 snapshot~;
+#X floatatom 144 512 0 0 0 0 - - -;
+#X obj 144 379 snapshot~;
+#X floatatom 144 300 0 0 0 0 - - -;
+#X floatatom 144 406 0 0 0 0 - - -;
+#X obj 144 324 sig~;
+#X obj 144 433 sig~;
+#X obj 144 351 dbtorms~;
+#X obj 144 459 rmstodb~;
+#X obj 145 114 mtof~;
+#X obj 145 217 ftom~;
+#X text 143 34 Audio;
+#X text 236 203 The ftom~ object transposes a frequency into a midi
+value in Hertz \, so that "440" goes to "69". A frequency of zero Hertz
+is given a MIDI value of -1500 (strictly speaking \, it is negative
+infinity.);
+#X text 237 93 The mtof object transposes a midi value into a frequency
+in Hertz \, so that "69" goes to "440". You can specify microtonal
+pitches as in "69.5" (a quarter tone higher than 69).;
+#X text 241 330 The [dbtorms] object converts from decibels to linear
+("RMS") amplitude \, so that 100 dB corresponds to an "RMS" of 1 .
+Zero dB \, which should correspond to 0.0001 in "RMS" \, is instead
+rounded down to zero.;
+#X text 247 438 The rmstodb object converts from linear ("RMS") amplitude
+to decibels \, so that an "RMS" of 1 corresponds to 100 dB. Zero amplitude
+(strictly speaking \, minus infinity dB) is clipped to zero dB;
+#X obj 756 114 mtof;
+#X floatatom 756 168 0 0 0 0 - - -;
+#X obj 756 219 ftom;
+#X floatatom 756 270 0 0 0 0 - - -;
+#X floatatom 756 66 0 0 0 0 - - -;
+#X floatatom 756 407 0 0 0 0 - - -;
+#X floatatom 756 510 0 0 0 0 - - -;
+#X floatatom 756 305 0 0 0 0 - - -;
+#X obj 756 354 dbtorms;
+#X obj 756 462 rmstodb;
+#X text 754 38 Control;
+#X connect 1 0 3 0;
+#X connect 2 0 1 0;
+#X connect 2 0 4 0;
+#X connect 2 0 13 0;
+#X connect 2 0 11 0;
+#X connect 4 0 6 0;
+#X connect 5 0 9 0;
+#X connect 6 0 10 0;
+#X connect 7 0 2 0;
+#X connect 7 0 8 0;
+#X connect 9 0 20 0;
+#X connect 10 0 21 0;
+#X connect 11 0 12 0;
+#X connect 13 0 15 0;
+#X connect 14 0 16 0;
+#X connect 15 0 17 0;
+#X connect 16 0 18 0;
+#X connect 17 0 19 0;
+#X connect 18 0 13 0;
+#X connect 19 0 11 0;
+#X connect 20 0 4 0;
+#X connect 21 0 1 0;
+#X connect 27 0 28 0;
+#X connect 28 0 29 0;
+#X connect 29 0 30 0;
+#X connect 31 0 27 0;
+#X connect 32 0 36 0;
+#X connect 34 0 35 0;
+#X connect 35 0 32 0;
+#X connect 36 0 33 0;

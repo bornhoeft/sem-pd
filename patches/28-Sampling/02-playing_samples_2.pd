@@ -1,0 +1,146 @@
+#N canvas 374 137 1077 737 12;
+#X obj 11 147 cnv 15 545 355 empty empty empty 20 12 0 14 -228856 -66577
+0;
+#X text 10 46 PD allows you to load pre-recorded sounds into an array
+or record your own.;
+#X text 10 82 The soundfiler object loads an array \, and outputs the
+file's length in samples. We can use this information to calculate
+the right numbers to use for playback speed:;
+#X obj 565 70 cnv 15 500 390 empty empty empty 20 12 0 14 -228856 -66577
+0;
+#X obj 564 465 cnv 15 240 260 empty empty empty 20 12 0 14 -228856
+-66577 0;
+#X obj 583 468 tgl 15 0 empty play-set play 18 8 0 12 -262144 -1 -1
+1 1;
+#X obj 583 585 phasor~;
+#X obj 586 488 hsl 128 15 -2 2 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 7225 1;
+#X floatatom 582 509 5 0 0 0 - - -, f 5;
+#X obj 583 667 tabread4~ sample-07;
+#X obj 601 531 r base_freq;
+#X obj 601 613 r len_samples;
+#X obj 583 695 throw~ out-07;
+#X obj 583 640 *~;
+#X obj 583 558 *;
+#X obj 585 212 tabwrite~ sample-07;
+#X text 575 12 To record incoming audio \, use tabwrite~. To get the
+length of the sample \, use timer to count the time elapsed between
+bang and stop.;
+#X msg 818 77 \; sample-07 resize 441000;
+#X text 809 117 resize the array to 10 seconds;
+#X msg 646 165 bang;
+#X msg 713 166 stop;
+#X obj 646 75 tgl 15 0 empty empty record 18 8 0 12 -262144 -1 -1 0
+1;
+#X obj 646 97 sel 1 0;
+#X obj 791 171 timer;
+#X obj 646 129 t b b;
+#X floatatom 792 223 10 0 0 1 length_in_seconds - -, f 10;
+#X obj 713 129 t b b;
+#X obj 585 127 adc~;
+#X floatatom 818 275 10 0 0 1 length_in_samples - -, f 10;
+#X obj 818 298 s len_samples;
+#X obj 791 379 /;
+#X obj 792 325 t b f;
+#X floatatom 791 407 10 0 0 1 base_frequency - -, f 10;
+#X obj 791 352 1;
+#X obj 791 431 s base_freq;
+#X obj 791 198 / 1000;
+#X obj 818 248 * 44100;
+#X text 853 170 time in msec;
+#X obj 255 270 cnv 15 520 160 empty empty empty 20 12 0 14 -262144
+-66577 0;
+#X text 272 292 The base frequency is the frequency in which the phasor~
+reads through the array in the duration of the sample length (= no
+transposition) -> base frequency * sample duration = 1 The phasor~
+runs like a sawtooth but between 0 and 1 This is why it has to be scaled
+with the duration in samples to read through the whole soundfile. The
+duration in samples is duration in seconds * sampling-rate.;
+#X text 11 14 Playing samples 2;
+#X obj 815 465 cnv 15 250 260 empty empty empty 20 12 0 14 -228856
+-66577 0;
+#X obj 845 478 vsl 15 80 0 1 0 0 empty volume-set empty 0 -8 0 8 -262144
+-1 -1 7900 1;
+#X floatatom 846 571 5 0 0 1 volume - -, f 5;
+#X obj 846 696 dac~;
+#X obj 936 477 loadbang;
+#X obj 846 624 line~;
+#X obj 846 598 pack 0 10;
+#X obj 846 662 *~;
+#X msg 935 503 \; pd dsp 1 \; play-set 0 \; volume-set 1;
+#X obj 909 623 catch~ out-07;
+#X obj 21 158 bng 15 250 50 0 empty empty load 18 8 0 12 -262144 -1
+-1;
+#X obj 21 181 openpanel;
+#X msg 21 207 read -resize \$1 sample-07;
+#X text 241 208 read the selected file into;
+#X obj 21 234 soundfiler;
+#X floatatom 21 263 10 0 0 1 length_in_samples - -, f 10;
+#X obj 22 420 /;
+#X obj 21 368 t b f;
+#X floatatom 22 445 10 0 0 1 base_frequency - -, f 10;
+#X obj 21 395 1;
+#X obj 21 317 / 44100;
+#X floatatom 21 344 10 0 0 1 length_in_seconds - -, f 10;
+#X obj 37 289 s len_samples;
+#X obj 22 469 s base_freq;
+#X text 108 183 with a "bang" the "Open file" browser appears;
+#X text 239 224 sample-07 and resize the array;
+#X obj 11 506 cnv 15 545 220 empty empty empty 20 12 0 14 -228856 -66577
+0;
+#N canvas 0 22 454 304 (subpatch) 0;
+#X array sample-07 155648 float 0;
+#X coords 0 2 155647 -2 200 140 1;
+#X restore 194 543 graph;
+#X connect 5 0 7 0;
+#X connect 6 0 13 0;
+#X connect 7 0 8 0;
+#X connect 8 0 14 0;
+#X connect 9 0 12 0;
+#X connect 10 0 14 1;
+#X connect 11 0 13 1;
+#X connect 13 0 9 0;
+#X connect 14 0 6 0;
+#X connect 19 0 15 0;
+#X connect 20 0 15 0;
+#X connect 21 0 22 0;
+#X connect 22 0 24 0;
+#X connect 22 1 26 0;
+#X connect 23 0 35 0;
+#X connect 24 0 19 0;
+#X connect 24 1 23 0;
+#X connect 25 0 31 0;
+#X connect 25 0 36 0;
+#X connect 26 0 20 0;
+#X connect 26 1 23 1;
+#X connect 27 0 15 0;
+#X connect 27 1 15 0;
+#X connect 28 0 29 0;
+#X connect 30 0 32 0;
+#X connect 31 0 33 0;
+#X connect 31 1 30 1;
+#X connect 32 0 34 0;
+#X connect 33 0 30 0;
+#X connect 35 0 25 0;
+#X connect 36 0 28 0;
+#X connect 42 0 43 0;
+#X connect 43 0 47 0;
+#X connect 45 0 49 0;
+#X connect 46 0 48 0;
+#X connect 47 0 46 0;
+#X connect 48 0 44 0;
+#X connect 48 0 44 1;
+#X connect 50 0 48 1;
+#X connect 51 0 52 0;
+#X connect 52 0 53 0;
+#X connect 53 0 55 0;
+#X connect 55 0 56 0;
+#X connect 56 0 61 0;
+#X connect 56 0 63 0;
+#X connect 57 0 59 0;
+#X connect 58 0 60 0;
+#X connect 58 1 57 1;
+#X connect 59 0 64 0;
+#X connect 60 0 57 0;
+#X connect 61 0 62 0;
+#X connect 62 0 58 0;

@@ -1,0 +1,87 @@
+#N canvas 184 144 733 653 12;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X array noiseview 200 float 3;
+#A 0 89 85 95 95 97 91 91 98 91 86 93 93 95 92 96 95 91 91 90 91 95
+90 95 89 87 96 96 98 94 92 91 90 86 88 89 86 86 95 88 98 92 94 96 95
+86 97 98 87 91 87 90 97 92 87 96 96 98 94 98 93 93 91 94 86 85 88 93
+97 87 96 92 96 93 96 88 94 88 87 91 87 95 91 97 98 97 92 91 98 90 87
+94 97 86 89 90 89 93 94 91 88 95 96 91 90 89 94 88 93 98 97 92 92 93
+89 86 98 95 92 93 94 90 90 97 91 86 94 95 97 95 85 96 97 98 89 97 87
+93 88 95 90 90 92 87 91 98 98 95 98 89 88 90 95 98 88 86 92 88 92 94
+86 87 98 94 87 97 90 95 91 87 89 96 96 93 94 91 97 87 88 92 92 90 93
+94 90 87 93 94 88 87 99 90 96 88 92 91 98 98 98 94 90;
+#X coords 0 126 199 0 200 140 1;
+#X restore 52 149 graph;
+#X obj 341 218 + 1;
+#X obj 341 259 / 2;
+#X floatatom 341 441 5 0 0 0 - - -, f 5;
+#X obj 341 185 snapshot~;
+#X obj 570 63 hsl 128 15 0 1000 0 0 empty metro empty -2 -8 0 10 -262144
+-1 -1 562 1;
+#X obj 498 112 metro 100;
+#X obj 498 82 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 498 172 f;
+#X obj 546 172 + 1;
+#X floatatom 567 86 5 0 0 0 - - -, f 5;
+#X obj 341 405 int;
+#X obj 341 372 * 127;
+#X floatatom 499 439 5 0 0 0 - - -, f 5;
+#X obj 594 172 mod 200;
+#X text 48 295 table: y = 0-126 \, x = 0-200;
+#X obj 341 536 tabwrite noiseview;
+#X obj 341 25 noise~;
+#X obj 365 55 hsl 128 15 0.01 1 1 0 empty scale empty -2 -8 0 10 -262144
+-1 -1 6480 1;
+#X floatatom 362 80 5 0 0 0 - - -, f 5;
+#X obj 341 109 *~;
+#X text 51 31 Noise as control parameter;
+#X obj 365 286 hsl 128 15 -0.5 0.5 0 0 empty shift empty -2 -8 0 10
+-262144 -1 -1 9250 1;
+#X floatatom 362 311 5 0 0 0 - - -, f 5;
+#X obj 341 339 + 0;
+#X text 387 440 y values;
+#X text 549 440 x values;
+#X text 378 108 scale noise;
+#X text 505 284 shift noise;
+#X obj 498 28 loadbang;
+#X obj 91 353 loadbang;
+#X obj 358 467 makenote 127 50;
+#X obj 384 503 noteout 11;
+#X msg 91 384 \; pd dsp 1 \; scale 0.3 \; metro 60 \; shift 0 \;;
+#X text 354 239 numbers between -1 and 1 converted to 0 - 1;
+#X text 391 372 range of 1 converted to midi (0 - 127);
+#X text 374 405 coerced to integer;
+#X text 510 198 x ids (200) for table;
+#X text 424 186 *);
+#X text 87 570 *) The snapshot~ object takes a signal and converts
+it to a control value whenever it receives a bang in its left outlet.
+;
+#X connect 1 0 2 0;
+#X connect 2 0 24 0;
+#X connect 3 0 16 0;
+#X connect 3 0 31 0;
+#X connect 4 0 1 0;
+#X connect 5 0 10 0;
+#X connect 6 0 4 0;
+#X connect 6 0 8 0;
+#X connect 7 0 6 0;
+#X connect 8 0 9 0;
+#X connect 8 0 13 0;
+#X connect 9 0 14 0;
+#X connect 10 0 6 1;
+#X connect 11 0 3 0;
+#X connect 12 0 11 0;
+#X connect 13 0 16 1;
+#X connect 14 0 8 1;
+#X connect 17 0 20 0;
+#X connect 18 0 19 0;
+#X connect 19 0 20 1;
+#X connect 20 0 4 0;
+#X connect 22 0 23 0;
+#X connect 23 0 24 1;
+#X connect 24 0 12 0;
+#X connect 29 0 7 0;
+#X connect 30 0 33 0;
+#X connect 31 0 32 0;
+#X connect 31 1 32 1;

@@ -1,0 +1,24 @@
+CPU optimisations in Pure Data:
+
+* avoid using GUI objects unless really necessary
+
+*  If you have subpatches within subpatches this is usually not a problem with control data. But, it really helps a lot within a patch if you put all the DSP objects on the same layer
+(... there would be no difference in DSP execution time between a patch having lots of subpatches and one with the same amount of computation all thrown in one window.  I haven't made any measurements but theoretical at least there shouldn't be any difference. Miller)
+
+* turning off [switch~] 
+
+* close a [spigot] going into [vline~] (cut the control connection to line~/vline~ objects when the dsp in their subpatch is turned off.)
+
+* avoid audio rate signal objects when it is possible to do the same thing with control objects. Only use audio rate signals when it is absolutely necessary to calculate every sample.
+
+* if you have a patch that uses [noise~], then just use one [noise~] object for the whole patch, and something like [s~ $0-noise] and then multiple copies of [r~ noise]. Generally this sort of logic should be applied whenever possible in your patch. For example, if you need a note, and then also another note one octave higher, then just use a [phasor~] for the original note, and then use [*~ 2] and [wrap~] to double the pitch for the next octave. This will be cheaper than 2 [phasor~]'s.
+
+* [tabread4~] is pretty hungry because of its 4-point interpolation. I found that making a simple 2 point interpolation for sample playback worked ok. (use 2 [tabread~] objects, and a [+~ 1] before the 2nd one, and then send the output of both [tabread~] objects into the left side of [*~ 0.5] to average them.
+
+* [*~ 0.5] is more efficient than [/~ 2] (no idea why...but...), also i can't remember, but [+~ -2] may have been more efficient that [-~ 2]
+
+* keep your delay lines as short as possible
+
+* for stereo, you will often have things that are common to both the left and right channel. Only calculate these once, and then send to both channels, rather than calculating individually twice.
+
+* make sure metros are off when not needed and try to spread out metro bangs from as few metro objects as possible.

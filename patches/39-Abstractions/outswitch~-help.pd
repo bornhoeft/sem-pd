@@ -1,0 +1,22 @@
+#N canvas 124 267 413 289 10;
+#X obj 91 222 dac~;
+#X text 23 32 with toggle on it switsches to 2nd output;
+#X text 21 20 switch between two audio outputs;
+#X obj 80 156 outswitch~;
+#X obj 140 93 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0 1
+;
+#X obj 80 93 osc~ 220;
+#X obj 80 127 *~ 0.2;
+#X msg 174 124 1 1000;
+#X text 23 44 usefull for bypass switches can be used with a line message
+as well.;
+#X msg 170 100 0 2000;
+#X text 227 122 to right channel in 1 sec.;
+#X text 224 99 to left channel in 2 secs.;
+#X connect 3 0 0 0;
+#X connect 3 1 0 1;
+#X connect 4 0 3 1;
+#X connect 5 0 6 0;
+#X connect 6 0 3 0;
+#X connect 7 0 3 1;
+#X connect 9 0 3 1;

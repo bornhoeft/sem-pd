@@ -1,0 +1,82 @@
+#N canvas 605 308 670 588 12;
+#X obj 288 539 dac~;
+#X obj 377 355 hsl 128 15 -12 24 0 0 empty transp transp 25 8 0 10
+-262144 -1 -1 4500 1;
+#X floatatom 374 375 5 0 0 0 - - -, f 5;
+#X obj 364 307 hsl 128 15 0.01 1 1 0 empty seg-length seg-length 25
+8 0 10 -262144 -1 -1 11500 1;
+#X obj 338 214 hsl 128 15 1 5000 1 0 empty input-hop input-hop 25 8
+0 10 -262144 -1 -1 9100 1;
+#X obj 313 112 hsl 128 15 5 1000 0 0 empty output-hop output-hop 25
+8 0 10 -262144 -1 -1 347 1;
+#X obj 49 489 table sample-99;
+#X floatatom 310 135 5 0 0 0 - - -, f 5;
+#X obj 327 164 hsl 128 15 0 500 0 0 empty empty output-hop-rand 25
+8 0 10 -262144 -1 -1 0 1;
+#X obj 403 447 hsl 128 15 1 10 0 1 empty empty env-sharp 25 8 0 10
+-262144 -1 -1 5100 1;
+#X obj 351 260 hsl 128 15 0 0.5 0 0 empty empty input-hop-rand 25 8
+0 10 -262144 -1 -1 2900 1;
+#X floatatom 399 468 5 0 0 0 - - -, f 5;
+#X floatatom 361 328 5 0 0 0 - - -, f 5;
+#X text 409 328 x output-hop;
+#X floatatom 348 281 5 0 0 0 - - -, f 5;
+#X floatatom 335 236 5 0 0 0 - - -, f 5;
+#X text 353 134 output-hop (msec);
+#X floatatom 323 190 5 0 0 0 - - -, f 5;
+#X text 391 280 * buffer-duration \, +/- random;
+#X text 366 188 + max msec \, random;
+#X text 51 538 (c) 2009 Achim Bornhoeft;
+#X text 381 235 slices in input-file;
+#X obj 389 402 hsl 128 15 0 12 0 0 empty transp-rand transp-rand 25
+8 0 10 -262144 -1 -1 3900 1;
+#X floatatom 386 422 5 0 0 0 - - -, f 5;
+#X text 421 374 in semitones;
+#X text 438 422 semitones random +/-;
+#X obj 298 500 grain-stream2;
+#X msg 48 117 \; pd dsp \$1 \; output-hop 40 \; input-hop 1000 \; seg-length
+1 \; transp 0 \; transp-rand 0 \;;
+#X obj 48 94 tgl 15 0 empty empty 1 22 7 0 14 -262144 -1 -258113 1
+1;
+#X obj 48 60 loadbang;
+#X obj 298 85 tgl 15 0 empty empty 3 22 7 0 14 -262144 -1 -258113 1
+1;
+#X obj 50 293 bng 15 250 50 0 empty empty 2 22 7 0 14 -262144 -1 -258113
+;
+#X obj 50 394 soundfiler;
+#X floatatom 50 421 10 0 0 1 length_in_samples - -, f 10;
+#X obj 50 448 s buf;
+#X msg 50 315 ../99-Sounds/1-4.wav;
+#X obj 50 342 symbol;
+#X msg 50 369 read -resize \$1 sample-99;
+#X obj 50 263 loadbang;
+#X text 133 20 Single grain stream with randomised parameters (asynchronous
+granulation);
+#X connect 1 0 2 0;
+#X connect 2 0 26 6;
+#X connect 3 0 12 0;
+#X connect 4 0 15 0;
+#X connect 5 0 7 0;
+#X connect 7 0 26 1;
+#X connect 8 0 17 0;
+#X connect 9 0 11 0;
+#X connect 10 0 14 0;
+#X connect 11 0 26 8;
+#X connect 12 0 26 5;
+#X connect 14 0 26 4;
+#X connect 15 0 26 3;
+#X connect 17 0 26 2;
+#X connect 22 0 23 0;
+#X connect 23 0 26 7;
+#X connect 26 0 0 0;
+#X connect 26 0 0 1;
+#X connect 28 0 27 0;
+#X connect 29 0 28 0;
+#X connect 30 0 26 0;
+#X connect 31 0 35 0;
+#X connect 32 0 33 0;
+#X connect 33 0 34 0;
+#X connect 35 0 36 0;
+#X connect 36 0 37 0;
+#X connect 37 0 32 0;
+#X connect 38 0 31 0;

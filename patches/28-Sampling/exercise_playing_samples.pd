@@ -1,0 +1,20 @@
+#N canvas 411 115 615 489 12;
+#X text 50 96 - Einsatzabstand mit [metro];
+#X text 46 171 - Vorwärts- und Rückwärtslesen des samples;
+#X text 49 117 - Dauer des Samples durch verschiedene Anfangs- und
+Endpunkte innerhalb des samples;
+#X text 46 154 - Tonhöhe (samplingrate conversion);
+#X text 41 281 1) Create a patch that playbacks a loaded sample. Control
+the following parameters randomly:;
+#X text 42 319 - entry points [metro];
+#X text 41 339 - duration of the sample (different start- and end times)
+;
+#X text 41 360 - pitch (sampling rate conversion);
+#X text 40 380 - forward and backward reading of the sample;
+#X text 43 195 2) ZUSATZ: Lassen Sie zwischen mehreren samples (in
+mehreren Tables) zufÃ¤llig auswählen.;
+#X text 48 44 1) Erstellen Sie ein Patch \, dass einen geladenen sample
+abspielt. Dabei sollen folgende Parameter per Zufall gesteuert werden:
+;
+#X text 41 411 2) Additionally change between different samples (in
+different tables);

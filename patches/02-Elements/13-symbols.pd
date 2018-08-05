@@ -1,0 +1,18 @@
+#N canvas 513 25 321 409 12;
+#X symbolatom 58 325 10 0 0 0 - - -, f 10;
+#X msg 58 31 katze;
+#X msg 71 60 hund;
+#X obj 58 240 symbol;
+#X obj 58 356 print;
+#X text 129 239 the symbol-Objekt;
+#X text 168 326 the symbol-Atom;
+#X msg 82 90 ver2felt;
+#X text 63 282 <- symbols;
+#X text 88 195 <- characters;
+#X msg 89 124 123;
+#X connect 0 0 4 0;
+#X connect 1 0 3 0;
+#X connect 2 0 3 0;
+#X connect 3 0 0 0;
+#X connect 7 0 3 0;
+#X connect 10 0 3 0;

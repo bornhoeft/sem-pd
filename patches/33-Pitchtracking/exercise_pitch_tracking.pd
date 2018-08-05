@@ -1,0 +1,8 @@
+#N canvas 462 363 555 189 12;
+#X text 24 27 Bauen Sie ein einfaches Stimmgerät für Gitarre oder
+Violine mit Ausgabe von Frequenz \, Tonhöhe (Objekt [pitch] nicht
+Vanilla) und MIDI-Wert \, das visuell anzeigt wenn eine Saite richtig
+gestimmt ist z.B. mit Bang.;
+#X text 24 102 Create a simple tuning programm for guitar or violin
+with output for frequency \, pitch (object [pitch] not Vanilla) and
+MIDI values that visually indicates when a string is in tune.;

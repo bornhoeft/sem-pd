@@ -1,0 +1,14 @@
+#N canvas 464 261 312 318 10;
+#X msg 64 95 reset;
+#X text 64 55 settable inc/dec stepper;
+#X text 63 173 keyboard control:;
+#X text 62 192 space = 1 step forward;
+#X text 63 210 backspace = 1 step backward;
+#X text 63 229 r = reset to 0;
+#X msg 119 95 4;
+#X text 152 94 set to any number;
+#X text 55 35 [ kbstep ];
+#X obj 64 133 kbstep;
+#X text 116 260 (c) 2008 AChim Bornhoeft;
+#X connect 0 0 9 0;
+#X connect 6 0 9 1;

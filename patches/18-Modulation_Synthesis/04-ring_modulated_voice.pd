@@ -1,0 +1,37 @@
+#N canvas 348 57 536 498 12;
+#X obj 139 296 adc~;
+#X obj 118 330 *~;
+#X obj 118 119 vsl 15 100 1 100 0 0 empty empty empty 0 -8 0 8 -262144
+-1 -1 0 0;
+#X obj 118 263 osc~;
+#X floatatom 118 234 5 0 0 0 - - -, f 5;
+#X obj 130 444 dac~;
+#X obj 118 404 *~;
+#X obj 188 120 vsl 15 100 1 100 0 0 empty empty empty 0 -8 0 8 -262144
+-1 -1 0 0;
+#X obj 189 295 osc~;
+#X obj 188 232 * 10;
+#X floatatom 188 267 5 0 0 0 - - -, f 5;
+#X obj 168 329 *~;
+#X obj 168 405 *~;
+#X obj 192 364 hsl 128 18 0 1 0 0 empty empty amplitude 20 8 0 12 -262144
+-1 -1 0 0;
+#X text 19 52 The sound coming in from the microphone is ringmodulated
+with zwo oscillators. Their frequencies are controlled with two sliders.
+;
+#X text 20 28 Ringmodulated voice;
+#X connect 0 0 1 1;
+#X connect 0 1 11 0;
+#X connect 1 0 6 0;
+#X connect 2 0 4 0;
+#X connect 3 0 1 0;
+#X connect 4 0 3 0;
+#X connect 6 0 5 0;
+#X connect 7 0 9 0;
+#X connect 8 0 11 1;
+#X connect 9 0 10 0;
+#X connect 10 0 8 0;
+#X connect 11 0 12 0;
+#X connect 12 0 5 1;
+#X connect 13 0 12 1;
+#X connect 13 0 6 1;

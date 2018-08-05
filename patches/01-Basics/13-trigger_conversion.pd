@@ -1,0 +1,35 @@
+#N canvas 227 116 518 449 12;
+#X obj 141 177 trigger anything float bang;
+#X msg 141 142 float 45.234;
+#X floatatom 141 213 5 0 0 0 - - -, f 5;
+#X floatatom 247 208 5 0 0 0 - - -, f 5;
+#X msg 27 289 12 45 blah;
+#X msg 119 288 blah;
+#X msg 169 289 123;
+#X msg 212 289 symbol test;
+#X text 25 70 [trigger] can also do limited conversions in addition
+to ordering. The keyword "anything" tells [trigger] to do no conversion.
+;
+#X obj 354 211 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 28 25 Trigger conversion;
+#X obj 117 369 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 117 335 trigger bang symbol list anything;
+#X symbolatom 204 393 10 0 0 0 - - -, f 10;
+#X obj 409 338 t b s l a;
+#X text 404 318 Short form:;
+#X obj 291 365 print list;
+#X obj 378 398 print anything;
+#X connect 0 0 2 0;
+#X connect 0 1 3 0;
+#X connect 0 2 9 0;
+#X connect 1 0 0 0;
+#X connect 4 0 12 0;
+#X connect 5 0 12 0;
+#X connect 6 0 12 0;
+#X connect 7 0 12 0;
+#X connect 12 0 11 0;
+#X connect 12 1 13 0;
+#X connect 12 2 16 0;
+#X connect 12 3 17 0;

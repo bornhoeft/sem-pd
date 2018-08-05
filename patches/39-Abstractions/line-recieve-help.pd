@@ -1,0 +1,10 @@
+#N canvas 251 323 532 243 12;
+#X floatatom 42 195 5 0 0 0 - - -, f 5;
+#X floatatom 42 72 5 0 0 0 - - -, f 5;
+#X text 222 158 1 arg: object name;
+#X text 223 181 2 arg: interpolation time in msec;
+#X obj 43 106 s rc1;
+#X obj 42 156 line-recieve rc1 1000;
+#X text 22 28 A line interpolated receive object for numbers;
+#X connect 1 0 4 0;
+#X connect 5 0 0 0;

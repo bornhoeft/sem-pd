@@ -1,0 +1,18 @@
+#N canvas 654 486 462 273 10;
+#X text 62 165 semitones just returns the right src from the given
+semitone transposition \, e.g. (semitones 12) will return 2;
+#X floatatom 98 122 10 0 0 0 - - -, f 10;
+#X floatatom 166 45 5 0 0 0 - - -, f 5;
+#X obj 255 63 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X floatatom 255 127 10 0 0 0 - - -, f 10;
+#X obj 98 85 semi2srt;
+#X obj 255 91 semi2srt 12;
+#X obj 98 19 loadbang;
+#X msg 98 47 -7;
+#X connect 2 0 5 0;
+#X connect 3 0 6 0;
+#X connect 5 0 1 0;
+#X connect 6 0 4 0;
+#X connect 7 0 8 0;
+#X connect 8 0 5 0;

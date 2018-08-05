@@ -1,0 +1,23 @@
+#N canvas 410 315 468 335 10;
+#X msg 167 107 reset;
+#X obj 235 181 bng 15 250 50 0 empty empty empty 0 -6 0 10 -262144
+-1 -1;
+#X floatatom 166 242 5 0 0 0 - - -;
+#X floatatom 235 243 5 0 0 0 - - -;
+#X msg 126 76 start;
+#X text 124 32 counts milliseconds between points of time;
+#X text 260 179 count points of time;
+#X text 103 286 (c) 2008 Achim Bornhoeft;
+#X text 217 106 reset the timer to zero;
+#X text 175 77 reset everything;
+#X obj 42 34 entry_points;
+#X obj 166 209 entry_points;
+#X obj 235 157 metro 1000;
+#X obj 235 129 loadbang;
+#X connect 0 0 11 0;
+#X connect 1 0 11 1;
+#X connect 4 0 11 0;
+#X connect 11 0 2 0;
+#X connect 11 1 3 0;
+#X connect 12 0 1 0;
+#X connect 13 0 12 0;

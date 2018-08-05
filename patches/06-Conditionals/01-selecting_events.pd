@@ -1,0 +1,87 @@
+#N canvas 711 32 601 752 12;
+#X floatatom 53 179 5 0 0 0 - - -, f 5;
+#X obj 53 229 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 77 229 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 53 202 select 2 3 4 5 6 10;
+#X obj 101 229 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 127 228 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 152 229 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 177 229 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X floatatom 202 229 5 0 0 1 everything_else - -, f 5;
+#X obj 54 102 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 1 1
+;
+#X obj 54 152 random 11;
+#X msg 54 314 42;
+#X obj 72 402 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X floatatom 117 400 5 0 0 1 everything_else - -, f 5;
+#X floatatom 71 342 5 0 0 0 - - -, f 5;
+#X floatatom 117 343 5 0 0 0 - - -, f 5;
+#X text 52 432 Also note that in the example above \, there is a second
+inlet. This is used to reset the argument's value like below. This
+feature is available only on [select] objects with only ONE creation
+argument -- in other example in this patch you'll notice that this
+second inlet is absent.;
+#X text 47 268 If the input does not match \, the ORIGINAL MESSAGE
+is sent to the rightmost outlet.;
+#X text 50 39 When the input to [select] matches one of its creation
+arguments \, then a "bang" is sent to the outlet \, NOT the original
+message.;
+#X text 49 17 Selecting Events;
+#X obj 114 663 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 167 663 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 218 663 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X msg 54 523 test;
+#X msg 175 578 400;
+#X msg 181 604 symbol 400;
+#X obj 271 664 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X msg 100 523 word;
+#X obj 114 637 select test word 400;
+#X msg 197 523 word;
+#X msg 146 522 test;
+#X obj 146 552 symbol;
+#X obj 54 124 metro 500;
+#X text 44 687 If the first argument of select is a symbol all incoming
+messages are treated as symbols. Messages containing other types than
+numbers or symbols result in an error.;
+#X obj 202 254 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 72 372 sel;
+#X connect 0 0 3 0;
+#X connect 3 0 1 0;
+#X connect 3 1 2 0;
+#X connect 3 2 4 0;
+#X connect 3 3 5 0;
+#X connect 3 4 6 0;
+#X connect 3 5 7 0;
+#X connect 3 6 8 0;
+#X connect 8 0 34 0;
+#X connect 9 0 32 0;
+#X connect 10 0 0 0;
+#X connect 11 0 35 0;
+#X connect 14 0 35 0;
+#X connect 15 0 35 1;
+#X connect 23 0 28 0;
+#X connect 24 0 28 0;
+#X connect 25 0 28 0;
+#X connect 27 0 28 0;
+#X connect 28 0 20 0;
+#X connect 28 1 21 0;
+#X connect 28 2 22 0;
+#X connect 28 3 26 0;
+#X connect 29 0 31 0;
+#X connect 30 0 31 0;
+#X connect 31 0 28 0;
+#X connect 32 0 10 0;
+#X connect 35 0 12 0;
+#X connect 35 1 13 0;

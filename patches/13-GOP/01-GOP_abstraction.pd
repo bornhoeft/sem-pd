@@ -1,0 +1,25 @@
+#N canvas 699 135 526 666 12;
+#X text 17 18 GOP abstractions;
+#X text 15 117 Open one of the instances of the same abstraction (chn.pd
+\, created with [chn 1 Floete] and [chn 2 Violine]) by clicking on
+the Canvas area and selecting "Open":;
+#X text 25 424 GOP is working with subpatches as well but without the
+possibility to set different variables:;
+#X obj 120 205 chn 1 Floete;
+#N canvas 582 286 223 273 subpatch 0;
+#X obj 62 5 adc~;
+#X obj 62 96 vu 15 120 empty empty -1 -8 0 10 -66577 -1 1 0;
+#X obj 127 6 loadbang;
+#X msg 126 34 \; pd dsp 1;
+#X obj 62 27 env~;
+#X obj 62 50 - 99;
+#X connect 0 0 4 0;
+#X connect 2 0 3 0;
+#X connect 4 0 5 0;
+#X connect 5 0 1 0;
+#X coords 0 -1 1 1 70 150 2 50 80;
+#X restore 219 474 pd subpatch;
+#X text 15 55 One method to reduce a patch just to the relevant graphical
+objects is by display only selected areas of an abstracion with the
+"graph on parent" (GOP) feature.;
+#X obj 250 205 chn 2 Violine;

@@ -1,0 +1,22 @@
+#N canvas 168 74 287 310 10;
+#X text 17 20 switch between two audio inputs;
+#X obj 129 171 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0
+1;
+#X obj 78 250 dac~;
+#X text 19 32 with toggle on it switsches to 2nd input;
+#X obj 78 218 inswitch~;
+#X obj 78 72 osc~ 220;
+#X obj 103 125 osc~ 660;
+#X msg 191 124 0 1000;
+#X msg 207 148 1 2000;
+#X obj 78 99 *~ 0.2;
+#X obj 103 150 *~ 0.2;
+#X connect 1 0 4 2;
+#X connect 4 0 2 0;
+#X connect 4 0 2 1;
+#X connect 5 0 9 0;
+#X connect 6 0 10 0;
+#X connect 7 0 4 2;
+#X connect 8 0 4 2;
+#X connect 9 0 4 0;
+#X connect 10 0 4 1;

@@ -1,0 +1,13 @@
+#N canvas 168 74 338 240 10;
+#X text 65 34 with toggle on it switsches to 2nd input;
+#X text 63 22 switch between two inputs;
+#X obj 189 111 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X floatatom 191 186 5 0 0 0 - - -;
+#X floatatom 140 67 5 0 0 0 - - -;
+#X floatatom 140 187 5 0 0 0 - - -;
+#X obj 140 138 outswitch;
+#X connect 2 0 6 1;
+#X connect 4 0 6 0;
+#X connect 6 0 5 0;
+#X connect 6 1 3 0;

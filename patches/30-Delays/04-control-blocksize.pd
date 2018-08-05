@@ -1,0 +1,106 @@
+#N canvas 390 136 680 846 12;
+#N canvas 195 311 638 556 delay-writer 0;
+#X obj 85 230 inlet~;
+#X obj 85 518 outlet~;
+#X obj 85 457 +~;
+#X obj 149 231 inlet;
+#X text 79 17 Because of the feedback \, the delwrite~ has to be computed
+after the delread~. So we set the blocksize to 1 to minimize the resulting
+delay.;
+#X text 389 229 this object sets the;
+#X text 388 246 block size for audio;
+#X text 387 265 computations in this;
+#X obj 149 289 delread~ G04-del;
+#X obj 96 487 delwrite~ G04-del 1000;
+#X text 78 193 incoming;
+#X text 80 208 pulses;
+#X text 149 192 delay;
+#X text 150 207 time;
+#X text 387 283 window. Must be a;
+#X text 387 302 power of two.;
+#X text 76 70 The smaller the blocksize the more expensive the computations
+are \, so don't reduce it lower than you have to. Also \, it's a good
+idea to isolate the portion of the patch that requires the smaller
+block size \, and only run that portion that way. Here \, the pulses
+that excite the delay line are computed outside this window \, and
+the output level control as well.;
+#X floatatom 149 262 5 0 0 0 - - -, f 5;
+#X obj 149 413 *~;
+#X obj 203 230 inlet;
+#X obj 391 207 block~ 1;
+#X connect 0 0 2 0;
+#X connect 2 0 1 0;
+#X connect 2 0 9 0;
+#X connect 3 0 17 0;
+#X connect 8 0 18 0;
+#X connect 17 0 8 0;
+#X connect 18 0 2 1;
+#X connect 19 0 18 1;
+#X restore 126 741 pd delay-writer;
+#X obj 186 621 expr 1000/$f1;
+#X obj 185 573 mtof;
+#X msg 128 468 1;
+#X msg 195 456 0;
+#X obj 185 520 random 60;
+#X obj 185 546 + 30;
+#X text 258 742 <-- here is the delay loop;
+#X obj 128 519 vline~;
+#X text 35 254 Here we use this principle to make a harpisichord-like
+sound by sending pulses into a recirculating delay line (which imitates
+the travel of the wave up and down the harpsichord string.) This is
+related to Karplus-Strong synthesis \, but the idea is probably much
+older than their paper.;
+#X text 10 491 this makes;
+#X text 9 508 a rectangular;
+#X text 8 547 long.;
+#X text 9 527 pulse 1 msec;
+#X text 299 622 length of delay line is 1000/(frequency);
+#X obj 113 804 dac~;
+#X obj 126 769 *~ 0.5;
+#X floatatom 186 599 5 0 0 0 - - -, f 5;
+#X obj 128 362 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X text 36 53 In situations where a delay read feeds back to a delay
+write \, the minimum possible delay you can achieve is one block \,
+which by default is 64 samples \, or 1.45 msec at 44100 Hz. The inlet~
+and outlet~ objects reblock signals to adjust for differences between
+parent and subpatch \, but only power-of-two adjustments are possible.
+So for "normal" audio computations \, all blocks should also be power-of-two
+in size. HOWEVER \, if you have no inlet~ or outlet~ you may specify
+any other block size. This is intended for later use in video processing.You
+can shorten the minimum delay by changing the block size. Do this in
+a subpatch (open it to see how).;
+#X text 40 21 Controlling delay with [block~];
+#X obj 128 387 metro 100;
+#X obj 220 388 hsl 128 15 1 40 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X floatatom 216 407 5 0 0 0 - - -, f 5;
+#X obj 195 430 del;
+#X text 291 721 feedback amount;
+#X obj 246 699 hsl 128 15 0 0.95 0 0 empty feedback-amount empty -2
+-8 0 10 -262144 -1 -1 9100 1;
+#X floatatom 243 719 5 0 0 0 - - -, f 5;
+#X obj 243 650 loadbang;
+#X msg 243 675 0.95;
+#X connect 0 0 16 0;
+#X connect 1 0 0 1;
+#X connect 2 0 17 0;
+#X connect 3 0 8 0;
+#X connect 4 0 8 0;
+#X connect 5 0 6 0;
+#X connect 6 0 2 0;
+#X connect 8 0 0 0;
+#X connect 16 0 15 0;
+#X connect 16 0 15 1;
+#X connect 17 0 1 0;
+#X connect 18 0 21 0;
+#X connect 21 0 3 0;
+#X connect 21 0 5 0;
+#X connect 21 0 24 0;
+#X connect 22 0 23 0;
+#X connect 23 0 24 1;
+#X connect 24 0 4 0;
+#X connect 26 0 27 0;
+#X connect 27 0 0 2;
+#X connect 28 0 29 0;
+#X connect 29 0 26 0;

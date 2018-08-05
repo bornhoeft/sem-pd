@@ -1,0 +1,34 @@
+#N canvas 326 214 466 324 12;
+#X floatatom 231 121 5 0 0 0 - - -;
+#X obj 231 97 value variable1;
+#X floatatom 66 123 5 0 0 0 - - -;
+#X obj 66 99 value variable1;
+#X floatatom 94 72 5 0 0 0 - - -;
+#X floatatom 259 70 5 0 0 0 - - -;
+#X floatatom 281 258 5 0 0 0 - - -;
+#X floatatom 66 260 5 0 0 0 - - -;
+#X floatatom 93 208 5 0 0 0 - - -;
+#X floatatom 306 207 5 0 0 0 - - -;
+#X obj 281 234 value something_else;
+#X obj 66 236 value something_else;
+#X text 61 30 Storing a number globally;
+#X obj 66 74 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 231 74 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 66 211 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 281 209 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X connect 1 0 0 0;
+#X connect 3 0 2 0;
+#X connect 4 0 3 0;
+#X connect 5 0 1 0;
+#X connect 8 0 11 0;
+#X connect 9 0 10 0;
+#X connect 10 0 6 0;
+#X connect 11 0 7 0;
+#X connect 13 0 3 0;
+#X connect 14 0 1 0;
+#X connect 15 0 11 0;
+#X connect 16 0 10 0;

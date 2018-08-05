@@ -1,0 +1,43 @@
+#N canvas 719 306 563 455 12;
+#X floatatom 47 297 5 0 0 0 - - -, f 5;
+#X floatatom 67 397 5 0 0 0 - - -, f 5;
+#X obj 47 323 s message1;
+#X obj 67 369 r message1;
+#X floatatom 172 420 5 0 0 0 - - -, f 5;
+#X obj 173 367 r message1;
+#X obj 173 394 + 1;
+#X text 46 30 [send] and [receive] - chordless connections;
+#X text 46 59 The [send] and [receive] objects are useful for linking
+objects and subroutines together in a single canvas or throughout multiple
+patches. Understanding these objects will help 'clean up' your patches
+and allow you to communicate messages between various modules that
+you build or between objects where patch cords are not possible.;
+#X floatatom 153 297 5 0 0 0 - - -, f 5;
+#X obj 153 324 s message1;
+#X text 44 236 send and receive objects can have a creation argument
+to distinguish multiple instances. All [sends]s and [receive]s of the
+same name will intercommunicate:;
+#X obj 47 200 send;
+#X obj 170 166 receive;
+#X floatatom 170 198 5 0 0 0 - - -, f 5;
+#X msg 47 165 50;
+#X floatatom 94 167 5 0 0 0 - - -, f 5;
+#X obj 325 166 receive;
+#X floatatom 325 198 5 0 0 0 - - -, f 5;
+#X floatatom 370 299 5 0 0 0 - - -, f 5;
+#X obj 370 326 s message2;
+#N canvas 338 367 359 247 message2 0;
+#X floatatom 125 123 5 0 0 0 - - -, f 5;
+#X obj 126 87 r message2;
+#X connect 1 0 0 0;
+#X restore 368 385 pd message2;
+#X connect 0 0 2 0;
+#X connect 3 0 1 0;
+#X connect 5 0 6 0;
+#X connect 6 0 4 0;
+#X connect 9 0 10 0;
+#X connect 13 0 14 0;
+#X connect 15 0 12 0;
+#X connect 16 0 12 0;
+#X connect 17 0 18 0;
+#X connect 19 0 20 0;

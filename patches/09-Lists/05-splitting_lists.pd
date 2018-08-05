@@ -1,0 +1,70 @@
+#N canvas 671 27 557 812 12;
+#X msg 54 183 bang;
+#X floatatom 149 270 3 0 5 0 - - -, f 3;
+#X msg 68 214 1;
+#X msg 79 243 1 2 3 4;
+#X text 109 410 first n;
+#X text 171 297 <-- creation arg inits split point;
+#X text 104 213 list with one number;
+#X text 97 183 list with no items;
+#X obj 56 434 print split1;
+#X obj 104 385 print split2;
+#X obj 149 330 print split3;
+#X text 48 51 The "list split" object takes lists and outputs the first
+"n" items (left outlet) and the remaining ones (middle outlet). The
+two outputs appear in the usual right-to-left order. In case there
+are fewer than "n" items in the list \, it is output (in its entirety)
+from the third outlet instead. The creation argument or the inlet sets
+the initial split point.;
+#X obj 56 297 list split 2;
+#X text 184 268 new split point (index);
+#X text 260 329 list shorter than index;
+#X text 52 19 Cut a list into smaller ones qith [list split];
+#X obj 95 579 + 1;
+#X floatatom 183 642 5 0 0 1 split_point - -, f 5;
+#X floatatom 105 706 5 0 0 1 list_entries - -, f 5;
+#X obj 176 579 list length;
+#X obj 134 580 mod;
+#X obj 60 579 f;
+#X obj 61 497 key;
+#X obj 61 528 sel 32;
+#X text 59 468 Cycle in a list with a modulo counter and [list split]
+;
+#X text 116 527 Use the space-bar to step through the list.;
+#X obj 59 605 t b f;
+#X text 154 359 starting value in rest of list;
+#X floatatom 66 409 5 0 0 0 - - -, f 5;
+#X floatatom 111 358 5 0 0 0 - - -, f 5;
+#X obj 60 556 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 105 731 makenote 100 500;
+#X obj 105 767 noteout;
+#X msg 59 641 59 23 34 40 76;
+#X floatatom 134 608 5 0 0 0 - - -, f 5;
+#X obj 59 678 list split 0;
+#X connect 0 0 12 0;
+#X connect 1 0 12 1;
+#X connect 2 0 12 0;
+#X connect 3 0 12 0;
+#X connect 12 0 8 0;
+#X connect 12 0 28 0;
+#X connect 12 1 29 0;
+#X connect 12 1 9 0;
+#X connect 12 2 10 0;
+#X connect 16 0 20 0;
+#X connect 18 0 31 0;
+#X connect 19 0 20 1;
+#X connect 20 0 21 1;
+#X connect 20 0 34 0;
+#X connect 21 0 16 0;
+#X connect 21 0 26 0;
+#X connect 22 0 23 0;
+#X connect 23 0 30 0;
+#X connect 26 0 33 0;
+#X connect 26 1 17 0;
+#X connect 30 0 21 0;
+#X connect 31 0 32 0;
+#X connect 31 1 32 1;
+#X connect 33 0 19 0;
+#X connect 33 0 35 0;
+#X connect 35 1 18 0;

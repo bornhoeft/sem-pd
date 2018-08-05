@@ -1,0 +1,36 @@
+#N canvas 1032 430 257 323 10;
+#X text 45 288 (c) Achim Bornhoeft 2015;
+#X obj 52 136 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 52 243 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 80 244 print;
+#X msg 80 167 reset;
+#X msg 166 167 5;
+#X obj 52 199 each 5;
+#X obj 31 18 each;
+#X floatatom 123 243 5 0 0 0 - - -, f 5;
+#X obj 123 268 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 133 167 3;
+#X obj 82 40 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
+;
+#X obj 82 60 metro 500;
+#X obj 82 82 random 10;
+#X floatatom 82 106 5 0 0 0 - - -, f 5;
+#X text 76 18 each n arg is passed;
+#X obj 89 135 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X connect 1 0 6 0;
+#X connect 4 0 6 0;
+#X connect 5 0 6 1;
+#X connect 6 0 2 0;
+#X connect 6 0 3 0;
+#X connect 6 0 8 0;
+#X connect 8 0 9 0;
+#X connect 10 0 6 1;
+#X connect 11 0 12 0;
+#X connect 12 0 13 0;
+#X connect 13 0 14 0;
+#X connect 14 0 6 0;
+#X connect 14 0 16 0;

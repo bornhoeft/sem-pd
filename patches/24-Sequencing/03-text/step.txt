@@ -1,0 +1,8 @@
+200 send1 0; send2 1;
+1000 send1 1; send2 2;
+1000 send1 2; send2 3;
+1000 send1 3; send2 4;
+1000 send1 4; send2 5;
+2000 send1 5; send2 6;
+1000 send1 6; send2 7;
+1000 send1 7; send2 8;

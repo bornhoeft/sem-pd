@@ -1,0 +1,35 @@
+#N canvas 10 40 515 454 12;
+#X msg 86 180 word;
+#X msg 72 126 set word;
+#X obj 87 213 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X msg 93 149 set another;
+#X text 14 65 You can build messages programmatically in message boxes.
+The basic operation is the [set( message:;
+#X text 18 381 When using the [set( \, [add( \, and [add2( messages
+\, the message box that you are building does not output anything.
+Instead it waits for a bang or a mouse click.;
+#X msg 53 288 add my message;
+#X msg 61 337 my message \;;
+#X text 18 238 [add( puts a complete message in the message box \,
+terminated by a semi-colon \, while [add2( just the items:;
+#X msg 303 288 add2 my;
+#X msg 396 288 add2 message;
+#X msg 316 342 my message my message;
+#X msg 254 288 set;
+#X msg 30 127 set;
+#X text 299 120 [set( alone resets:;
+#X msg 364 155 set;
+#X msg 364 189;
+#X msg 69 312 set;
+#X text 18 33 building messages;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 3 0 0 0;
+#X connect 6 0 7 0;
+#X connect 9 0 11 0;
+#X connect 10 0 11 0;
+#X connect 12 0 11 0;
+#X connect 13 0 0 0;
+#X connect 15 0 16 0;
+#X connect 17 0 7 0;

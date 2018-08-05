@@ -1,0 +1,5 @@
+#N canvas 354 419 539 152 12;
+#X text 28 27 Write a patch with a [list] of midinotes that is called
+in a defined rhythm. Write a loop for this list with a [mod] counter
+in which the mod argument is set by [list length]. Cycle in this list
+with [list split] and output the notes with [noteout].;

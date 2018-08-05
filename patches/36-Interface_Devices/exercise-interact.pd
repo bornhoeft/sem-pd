@@ -1,0 +1,7 @@
+#N canvas 651 235 695 238 16;
+#X text 33 30 Create a patch in which sounds and playing duration and
+sound synthesis (AM \, RM \, FM \, etc.) is controlled by the keyboard.
+;
+#X text 33 110 Erstellen sie ein Patch \, in dem die Klaenge \, ihre
+Spieldauer und die Klangsynthese (AM \, RM \, FM \, etc.) mit der Tastatur
+kontrolliert werden.;

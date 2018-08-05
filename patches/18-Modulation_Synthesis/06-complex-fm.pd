@@ -1,0 +1,102 @@
+#N canvas 429 170 498 609 12;
+#X text 35 570 Copyright (C) 2002 Maurizio Umberto Puxeddu;
+#N canvas 0 22 714 300 initialize 0;
+#X obj 21 15 inlet;
+#X obj 47 147 f 220;
+#X obj 100 157 f 1;
+#X obj 347 154 f 3;
+#X obj 45 218 s \$0-F;
+#X obj 103 216 s \$0-C;
+#X obj 154 157 f 2.3;
+#X obj 560 144 f 0.1;
+#X obj 577 219 s \$0-G;
+#X obj 21 69 trigger b b b b b b b b b;
+#X obj 165 219 s \$0-M1;
+#X obj 233 217 s \$0-M2;
+#X obj 297 220 s \$0-M3;
+#X obj 283 159 f 0.5;
+#X obj 412 153 f 1;
+#X obj 470 151 f 4;
+#X obj 370 226 s \$0-I1;
+#X obj 435 225 s \$0-I2;
+#X obj 493 223 s \$0-I3;
+#X obj 214 160 f 2.51;
+#X connect 0 0 9 0;
+#X connect 1 0 4 0;
+#X connect 2 0 5 0;
+#X connect 3 0 16 0;
+#X connect 6 0 10 0;
+#X connect 7 0 8 0;
+#X connect 9 0 1 0;
+#X connect 9 1 2 0;
+#X connect 9 2 6 0;
+#X connect 9 3 19 0;
+#X connect 9 4 13 0;
+#X connect 9 5 3 0;
+#X connect 9 6 14 0;
+#X connect 9 7 15 0;
+#X connect 9 8 7 0;
+#X connect 13 0 12 0;
+#X connect 14 0 17 0;
+#X connect 15 0 18 0;
+#X connect 19 0 11 0;
+#X restore 287 228 pd initialize;
+#X obj 26 62 cnv 15 360 120 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 41 97 nbx 5 14 -1e+37 1e+37 0 0 \$0-F \$0-F Frequency 0 -6 0
+10 -233017 -1 -1 0 256;
+#X obj 110 97 nbx 5 14 -1e+37 1e+37 0 0 \$0-C \$0-C C 0 -6 0 10 -233017
+-1 -1 0 256;
+#X obj 179 97 nbx 5 14 -1e+37 1e+37 0 0 \$0-M1 \$0-M1 M1 0 -6 0 10
+-233017 -1 -1 0 256;
+#X obj 248 97 nbx 5 14 -1e+37 1e+37 0 0 \$0-I1 \$0-I1 I1 0 -6 0 10
+-233017 -1 -1 0 256;
+#X obj 318 97 nbx 5 14 -1e+37 1e+37 0 0 \$0-G gain Gain 0 -6 0 10 -233017
+-1 -1 0 256;
+#X obj 18 529 dac~;
+#X obj 29 205 r \$0-F;
+#X obj 52 230 r \$0-C;
+#X obj 29 479 *~ 0;
+#X obj 52 455 r \$0-G;
+#X text 211 401 Synthesis;
+#X text 328 65 Control;
+#X obj 99 279 r \$0-M2;
+#X obj 76 255 r \$0-M1;
+#X obj 123 302 r \$0-M3;
+#X obj 146 326 r \$0-I1;
+#X obj 170 351 r \$0-I2;
+#X obj 194 375 r \$0-I3;
+#X obj 179 130 nbx 5 14 -1e+37 1e+37 0 0 \$0-M2 \$0-M2 M2 0 -6 0 10
+-233017 -1 -1 0 256;
+#X obj 178 159 nbx 5 14 -1e+37 1e+37 0 0 \$0-M3 \$0-M3 M3 0 -6 0 10
+-233017 -1 -1 0 256;
+#X obj 247 128 nbx 5 14 -1e+37 1e+37 0 0 \$0-I2 \$0-I2 I2 0 -6 0 10
+-233017 -1 -1 0 256;
+#X obj 247 160 nbx 5 14 -1e+37 1e+37 0 0 \$0-I3 \$0-I3 I3 0 -6 0 10
+-233017 -1 -1 0 256;
+#X obj 287 203 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 288 266 key;
+#X obj 288 295 sel 32;
+#X obj 288 323 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+0.1;
+#X msg 288 350 \; gain \$1 \;;
+#X obj 29 402 fm3m~ ---------------;
+#X text 28 26 Complex Frequency Modulation (1 Carrier + 3 Modulators)
+;
+#X connect 9 0 30 0;
+#X connect 10 0 30 1;
+#X connect 11 0 8 0;
+#X connect 11 0 8 1;
+#X connect 12 0 11 1;
+#X connect 15 0 30 3;
+#X connect 16 0 30 2;
+#X connect 17 0 30 4;
+#X connect 18 0 30 5;
+#X connect 19 0 30 6;
+#X connect 20 0 30 7;
+#X connect 25 0 1 0;
+#X connect 26 0 27 0;
+#X connect 27 0 28 0;
+#X connect 28 0 29 0;
+#X connect 30 0 11 0;

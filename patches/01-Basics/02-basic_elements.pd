@@ -1,0 +1,15 @@
+#N canvas 389 179 544 390 12;
+#X obj 36 139;
+#X obj 34 89 float;
+#X msg 34 185 message;
+#X floatatom 34 234 5 0 0 0 - - -, f 5;
+#X symbolatom 34 283 10 0 0 0 - - -, f 10;
+#X text 33 332 comment;
+#X text 151 89 object box (Apple-1);
+#X text 152 185 message box (Apple-2 \, click);
+#X text 152 230 number box (Apple-3 \, click and drag/type);
+#X text 152 282 symbol box (Apple-4 \, click and type);
+#X text 153 331 comment (Apple-5. like the rest of this text);
+#X text 151 139 empty object box or object not found (Apple-1);
+#X text 151 139 empty object box;
+#X text 32 28 Bascic Elements (see "Put" Menu);

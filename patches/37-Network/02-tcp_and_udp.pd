@@ -1,0 +1,27 @@
+#N canvas 454 264 512 483 12;
+#X text 11 66 There are two main protocols for transmitting data over
+networks: TCP and UDP.;
+#X text 10 109 TCP is the most common \, it stands for Transmission
+Control Protocol. Basically \, that means that the protocol manages
+the transmission of the data. With TCP \, when you send a packet of
+data \, its guaranteed to arrive.;
+#X text 9 203 By default \, most networking objects in Pd use TCP:
+;
+#X obj 28 226 netsend;
+#X text 9 261 UDP stands for User Datagram Protocol. It is a lightweight
+\, simple protocol that is meant to be as quick and small as possible.
+The downside is that the data packets are not guaranteed to arrive.
+;
+#X obj 122 228 netreceive 32194;
+#X obj 137 365 netreceive 32194 1;
+#X obj 33 365 netsend 1;
+#X text 11 400 One advantage to UDP is that you do not need to maintain
+a connection to receive data. Whenever you open a UDP port \, you will
+start receiving data.;
+#X text 10 25 TCP and UDP;
+#X text 8 177 http://en.wikipedia.org/wiki/Transmission_Control_Protocol
+;
+#X text 11 333 http://en.wikipedia.org/wiki/User_Datagram_Protocolmment
+;
+#X text 268 228 [netclient];
+#X text 358 227 [netserver];

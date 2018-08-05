@@ -1,0 +1,8 @@
+#N canvas 596 242 218 244 10;
+#X obj 40 118 key-lock;
+#X obj 40 92 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X floatatom 40 153 5 0 0 0 - - -, f 5;
+#X text 38 51 [key] with tgl to lock;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;

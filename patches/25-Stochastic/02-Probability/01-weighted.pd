@@ -1,0 +1,58 @@
+#N canvas 379 101 421 623 12;
+#X obj 41 399 random 100;
+#X obj 41 512 bng 20 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 103 546 bng 20 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 41 448 moses 10;
+#X obj 103 516 moses 30;
+#X obj 164 544 bng 20 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X text 37 533 10%;
+#X text 101 566 20%;
+#X text 161 567 70%;
+#X obj 46 134 random 100;
+#X obj 46 277 bng 20 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 107 255 bng 20 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X text 42 81 with two possible outcomes;
+#X text 36 339 with three possible outcomes;
+#X text 39 37 Weighted random;
+#X floatatom 46 227 5 0 0 0 - - -, f 5;
+#X floatatom 107 227 5 0 0 0 - - -, f 5;
+#X obj 287 38 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 287 89 s metr;
+#X obj 46 104 r metr;
+#X obj 41 371 r metr;
+#X obj 287 59 metro 800;
+#X floatatom 41 481 5 0 0 0 - - -, f 5;
+#X floatatom 102 482 5 0 0 0 - - -, f 5;
+#X floatatom 41 425 5 0 0 0 - - -, f 5;
+#X floatatom 46 168 5 0 0 0 - - -, f 5;
+#X floatatom 107 167 3 0 100 0 - - -, f 3;
+#X text 136 165 <-- change probabililty;
+#X obj 46 194 moses 20;
+#X text 42 299 %20 (numbers 0 - 19);
+#X text 102 279 %80 (numbers 20 - 99);
+#X text 118 450 rest (90%);
+#X connect 0 0 24 0;
+#X connect 3 0 22 0;
+#X connect 3 1 23 0;
+#X connect 4 0 2 0;
+#X connect 4 1 5 0;
+#X connect 9 0 25 0;
+#X connect 15 0 10 0;
+#X connect 16 0 11 0;
+#X connect 17 0 21 0;
+#X connect 19 0 9 0;
+#X connect 20 0 0 0;
+#X connect 21 0 18 0;
+#X connect 22 0 1 0;
+#X connect 23 0 4 0;
+#X connect 24 0 3 0;
+#X connect 25 0 28 0;
+#X connect 26 0 28 1;
+#X connect 28 0 15 0;
+#X connect 28 1 16 0;

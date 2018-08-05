@@ -1,0 +1,43 @@
+#N canvas 529 151 594 544 12;
+#X obj 233 257 tgl 15 0 empty empty empty 0 -6 0 10 -262144 -1 -1 0
+1;
+#X obj 233 360 random 10;
+#X obj 329 361 random 10;
+#X floatatom 233 395 5 0 0 0 - - -, f 5;
+#X floatatom 329 397 5 0 0 0 - - -, f 5;
+#X floatatom 233 486 5 0 0 0 - - -, f 5;
+#X obj 233 318 t b b;
+#X obj 233 446 min;
+#X floatatom 308 487 5 0 0 0 - - -, f 5;
+#X obj 308 446 max;
+#X text 36 21 [min] and [max];
+#X text 35 60 [max] returns the greater of the two numbers passed to
+its inlets. For example \, if the creation argument (or right inlet)
+is equal to 10 \, and you send 9 to the left inlet then the object
+will return 10 If you pass it an 11 \, then object returns 11;
+#X obj 233 281 metro 2000;
+#X obj 142 361 random 10;
+#X floatatom 142 396 5 0 0 0 - - -, f 5;
+#X floatatom 142 487 5 0 0 0 - - -, f 5;
+#X obj 142 447 max 4;
+#X text 63 448 at least;
+#X text 33 146 [min] returns the lesser of the two numbers passed to
+its inlets. For example \, if the creation argument (or right inlet)
+is equal to 10 \, and you send 9 to the left inlet then the object
+will return 9 If you pass it an 11 \, then object returns 10;
+#X connect 0 0 12 0;
+#X connect 1 0 3 0;
+#X connect 2 0 4 0;
+#X connect 3 0 7 0;
+#X connect 3 0 9 0;
+#X connect 4 0 7 1;
+#X connect 4 0 9 1;
+#X connect 6 0 1 0;
+#X connect 6 0 13 0;
+#X connect 6 1 2 0;
+#X connect 7 0 5 0;
+#X connect 9 0 8 0;
+#X connect 12 0 6 0;
+#X connect 13 0 14 0;
+#X connect 14 0 16 0;
+#X connect 16 0 15 0;

@@ -1,0 +1,37 @@
+#N canvas 213 67 557 494 12;
+#X obj 34 180 random 100;
+#X floatatom 35 271 3 0 0 0 - - -, f 3;
+#X text 128 180 Generates random numbers between 0 and 99;
+#X text 161 152 Changes the 'range' of random numbers.;
+#X text 29 16 Random Numbers;
+#X floatatom 111 153 5 0 0 0 - - -, f 5;
+#X obj 34 100 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 34 124 metro 300;
+#X obj 35 240 +;
+#X floatatom 56 210 5 0 0 0 - - -, f 5;
+#X text 101 209 Shift the range up with positive values and down with
+negative ones.;
+#X floatatom 39 436 0 0 0 0 - - -;
+#X obj 39 409 / 100;
+#X text 90 409 divide by 100 to keep output within range.;
+#X text 80 435 produces fractional results between 0 and 5;
+#X obj 40 331 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 40 355 metro 300;
+#X obj 39 382 random 501;
+#X text 36 301 Create fractional random numbers:;
+#X text 27 43 [random] outputs pseudo-random integers between 0 and
+N-1 where N is the creation argument or the value of the right inlet.
+;
+#X text 126 381 numbers 0 - 500;
+#X connect 0 0 8 0;
+#X connect 5 0 0 1;
+#X connect 6 0 7 0;
+#X connect 7 0 0 0;
+#X connect 8 0 1 0;
+#X connect 9 0 8 1;
+#X connect 12 0 11 0;
+#X connect 15 0 16 0;
+#X connect 16 0 17 0;
+#X connect 17 0 12 0;

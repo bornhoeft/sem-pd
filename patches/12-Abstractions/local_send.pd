@@ -1,0 +1,38 @@
+#N canvas 337 42 577 368 12;
+#X obj 200 55 inlet;
+#X obj 200 87 s \$1-a;
+#X obj 295 87 s \$1-b;
+#X obj 295 55 inlet;
+#X floatatom 110 213 5 0 0 0 - - -, f 5;
+#X floatatom 110 308 5 0 0 0 - - -, f 5;
+#X obj 175 244 s here's-what-happens-if-you-dont;
+#X obj 175 276 r here's-what-happens-if-you-dont;
+#X floatatom 175 308 5 0 0 0 - - -, f 5;
+#X floatatom 175 213 5 0 0 0 - - -, f 5;
+#X floatatom 455 213 5 0 0 0 - - -, f 5;
+#X floatatom 455 308 5 0 0 0 - - -, f 5;
+#X obj 455 244 s \$0-d;
+#X obj 455 276 r \$0-d;
+#X text 49 20 This is an abstraction used in "local_sends_and_receives.pd"
+;
+#X obj 45 244 send \$1;
+#X floatatom 45 213 5 0 0 0 - - -, f 5;
+#X floatatom 45 308 5 0 0 0 - - -, f 5;
+#X obj 45 276 r \$1;
+#X text 49 115 The sends above get named "one-a" \, etc. The window
+title bar tells you the creation arguments for this particular instance.
+You can use this to make internal local connections as shown below.
+The "\$1-c" boxes act locally whereas the middle boxes get crosstalk
+between the windows.;
+#X obj 110 244 s c-\$1;
+#X obj 110 276 r c-\$1;
+#X connect 0 0 1 0;
+#X connect 3 0 2 0;
+#X connect 4 0 20 0;
+#X connect 7 0 8 0;
+#X connect 9 0 6 0;
+#X connect 10 0 12 0;
+#X connect 13 0 11 0;
+#X connect 16 0 15 0;
+#X connect 18 0 17 0;
+#X connect 21 0 5 0;

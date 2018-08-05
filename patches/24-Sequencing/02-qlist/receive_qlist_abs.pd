@@ -1,0 +1,14 @@
+#N canvas 247 634 636 281 12;
+#X obj 135 49 r \$1-fader;
+#X obj 277 51 r \$1-number;
+#X obj 135 90 line;
+#X obj 138 158 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X floatatom 277 156 5 0 0 0 - - -, f 5;
+#X text 74 208 The names of the [recieve] objects are created with
+the variable \$1 to make them indepentently accessible by the qlist
+(see qlist2.txt).;
+#X connect 0 0 2 0;
+#X connect 1 0 4 0;
+#X connect 2 0 3 0;
+#X coords 0 -1 1 1 250 30 2 100 150;

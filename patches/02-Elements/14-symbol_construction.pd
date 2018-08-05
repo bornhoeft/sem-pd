@@ -1,0 +1,30 @@
+#N canvas 180 74 545 564 12;
+#X text 18 109 There are many different ways of constructing symbols
+from various parts. You can turn lists into symbols by replacing the
+spaces with other characters or you can use objects with "format strings"
+that allow you to create symbols with more flexibility;
+#X text 21 54 Many times you need to dynamically create different symbols.
+For example \, if you are working with many files \, you might want
+to name them with a sequential number.;
+#X text 22 19 Symbol creation;
+#X floatatom 50 245 0 0 0 0 - - -;
+#X obj 50 320 makefilename dog%d.aif;
+#X msg 49 424 symbol meat;
+#X msg 62 448 symbol hair;
+#X obj 49 476 makefilename dog%s.aif;
+#X msg 65 271 set cat%d.wav;
+#X msg 65 295 set %d-zebra;
+#X text 84 245 <- numbers replace "%d" in string;
+#X text 190 273 <- "set" message replaces format;
+#X text 256 322 <- creation argument is format;
+#X text 45 216 SUBSTITUTING A NUMBER;
+#X text 45 393 SUBSTITUTING A SYMBOL;
+#X symbolatom 50 350 10 0 0 0 - - -;
+#X symbolatom 48 506 15 0 0 0 - - -;
+#X connect 3 0 4 0;
+#X connect 4 0 15 0;
+#X connect 5 0 7 0;
+#X connect 6 0 7 0;
+#X connect 7 0 16 0;
+#X connect 8 0 4 0;
+#X connect 9 0 4 0;

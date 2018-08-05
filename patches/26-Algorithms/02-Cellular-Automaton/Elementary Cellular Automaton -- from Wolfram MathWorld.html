@@ -1,0 +1,425 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Elementary Cellular Automaton -- from Wolfram MathWorld</title>
+
+
+
+
+<meta name="DC.Creator" content="Weisstein, Eric W.">
+<meta name="DC.Description" content="The simplest class of one-dimensional cellular automata. Elementary cellular automata have two possible values for each cell (0 or 1), and rules that depend only on nearest neighbor values. As a result, the evolution of an elementary cellular automaton can completely be described by a table specifying the state a given cell will have in the next generation based on the value of the cell to its left, the value the cell itself, and the value of the cell to its right. Since there are...">
+<meta name="DC.Date.Modified" scheme="W3CDTF" content="2002-04-09">
+<meta name="DC.Date.Modified" scheme="W3CDTF" content="2002-04-10">
+<meta name="DC.Date.Modified" scheme="W3CDTF" content="2002-07-23">
+<meta name="DC.Date.Modified" scheme="W3CDTF" content="2006-04-12">
+<meta name="DC.Subject" scheme="MathWorld" content="Mathematics:Discrete Mathematics:Cellular Automata">
+<meta name="DC.Subject" scheme="MathWorld" content="Mathematics:Recreational Mathematics:Mathematical Art:Mathematical Images">
+<meta name="DC.Subject" scheme="MSC_2000" content="37B15">
+<meta name="DC.Subject" scheme="MSC_2000" content="68Q80">
+<meta name="DC.Rights" content="Copyright 1999-2008 Wolfram Research, Inc.  See http://mathworld.wolfram.com/about/terms.html for a full terms of use statement.">
+<meta name="DC.Format" scheme="IMT" content="text/html">
+<meta name="DC.Identifier" scheme="URI" content="http://mathworld.wolfram.com/ElementaryCellularAutomaton.html">
+<meta name="DC.Language" scheme="RFC3066" content="en">
+<meta name="DC.Publisher" content="Wolfram Research, Inc.">
+<meta name="DC.Relation.IsPartOf" scheme="URI" content="http://mathworld.wolfram.com/">
+<meta name="DC.Type" scheme="DCMIType" content="Text">
+<meta name="Last-Modified" content="2006-04-12">
+<link rel="alternate" type="application/rss+xml" title="MathWorld Headline News" href="http://mathworld.wolfram.com/news/rss.xml">
+
+
+
+
+<link rel="stylesheet" type="text/css" href="Elementary%20Cellular%20Automaton%20--%20from%20Wolfram%20MathWorld-Dateien/index.css" media="all">
+</head>
+<body>
+  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tbody><tr>
+      <!-- IE Mac will fail on url('') -->
+      <td style="background-image: url(header.gif); background-repeat: no-repeat;">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tbody><tr>
+            <td><img src="Elementary%20Cellular%20Automaton%20--%20from%20Wolfram%20MathWorld-Dateien/spacer.gif" alt="" usemap="#TopMap" border="0" height="80" width="615"></td>
+<td width="300"><img src="Elementary%20Cellular%20Automaton%20--%20from%20Wolfram%20MathWorld-Dateien/spacer.gif" alt="" width="50">
+<div class="formwrapper">
+<form name="NavBarSearch" action="http://mathworld.wolfram.com/search/" method="get" accept-charset="UTF-8" onsubmit=" if (checkForDefaultInput('query_1', 'SEARCH MATHWORLD')) { return false; }">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody><tr>
+<!--
+<td valign="middle" nowrap="nowrap"><a href="/search/" style="font-size:10px;">
+Search Site</a>
+</td>
+-->
+<td>
+<table class="searchboxborder" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+  <td><input id="query_1" class="searchboxsub" name="query" value="SEARCH MATHWORLD" onfocus="initTextInput(this,'clear','SEARCH MATHWORLD')" onblur="initTextInput(this,'setDefault','SEARCH MATHWORLD')" type="text"></td>
+<!--
+  <td><input type="image" src="/common/images/search/searchbox_arrows.gif" class="searchbox" alt="Search" onclick="if (checkForDefaultInput('query_1', 'SEARCH MATHWORLD')) { return false;} else {document.NavBarSearch.submit(); }" /></td>
+-->
+  </tr>
+</tbody></table></td>
+<td valign="middle"><input src="Elementary%20Cellular%20Automaton%20--%20from%20Wolfram%20MathWorld-Dateien/go.gif" type="image"></td>
+</tr>
+</tbody></table>
+</form>
+</div>
+            </td>
+          </tr>
+        </tbody></table>
+        <div style="padding-right: 840px;"></div>
+      </td>
+      <td width="100%"><img src="Elementary%20Cellular%20Automaton%20--%20from%20Wolfram%20MathWorld-Dateien/header-extend.gif" alt="" height="79" width="100%"></td>
+    </tr>
+  </tbody></table>
+
+<map name="TopMap" id="TopMap"><area shape="rect" coords="11,34,198,51" href="http://www.wolfram.com/products/mathematica/" target="_top" alt="made with Mathematica technology"><area shape="rect" coords="8,8,197,30" href="http://mathworld.wolfram.com/" alt="MathWorld">
+  
+  
+</map>
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody><tr valign="top">
+<td>
+<!-- Sidebar -->
+
+<table border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr><td align="left" nowrap="nowrap" valign="top" width="185">
+    <table border="0" cellpadding="0" cellspacing="0" width="175">
+    <tbody><tr><td>
+    <div class="leftsidebar">
+    <div class="mainindices">
+      <a href="http://mathworld.wolfram.com/topics/Algebra.html">Algebra</a><br>
+      <a href="http://mathworld.wolfram.com/topics/AppliedMathematics.html">Applied Mathematics</a><br>
+      <a href="http://mathworld.wolfram.com/topics/CalculusandAnalysis.html">Calculus and Analysis</a><br>
+      <a href="http://mathworld.wolfram.com/topics/DiscreteMathematics.html">Discrete Mathematics</a><br>
+      <a href="http://mathworld.wolfram.com/topics/FoundationsofMathematics.html">Foundations of Mathematics</a><br>
+      <a href="http://mathworld.wolfram.com/topics/Geometry.html">Geometry</a><br>
+      <a href="http://mathworld.wolfram.com/topics/HistoryandTerminology.html">History and Terminology</a><br>
+      <a href="http://mathworld.wolfram.com/topics/NumberTheory.html">Number Theory</a><br>
+      <a href="http://mathworld.wolfram.com/topics/ProbabilityandStatistics.html">Probability and Statistics</a><br>
+      <a href="http://mathworld.wolfram.com/topics/RecreationalMathematics.html">Recreational Mathematics</a><br>
+      <a href="http://mathworld.wolfram.com/topics/Topology.html">Topology</a><br>
+    </div>
+    </div>
+    </td></tr></tbody></table>
+</td></tr>
+<tr><td height="10"></td></tr>
+<tr><td align="left" nowrap="nowrap" valign="top" width="185">
+<table border="0" cellpadding="0" cellspacing="0" width="175">
+    <tbody><tr><td>
+    <div class="leftsidebar2">
+    <div class="subindices">
+    <a href="http://mathworld.wolfram.com/letters/">Alphabetical Index</a><br>
+    <a href="http://mathworld.wolfram.com/topics/InteractiveEntries.html">Interactive Entries</a><br>
+    <a href="http://mathworld.wolfram.com/cgi-bin/random.cgi">Random Entry</a><br>
+    <a href="http://mathworld.wolfram.com/whatsnew/">New in <i>MathWorld</i></a><br>
+    </div>
+    <div class="divider"></div>
+    <div class="subindices">
+      <a href="http://mathworld.wolfram.com/classroom/"><i>MathWorld</i> Classroom</a><br>
+    </div>
+    <div class="divider"></div>
+    <div class="subindices">
+       <a href="http://mathworld.wolfram.com/about/">About <i>MathWorld</i></a><br>
+       <a href="http://mathworld.wolfram.com/contact/contribute.html">Contribute to <i>MathWorld</i></a><br>
+       <a href="http://mathworld.wolfram.com/contact/">Send a Message to the Team</a><br>
+    </div>
+    <div class="divider"></div>
+    <div class="subindices">
+       <a href="http://www.amazon.com/exec/obidos/ASIN/1584883472/ref=nosim/weisstein-20" target="_top"><i>MathWorld</i> Book</a><br>
+    </div>
+    </div>
+    <div class="leftsidebarfooter">
+      <div class="last-updated">
+      <a href="http://mathworld.wolfram.com/whatsnew/">12,799 entries</a>
+      </div>
+      <div class="last-updated">
+      <a href="http://mathworld.wolfram.com/whatsnew/">Last updated: Fri Mar 14 2008</a><br>
+      </div>
+      <br>
+      <a href="http://mathworld.wolfram.com/about/author.html"><img src="Elementary%20Cellular%20Automaton%20--%20from%20Wolfram%20MathWorld-Dateien/created_01.gif" name="Image1" id="Image1" title="Created, developed, and nurtured by Eric Weisstein" alt="Created, developed, and nurtured by Eric Weisstein" border="0" height="32" width="120"></a><br>
+      <a href="http://www.wolfram.com/" target="_top"><img src="Elementary%20Cellular%20Automaton%20--%20from%20Wolfram%20MathWorld-Dateien/created_02.gif" name="Image2" id="Image2" title="at Wolfram Research" alt="at Wolfram Research" border="0" height="17" width="120"></a> 
+    </div>
+  </td></tr>
+  </tbody></table>
+
+  </td></tr>
+</tbody></table>
+
+<!-- End Sidebar -->
+
+</td>
+<td><img src="Elementary%20Cellular%20Automaton%20--%20from%20Wolfram%20MathWorld-Dateien/spacer.gif" alt="" height="1" width="20"></td>
+<td>
+<div class="leftshadow">
+<div class="centertable">
+<table width="100%">
+<!-- Begin Body -->
+<tbody><tr>
+<td><img src="Elementary%20Cellular%20Automaton%20--%20from%20Wolfram%20MathWorld-Dateien/spacer.gif" alt="" height="1" width="400"></td>
+</tr>
+<tr>
+<td align="left" valign="top" width="100%">
+<!-- Begin Subject -->
+<div class="subjectnavbar">
+<a href="http://mathworld.wolfram.com/topics/DiscreteMathematics.html">Discrete Mathematics</a>&nbsp;&gt;&nbsp;<a href="http://mathworld.wolfram.com/topics/CellularAutomata.html">Cellular Automata</a>&nbsp;&gt;<br>
+</div>
+<div class="subjectnavbar">
+<a href="http://mathworld.wolfram.com/topics/RecreationalMathematics.html">Recreational Mathematics</a>&nbsp;&gt;&nbsp;<a href="http://mathworld.wolfram.com/topics/MathematicalArt.html">Mathematical Art</a>&nbsp;&gt;&nbsp;<a href="http://mathworld.wolfram.com/topics/MathematicalImages.html">Mathematical
+ Images</a>&nbsp;&gt;<br>
+</div>
+<div class="subjectnavbar">
+<a href="http://mathworld.wolfram.com/topics/InteractiveEntries.html">Interactive Entries</a>&nbsp;&gt;&nbsp;<a href="http://mathworld.wolfram.com/topics/InteractiveDemonstrations.html">Interactive Demonstrations</a>&nbsp;&gt;<br>
+</div>
+<!-- End Subject -->
+<br>
+<!-- Begin Title -->
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody><tr><td class="title" valign="baseline"><span class="nowrap">Elementary Cellular Automaton</span></td></tr><tr><td valign="top"><span class="nowrap"><img src="Elementary%20Cellular%20Automaton%20--%20from%20Wolfram%20MathWorld-Dateien/underline.gif" alt="" height="3" width="100%"><img src="Elementary%20Cellular%20Automaton%20--%20from%20Wolfram%20MathWorld-Dateien/underline.gif" alt="" height="3" width="20"></span></td><td><img src="Elementary%20Cellular%20Automaton%20--%20from%20Wolfram%20MathWorld-Dateien/spacer.gif" alt="" height="15"></td></tr>
+</tbody></table>
+<!-- End Title -->
+</td>
+</tr>
+<tr valign="top">
+<td>
+<!-- Begin Total Content -->
+<a href="http://mathworld.wolfram.com/notebooks/CellularAutomata/ElementaryCellularAutomaton.nb" onclick="downloadNotebook('http://mathworld.wolfram.com/notebooks/CellularAutomata/ElementaryCellularAutomaton.nb');return false;"><img src="Elementary%20Cellular%20Automaton%20--%20from%20Wolfram%20MathWorld-Dateien/dnld-nb.gif" alt="DOWNLOAD Mathematica Notebook" border="0" height="26" width="119"></a>
+<!-- Begin Content -->
+<div align="center">
+<img src="Elementary%20Cellular%20Automaton%20--%20from%20Wolfram%20MathWorld-Dateien/elementaryca30rules_775.gif" alt="ElementaryCA30Rules" height="62" width="573">
+</div>
+<p class="Text">
+The simplest class of one-dimensional <a href="http://mathworld.wolfram.com/CellularAutomaton.html" class="Hyperlink">cellular automata</a>. Elementary cellular automata have two possible values for each cell
+ (0 or 1), and rules that depend only on nearest neighbor values. As a result, the
+ evolution of an elementary cellular automaton can completely be described by a table
+ specifying the state a given cell will have in the next generation based on the value
+ of the cell to its left, the value the cell itself, and the value of the cell to
+ its right. Since there are <img src="Elementary%20Cellular%20Automaton%20--%20from%20Wolfram%20MathWorld-Dateien/inline1.gif" class="inlineformula" alt="2×2×2=2^3=8" border="0" height="16" width="103">
+ possible binary states for the three cells neighboring a given cell, there are a
+ total of <img src="Elementary%20Cellular%20Automaton%20--%20from%20Wolfram%20MathWorld-Dateien/inline2.gif" class="inlineformula" alt="2^8=256" border="0" height="16" width="52"> elementary cellular automata,
+ each of which can be indexed with an 8-bit binary number (Wolfram 1983, 2002). For
+ example, the table giving the evolution of <a href="http://mathworld.wolfram.com/Rule30.html" class="Hyperlink">rule
+ 30</a> (<img src="Elementary%20Cellular%20Automaton%20--%20from%20Wolfram%20MathWorld-Dateien/inline3.gif" class="inlineformula" alt="30=00011110_2" border="0" height="14" width="98">) is illustrated above. In
+ this diagram, the possible values of the three neighboring cells are shown in the
+ top row of each panel, and the resulting value the central cell takes in the next
+ generation is shown below in the center. <img src="Elementary%20Cellular%20Automaton%20--%20from%20Wolfram%20MathWorld-Dateien/inline4.gif" class="inlineformula" alt="n" border="0" height="14" width="7"> generations of
+ elementary cellular automaton rule <img src="Elementary%20Cellular%20Automaton%20--%20from%20Wolfram%20MathWorld-Dateien/inline5.gif" class="inlineformula" alt="r" border="0" height="14" width="6"> are implemented
+ as <tt><a href="http://reference.wolfram.com/mathematica/ref/CellularAutomaton.html" class="Hyperlink">CellularAutomaton</a></tt>[<i>r</i>, <img src="Elementary%20Cellular%20Automaton%20--%20from%20Wolfram%20MathWorld-Dateien/inline6.gif" class="inlineformula" alt="{" border="0" height="14" width="5"><img src="Elementary%20Cellular%20Automaton%20--%20from%20Wolfram%20MathWorld-Dateien/inline7.gif" class="inlineformula" alt="{" border="0" height="14" width="5">1<img src="Elementary%20Cellular%20Automaton%20--%20from%20Wolfram%20MathWorld-Dateien/inline8.gif" class="inlineformula" alt="}" border="0" height="14" width="5">0<img src="Elementary%20Cellular%20Automaton%20--%20from%20Wolfram%20MathWorld-Dateien/inline9.gif" class="inlineformula" alt="}" border="0" height="14" width="5">, <i>n</i>, <img src="Elementary%20Cellular%20Automaton%20--%20from%20Wolfram%20MathWorld-Dateien/inline10.gif" class="inlineformula" alt="{" border="0" height="14" width="5"><tt>All</tt>, <tt>All</tt><img src="Elementary%20Cellular%20Automaton%20--%20from%20Wolfram%20MathWorld-Dateien/inline11.gif" class="inlineformula" alt="}" border="0" height="14" width="5">].
+</p>
+<div align="center">
+<img src="Elementary%20Cellular%20Automaton%20--%20from%20Wolfram%20MathWorld-Dateien/elementaryca30_1000.gif" alt="ElementaryCA30" height="188" width="366">
+</div>
+<p class="Text">
+The evolution of a one-dimensional cellular automaton can be illustrated
+ by starting with the initial state (generation zero) in the first row, 
+the first generation on
+ the second row, and so on. For example, the figure above illustrated 
+the first 20
+ generations of the <a href="http://mathworld.wolfram.com/Rule30.html" class="Hyperlink">rule 30</a> elementary
+ cellular automaton starting with a single black cell.
+</p>
+<div align="center">
+<img src="Elementary%20Cellular%20Automaton%20--%20from%20Wolfram%20MathWorld-Dateien/elementarycarules_1000.gif" alt="ElementaryCARules" height="268" width="635">
+</div>
+<div align="center">
+<img src="Elementary%20Cellular%20Automaton%20--%20from%20Wolfram%20MathWorld-Dateien/elementaryca_850.gif" alt="ElementaryCA" height="566" width="540">
+</div>
+<p class="Text">
+The illustrations above show some automata numbers that give 
+particularly interesting pattern propagated for 15 generations starting 
+with a single black cell in the initial
+ iteration. Rule 30 is of special interest because it is chaotic 
+(Wolfram 2002, p.&nbsp;<a href="http://www.wolframscience.com/nksonline/page-871-text" class="Hyperlink">871</a>),
+ with central column given by 1, 1, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, ... (Sloane's
+ <a href="http://www.research.att.com/%7Enjas/sequences/A051023" class="Hyperlink">A051023</a>).
+ In fact, this rule is used as the <a href="http://mathworld.wolfram.com/RandomNumber.html" class="Hyperlink">random
+ number</a> generator used for large integers in <i><a href="http://www.wolfram.com/products/mathematica/" class="Hyperlink"><i>Mathematica</i></a></i> (Wolfram 2002, p.&nbsp;<a href="http://www.wolframscience.com/nksonline/page-317-text" class="Hyperlink">317</a>).
+</p>
+<p class="Text">
+The complete set of 256 (rules 0-255) elementary cellular automata are 
+illustrated below for a starting condition consisting of a single black 
+cell.
+</p>
+<div align="center">
+<img src="Elementary%20Cellular%20Automaton%20--%20from%20Wolfram%20MathWorld-Dateien/elementaryca1_900.gif" alt="ElementaryCA1" height="592" width="568">
+</div>
+<div align="center">
+<img src="Elementary%20Cellular%20Automaton%20--%20from%20Wolfram%20MathWorld-Dateien/elementaryca2_900.gif" alt="ElementaryCA2" height="592" width="570">
+</div>
+<div align="center">
+<img src="Elementary%20Cellular%20Automaton%20--%20from%20Wolfram%20MathWorld-Dateien/elementaryca3_900.gif" alt="ElementaryCA3" height="591" width="568">
+</div>
+<div align="center">
+<img src="Elementary%20Cellular%20Automaton%20--%20from%20Wolfram%20MathWorld-Dateien/elementaryca4_900.gif" alt="ElementaryCA4" height="591" width="568">
+</div>
+<div align="center">
+<img src="Elementary%20Cellular%20Automaton%20--%20from%20Wolfram%20MathWorld-Dateien/elementaryca5_900.gif" alt="ElementaryCA5" height="710" width="568">
+</div>
+<p class="Text">
+Of the <img src="Elementary%20Cellular%20Automaton%20--%20from%20Wolfram%20MathWorld-Dateien/inline12.gif" class="inlineformula" alt="2^8=256" border="0" height="16" width="52"> elementary cellular automata,
+ there are 88 fundamentally inequivalent rules (Wolfram 2002, p.&nbsp;<a href="http://www.wolframscience.com/nksonline/page-57-text" class="Hyperlink">57</a>).
+</p>
+<p class="Text">
+The <a href="http://mathworld.wolfram.com/Amphichiral.html" class="Hyperlink">amphichiral</a> elementary cellular automata are 0, 1, 4, 5, 18, 19, 22, 23, 32, 33, 36, 37, 50, 51, 54, 55, 72, 73,
+ 76, 77, 90, 91, 94, 95, 104, 105, 108, 109, 122, 123, 126, 127, 128, 129, 132, 133,
+ 146, 147, 150, 151, 160, 161, 164, 165, 178, 179, 182, 183, 200, 201, 204, 205, 218,
+ 219, 222, 223, 232, 233, 236, 237, 250, 251, 254, and 255.
+</p>
+<!-- End Content -->
+<!-- Begin See Also -->
+<form name="SearchLinks" method="get" action="http://mathworld.wolfram.com/search/">
+<p class="CrossRefs">
+<span class="crosslinkheader">SEE ALSO:</span> <a href="http://mathworld.wolfram.com/CellularAutomaton.html" class="Hyperlink">Cellular Automaton</a>,<a href="http://mathworld.wolfram.com/Rule30.html" class="Hyperlink">Rule
+ 30</a>, <a href="http://mathworld.wolfram.com/Rule54.html" class="Hyperlink">Rule 54</a>, <a href="http://mathworld.wolfram.com/Rule60.html" class="Hyperlink">Rule 60</a>, <a href="http://mathworld.wolfram.com/Rule62.html" class="Hyperlink">Rule 62</a>,
+ <a href="http://mathworld.wolfram.com/Rule90.html" class="Hyperlink">Rule 90</a>, <a href="http://mathworld.wolfram.com/Rule94.html" class="Hyperlink">Rule
+ 94</a>, <a href="http://mathworld.wolfram.com/Rule102.html" class="Hyperlink">Rule 102</a>, <a href="http://mathworld.wolfram.com/Rule110.html" class="Hyperlink">Rule 110</a>, <a href="http://mathworld.wolfram.com/Rule126.html" class="Hyperlink">Rule 126</a>,
+ <a href="http://mathworld.wolfram.com/Rule150.html" class="Hyperlink">Rule 150</a>, <a href="http://mathworld.wolfram.com/Rule158.html" class="Hyperlink">Rule
+ 158</a>, <a href="http://mathworld.wolfram.com/Rule182.html" class="Hyperlink">Rule 182</a>, <a href="http://mathworld.wolfram.com/Rule188.html" class="Hyperlink">Rule 188</a>, <a href="http://mathworld.wolfram.com/Rule190.html" class="Hyperlink">Rule 190</a>,
+ <a href="http://mathworld.wolfram.com/Rule220.html" class="Hyperlink">Rule 220</a>, <a href="http://mathworld.wolfram.com/Rule222.html" class="Hyperlink">Rule
+ 222</a>, <a href="http://mathworld.wolfram.com/TotalisticCellularAutomaton.html" class="Hyperlink">Totalistic
+ Cellular Automaton</a>
+</p>
+</form>
+<!-- End See Also -->
+<!-- Begin CrossURL -->
+<!-- End CrossURL -->
+<!-- Begin Contributor -->
+<!-- End Contributor -->
+<!-- Begin References -->
+<p>
+<img src="Elementary%20Cellular%20Automaton%20--%20from%20Wolfram%20MathWorld-Dateien/underline.gif" alt="" height="3" width="300">
+</p>
+<span class="crosslinkheader">REFERENCES:</span>
+<p class="Reference">
+<img src="Elementary%20Cellular%20Automaton%20--%20from%20Wolfram%20MathWorld-Dateien/mathematica.gif" alt="" align="bottom" border="0" height="16" width="16"> Rangel-Mondragon, J. "A Catalog of Cellular Automata."
+ <a href="http://library.wolfram.com/infocenter/MathSource/505/" class="Hyperlink">http://library.wolfram.com/infocenter/MathSource/505/</a>.
+</p>
+<p class="Reference">
+Sloane, N.&nbsp;J.&nbsp;A. Sequence  <a href="http://www.research.att.com/%7Enjas/sequences/A051023" class="Hyperlink">A051023</a> in "The On-Line Encyclopedia of Integer Sequences."
+</p>
+<p class="Reference">
+Wolfram, S. "Statistical Mechanics of Cellular Automata." <i>Rev. Mod.
+Phys.</i> <b>55</b>, 601-644, 1983.
+</p>
+<p class="Reference">
+Wolfram, S. <i><a href="http://www.amazon.com/exec/obidos/ASIN/1579550088/ref=nosim/weisstein-20" class="Hyperlink">A New Kind of Science.</a></i> Champaign, IL: Wolfram Media, pp.&nbsp;<a href="http://www.wolframscience.com/nksonline/page-23-text" class="Hyperlink">23</a>-60,
+ <a href="http://www.wolframscience.com/nksonline/page-112-text" class="Hyperlink">112</a>,
+ and <a href="http://www.wolframscience.com/nksonline/page-865a-text" class="Hyperlink">865</a>-866,
+ 2002.
+</p>
+<!-- End References -->
+<!-- Begin CiteAs -->
+<div>
+<img src="Elementary%20Cellular%20Automaton%20--%20from%20Wolfram%20MathWorld-Dateien/underline.gif" alt="" height="3" width="300"><br><br><br><span class="crosslinkheader">CITE THIS AS:</span><br>
+<p class="citation">
+<a href="http://mathworld.wolfram.com/about/author.html">Weisstein, Eric W.</a> "Elementary Cellular Automaton."
+From <a href="http://mathworld.wolfram.com/"><i>MathWorld</i></a>--A Wolfram Web Resource. <a href="http://mathworld.wolfram.com/ElementaryCellularAutomaton.html">http://mathworld.wolfram.com/ElementaryCellularAutomaton.html</a>
+</p>
+</div>
+<!-- End CiteAs -->
+<!-- End Total Content -->
+</td></tr>
+<!-- End Body -->
+</tbody></table>
+</div>
+</div>
+<div class="bottomshadow">
+<img src="Elementary%20Cellular%20Automaton%20--%20from%20Wolfram%20MathWorld-Dateien/spacer.gif" alt="" height="17" width="1">
+</div>
+<p class="footer">
+<a href="http://mathworld.wolfram.com/contact/"><img src="Elementary%20Cellular%20Automaton%20--%20from%20Wolfram%20MathWorld-Dateien/send.gif" alt="Send" title="Send" border="0" height="17" width="16">Contact the <i>MathWorld</i> Team</a><br>
+© 1999-2008 <a href="http://www.wolfram.com/" target="_top">Wolfram Research, Inc.</a> | <a href="http://mathworld.wolfram.com/about/terms.html">Terms of Use</a>
+</p>
+
+</td>
+<td valign="top">
+<!-- Rightbar -->
+
+<div class="righttable">
+<table border="0" cellpadding="0" cellspacing="0" width="185">
+<tbody><tr valign="top">
+<td>
+<div class="leftmargin">
+      <div class="othersite_heading"><a href="http://www.wolfram.com/webresources.html" target="_top">Other Wolfram Sites:</a></div>
+      <div class="othersite"><a href="http://www.wolfram.com/" target="_top">
+      <img src="Elementary%20Cellular%20Automaton%20--%20from%20Wolfram%20MathWorld-Dateien/bullet-aqua.gif" alt="" border="0" height="7" width="7">&nbsp;&nbsp;Wolfram Research</a>
+      </div>
+      <div class="othersite"><a href="http://demonstrations.wolfram.com/" target="_top">
+      <img src="Elementary%20Cellular%20Automaton%20--%20from%20Wolfram%20MathWorld-Dateien/bullet-aqua.gif" alt="" border="0" height="7" width="7">&nbsp;&nbsp;Demonstrations Site</a>
+      </div>
+      <div class="othersite"><a href="http://integrals.wolfram.com/" target="_top">
+      <img src="Elementary%20Cellular%20Automaton%20--%20from%20Wolfram%20MathWorld-Dateien/bullet-aqua.gif" alt="" border="0" height="7" width="7">&nbsp;&nbsp;Integrator</a>
+      </div>
+      <div class="othersite"><a href="http://tones.wolfram.com/" target="_top">
+      <img src="Elementary%20Cellular%20Automaton%20--%20from%20Wolfram%20MathWorld-Dateien/bullet-aqua.gif" alt="" border="0" height="7" width="7">&nbsp;&nbsp;Tones</a>
+      </div>
+      <div class="othersite"><a href="http://functions.wolfram.com/" target="_top">
+      <img src="Elementary%20Cellular%20Automaton%20--%20from%20Wolfram%20MathWorld-Dateien/bullet-aqua.gif" alt="" border="0" height="7" width="7">&nbsp;&nbsp;Functions Site</a>
+      </div>
+      <div class="othersite"><a href="http://www.wolframscience.com/" target="_top">
+      <img src="Elementary%20Cellular%20Automaton%20--%20from%20Wolfram%20MathWorld-Dateien/bullet-aqua.gif" alt="" border="0" height="7" width="7">&nbsp;&nbsp;Wolfram Science</a>
+      </div>
+      <div class="othersite"><a href="http://www.wolfram.com/webresources.html" target="_top">
+      <img src="Elementary%20Cellular%20Automaton%20--%20from%20Wolfram%20MathWorld-Dateien/bullet-aqua.gif" alt="" border="0" height="7" width="7">&nbsp;&nbsp;more…</a>
+      </div>
+</div>
+
+<div class="rightline-sub"></div>
+<div align="center">
+<a href="http://www.wolfram.com/products/mathematica/" target="_top"><img src="Elementary%20Cellular%20Automaton%20--%20from%20Wolfram%20MathWorld-Dateien/mathematica_reinvented.gif" alt="Mathematica reinvented" title="Mathematica reinvented" border="0" height="34" width="183"></a>
+</div>
+<div class="leftmargin">
+  <div class="othersite">
+    <a href="http://www.wolfram.com/products/mathematica/" target="_top">
+      <img src="Elementary%20Cellular%20Automaton%20--%20from%20Wolfram%20MathWorld-Dateien/bullet-aqua.gif" alt="" border="0" height="7" width="7">&nbsp;&nbsp;<i>Mathematica</i> Home Page</a>
+  </div>
+</div>
+</td></tr>
+</tbody></table>
+</div>
+
+<div class="adtable">
+<table border="0" cellpadding="0" cellspacing="0" width="185">
+<tbody><tr><td>
+
+
+<div style="margin-left: 20px;">
+<div class="ad" style="margin-top: 5px;">
+Show off your math savvy with a <a href="http://store.wolfram.com/view/misc/index.str#mathworld" target="_top"><i>MathWorld</i> T-shirt</a>.
+</div>
+</div>
+</td></tr>
+</tbody></table>
+</div>
+<div class="demonstrations">
+<table border="0" width="185">
+<tbody><tr valign="top"><td>
+<div class="othersite_heading" style="text-align: center;">
+<div class="demoheader">
+Interactive Demonstrations
+</div>
+</div>
+</td></tr>
+</tbody></table>
+<div class="demonstrationsborder">
+<img src="Elementary%20Cellular%20Automaton%20--%20from%20Wolfram%20MathWorld-Dateien/spacer.gif" alt="" height="1" width="190">
+</div>
+<div class="leftmargin">
+<table border="0" cellspacing="7" width="185">
+<tbody><tr valign="top"><td><a href="http://demonstrations.wolfram.com/CellularAutomatonExplorer/" class="borderImage" target="_top"><img src="Elementary%20Cellular%20Automaton%20--%20from%20Wolfram%20MathWorld-Dateien/cellularautomatonexplorer.jpg" alt="Cellular Automaton Explorer" border="0" height="50" width="44"></a></td><td valign="middle"><span class="ad"><a href="http://demonstrations.wolfram.com/CellularAutomatonExplorer/" class="othersite" target="_top">Cellular Automaton Explorer</a></span></td></tr><tr valign="top"><td><a href="http://demonstrations.wolfram.com/PappusChain/" class="borderImage" target="_top"><img src="Elementary%20Cellular%20Automaton%20--%20from%20Wolfram%20MathWorld-Dateien/pappuschain.jpg" alt="Pappus Chain" border="0" height="47" width="44"></a></td><td valign="middle"><span class="ad"><a href="http://demonstrations.wolfram.com/PappusChain/" class="othersite" target="_top">Pappus
+ Chain</a></span></td></tr><tr valign="top"><td><a href="http://demonstrations.wolfram.com/ElementaryNearestAmbidextrousAutomata/" class="borderImage" target="_top"><img src="Elementary%20Cellular%20Automaton%20--%20from%20Wolfram%20MathWorld-Dateien/elementarynearestambidextrousautomata.jpg" alt="Elementary Nearest Ambidextrous Automata" border="0" height="46" width="44"></a></td><td valign="middle"><span class="ad"><a href="http://demonstrations.wolfram.com/ElementaryNearestAmbidextrousAutomata/" class="othersite" target="_top">Elementary Nearest Ambidextrous Automata</a></span></td></tr><tr valign="top"><td><a href="http://demonstrations.wolfram.com/SemiRotationAutomatonPlot/" class="borderImage" target="_top"><img src="Elementary%20Cellular%20Automaton%20--%20from%20Wolfram%20MathWorld-Dateien/semirotationautomatonplot.jpg" alt="Semi-Rotation Automaton Plot" border="0" height="46" width="44"></a></td><td valign="middle"><span class="ad"><a href="http://demonstrations.wolfram.com/SemiRotationAutomatonPlot/" class="othersite" target="_top">Semi-Rotation Automaton Plot</a></span></td></tr>
+</tbody></table>
+</div>
+<div class="demonstrationsline">
+<img src="Elementary%20Cellular%20Automaton%20--%20from%20Wolfram%20MathWorld-Dateien/spacer.gif" alt="" height="1" width="190">
+</div>
+<div class="demofooter">
+from <a href="http://demonstrations.wolfram.com/" target="_top">The Wolfram Demonstrations
+Project</a>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+
+
+</body></html>

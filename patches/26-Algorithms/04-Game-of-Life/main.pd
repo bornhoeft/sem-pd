@@ -1,0 +1,78 @@
+#N canvas 364 228 506 407 10;
+#X obj 0 -95 cnv 15 500 400 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 318 36 box_msg;
+#X obj 9 -80 cnv 15 360 35 empty empty Conway's_Game_of_Life 10 20
+1 30 -54174 -262144 0;
+#X text 234 -99 Create by kicko-wang;
+#X obj 47 -10 bng 30 250 50 0 step empty Step 0 -10 0 10 -258113 -257985
+-1;
+#X obj 89 -20 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#N canvas 252 142 465 282 to-zero 0;
+#X msg -558 -620 \; s_row_\$1 const \$2;
+#X obj -566 -653 pack f 0;
+#X obj -556 -695 f;
+#X obj -523 -694 + 1;
+#X obj -492 -695 % 16;
+#X obj -491 -671 sel 15;
+#X obj -490 -571 outlet;
+#X obj -558 -758 inlet;
+#X msg -490 -647 0;
+#X obj -558 -570 outlet;
+#X obj -579 -716 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg -433 -620 \; r_row_\$1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0;
+#X obj -401 -640 bng 15 250 50 0 zero empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj -380 -641 bng 15 250 50 0 step empty empty 17 7 0 10 -258113
+-1 -1;
+#X obj -557 -721 metro 10;
+#X obj -401 -661 del 200;
+#X connect 1 0 0 0;
+#X connect 2 0 3 0;
+#X connect 2 0 1 0;
+#X connect 2 0 5 0;
+#X connect 2 0 11 0;
+#X connect 3 0 4 0;
+#X connect 4 0 2 1;
+#X connect 5 0 8 0;
+#X connect 5 0 15 0;
+#X connect 7 0 14 0;
+#X connect 8 0 6 0;
+#X connect 10 0 2 0;
+#X connect 14 0 2 0;
+#X connect 15 0 12 0;
+#X connect 15 0 13 0;
+#X restore 89 4 pd to-zero;
+#X obj 10 -10 tgl 30 0 start empty Start 0 -10 0 10 -258113 -1 -1 0
+1;
+#X obj 158 3 count;
+#X obj 158 -18 hradio 15 1 0 4 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#X obj 9 255 row_box 15;
+#X obj 225 -10 tgl 30 0 display-t empty Display-info 0 -10 0 10 -262144
+-1 -1 0 1;
+#X obj 9 105 row_box 5;
+#X obj 9 165 row_box 9;
+#X obj 9 135 row_box 7;
+#X obj 9 30 row_box 0;
+#X obj 9 120 row_box 6;
+#X obj 9 150 row_box 8;
+#X obj 9 90 row_box 4;
+#X obj 9 45 row_box 1;
+#X obj 9 75 row_box 3;
+#X obj 9 60 row_box 2;
+#X obj 9 240 row_box 14;
+#X obj 9 180 row_box 10;
+#X obj 9 195 row_box 11;
+#X obj 9 210 row_box 12;
+#X obj 9 225 row_box 13;
+#X obj 338 134 catch~ all;
+#X obj 338 228 dac~;
+#X connect 5 0 6 0;
+#X connect 6 1 5 0;
+#X connect 9 0 8 0;
+#X connect 27 0 28 0;
+#X connect 27 0 28 1;

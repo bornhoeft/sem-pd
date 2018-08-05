@@ -1,0 +1,49 @@
+#N canvas 226 190 569 461 12;
+#X obj 311 337 dac~;
+#X obj 45 170 hsl 101 15 0 100 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 0 1;
+#X floatatom 42 227 5 0 0 0 - - -, f 5;
+#X obj 165 170 hsl 101 15 0 100 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 0 1;
+#X floatatom 162 227 5 0 0 0 - - -, f 5;
+#X obj 162 196 + 200;
+#X obj 311 223 catch~ bus1;
+#X msg 56 295 set bus1;
+#X msg 79 324 set bus2;
+#X text 25 26 Receive multiple sends;
+#X obj 315 138 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 315 169 \; pd dsp \$1;
+#X obj 311 250 *~ 0.3;
+#X obj 340 310 *~ 0.3;
+#X obj 340 281 catch~ bus2;
+#X msg 176 295 set bus1;
+#X msg 187 331 set bus2;
+#X obj 41 363 throw~ bus1;
+#X obj 161 363 throw~ bus2;
+#X text 26 52 With [throw~] and [catch~] can be used for a summing
+signal bus and non-local connections. Any number of throw~ objects
+can add into one catch~ object (but two catch~ objects cannot share
+the same name.) You can redirect throw~ via a "set" message.;
+#X obj 162 261 osc~ 200;
+#X obj 42 263 osc~ 100;
+#X obj 42 196 + 100;
+#X text 36 401 Hear the difference of almost identical frequencies
+when routed to one and to different channels.;
+#X connect 1 0 22 0;
+#X connect 2 0 21 0;
+#X connect 3 0 5 0;
+#X connect 4 0 20 0;
+#X connect 5 0 4 0;
+#X connect 6 0 12 0;
+#X connect 7 0 17 0;
+#X connect 8 0 17 0;
+#X connect 10 0 11 0;
+#X connect 12 0 0 0;
+#X connect 13 0 0 1;
+#X connect 14 0 13 0;
+#X connect 15 0 18 0;
+#X connect 16 0 18 0;
+#X connect 20 0 18 0;
+#X connect 21 0 17 0;
+#X connect 22 0 2 0;

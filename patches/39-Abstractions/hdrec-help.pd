@@ -1,0 +1,27 @@
+#N canvas 357 298 552 362 12;
+#X text 103 29 timed hd sample recording;
+#X obj 45 69 adc~;
+#X text 53 315 (c) 2007 Achim Bornhoeft;
+#X msg 177 212 1 5000 3 floete;
+#X obj 56 287 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 77 284 bang on stop;
+#X text 311 213 timed recording;
+#X text 259 135 start recording;
+#X msg 116 133 1 0 2 soundfile;
+#X obj 135 161 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 166 158 start/stop recording;
+#X text 106 75 arg 1: record on/off (0/1) \, arg 2: recording time
+in msec \, if 0 (default) timed recording is off \, arg 3: set file
+number \, arg 4: sndfile name;
+#X obj 56 254 hdrec~;
+#X obj 42 28 hdrec~;
+#X msg 150 184 0;
+#X connect 1 0 12 0;
+#X connect 1 1 12 0;
+#X connect 3 0 12 1;
+#X connect 8 0 12 1;
+#X connect 9 0 12 1;
+#X connect 12 0 4 0;
+#X connect 14 0 12 1;

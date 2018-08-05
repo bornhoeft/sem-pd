@@ -1,0 +1,12 @@
+#N canvas 347 130 587 334 12;
+#X text 52 80 2) Zusatz: Integrieren Sie in das Patch einen Sekundenzähler
+\, der die Zeit zwischen dem Ende der Aufnahme und dem Beginn des Abspielens
+des Klangs anzeigt.;
+#X text 51 225 2) Additionaly integrate a counter which displays the
+time between the end of the recording and the start of the playback.
+;
+#X text 54 25 1) Erstellen Sie ein Patch \, das über den Mikrophoneingang
+aufnimmt und das Aufgenommene zu einem zufÃ¤lligen späteren Zeitpunkt
+wieder abspielt.;
+#X text 51 171 1) Create a patch that records the sound from the microphone
+input and playback this sound a randomised time later.;

@@ -1,0 +1,5 @@
+#N canvas 449 619 354 207 10;
+#X obj 60 76 init 1;
+#X floatatom 60 112 5 0 0 0 - - -, f 5;
+#X text 57 41 Initialise number at startup;
+#X connect 0 0 1 0;

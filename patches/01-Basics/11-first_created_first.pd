@@ -1,0 +1,16 @@
+#N canvas 304 58 545 277 12;
+#X floatatom 154 89 5 0 0 0 - - -, f 5;
+#X obj 154 133 +;
+#X floatatom 154 169 5 0 0 0 - - -, f 5;
+#X floatatom 262 90 5 0 0 0 - - -, f 5;
+#X obj 262 134 +;
+#X floatatom 262 170 5 0 0 0 - - -, f 5;
+#X text 40 33 First CREATED cord is calculated first. See the difference
+between the two visually identical patches:;
+#X text 72 226 To control this use the [trigger] object.;
+#X connect 0 0 1 0;
+#X connect 0 0 1 1;
+#X connect 1 0 2 0;
+#X connect 3 0 4 1;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;

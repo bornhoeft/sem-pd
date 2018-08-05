@@ -1,0 +1,106 @@
+#N canvas 311 147 718 603 12;
+#X obj 48 384 bng 15 250 50 0 empty empty empty 20 8 0 8 -262144 -1
+-1;
+#X obj 48 467 bng 15 250 50 0 empty empty empty 20 8 0 8 -262144 -1
+-1;
+#X obj 143 468 bng 15 250 50 0 empty empty empty 20 8 0 8 -262144 -1
+-1;
+#X obj 218 468 bng 15 250 50 0 empty empty empty 20 8 0 8 -262144 -1
+-1;
+#X msg 48 490 1;
+#X msg 143 491 2;
+#X msg 217 490 3;
+#X obj 143 538 s state;
+#X obj 264 246 r state;
+#X obj 243 329 sel 1 2 3;
+#X obj 263 386 bng 15 250 50 0 empty empty empty 20 8 0 8 -262144 -1
+-1;
+#X obj 263 469 bng 15 250 50 0 empty empty empty 20 8 0 8 -262144 -1
+-1;
+#X obj 355 468 bng 15 250 50 0 empty empty empty 20 8 0 8 -262144 -1
+-1;
+#X obj 430 470 bng 15 250 50 0 empty empty empty 20 8 0 8 -262144 -1
+-1;
+#X msg 263 491 1;
+#X msg 355 490 2;
+#X msg 429 491 3;
+#X obj 355 536 s state;
+#X obj 481 388 bng 15 250 50 0 empty empty empty 20 8 0 8 -262144 -1
+-1;
+#X obj 481 471 bng 15 250 50 0 empty empty empty 20 8 0 8 -262144 -1
+-1;
+#X obj 575 471 bng 15 250 50 0 empty empty empty 20 8 0 8 -262144 -1
+-1;
+#X obj 651 472 bng 15 250 50 0 empty empty empty 20 8 0 8 -262144 -1
+-1;
+#X msg 480 493 1;
+#X msg 574 495 2;
+#X msg 651 495 3;
+#X obj 574 540 s state;
+#X msg 346 249 \; state 1;
+#X obj 243 301 f 1;
+#X obj 48 407 random 100;
+#X obj 48 439 moses 30;
+#X obj 143 440 moses 60;
+#X obj 263 409 random 100;
+#X obj 263 441 moses 10;
+#X obj 355 440 moses 60;
+#X obj 481 411 random 100;
+#X obj 481 443 moses 70;
+#X obj 575 443 moses 80;
+#X floatatom 264 273 3 0 0 0 - - -, f 3;
+#X text 346 223 reset;
+#X text 29 52 Here is how to construct a simple \, three-valued Markov
+chain using "random." Each time you click on "step" the previous output
+("state") determines which of three random networks to invoke \, each
+having a different probability distribution for the next value of "state."
+For instance if the state was 3 \, the next state will be 1 70% of
+the time \, state 2 10% \, and state 3 20%.;
+#X text 30 20 Markov chain;
+#X obj 243 190 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 243 214 metro 500;
+#X connect 0 0 28 0;
+#X connect 1 0 4 0;
+#X connect 2 0 5 0;
+#X connect 3 0 6 0;
+#X connect 4 0 7 0;
+#X connect 5 0 7 0;
+#X connect 6 0 7 0;
+#X connect 8 0 37 0;
+#X connect 9 0 0 0;
+#X connect 9 1 10 0;
+#X connect 9 2 18 0;
+#X connect 10 0 31 0;
+#X connect 11 0 14 0;
+#X connect 12 0 15 0;
+#X connect 13 0 16 0;
+#X connect 14 0 17 0;
+#X connect 15 0 17 0;
+#X connect 16 0 17 0;
+#X connect 18 0 34 0;
+#X connect 19 0 22 0;
+#X connect 20 0 23 0;
+#X connect 21 0 24 0;
+#X connect 22 0 25 0;
+#X connect 23 0 25 0;
+#X connect 24 0 25 0;
+#X connect 27 0 9 0;
+#X connect 28 0 29 0;
+#X connect 29 0 1 0;
+#X connect 29 1 30 0;
+#X connect 30 0 2 0;
+#X connect 30 1 3 0;
+#X connect 31 0 32 0;
+#X connect 32 0 11 0;
+#X connect 32 1 33 0;
+#X connect 33 0 12 0;
+#X connect 33 1 13 0;
+#X connect 34 0 35 0;
+#X connect 35 0 19 0;
+#X connect 35 1 36 0;
+#X connect 36 0 20 0;
+#X connect 36 1 21 0;
+#X connect 37 0 27 1;
+#X connect 41 0 42 0;
+#X connect 42 0 27 0;

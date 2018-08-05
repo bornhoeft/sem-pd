@@ -1,0 +1,49 @@
+#N canvas 567 169 572 708 12;
+#X text 46 108 If you start [until] with a "bang" \, it will begin
+an infinite loop! Please plan ahead in this case so that there is a
+mechanism in place to stop the loop - otherwise Pd will effectively
+freeze.;
+#X text 46 181 HOW TO FREEZE Pd;
+#X msg 47 214 bang;
+#X obj 47 242 until;
+#X obj 47 270 print;
+#X text 111 219 DO NOT CLICK. DO NOT CLICK. DO NOT CLICK.;
+#X text 49 534 If you start [until] with a number \, it iterates that
+number of times. The [uzi] object in MAX works the same way.;
+#X obj 107 622 until;
+#X msg 108 577 100;
+#X obj 107 650 print i;
+#X msg 150 577 3;
+#X msg 193 577 42;
+#X text 47 297 The [until] object's left inlet starts a loop in which
+it outputs "bang" until its right inlet gets a "bang" which stops it.
+;
+#X msg 46 388 bang;
+#X obj 46 416 until;
+#X text 98 392 start;
+#X obj 46 444 f;
+#X obj 94 448 + 1;
+#X obj 152 448 sel 0;
+#X obj 45 507 print;
+#X obj 94 476 mod 10;
+#X text 111 244 If you click \, kill Pd or reboot the computer.;
+#X text 46 346 The example below includes a method to stop the loop
+to prevent Pd from looping infinitely.;
+#X text 283 627 (C) Copyright Dave Sabine;
+#X text 47 76 Looping in Pd can be done by using the [until] object.
+;
+#X text 51 29 Looping;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 7 0 9 0;
+#X connect 8 0 7 0;
+#X connect 10 0 7 0;
+#X connect 11 0 7 0;
+#X connect 13 0 14 0;
+#X connect 14 0 16 0;
+#X connect 16 0 17 0;
+#X connect 16 0 19 0;
+#X connect 17 0 20 0;
+#X connect 18 0 14 1;
+#X connect 20 0 16 1;
+#X connect 20 0 18 0;

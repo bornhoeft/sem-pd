@@ -1,0 +1,105 @@
+#N canvas 618 180 647 463 12;
+#X obj 147 198 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0
+1;
+#X obj 146 247 tabwrite~ \$0-wavetable1;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X array \$0-wavetable1 128 float 1;
+#A 0 0.0147899 0.0116016 0.0078442 0.00414285 0.00069807 -0.0028937
+-0.00660009 -0.0100199 -0.0129484 -0.0150407 -0.016634 -0.0180137 -0.0186123
+-0.0179514 -0.0161636 -0.0137117 -0.0102482 -0.00614296 -0.00195157
+0.00188326 0.00519971 0.00860653 0.0114668 0.013904 0.0156433 0.0165843
+0.0171412 0.017416 0.0164447 0.0152509 0.01383 0.011361 0.00824996
+0.00443314 0.000306703 -0.00368081 -0.00753656 -0.0110475 -0.0137301
+-0.0157728 -0.0167426 -0.0169969 -0.0167739 -0.0158149 -0.0141184 -0.011617
+-0.0090324 -0.00622755 -0.0034718 -0.000386238 0.00257311 0.00558322
+0.00873049 0.0113784 0.0138195 0.0158939 0.0170288 0.0176554 0.0177042
+0.017249 0.0160206 0.0137031 0.0110855 0.00771069 0.0144568 0.0203421
+0.0252657 0.0287948 0.0307338 0.0317804 0.0312501 0.029909 0.0270566
+0.0225725 0.0168191 0.00984612 0.00192393 -0.0061293 -0.0141656 -0.0214005
+-0.0274159 -0.0325427 -0.0360219 -0.0376464 -0.0372776 -0.0348035 -0.0311958
+-0.0257185 -0.0186021 -0.0101687 -0.00134382 0.00779199 0.0167376 0.0247423
+0.0314011 0.0369992 0.0414637 0.0443407 0.0452136 0.0443876 0.0415008
+0.0371503 0.030843 0.022795 0.013745 0.00453781 -0.00432211 -0.0129534
+-0.0205346 -0.0271456 -0.03298 -0.0368433 -0.0389383 -0.0389252 -0.0375274
+-0.0342743 -0.0295007 -0.0233672 -0.0165294 -0.00951446 -0.00157652
+0.0066522 0.0144364 0.0215965 0.0273202 0.0317179 0.0350409 0.0367848
+;
+#X coords 0 1 127 -1 200 140 1;
+#X restore 402 31 graph;
+#X obj 70 31 noise~;
+#X obj 70 183 *~;
+#X obj 72 342 dac~;
+#X obj 147 219 metro 30;
+#N canvas 45 83 488 322 fft 0;
+#X obj 19 61 inlet~;
+#X obj 95 214 inlet;
+#X obj 29 92 rfft~;
+#X obj 29 125 *~;
+#X obj 60 125 *~;
+#X obj 29 155 sqrt~;
+#X obj 332 109 block~ 4096 1;
+#X obj 29 181 biquad~ 0 0 0 0 1;
+#X text 93 93 Fourier series;
+#X text 98 146 magnitude;
+#X text 96 131 calculate;
+#X text 21 3 This subpatch computes the spectrum of the incoming signal
+with a (rectangular windowed) FFT. FFTs aren't properly introduced
+until much later.;
+#X text 83 61 signal to analyze;
+#X text 192 166 delay two samples;
+#X text 191 182 for better graphing;
+#X text 145 216 "bang" into this inlet to graph it;
+#X obj 95 248 tabwrite~ \$0-frequencies;
+#X obj 20 281 tabwrite~ \$0-frequencies;
+#X connect 0 0 2 0;
+#X connect 0 0 17 0;
+#X connect 1 0 16 0;
+#X connect 1 0 17 0;
+#X connect 2 0 3 0;
+#X connect 2 0 3 1;
+#X connect 2 1 4 0;
+#X connect 2 1 4 1;
+#X connect 3 0 5 0;
+#X connect 4 0 5 0;
+#X connect 5 0 7 0;
+#X connect 7 0 16 0;
+#X restore 130 342 pd fft;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X array \$0-frequencies 256 float 0;
+#X coords 0 100 255 0 200 130 1;
+#X restore 399 210 graph;
+#X text 191 287 graph frequencies;
+#X obj 168 291 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0
+1;
+#X obj 169 312 metro 30;
+#X obj 82 61 hsl 128 15 1 6000 0 0 empty empty 1_-_6000_Hz 20 8 1 12
+-262144 -1 -1 0 1;
+#X text 578 342 500 Hz;
+#X text 396 341 0 Hz;
+#X text 377 159 -1;
+#X text 385 91 0;
+#X text 385 24 1;
+#X obj 70 133 bp~;
+#X obj 94 89 hsl 128 15 0 1000 0 0 empty empty Q 20 8 1 12 -262144
+-1 -1 0 1;
+#X text 72 380 PD also includes \, [vcf~] which works just like [bp~]
+but takes a signal for cutoff \, allowing for smooth changes in frequency.
+;
+#X text 66 6 bandpass filter;
+#X floatatom 91 111 5 0 0 0 - - -, f 5;
+#X obj 91 161 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X connect 0 0 6 0;
+#X connect 3 0 18 0;
+#X connect 4 0 5 0;
+#X connect 4 0 5 1;
+#X connect 4 0 7 0;
+#X connect 4 0 1 0;
+#X connect 6 0 1 0;
+#X connect 10 0 11 0;
+#X connect 11 0 7 1;
+#X connect 12 0 18 1;
+#X connect 18 0 4 0;
+#X connect 19 0 22 0;
+#X connect 22 0 18 2;
+#X connect 23 0 4 1;

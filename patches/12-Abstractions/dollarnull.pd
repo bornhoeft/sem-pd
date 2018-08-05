@@ -1,0 +1,39 @@
+#N canvas 501 25 646 582 12;
+#X obj 193 34 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 193 102 print;
+#X floatatom 142 236 5 0 0 0 - - -, f 5;
+#X obj 44 279 loadbang;
+#X floatatom 46 417 5 0 0 0 - - -, f 5;
+#X obj 90 344 f \$0;
+#X obj 44 312 t b b;
+#X text 36 141 use the \$0 for local send and receive;
+#X obj 193 68 list \$0;
+#X text 270 67 get the \$0 arg with list;
+#X obj 142 202 r \$0-send;
+#X obj 44 202 s \$0-send;
+#X floatatom 44 167 5 0 0 0 - - -, f 5;
+#X obj 45 383 v \$1-dolnull;
+#X obj 43 507 f \$2;
+#X obj 43 467 loadbang;
+#X floatatom 43 542 5 0 0 0 - - -, f 5;
+#X text 86 506 get the \$0 argument from the parent patch as second
+argument;
+#X text 105 417 set the local \$0 arg in a variable to make it global
+;
+#X obj 41 33 loadbang;
+#X floatatom 40 107 5 0 0 0 - - -, f 5;
+#X obj 41 74 f \$0;
+#X connect 0 0 8 0;
+#X connect 3 0 6 0;
+#X connect 5 0 13 0;
+#X connect 6 0 13 0;
+#X connect 6 1 5 0;
+#X connect 8 0 1 0;
+#X connect 10 0 2 0;
+#X connect 12 0 11 0;
+#X connect 13 0 4 0;
+#X connect 14 0 16 0;
+#X connect 15 0 14 0;
+#X connect 19 0 21 0;
+#X connect 21 0 20 0;

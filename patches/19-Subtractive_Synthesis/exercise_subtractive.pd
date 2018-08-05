@@ -1,0 +1,9 @@
+#N canvas 553 286 550 312 12;
+#X text 59 153 Create a patch for 2 voices with independent rhythms
+and different [bp~] noise types by modulating their center frequency
+and filter-Q continuously and/or [random]. Create abstractions if necessary.
+;
+#X text 59 55 Erstellen Sie ein patch mit 2 Stimmen mit unterschiedlicher
+Rhythmik und verschiedenen [bp~] Geräuscharten \, indem Sie deren
+Zentralfrequenz und Filter-Q kontinuierlich oder zufällig modulieren.
+Verwenden Sie Abstraktionen wenn nötig.;
