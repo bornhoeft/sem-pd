@@ -1,0 +1,12 @@
+#N canvas 140 485 694 380 12;
+#X text 109 207 Erstellen Sie ein Performance Patch mit GUI Elementen
+für 2 seperate Mikrofoneingänge mit gleicher Klangverarbeitung. In
+beiden Kanälen soll wahlweise zwei der folgenden Audioverarbeitungen
+kombiniert werden: Pitchshifting \, Frequenzmodulation \, Ringmodulation
+\, Delay. Der Output des Patches soll ein Stereoausgang mit Panning
+sein.;
+#X text 108 66 Create a performance patch with gui elements for 2 seperate
+microphone inputs and similar sound processing. Both channels should
+combine two of the following audio processings: pitch shifting \, frequency
+modulation \, ringmodulation \, delay. The patch output should be in
+stereo with panning.;
