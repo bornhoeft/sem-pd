@@ -10,7 +10,7 @@ as the membranes or other percussive sources may have resonant frequencies
 which are not whole number multiples of their fundamental frequencies.
 They are said to have non-harmonic overtones.;
 #X text 46 19 Harmonics and Overtones;
-#X floatatom 50 246 5 0 0 0 - - -;
+#X floatatom 50 246 5 0 0 0 - - -, f 5;
 #X obj 50 301 * 1;
 #X obj 50 427 /~ 12;
 #X obj 50 464 dac~;
@@ -62,7 +62,7 @@ They are said to have non-harmonic overtones.;
 #X obj 300 301 * 7;
 #X obj 341 301 * 8;
 #X obj 381 301 * 9;
-#X floatatom 283 540 5 0 0 0 - - -;
+#X floatatom 283 540 5 0 0 0 - - -, f 5;
 #X obj 284 771 dac~;
 #X obj 326 654 osc~;
 #X obj 326 698 *~;
@@ -85,7 +85,7 @@ They are said to have non-harmonic overtones.;
 #X obj 303 678 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 284 743 /~ 5;
-#X floatatom 50 540 5 0 0 0 - - -;
+#X floatatom 50 540 5 0 0 0 - - -, f 5;
 #X obj 51 771 dac~;
 #X obj 92 650 osc~;
 #X obj 93 703 *~;
