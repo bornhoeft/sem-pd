@@ -1,27 +1,18 @@
 # Pure Data Tutorial
 
 This is a collection of patches for Pure Data (Vanilla) used as a tutorial
-at the Studio Electronic Music (SEM) at the Mozarteum.
+at the Studio Electronic Music (SEM) at the University Mozarteum, Salzburg, Austria
 
 # Installation / Usage (Mac & Windows)
 
-1. 
+1. Start the Pure Data application
 
-Simply start the document "index.htm" in your browser. 
-Download a patch before open it in Pure Data. If you are working locally you can configure your browser (Preferences -> Data Types) to open patches automatically in Pure Data by clicking them. Alternatively (Mac OS) you can drag any link to a Pure Data file (.pd) directly on the program icon in your Dock. 
+2. Navigate to the help browser
 
-2.
+3. Double click on "Pure Data" -> the file browser opens
 
-a) Start the Pure Data application
+4. Copy the complete PD Tutorial folder into the opened folder
 
-b) Navigate to the help browser
+5. Close the windows and start the application.
 
-c) Double click on "Pure Data" -> the file browser opens
-
-d) Copy the complete PD Tutorial folder into the opened folder
-
-e) Close the windows and start the application.
-
-f) The tutorial can be found in the menu "Help/Browser" under "Pure Data/PD-Tutorial".
-
-(If you click the the document "index.htm" from here your browser will start with it.)
+6. The tutorial can be found in the menu "Help/Browser" under "Pure Data/sem-pd".

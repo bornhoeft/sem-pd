@@ -1,0 +1,57 @@
+#N canvas 778 181 538 654 12;
+#X obj 66 323 osc~ 440;
+#X obj 92 477 line~;
+#X obj 67 507 *~;
+#X obj 54 544 dac~;
+#X floatatom 66 263 5 0 0 0 - - -, f 5;
+#X obj 181 178 vsl 15 128 1 1000 0 0 empty empty attack -10 -8 0 12
+-262144 -1 -1 0 1;
+#X obj 245 176 vsl 15 128 0 1000 0 0 empty empty sustain -10 -8 0 12
+-262144 -1 -1 0 1;
+#X obj 308 177 vsl 15 128 1 1000 0 0 empty empty release -10 -8 0 12
+-262144 -1 -1 0 1;
+#X obj 225 398 del;
+#X obj 92 425 pack 1 f;
+#X obj 226 425 pack 0 f;
+#X obj 246 346 +;
+#X obj 245 317 t b f;
+#X obj 66 137 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0 1
+;
+#X obj 66 204 random 200;
+#X obj 66 233 + 100;
+#X obj 66 290 t f b b;
+#X text 57 29 Control line envelopes;
+#X text 56 59 This examples shows how to create random sines with different
+shaped envelopes.;
+#X floatatom 153 373 5 0 0 0 - - -, f 5;
+#X floatatom 307 373 5 0 0 0 - - -, f 5;
+#X floatatom 246 372 5 0 0 0 - - -, f 5;
+#X obj 135 138 + 1000;
+#X obj 66 173 metro 500;
+#X connect 0 0 2 0;
+#X connect 1 0 2 1;
+#X connect 2 0 3 0;
+#X connect 2 0 3 1;
+#X connect 4 0 16 0;
+#X connect 5 0 11 0;
+#X connect 5 0 19 0;
+#X connect 6 0 12 0;
+#X connect 7 0 20 0;
+#X connect 8 0 10 0;
+#X connect 9 0 1 0;
+#X connect 10 0 1 0;
+#X connect 11 0 21 0;
+#X connect 12 0 11 0;
+#X connect 12 1 11 1;
+#X connect 13 0 23 0;
+#X connect 14 0 15 0;
+#X connect 14 0 22 0;
+#X connect 15 0 4 0;
+#X connect 16 0 0 0;
+#X connect 16 1 9 0;
+#X connect 16 2 8 0;
+#X connect 19 0 9 1;
+#X connect 20 0 10 1;
+#X connect 21 0 8 1;
+#X connect 22 0 23 1;
+#X connect 23 0 14 0;
