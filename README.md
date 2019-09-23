@@ -9,7 +9,7 @@ at the Studio Electronic Music (SEM) at the University Mozarteum, Salzburg, Aust
 
 2. Navigate to the help browser
 
-3. Double click on "Pure Data" -> the file browser opens
+3. Double click on "Pure Data" → the file browser opens
 
 4. Copy the complete PD Tutorial folder into the opened folder
 
