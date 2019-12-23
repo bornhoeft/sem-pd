@@ -1,4 +1,4 @@
-#N canvas 311 141 493 152 12;
+#N canvas 311 141 526 152 12;
 #X text 39 34 Make a patch in which you control some midinotes with
 a slider. The velocity of this notes should be 80 and the duration
 100 msecs.;

@@ -1,4 +1,4 @@
-#N canvas 56 74 690 593 12;
+#N canvas 276 79 690 593 12;
 #X obj 5 5 cnv 15 90 200 empty \$1-channel \$2 20 20 1 14 -228856 -66577
 0;
 #X obj 183 89 *~;
@@ -22,7 +22,7 @@ canvas (resp. channel) with the second argument by putting \$2 in the
 "name" field in "properties" (see "labeling.pd" in the Tutorial).;
 #X obj 204 38 adc~ \$1;
 #X obj 27 43 vsl 15 119 0 1 0 0 xxxs dummy empty 0 -9 0 10 -191407
--1 -1 2500 1;
+-1 -1 0 1;
 #X obj 47 43 vu 15 120 empty empty -1 -8 0 10 -66577 -1 0 0;
 #X obj 219 76 env~;
 #X obj 219 99 - 99;

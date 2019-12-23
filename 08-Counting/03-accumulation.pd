@@ -1,4 +1,4 @@
-#N canvas 204 23 616 723 12;
+#N canvas 415 23 616 723 12;
 #X text 25 47 With a little change to the counter idiom you get another
 operation: an accumulator to sum incoming numbers.;
 #X text 26 88 Remember the counter:;

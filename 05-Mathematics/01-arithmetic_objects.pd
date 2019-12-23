@@ -4,14 +4,14 @@
 #X obj 169 285 -;
 #X obj 223 285 *;
 #X obj 278 285 /;
-#X obj 333 283 pow;
-#X floatatom 114 186 5 0 0 0 - - -, f 5;
+#X obj 324 286 pow;
+#X floatatom 171 195 5 0 0 0 - - -, f 5;
 #X floatatom 114 310 0 0 0 0 - - -;
 #X floatatom 169 311 0 0 0 0 - - -;
 #X floatatom 223 311 0 0 0 0 - - -;
 #X floatatom 278 311 0 0 0 0 - - -;
-#X floatatom 333 309 0 0 0 0 - - -;
-#X floatatom 351 189 5 0 0 0 - - -, f 5;
+#X floatatom 324 312 0 0 0 0 - - -;
+#X floatatom 345 192 5 0 0 0 - - -, f 5;
 #X text 51 52 All of these objects operate the same way. The right
 inlet sets or changes the numeric value of the object. Sending a number
 to the left inlet forces the object to perform the operation with the
@@ -19,19 +19,16 @@ current numeric value of the object and output the result. A "bang"
 will output the result without changing the numeric values at either
 inlet. A creation argument can be used to define the initial numeric
 value of the right inlet.;
-#X floatatom 226 440 5 0 0 0 - - -, f 5;
-#X floatatom 120 531 5 0 0 0 - - -, f 5;
-#X floatatom 244 532 5 0 0 0 - - -, f 5;
-#X floatatom 321 533 5 0 0 0 - - -, f 5;
-#X text 52 341 The [pow] is used to exponentiate a number. The object
+#X text 41 472 The [pow] is used to exponentiate a number. The object
 returns the value at the left inlet to the power of the right inlet
 where the left inlet is the base and the right inlet is the exponent.
 For example: 2 to the power of 2 = 4 (i.e. 2 Squared).;
-#X obj 120 503 pow 0.9;
-#X floatatom 190 531 5 0 0 0 - - -, f 5;
-#X obj 244 502 pow -0.9;
-#X obj 321 503 pow -1.1;
-#X obj 190 503 pow 2;
+#X floatatom 324 368 0 0 0 0 - - -;
+#X obj 324 338 sqrt;
+#X floatatom 324 429 5 0 0 0 - - -, f 5;
+#X obj 324 401 *;
+#X floatatom 69 310 0 0 0 0 - - -;
+#X obj 69 282 abs;
 #X connect 1 0 7 0;
 #X connect 2 0 8 0;
 #X connect 3 0 9 0;
@@ -42,16 +39,15 @@ For example: 2 to the power of 2 = 4 (i.e. 2 Squared).;
 #X connect 6 0 3 0;
 #X connect 6 0 4 0;
 #X connect 6 0 5 0;
+#X connect 6 0 20 0;
+#X connect 11 0 16 0;
 #X connect 12 0 5 1;
 #X connect 12 0 4 1;
 #X connect 12 0 3 1;
 #X connect 12 0 2 1;
 #X connect 12 0 1 1;
-#X connect 14 0 19 0;
-#X connect 14 0 21 0;
-#X connect 14 0 22 0;
-#X connect 14 0 23 0;
-#X connect 19 0 15 0;
-#X connect 21 0 16 0;
-#X connect 22 0 17 0;
-#X connect 23 0 20 0;
+#X connect 15 0 18 1;
+#X connect 15 0 18 0;
+#X connect 16 0 15 0;
+#X connect 18 0 17 0;
+#X connect 20 0 19 0;

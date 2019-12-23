@@ -1,10 +1,6 @@
 #N canvas 245 225 536 469 12;
 #X obj 260 148 tgl 200 0 empty empty empty 0 -6 0 8 -228856 -258113
 -1 0 12345;
-#X text 13 65 Many objects have properties that affect how the behave
-and look. You can see and edit these properties by opening the Properties
-panel. Below is a giant toggle. If you right-click on it \, and select
-"Properties" \, you can see the properties.;
 #X floatatom 260 353 5 0 0 0 - - -, f 5;
 #X text 18 387 You'll see in the properties panel that "size" is set
 to 200 pixels and "value" is set to 12345 \, so the toggle outputs
@@ -12,4 +8,8 @@ to 200 pixels and "value" is set to 12345 \, so the toggle outputs
 #X text 15 221 right-click on this -->;
 #X text 15 240 and select "Properties";
 #X text 14 32 Properties;
-#X connect 0 0 2 0;
+#X text 14 65 Many objects have properties that affect how they behave
+and look. You can see and edit these properties by opening the Properties
+panel. Below is a giant toggle. If you right-click on it \, and select
+"Properties" \, you can see the properties.;
+#X connect 0 0 1 0;

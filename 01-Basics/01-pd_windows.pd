@@ -1,0 +1,8 @@
+#N canvas 594 264 529 209 12;
+#X text 19 27 Patch window;
+#X text 19 62 This window is a patch window. Everything in Puredata
+is made in patches. To create a patch choose "New" (cmd-n on a Mac
+\, ctrl-n in Windows) from the "File" menu \, to open a patch choose
+"Open" (cmd-o or ctrl-o).;
+#X text 18 143 The PD window (menu "Window/Pd window" or cmd-r or ctrl-r)
+displays messages \, errors \, prints and other informations.;

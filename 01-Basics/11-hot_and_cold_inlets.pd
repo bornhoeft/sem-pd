@@ -1,12 +1,12 @@
 #N canvas 10 40 531 609 12;
-#X floatatom 15 312 5 0 0 0 - - -;
-#X msg 15 215 1;
+#X floatatom 15 312 5 0 0 0 - - -, f 5;
+#X msg 15 217 1;
 #X text 11 54 For most objects in Pd \, the leftmost inlet is the "hot"
 inlet. This means that it will output something whenever it receives
 data on the "hot" inlet.;
 #X text 89 251 2) click this and there will be no new output;
 #X obj 176 465 +;
-#X floatatom 176 494 5 0 0 0 - - -;
+#X floatatom 176 494 5 0 0 0 - - -, f 5;
 #X msg 79 390 1;
 #X text 10 358 Try a number of different combinations to see for yourself:
 ;
@@ -27,9 +27,9 @@ a 1;
 just store the data. When the object receives input on the "hot" inlet
 \, the object with read the data from all the inlets and do its thing.
 ;
-#X text 88 282 3) now click the [1( message box;
+#X text 90 282 3) now click the [1( message box;
 #X text 12 18 Hot and cold inlets;
-#X msg 41 248 2;
+#X msg 36 250 2;
 #X obj 15 279 +;
 #X connect 1 0 21 0;
 #X connect 4 0 5 0;

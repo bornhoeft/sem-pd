@@ -1,4 +1,4 @@
-#N canvas 582 46 550 815 12;
+#N canvas 923 57 550 815 12;
 #X text 46 44 The term harmonic has a precise meaning - that of an
 integer (whole number) multiple of the fundamental frequency of a vibrating
 object. The term overtone is used to refer to any resonant frequency
@@ -129,8 +129,8 @@ They are said to have non-harmonic overtones.;
 -1 -1 0 1;
 #X text 131 540 Harmonics;
 #X text 48 502 just/pure intervals;
-#X text 127 246 harmonic vertones;
 #X obj 420 301 * 10;
+#X text 127 246 harmonic overtones;
 #X connect 2 0 3 0;
 #X connect 2 0 36 0;
 #X connect 2 0 37 0;
@@ -140,7 +140,7 @@ They are said to have non-harmonic overtones.;
 #X connect 2 0 41 0;
 #X connect 2 0 42 0;
 #X connect 2 0 43 0;
-#X connect 2 0 101 0;
+#X connect 2 0 100 0;
 #X connect 3 0 6 0;
 #X connect 4 0 5 0;
 #X connect 4 0 5 1;
@@ -242,4 +242,4 @@ They are said to have non-harmonic overtones.;
 #X connect 94 0 55 0;
 #X connect 95 0 52 0;
 #X connect 96 0 49 0;
-#X connect 101 0 33 0;
+#X connect 100 0 33 0;

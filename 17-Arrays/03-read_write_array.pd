@@ -57,6 +57,8 @@ and [tabread];
 #X floatatom 346 289 5 0 0 0 - - -, f 5;
 #X text 83 214 Write random numbers to an array;
 #X obj 492 253 mod 5;
+#X obj 89 695 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
 #X connect 2 0 0 0;
 #X connect 4 0 6 0;
 #X connect 5 0 9 0;
@@ -71,6 +73,7 @@ and [tabread];
 #X connect 15 0 16 0;
 #X connect 16 0 17 0;
 #X connect 17 0 18 0;
+#X connect 17 0 50 0;
 #X connect 19 0 11 0;
 #X connect 25 0 0 1;
 #X connect 26 0 0 0;

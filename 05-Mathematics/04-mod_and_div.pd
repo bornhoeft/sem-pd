@@ -1,40 +1,40 @@
-#N canvas 570 143 566 523 12;
-#X floatatom 40 216 0 0 0 0 - - -;
-#X floatatom 95 277 0 0 0 0 - - -;
-#X floatatom 168 217 0 1 1000 0 - - -;
-#X text 73 216 divided by;
-#X obj 95 250 mod;
+#N canvas 570 143 546 594 12;
+#X floatatom 100 225 0 0 0 0 - - -;
+#X floatatom 146 308 0 0 0 0 - - -;
+#X floatatom 227 226 0 1 1000 0 - - -;
+#X text 132 226 divided by;
 #X text 35 125 [mod] takes a number in its left inlet and will divide
 that number by either the creation argument or the number given at
 its left inlet and will produce the value of the remainder at its outlet.
 If no creation argument is given \, then the default value is 1;
-#X text 27 306 [div] takes a number in its left inlet and will divide
+#X text 21 370 [div] takes a number in its left inlet and will divide
 that number by either the creation argument or the number given at
 its left inlet and will produce the result without a remainder. If
 no creation argument is given \, then the default value is 1;
-#X floatatom 50 398 0 0 0 0 - - -;
-#X floatatom 50 473 0 0 0 0 - - -;
-#X floatatom 262 400 0 1 100000 0 - - -;
-#X text 127 400 divided by;
-#X obj 50 443 div;
-#X obj 241 442 /;
-#X floatatom 241 473 0 0 0 0 - - -;
-#X text 311 473 with a remainder.;
+#X floatatom 44 462 0 0 0 0 - - -;
+#X floatatom 44 537 0 0 0 0 - - -;
+#X floatatom 256 464 0 1 100000 0 - - -;
+#X text 121 464 divided by;
+#X obj 44 507 div;
+#X obj 235 506 /;
+#X floatatom 235 537 0 0 0 0 - - -;
+#X text 276 537 with a remainder.;
 #X text 37 26 [mod] and [div] are helpful objects to determine whether
 or not a fraction produces a remainder \, or to determine the value
 of the remainder. For example \, 3 / 3 = 1 with a remainder of zero
 (i.e. no remainder) while 4 / 3 = 1 with a remainder of 1;
-#X text 130 276 remainder;
-#X text 86 473 with no remainder;
-#X obj 236 257 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 500 1;
-#X connect 0 0 4 0;
-#X connect 1 0 18 0;
-#X connect 2 0 4 1;
-#X connect 4 0 1 0;
-#X connect 7 0 11 0;
-#X connect 7 0 12 0;
-#X connect 9 0 11 1;
-#X connect 9 0 12 1;
-#X connect 11 0 8 0;
-#X connect 12 0 13 0;
+#X text 80 537 with no remainder;
+#X obj 149 338 hsl 128 15 0 9 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 11289 1;
+#X obj 146 281 mod 10;
+#X text 181 307 remainder (rest);
+#X connect 0 0 17 0;
+#X connect 1 0 16 0;
+#X connect 2 0 17 1;
+#X connect 6 0 10 0;
+#X connect 6 0 11 0;
+#X connect 8 0 10 1;
+#X connect 8 0 11 1;
+#X connect 10 0 7 0;
+#X connect 11 0 12 0;
+#X connect 17 0 1 0;
