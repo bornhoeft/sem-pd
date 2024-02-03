@@ -1,9 +1,0 @@
-eins 
-2 drei;
-
-vier 5 sechs;
-
-sieben 8 
-neun;
-
-zehn 11 zwoelf;

@@ -1,17 +1,14 @@
 #N canvas 235 61 508 288 12;
-#X floatatom 118 232 5 0 0 0 - - -, f 5;
-#X floatatom 199 231 5 0 0 0 - - -, f 5;
-#X floatatom 363 230 5 0 0 0 - - -, f 5;
-#X symbolatom 281 231 8 0 0 0 - - -, f 8;
+#X floatatom 118 232 5 0 0 0 - - - 0;
+#X floatatom 189 231 5 0 0 0 - - - 0;
+#X floatatom 332 229 5 0 0 0 - - - 0;
+#X symbolatom 260 231 8 0 0 0 - - - 0;
 #X msg 118 167 300 240 cat 1;
-#X obj 118 202 unpack float float symbol float;
-#X text 12 61 [unpack] takes lists of atoms and distributes them to
-its outlets. The creation arguments are used to specify the types of
-atoms expected in the incoming list and specify float (any number or
-the symbol 'f') \, pointer (symbol 'p') or symbol (symbol 's').;
+#X text 12 61 [unpack] takes lists of atoms and distributes them to its outlets. The creation arguments are used to specify the types of atoms expected in the incoming list and specify float (any number or the symbol 'f') \, pointer (symbol 'p') or symbol (symbol 's').;
 #X text 15 18 Using lists;
-#X connect 4 0 5 0;
-#X connect 5 0 0 0;
-#X connect 5 1 1 0;
-#X connect 5 2 3 0;
-#X connect 5 3 2 0;
+#X obj 118 202 unpack float float symbol float;
+#X connect 4 0 7 0;
+#X connect 7 0 0 0;
+#X connect 7 1 1 0;
+#X connect 7 2 3 0;
+#X connect 7 3 2 0;

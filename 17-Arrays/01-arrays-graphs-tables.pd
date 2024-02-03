@@ -1,83 +1,38 @@
-#N canvas 299 68 589 817 12;
-#N canvas 132 22 678 494 How_to_create_an_array_in_PD 0;
+#N canvas 299 68 479 803 12;
+#N canvas 132 38 476 491 How_to_create_an_array_in_PD 0;
 #X text 22 9 1 Select "array" from the "Put" menu above.;
-#X text 21 288 4 If you want Pd to create a new graph for this array
-\, then select "in new graph". If you have another location in mind
--- for example if you want to overlap two arrays in a single graph
-\, then select "in last graph".;
-#X text 19 361 5 Then click "OK" and place the new array anywhere in
-this window.;
-#X text 19 403 6 Note: if you do not want to see the graph in this
-window \, then you can use the [table] object instead...the array will
-then be created inside the [table] object and will be seen only if
-you manually open the table.;
-#X text 22 31 2 A dialogue box appears where you can type the name
-of the array and the desired size. Names can be anything you want -
-if you want a localized array \, then name it something like \$1-dave
-(the dollar sign indicates that part of the name is a variable which
-is unique to this patch). The size of the array can be anything greater
-than 0 (zero). At a sample rate of 441000 khz \, an array of 882000
-will provide you with 2 seconds of audio data.;
-#X text 21 167 3 The "Save contents" checkbox will inform Pure Data
-that you want the array saved within the source code of this patch.
-This way \, you can ensure that the array will maintain its values
-each time you open this patch. This is recommended only for relatively
-small arrays...larger arrays should be saved to either a text file
-\, or an audio file.;
-#X restore 234 317 pd How_to_create_an_array_in_PD;
-#N canvas 133 22 536 564 Common_uses_for_arrays_in_PD 0;
+#X text 21 288 4 If you want Pd to create a new graph for this array \, then select "in new graph". If you have another location in mind -- for example if you want to overlap two arrays in a single graph \, then select "in last graph".;
+#X text 19 361 5 Then click "OK" and place the new array anywhere in this window.;
+#X text 19 403 6 Note: if you do not want to see the graph in this window \, then you can use the [table] object instead...the array will then be created inside the [table] object and will be seen only if you manually open the table.;
+#X text 22 31 2 A dialogue box appears where you can type the name of the array and the desired size. Names can be anything you want - if you want a localized array \, then name it something like \$1-dave (the dollar sign indicates that part of the name is a variable which is unique to this patch). The size of the array can be anything greater than 0 (zero). At a sample rate of 441000 khz \, an array of 882000 will provide you with 2 seconds of audio data.;
+#X text 21 167 3 The "Save contents" checkbox will inform Pure Data that you want the array saved within the source code of this patch. This way \, you can ensure that the array will maintain its values each time you open this patch. This is recommended only for relatively small arrays...larger arrays should be saved to either a text file \, or an audio file.;
+#X restore 231 274 pd How_to_create_an_array_in_PD;
+#N canvas 133 38 536 564 Common_uses_for_arrays_in_PD 0;
 #X text 27 26 COMMON USES FOR ARRAYS IN Pd;
-#X text 49 60 Arrays are versatile. Their simple structure make them
-useful in countless situations. This page discusses perhaps the most
-common applications.;
-#X text 50 225 2 MIDI Sequencers: array values limited to a range between
-0 and 127 are suitable for MIDI output to be used as pitch \, velocity
-\, or controller numbers. Some MIDI information requires a much larger
-range \, such as pitch benders.;
-#X text 50 306 3 Envelopes: an array with four elements can be used
-effectively as an ADSR enveloper. There are numerous examples of this
-in other Pd help documents.;
-#X text 53 377 4 Math and conversion tables: arrays are an excellent
-visual tool when performing fourier analysis and other higher mathematic
-functions.;
-#X text 54 450 5 Wave editing: with proper manipulation of array data
-\, Pd can be fully functional wave editor \, complete with mouse-clickable
-cut-n-paste \, pitch-shift \, time expansion \, down/upsampling \,
-and other tools typically found in commercial wave editors.;
-#X text 49 128 1 Audio sample data: when an array's values are limited
-to a range between -1 and 1 \, the numbers are suitable for conversion
-to analog audio signal. These arrays are typically many thousands of
-elements and stored on hard disk in the form of aiff \, wav or pure
-text.;
-#X restore 233 289 pd Common_uses_for_arrays_in_PD;
-#X text 16 40 Arrays \, in most programming environments \, are considered
-to be "a sequence of objects all of which have the same variable type"
-wherein each object is called an element and the elements are numbered
-in a row 0 \, 1 \, 2 \, 3 \, etc. These numbers are called indices.
-Each index holds a corresponding value.;
+#X text 49 60 Arrays are versatile. Their simple structure make them useful in countless situations. This page discusses perhaps the most common applications.;
+#X text 50 225 2 MIDI Sequencers: array values limited to a range between 0 and 127 are suitable for MIDI output to be used as pitch \, velocity \, or controller numbers. Some MIDI information requires a much larger range \, such as pitch benders.;
+#X text 50 306 3 Envelopes: an array with four elements can be used effectively as an ADSR enveloper. There are numerous examples of this in other Pd help documents.;
+#X text 53 377 4 Math and conversion tables: arrays are an excellent visual tool when performing fourier analysis and other higher mathematic functions.;
+#X text 54 450 5 Wave editing: with proper manipulation of array data \, Pd can be fully functional wave editor \, complete with mouse-clickable cut-n-paste \, pitch-shift \, time expansion \, down/upsampling \, and other tools typically found in commercial wave editors.;
+#X text 49 128 1 Audio sample data: when an array's values are limited to a range between -1 and 1 \, the numbers are suitable for conversion to analog audio signal. These arrays are typically many thousands of elements and stored on hard disk in the form of aiff \, wav or pure text.;
+#X restore 230 246 pd Common_uses_for_arrays_in_PD;
+#X text 16 40 Arrays \, in most programming environments \, are considered to be "a sequence of objects all of which have the same variable type" wherein each object is called an element and the elements are numbered in a row 0 \, 1 \, 2 \, 3 \, etc. These numbers are called indices. Each index holds a corresponding value.;
 #X text 17 204 Arrays in Pd look like this:;
 #N canvas 809 236 450 300 (subpatch) 0;
 #X array example_array 100 float 0;
 #X coords 0 1 99 -1 200 140 1;
 #X restore 17 247 graph;
-#X text 16 136 All of this is true in Pd \, except that arrays in Pd
-can only hold floating point data. (other data types in Pd are called
-"lists" or "anythings" and require different tools to manipulate them.)
-;
+#X text 16 136 All of this is true in Pd \, except that arrays in Pd can only hold floating point data. (other data types in Pd are called "lists" or "anythings" and require different tools to manipulate them.);
 #N canvas 318 144 450 278 (subpatch) 0;
 #X coords 0 1 100 -1 200 140 1 0 0;
 #X restore 18 434 graph;
-#X text 16 580 These two objects are separate \, but Pd creates both
-simoultaneously for purposes of convenience. These two objects together
-are called a "table".;
+#X text 16 580 These two objects are separate \, but Pd creates both simoultaneously for purposes of convenience. These two objects together are called a "table".;
 #X text 15 668 To see the relation:;
 #X obj 19 638 table exmp_array;
 #X text 17 18 Arrays \, Graphs and Tables;
-#X text 17 689 1 Right-click on the array and select "Properties" from
-the menu. Two dialogue boxes will open - one called "Canvas Properties"
-and one called "Array Properties".;
-#X text 17 743 2 Then right-click again on the array and select "Help"
-from the menu. The window that opens is the canvas.pd help document.
-;
-#X text 17 393 The array above is actually only the horizontal line!
-The rectangle surrounding the array is called a "graph".;
+#X text 17 689 1 Right-click on the array and select "Properties" from the menu. Two dialogue boxes will open - one called "Canvas Properties" and one called "Array Properties".;
+#X text 17 743 2 Then right-click again on the array and select "Help" from the menu. The window that opens is the canvas.pd help document.;
+#X text 17 393 The array above is actually only the horizontal line! The rectangle surrounding the array is called a "graph".;
+#X text 231 491 <-- GRAPH;
+#X text 227 308 <-- ARRAY;
+#X text 151 638 <-- TABLE;

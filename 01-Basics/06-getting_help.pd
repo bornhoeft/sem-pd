@@ -1,11 +1,11 @@
-#N canvas 10 40 566 370 12;
+#N canvas 779 168 566 370 12;
 #X msg 179 150;
 #X obj 61 150 trigger;
 #X text 58 187 object;
 #X text 179 186 message;
-#X floatatom 275 150 5 0 0 0 - - -, f 5;
+#X floatatom 275 150 5 0 0 0 - - -;
 #X text 276 182 number box;
-#X symbolatom 403 151 10 0 0 0 - - -, f 10;
+#X symbolatom 403 151 10 0 0 0 - - -;
 #X text 406 182 symbol box;
 #X text 21 75 Right-click on anything and select "Help" \, and a help
 patch will pop up.;

@@ -1,59 +1,39 @@
-#N canvas 459 22 581 755 12;
+#N canvas 459 25 581 667 12;
 #X obj 44 240 moses 10;
-#X floatatom 45 211 4 0 0 0 - - -, f 4;
-#X floatatom 44 267 4 0 0 0 - - -, f 4;
-#X floatatom 105 266 4 0 0 0 - - -, f 4;
+#X floatatom 45 211 4 0 0 0 - - - 0;
+#X floatatom 44 267 4 0 0 0 - - - 0;
+#X floatatom 97 265 4 0 0 0 - - - 0;
 #X obj 212 238 moses 0;
-#X floatatom 212 266 5 0 0 0 - - -, f 5;
-#X floatatom 265 265 5 0 0 0 - - -, f 5;
-#X floatatom 212 212 5 0 0 0 - - -, f 5;
+#X floatatom 212 266 5 0 0 0 - - - 0;
+#X floatatom 258 265 5 0 0 0 - - - 0;
+#X floatatom 212 212 5 0 0 0 - - - 0;
 #X text 43 18 Part number streams;
-#X text 39 40 Moses takes numbers and outputs them at left if they're
-less than a control value \, and at right if they're greater or equal
-to it. The creation argument initializes the control value (10 in this
-example) and the right inlet changes it. One way to think of [moses]
-is as a filter. For the following example \, imagine that [moses] works
-as a low pass and high pass filter simoultaneously -- for non-audio
-signals. In the right example you will see that negative numbers will
-pass through the left outlet while positive numbers will pass through
-the right outlet.;
+#X text 39 40 Moses takes numbers and outputs them at left if they're less than a control value \, and at right if they're greater or equal to it. The creation argument initializes the control value (10 in this example) and the right inlet changes it. One way to think of [moses] is as a filter. For the following example \, imagine that [moses] works as a low pass and high pass filter simoultaneously -- for non-audio signals. In the right example you will see that negative numbers will pass through the left outlet while positive numbers will pass through the right outlet.;
 #X msg 101 370 bang;
-#X text 37 293 You can generate weighted random numbers from uniformly
-distributed ones. If you just want two possible outcomes with a varying
-probability for each one \, you can do as shown:;
+#X text 37 293 You can generate weighted random numbers from uniformly distributed ones. If you just want two possible outcomes with a varying probability for each one \, you can do as shown:;
 #X obj 101 395 random 100;
-#X floatatom 162 422 3 0 100 0 - - -, f 3;
+#X floatatom 154 422 3 0 100 0 - - - 0;
 #X text 192 420 <-- change probablilty;
 #X obj 101 446 moses 80;
 #X text 150 372 <-- click to test;
-#X text 39 497 This outputs a number at left 80% of the time \, otherwise
-at right \, unless you override the "80" using the number box. You
-may extend this to more than two possible outcomes \, for instance
-like this:;
+#X text 39 497 This outputs a number at left 80% of the time \, otherwise at right \, unless you override the "80" using the number box. You may extend this to more than two possible outcomes \, for instance like this:;
 #X obj 190 598 random 100;
 #X obj 190 626 moses 10;
 #X obj 251 654 moses 30;
 #X text 247 725 20%;
 #X text 309 724 70%;
-#X obj 251 710 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 312 710 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 101 474 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 162 473 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X floatatom 312 682 5 0 0 0 - - -, f 5;
-#X floatatom 251 682 5 0 0 0 - - -, f 5;
-#X floatatom 190 681 5 0 0 0 - - -, f 5;
+#X obj 251 710 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
+#X obj 312 710 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
+#X obj 101 474 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
+#X obj 154 473 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
+#X floatatom 312 682 5 0 0 0 - - - 0;
+#X floatatom 251 682 5 0 0 0 - - - 0;
+#X floatatom 190 681 5 0 0 0 - - - 0;
 #X obj 192 574 metro 300;
-#X obj 192 552 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X text 39 750 10% of numbers are between 0 and 9 \, 20% of numbers
-between 10 and 29 and 70% are between 30 and 99;
+#X obj 192 552 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000 0 1;
+#X text 39 750 10% of numbers are between 0 and 9 \, 20% of numbers between 10 and 29 and 70% are between 30 and 99;
 #X text 187 724 10%;
-#X obj 190 709 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 190 709 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
 #X connect 0 0 2 0;
 #X connect 0 1 3 0;
 #X connect 1 0 0 0;

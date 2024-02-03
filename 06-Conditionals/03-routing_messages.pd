@@ -1,10 +1,10 @@
-#N canvas 344 70 548 647 12;
+#N canvas 438 45 548 647 12;
 #X text 122 321 argument without value prints bang;
 #X text 226 376 rightmost outlet prints everything;
 #X text 228 392 which can't be routed;
 #X obj 39 437 print 1;
-#X obj 97 411 print 2;
-#X obj 156 387 print 3;
+#X obj 90 411 print 2;
+#X obj 141 385 print 3;
 #X obj 39 360 route key1 key2;
 #X msg 79 322 key1;
 #X msg 70 261 key2 one two;
@@ -13,21 +13,8 @@
 #X msg 52 198 1 2;
 #X msg 41 169 blah 1 2;
 #X text 31 15 Seperate messages by first element in the message;
-#X text 30 42 Every message has a selector. The selector is the first
-element in the message. It tells the object which receives that message
-what to do with it. A selector is basically like a command or a function.
-The selector is a symbolic atom \, which is a non-numeric string with
-no white space \, semicolons \, or commas. In the case of messages
-whose first element is a numeric atom \, the "float" selector is implied.
-;
-#X text 34 470 The first argument in [route] defines the type (in this
-case "symbol". All subsequent arguments should be in that type othewise
-they are ignored. If a message is not a number or a symbol an error
-message will be printed. The route argument (here "key1" and "key2")
-is cut off from the remaining list in the output. The selector is a
-symbolic atom \, which is a non-numeric string with no white space
-\, semicolons \, or commas. In the case of messages whose first element
-is a numeric atom \, the "float" selector is implied.;
+#X text 30 42 Every message has a selector. The selector is the first element in the message. It tells the object which receives that message what to do with it. A selector is basically like a command or a function. The selector is a symbolic atom \, which is a non-numeric string with no white space \, semicolons \, or commas. In the case of messages whose first element is a numeric atom \, the "float" selector is implied.;
+#X text 34 470 The first argument in [route] defines the type (in this case "symbol". All subsequent arguments should be in that type othewise they are ignored. If a message is not a number or a symbol an error message will be printed. The route argument (here "key1" and "key2") is cut off from the remaining list in the output. The selector is a symbolic atom \, which is a non-numeric string with no white space \, semicolons \, or commas. In the case of messages whose first element is a numeric atom \, the "float" selector is implied.;
 #X connect 6 0 3 0;
 #X connect 6 1 4 0;
 #X connect 6 2 5 0;

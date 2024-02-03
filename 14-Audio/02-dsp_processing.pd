@@ -25,19 +25,22 @@ as "DSP" or Digital Signal Processing.;
 #X text 17 173 - you can send Pd a dsp message;
 #X text 15 226 - there are key commands;
 #X text 15 199 - there are high-level objects \, like [pddp/dsp].;
-#N canvas 0 22 288 364 4'33" 0;
+#N canvas 666 227 531 389 4'33" 0;
 #X obj 40 108 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X msg 40 127 \; pd dsp 1;
 #X msg 40 306 \; pd dsp 0;
 #X obj 40 171 bang~;
-#X floatatom 40 255 5 0 0 0 - - -, f 5;
+#X floatatom 40 255 5 0 0 0 - - -;
 #X msg 40 199 1;
 #X obj 40 228 +;
 #X obj 39 75 block~ 64;
 #X text 36 43 silence_computated@SR44100;
 #X obj 40 279 sel 188115;
 #X text 37 20 hommage à john cage;
+#X text 95 171 Bang~ outputs a bang after each DSP cycle (64 samples).
+;
+#X text 136 279 64 * 188115 / 44100 = 273 = 4 min 33 sec;
 #X connect 0 0 1 0;
 #X connect 3 0 5 0;
 #X connect 4 0 6 1;

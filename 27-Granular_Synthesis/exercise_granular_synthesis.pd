@@ -1,0 +1,12 @@
+#N canvas 693 341 645 358 12;
+#X text 87 180 Lesen und spielen Sie die Granularsynthese Patches und
+bereiten Sie sich zur naechsten Stunde darauf vor \, die grundlegenden
+Prinzipien erklaeren zu koennen. Erstellen sie 3 unabhaengige grain-streams
+(Instanzen) der "grain-stream2" Abstraktion \, die alle auf den gleichen
+Table zugreifen. Steuern Sie unterschiedliche Einstellungen der Parameter
+mit einer qlist.;
+#X text 87 44 Read and play with the granular synthesis patches and
+prepare to explain the principles of it for the next lesson. Create
+3 independent grain streams (instrances) of the "grain-stream2" abstraction
+all reading the same table. Make some different settings for the parameters
+with a qlist.;

@@ -1,0 +1,8 @@
+#N canvas 705 628 548 226 10;
+#X msg 32 79 browse http://www.mathematische-basteleien.de/gameoflife.htm;
+#X obj 32 100 pdcontrol;
+#X msg 34 141 browse https://en.wikipedia.org/wiki/Conway_Game_of_Life;
+#X obj 34 162 pdcontrol;
+#X connect 0 0 1 0;
+#X connect 2 0 3 0;
+#X coords 0 226 1 225 300 15 0;

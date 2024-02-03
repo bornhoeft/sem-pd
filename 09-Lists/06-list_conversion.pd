@@ -1,26 +1,19 @@
-#N canvas 279 248 630 430 12;
+#N canvas 321 117 630 430 12;
 #X text 92 258 a set that is not a "list" has an undefined type:;
 #X msg 41 87 list;
-#X symbolatom 87 190 10 0 0 0 - - -, f 10;
+#X symbolatom 87 190 10 0 0 0 - - - 0;
 #X msg 66 120 list 25;
 #X msg 79 159 list foo;
-#X text 167 158 A "list" of one "symbol" is converted to a "symbol"
-;
+#X text 167 158 A "list" of one "symbol" is converted to a "symbol";
 #X text 141 120 A "list" of one "float" is converted to a "float";
 #X text 92 87 An empty "list" is converted to a "bang";
-#X obj 41 377 bng 15 250 50 0 empty empty bang 0 20 1 9 -262144 -1
--1;
-#X obj 98 376 bng 15 250 50 0 empty empty float 0 21 1 9 -262144 -1
--1;
-#X obj 155 376 bng 15 250 50 0 empty empty symbol 0 21 1 9 -262144
--1 -1;
-#X obj 269 376 bng 15 250 50 0 empty empty list 0 21 1 9 -262144 -1
--1;
-#X obj 326 377 bng 15 250 50 0 empty empty UNDEFINED 0 21 1 9 -262144
--1 -1;
+#X obj 41 377 bng 15 250 50 0 empty empty bang 0 20 1 9 #fcfcfc #000000 #000000;
+#X obj 90 376 bng 15 250 50 0 empty empty float 0 21 1 9 #fcfcfc #000000 #000000;
+#X obj 140 375 bng 15 250 50 0 empty empty symbol 0 21 1 9 #fcfcfc #000000 #000000;
+#X obj 240 374 bng 15 250 50 0 empty empty list 0 21 1 9 #fcfcfc #000000 #000000;
+#X obj 290 374 bng 15 250 50 0 empty empty UNDEFINED 0 21 1 9 #fcfcfc #000000 #000000;
 #X obj 41 348 route bang float symbol pointer list;
-#X obj 212 376 bng 15 250 50 0 empty empty pointer 0 21 1 9 -262144
--1 -1;
+#X obj 190 374 bng 15 250 50 0 empty empty pointer 0 21 1 9 #fcfcfc #000000 #000000;
 #X text 38 47 List conversions;
 #X msg 82 227 list this is a set with a cast;
 #X msg 92 283 this is a set withOUT a cast;

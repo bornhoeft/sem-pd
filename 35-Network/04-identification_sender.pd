@@ -1,0 +1,58 @@
+#N canvas 168 204 1353 1185 12;
+#X msg 119 178 disconnect;
+#X obj 157 496 netsend 1;
+#X text 240 513 creation argument: 0 or none for TCP \, nonzero for
+UDP;
+#X text 273 104 connecting p2p;
+#X text 241 497 Send messages on remote machine;
+#X msg 91 141 connect localhost 3002;
+#X text 285 141 connecting zum localhost;
+#X msg 28 72 connect 255.255.255.0 3000;
+#X obj 157 522 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 1
+1;
+#X text 182 522 Status;
+#X obj 183 376 pack f f;
+#X obj 239 353 hsl 128 15 0 1 0 0 empty vol empty -2 -6 0 8 -262144
+-1 -1 12700 1;
+#X text 380 351 control volume over the network;
+#X obj 182 266 metro 1000;
+#X obj 183 247 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 1
+1;
+#X obj 181 291 random 100;
+#X obj 182 315 + 10;
+#X msg 160 222 send achim 440 0.5;
+#X obj 183 468 list trim;
+#X obj 183 437 list prepend send achim;
+#X text 356 439 add a name identifiers and send argument;
+#X text 24 32 network identification (sender);
+#X obj 305 259 loadbang;
+#X msg 305 288 \; vol 0.5 \;;
+#X text 266 72 connecting to the netmask (for 254 addresses);
+#N canvas 442 315 939 452 p2p 1;
+#X text 20 105 p2p: der Empfänger muss sich mit [netreceive] und dem
+gleichen port (3000) verbinden zum Empfang. Wenn er selbst senden will
+muss er auf einem anderen port mit der hiesigen ip-Adresse verbinden
+und wird mit [netreceive] auf dem port (hier 3001) empfangen.;
+#X text 22 18 p2p: the receiver must be connected with [netreceive]
+and the same port (3000). For sending data the receiver must be connected
+on another port with the local ip address and will be broadcasted by
+[netreceive] on port \, in this exp 3001 received.;
+#X restore 408 105 pd p2p;
+#X obj 194 408 print;
+#X msg 57 105 connect 192.168.0.157 3001;
+#X connect 0 0 1 0;
+#X connect 1 0 8 0;
+#X connect 5 0 1 0;
+#X connect 7 0 1 0;
+#X connect 10 0 19 0;
+#X connect 10 0 26 0;
+#X connect 11 0 10 1;
+#X connect 13 0 15 0;
+#X connect 14 0 13 0;
+#X connect 15 0 16 0;
+#X connect 16 0 10 0;
+#X connect 17 0 1 0;
+#X connect 18 0 1 0;
+#X connect 19 0 18 0;
+#X connect 22 0 23 0;
+#X connect 27 0 1 0;

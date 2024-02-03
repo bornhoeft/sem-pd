@@ -1,18 +1,15 @@
-#N canvas 488 317 458 340 12;
+#N canvas 154 25 538 378 12;
 #X text 53 19 Labeling GUI Objects;
-#N canvas 506 156 552 350 advanced 0;
-#X obj 58 184 cnv 15 150 60 empty empty empty 20 12 0 14 -233017 -66577
-0;
+#N canvas 272 68 490 353 advanced 1;
+#X obj 58 184 cnv 15 150 60 empty empty empty 20 12 0 14 #e0e0e0 #404040 0;
 #X obj 271 165 line;
-#X floatatom 270 304 10 0 0 1 output - -, f 10;
+#X floatatom 270 304 10 0 0 1 output - - 0;
 #X obj 271 196 s \$0-out-hop-s;
 #X obj 270 271 r \$0-out-hop-r;
-#X floatatom 271 102 5 0 1000 1 input - -, f 5;
-#X obj 69 207 hsl 128 20 0 1000 0 0 \$0-out-hop-r \$0-out-hop-s name:269.61
-20 10 0 12 -262144 -258113 -1 3424 1;
-#X text 52 26 Labeling functionality with the abstraction [guilabel]
-for name and value display.;
-#N canvas 311 199 252 240 guilabel 0;
+#X floatatom 271 102 5 0 1000 1 input - - 0;
+#X obj 69 207 hsl 128 20 0 1000 0 0 \$0-out-hop-r \$0-out-hop-s name:329 20 10 0 12 #fcfcfc #fc0400 #000000 0 1;
+#X text 52 26 Labeling functionality with the abstraction [guilabel] for name and value display.;
+#N canvas 1316 520 440 572 guilabel 0;
 #X msg 38 135 label \$1;
 #X obj 38 36 inlet;
 #X obj 38 168 outlet;
@@ -47,7 +44,7 @@ for name and value display.;
 #X connect 3 0 4 0;
 #X connect 4 0 0 0;
 #X restore 295 232 pd guilabel;
-#X obj 271 132 pack \$1 200;
+#X obj 271 132 pack \$1 50;
 #X connect 1 0 3 0;
 #X connect 4 0 2 0;
 #X connect 4 0 8 0;
@@ -55,17 +52,15 @@ for name and value display.;
 #X connect 8 0 3 0;
 #X connect 9 0 1 0;
 #X restore 51 251 pd advanced example;
-#X obj 232 225 send to-slider;
-#X obj 114 69 vsl 15 128 0 127 0 0 from-slider to-slider slider:74
--16 140 0 10 -262144 -1 -1 7400 1;
-#X msg 254 155 label slider:\$1;
-#X floatatom 231 285 5 0 0 0 - - -, f 5;
-#X obj 231 256 receive from-slider;
-#X obj 254 123 makefilename %d;
-#X obj 235 64 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 7400 1;
-#X connect 4 0 2 0;
+#X obj 114 69 vsl 15 128 0 127 0 0 from-slider to-slider noten:85 -16 140 0 10 #fcfcfc #000000 #000000 0 1;
+#X floatatom 283 285 5 0 0 0 - - - 0;
+#X obj 283 256 receive from-slider;
+#X obj 306 123 makefilename %d;
+#X obj 287 64 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 284 225 send to-slider;
+#X msg 306 155 label midi:\$1;
+#X connect 4 0 3 0;
+#X connect 5 0 8 0;
 #X connect 6 0 5 0;
-#X connect 7 0 4 0;
+#X connect 6 0 7 0;
 #X connect 8 0 7 0;
-#X connect 8 0 2 0;

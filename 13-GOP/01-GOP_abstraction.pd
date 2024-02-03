@@ -1,4 +1,4 @@
-#N canvas 699 135 526 666 12;
+#N canvas 636 39 1191 1320 12;
 #X text 17 18 GOP abstractions;
 #X text 15 117 Open one of the instances of the same abstraction (chn.pd
 \, created with [chn 1 Floete] and [chn 2 Violine]) by clicking on

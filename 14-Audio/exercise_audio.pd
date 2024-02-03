@@ -1,0 +1,3 @@
+#N canvas 430 356 535 243 12;
+#X text 67 130 Wandeln Sie die letzte Hausaufgabe von Midi nach Audio um. Verwenden Sie dazu [osc] Objekte. (Beachten Sie dabei \, dass Sie nun mit Frequenzen statt mit Midinoten arbeiten.);
+#X text 69 67 Change the last homework from Midi into Audio. Use the [osc~] object. (Note: You are dealing with frequencies now !);

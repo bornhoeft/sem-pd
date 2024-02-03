@@ -1,30 +1,22 @@
 #N canvas 407 120 630 425 12;
-#X floatatom 279 330 5 0 0 0 - - -, f 5;
-#X symbolatom 334 330 10 0 0 0 - - -, f 10;
-#X obj 224 353 bng 15 250 50 0 empty empty bang -6 23 0 12 -262144
--1 -1;
+#X floatatom 272 352 5 0 0 0 - - - 0;
+#X symbolatom 320 351 10 0 0 0 - - - 0;
+#X obj 224 376 bng 15 250 50 0 empty empty bang -6 23 0 12 #fcfcfc #000000 #000000;
 #X obj 224 270 route bang float symbol list;
-#X obj 279 353 bng 15 250 50 0 empty empty float -4 23 0 12 -262144
--1 -1;
-#X obj 334 353 bng 15 250 50 0 empty empty symbol -12 23 0 12 -262144
--1 -1;
-#X obj 389 297 bng 15 250 50 0 empty empty list -2 23 0 12 -262144
--1 -1;
-#X obj 445 297 bng 15 250 50 0 empty empty selector_series -18 23 0
-12 -262144 -1 -1;
+#X obj 272 375 bng 15 250 50 0 empty empty float -4 23 0 12 #fcfcfc #000000 #000000;
+#X obj 320 374 bng 15 250 50 0 empty empty symbol -12 23 0 12 #fcfcfc #000000 #000000;
+#X obj 368 321 bng 15 250 50 0 empty empty list -2 23 0 12 #fcfcfc #000000 #000000;
+#X obj 417 297 bng 15 250 50 0 empty empty selector_series -18 23 0 12 #fcfcfc #000000 #000000;
 #X msg 62 101 bang;
 #X msg 146 118 642.3;
 #X msg 224 94 symbol moshimoshi;
 #X msg 231 121 symbol sayonara;
-#X obj 50 132 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
--1;
+#X obj 50 132 bng 15 250 50 0 empty empty empty 0 -6 0 8 #fcfcfc #000000 #000000;
 #X msg 411 100 1 2 3;
 #X msg 416 125 5 for free!;
 #X msg 421 153 list here we go...;
 #X msg 115 94 float 5;
-#X text 22 17 When processing messages \, some operations should only
-be applied to messages of a certain type. [route] allows you to sort
-messages by type:;
+#X text 22 17 When processing messages \, some operations should only be applied to messages of a certain type. [route] allows you to sort messages by type:;
 #X msg 427 181 not a list? nope...;
 #X connect 0 0 4 0;
 #X connect 1 0 5 0;

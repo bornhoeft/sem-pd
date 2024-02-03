@@ -1,0 +1,49 @@
+#N canvas 203 113 1222 872 12;
+#X obj 80 98 env~ 4096;
+#X floatatom 80 122 5 0 0 0 - - -;
+#X obj 166 99 env~ 16384;
+#X floatatom 166 124 5 0 0 0 - - -;
+#X text 38 161 env~ calculates RMS amplitude over a number of samples
+(4096 =~ 93 msec \, 16384 =~ 270 msec with a samplingrate of 44100).
+Use env~ to estimate the amplitude of a signal \, 100 dB = maximum
+;
+#X obj 286 243 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 286 263 metro 250;
+#X obj 286 309 snapshot~;
+#X obj 219 241 adc~ 1;
+#X obj 358 239 hsl 128 15 10 2000 0 0 empty empty empty -2 -8 0 10
+-262144 -1 -1 0 1;
+#X floatatom 286 341 10 0 0 0 - - -;
+#X floatatom 286 415 10 0 0 0 - - -;
+#X obj 286 365 * 100;
+#X obj 286 390 / 10;
+#X text 29 449 A snapshot~ object prints out the values of an incoming
+signal every time it is sent a bang message.;
+#X obj 70 363 snapshot~;
+#X floatatom 70 392 0 0 0 0 - - -;
+#X obj 46 244 osc~ 0.1;
+#X obj 80 41 adc~ 1;
+#X obj 80 326 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 80 270 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 80 296 metro 100;
+#X connect 0 0 1 0;
+#X connect 2 0 3 0;
+#X connect 5 0 6 0;
+#X connect 6 0 7 0;
+#X connect 7 0 10 0;
+#X connect 8 0 7 0;
+#X connect 9 0 6 1;
+#X connect 10 0 12 0;
+#X connect 12 0 13 0;
+#X connect 13 0 11 0;
+#X connect 15 0 16 0;
+#X connect 15 0 16 0;
+#X connect 17 0 15 0;
+#X connect 18 0 0 0;
+#X connect 18 0 2 0;
+#X connect 19 0 15 0;
+#X connect 20 0 21 0;
+#X connect 21 0 19 0;

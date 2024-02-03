@@ -1,0 +1,67 @@
+#N canvas 658 109 594 569 12;
+#X msg 35 137 1;
+#X msg 70 138 0;
+#X obj 35 192 vline~;
+#X obj 35 17 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 35 223 *~ 0.2;
+#X obj 36 305 dac~;
+#X obj 35 42 metro 700;
+#X obj 70 112 del 1;
+#X obj 35 73 t b b b;
+#X obj 123 112 random 10;
+#X obj 122 169 + 0.1;
+#X obj 123 139 / 10;
+#X floatatom 122 194 5 0 0 0 - - -;
+#X obj 107 364 bng 30 250 50 0 empty empty empty 17 7 0 10 -262144
+-258113 -1;
+#X text 63 414 arg 1: trigger value;
+#X text 63 439 arg 2: debounce time (msecs) before new trigger possible
+;
+#X text 63 503 arg 4: time (msecs) until debounce level is accepted.
+;
+#X text 63 462 arg 3: debounce level: value to be reached before new
+trigger (see trigger value) is possible.;
+#X obj 123 219 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 122 265 tgl 30 0 empty empty empty 17 7 0 10 -262144 -258113
+-1 0 1;
+#X obj 107 339 threshold~ 0.4 1000 0.4 1000;
+#X msg 125 310 set 0.5 1000 0.2 1000;
+#X obj 122 239 >= 0.4;
+#X floatatom 349 134 5 0 0 0 - - -;
+#X obj 349 101 env~ 4096;
+#X obj 349 274 bng 30 250 50 0 empty empty empty 17 7 0 10 -262144
+-258113 -1;
+#X obj 369 204 tgl 30 0 empty empty empty 17 7 0 10 -262144 -258113
+-1 0 1;
+#X obj 369 175 >= 60;
+#X obj 349 245 threshold~ 60 1000 50 1000;
+#X obj 349 67 adc~ 1;
+#X connect 0 0 2 0;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 3 0 6 0;
+#X connect 4 0 5 0;
+#X connect 4 0 5 1;
+#X connect 4 0 20 0;
+#X connect 6 0 8 0;
+#X connect 7 0 1 0;
+#X connect 8 0 0 0;
+#X connect 8 1 7 0;
+#X connect 8 2 9 0;
+#X connect 9 0 11 0;
+#X connect 10 0 12 0;
+#X connect 11 0 10 0;
+#X connect 12 0 4 1;
+#X connect 12 0 18 0;
+#X connect 18 0 22 0;
+#X connect 20 0 13 0;
+#X connect 21 0 20 0;
+#X connect 22 0 19 0;
+#X connect 23 0 27 0;
+#X connect 23 0 28 0;
+#X connect 24 0 23 0;
+#X connect 27 0 26 0;
+#X connect 28 0 25 0;
+#X connect 29 0 24 0;

@@ -1,0 +1,140 @@
+#N canvas 69 96 1580 706 16;
+#X declare -path abs;
+#X obj 771 408 gendyn~;
+#X obj 701 359 r start;
+#X obj 736 618 dac~;
+#X obj 528 30 declare -path abs;
+#X obj 371 441 image abs/dss.gif 0;
+#X obj 527 104 tgl 15 0 empty empty empty 17 7 0 10 -262144 -258113
+-1 1 1;
+#N canvas 0 22 368 239 key-control 0;
+#X obj 38 30 key;
+#X floatatom 37 66 5 0 0 0 - - -, f 5;
+#X obj 38 135 outlet;
+#X obj 38 95 sel 32 110;
+#X obj 195 138 + 1;
+#X obj 131 185 outlet;
+#X obj 133 137 f 1;
+#X obj 253 136 mod 6;
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
+#X connect 3 0 2 0;
+#X connect 3 1 6 0;
+#X connect 4 0 7 0;
+#X connect 6 0 4 0;
+#X connect 6 0 5 0;
+#X connect 7 0 6 1;
+#X restore 527 72 pd key-control;
+#X obj 664 106 hradio 15 1 0 6 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#N canvas 301 209 425 801 examples 1;
+#X obj 77 26 inlet;
+#X obj 73 69 sel 0 1 2 3 4 5;
+#X obj 248 66 loadbang;
+#X obj 73 105 t b b;
+#X obj 48 326 t b b;
+#X text 142 108 2 x bang ???;
+#X msg 35 154 \; \$0-p0 10 \; \$0-p1 40 \; \$0-p2 40 \; \$0-p3 0.3
+\; \$0-p4 0.1 \; \$0-p5 0.1 \;;
+#X msg 80 362 \; \$0-p0 10 \; \$0-p1 40 \; \$0-p2 100 \; \$0-p3 0.3
+\; \$0-p4 0.1 \; \$0-p5 0.1 \;;
+#X obj 57 534 t b b;
+#X obj 203 188 t b b;
+#X obj 226 408 t b b;
+#X obj 180 577 t b b;
+#X msg 203 618 \; \$0-p0 20 \; \$0-p1 20 \; \$0-p2 2000 \; \$0-p3 0.3
+\; \$0-p4 2 \; \$0-p5 2 \;;
+#X msg 42 571 \; \$0-p0 20 \; \$0-p1 40 \; \$0-p2 400 \; \$0-p3 0.3
+\; \$0-p4 0.1 \; \$0-p5 0.2 \;;
+#X msg 249 449 \; \$0-p0 20 \; \$0-p1 100 \; \$0-p2 1000 \; \$0-p3
+0.3 \; \$0-p4 1 \; \$0-p5 1 \;;
+#X msg 226 229 \; \$0-p0 20 \; \$0-p1 300 \; \$0-p2 400 \; \$0-p3 0.3
+\; \$0-p4 0.1 \; \$0-p5 1.5 \;;
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
+#X connect 1 1 4 0;
+#X connect 1 2 8 0;
+#X connect 1 3 9 0;
+#X connect 1 4 10 0;
+#X connect 1 5 11 0;
+#X connect 2 0 6 0;
+#X connect 3 0 6 0;
+#X connect 3 1 6 0;
+#X connect 4 0 7 0;
+#X connect 4 1 7 0;
+#X connect 8 0 13 0;
+#X connect 8 1 13 0;
+#X connect 9 0 15 0;
+#X connect 9 1 15 0;
+#X connect 10 0 14 0;
+#X connect 10 1 14 0;
+#X connect 11 0 12 0;
+#X connect 11 1 12 0;
+#X restore 664 133 pd examples;
+#X obj 964 357 hsl 128 15 0 2 0 0 empty \$0-p5 p2 51 5 0 12 -4096 -258049
+-1 635 1;
+#X floatatom 964 379 5 0 0 0 - - -, f 5;
+#X obj 932 309 hsl 128 15 0 2 0 0 empty \$0-p4 p1 50 5 0 12 -4096 -258049
+-1 635 1;
+#X floatatom 932 331 5 0 0 0 - - -, f 5;
+#X obj 900 256 hsl 128 15 0.01 1 0 0 empty \$0-p3 a 50 5 0 12 -260097
+-1 -1 3720 1;
+#X floatatom 900 278 5 0 0 0 - - -, f 5;
+#X obj 867 207 hsl 128 15 10 5000 1 0 empty \$0-p2 f2 50 5 0 12 -262081
+-258049 -1 2833 1;
+#X floatatom 867 229 5 0 0 0 - - -, f 5;
+#X obj 835 159 hsl 128 15 10 5000 1 0 empty \$0-p1 f1 50 5 0 12 -262081
+-258049 -1 2833 1;
+#X floatatom 835 179 5 0 0 0 - - -, f 5;
+#X obj 803 75 hsl 128 15 2 20 1 0 empty \$0-p0 b 50 5 0 12 -258049
+-1 -1 8877 1;
+#X floatatom 804 130 5 0 0 0 - - -, f 5;
+#X obj 804 98 int;
+#X text 1193 62 (c) 2020 Achim Bornhoeft;
+#X msg 527 128 \; pd dsp \$1 \; start \$1;
+#X text 851 33 gendyn~ parameter;
+#X text 108 48 Dynamisch Stochastische Synthese;
+#X obj 753 576 rev3~ 100 60 3000 20;
+#X text 945 70 breakpoints;
+#X text 899 178 freq deviation 1;
+#X text 925 227 freq deviation 2;
+#X text 993 330 amp deviation 1;
+#X text 1027 378 amp deviation 2;
+#X text 960 278 amp max;
+#X text 79 610 “It seems that the transient part of the sound is
+far more important than the permanent part in timbre recognition and
+in music in general” (Xenakis 1992 \, 244);
+#X text 77 213 Eine flexible Wellenform wird direkt generiert \, indem
+sich die Samples (Breakpoints) in definierten Zufallsbereichen kontinuierlich
+bewegen (random walk).;
+#X text 1003 457 1) freq dev 1 = 2 \, nahezu statischer Klang;
+#X text 1002 491 2) freq dev 1 /= 2 \, kontinuierliche Frequenzbewegung
+;
+#X text 1003 526 3) mehr Breakpoints (20) -> breiteres Klangspektrum
+;
+#X text 1003 562 4) Abweichung in der Amplitude -> Spektrum variabel
+;
+#X text 1000 597 5) Abweichung in freq und amp -> geräuschhaft;
+#X text 999 634 6) hohe Abweichung in freq und amp -> Geräusch;
+#X connect 0 0 26 0;
+#X connect 0 0 26 1;
+#X connect 1 0 0 0;
+#X connect 5 0 23 0;
+#X connect 6 0 5 0;
+#X connect 6 1 7 0;
+#X connect 7 0 8 0;
+#X connect 9 0 10 0;
+#X connect 10 0 0 6;
+#X connect 11 0 12 0;
+#X connect 12 0 0 5;
+#X connect 13 0 14 0;
+#X connect 14 0 0 4;
+#X connect 15 0 16 0;
+#X connect 16 0 0 3;
+#X connect 17 0 18 0;
+#X connect 18 0 0 2;
+#X connect 19 0 21 0;
+#X connect 20 0 0 1;
+#X connect 21 0 20 0;
+#X connect 26 0 2 0;
+#X connect 26 0 2 1;

@@ -1,0 +1,16 @@
+#N canvas 669 490 406 280 10;
+#X floatatom 101 168 5 0 0 0 - - -;
+#X floatatom 100 94 5 50 100 0 - - -;
+#X floatatom 59 94 5 0 0 0 - - -;
+#X floatatom 236 96 5 0 0 0 - - -;
+#X floatatom 235 168 5 0 0 0 - - -;
+#X text 78 208 args: min in \, max in \, min out \, max out;
+#X text 45 47 numbers in a given range are scaled to another range
+;
+#X obj 100 130 range 50 100 0 127;
+#X obj 235 130 range 0 127 -1 1;
+#X connect 1 0 7 0;
+#X connect 2 0 7 0;
+#X connect 3 0 8 0;
+#X connect 7 0 0 0;
+#X connect 8 0 4 0;

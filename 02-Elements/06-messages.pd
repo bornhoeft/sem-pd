@@ -1,24 +1,19 @@
-#N canvas 10 40 823 484 12;
+#N canvas 141 40 766 470 12;
 #X msg 256 163 say hello;
-#X symbolatom 256 352 10 0 0 1 symbol_box_expects_a_symbol_message
-- -, f 10;
+#X symbolatom 256 352 10 0 0 1 symbol_box_expects_a_symbol_message - - 0;
 #X obj 34 250 + 1;
 #X msg 33 162 1;
-#X floatatom 33 307 5 0 0 0 - - -, f 5;
+#X floatatom 33 307 5 0 0 0 - - - 0;
 #X text 85 162 <-- messages -->;
 #X text 89 251 <-- objects -->;
 #X msg 272 198 do as I say!;
-#X text 20 63 Objects respond to messages received on their inlets
-\, and output messages on their outlets. These messages can be anything
-from data to commands.;
+#X text 20 63 Objects respond to messages received on their inlets \, and output messages on their outlets. These messages can be anything from data to commands.;
 #X text 26 129 data;
 #X text 261 128 commands;
-#X text 48 390 All communication within Pd is in the form of messages
-\, including when the user is controlling the program.;
+#X text 48 390 All communication within Pd is in the form of messages \, including when the user is controlling the program.;
 #X msg 45 190 2;
 #X text 21 24 Messages;
-#X text 305 320 When using symbolic atoms \, the symbol message is
-essential:;
+#X text 305 320 When using symbolic atoms \, the symbol message is essential:;
 #X obj 256 233 route say;
 #X obj 324 260 bang;
 #X obj 256 288 symbol;

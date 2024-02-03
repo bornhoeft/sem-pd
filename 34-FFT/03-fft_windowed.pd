@@ -1,0 +1,108 @@
+#N canvas 656 59 1265 1292 12;
+#X obj 125 166 * 44100;
+#X obj 125 195 / 64;
+#X floatatom 125 226 7 0 0 0 - - -, f 7;
+#X obj 125 262 osc~;
+#X obj 197 368 rfft~;
+#X obj 197 417 *~;
+#X obj 233 418 *~;
+#X obj 196 458 +~;
+#X obj 196 495 sqrt~;
+#X obj 196 554 print~;
+#X obj 213 529 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 124 317 *~;
+#X obj 146 289 tabreceive~ hanning;
+#N canvas 288 330 450 300 (subpatch) 0;
+#X array hanning 64 float 1;
+#A 0 0 0.00240764 0.00960734 0.0215298 0.0380601 0.0590392 0.0842649
+0.113494 0.146446 0.182803 0.222214 0.264301 0.308658 0.354857 0.402455
+0.450991 0.5 0.549009 0.597545 0.645143 0.691342 0.735699 0.777786
+0.817197 0.853554 0.886506 0.915736 0.940961 0.96194 0.978471 0.990393
+0.997593 1 0.997592 0.990392 0.978469 0.961939 0.940959 0.915733 0.886503
+0.853551 0.817194 0.777782 0.735695 0.691338 0.645139 0.597541 0.549004
+0.499996 0.450987 0.40245 0.354853 0.308654 0.264297 0.222211 0.182799
+0.146443 0.113491 0.084262 0.0590366 0.038058 0.0215281 0.00960615
+0.00240701;
+#X coords 0 1 63 0 200 140 1 0 0;
+#X restore 376 464 graph;
+#X obj 404 246 samplerate~;
+#X obj 404 272 / 64;
+#X obj 404 330 osc~;
+#X obj 404 356 *~ -0.5;
+#X obj 404 383 +~ 0.5;
+#X obj 389 416 tabwrite~ hanning;
+#X msg 498 245 0;
+#X text 62 25 Windowed analysis;
+#X obj 388 107 loadbang;
+#X msg 425 163 \; pd dsp 1 \;;
+#X obj 388 205 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 388 135 t b b;
+#X text 412 202 create hanning window;
+#X text 245 493 magnitude;
+#X text 61 51 To reduce spectral leackage the signal is windowed before
+analysis.;
+#X obj 47 371 rfft~;
+#X obj 47 420 *~;
+#X obj 83 421 *~;
+#X obj 46 461 +~;
+#X obj 46 498 sqrt~;
+#X obj 46 557 print~;
+#X obj 63 532 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X text 95 496 magnitude;
+#X text 90 529 non windowed;
+#X text 473 368 unipolar;
+#X floatatom 404 301 5 0 0 0 - - -, f 5;
+#X text 240 526 windowed version;
+#N canvas 752 265 443 120 credits 0;
+#X text 20 15 Johannes Kreidler;
+#X text 24 40 www.pd-tutorial.com;
+#X text 23 66 http://www.pd-tutorial.com/english/ch03s08.html;
+#X restore 431 20 pd credits;
+#X msg 125 119 1.436;
+#X obj 125 93 loadbang;
+#X obj 128 143 hsl 128 15 1 32 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 179 1;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 11 0;
+#X connect 3 0 29 0;
+#X connect 4 0 5 0;
+#X connect 4 0 5 1;
+#X connect 4 1 6 0;
+#X connect 4 1 6 1;
+#X connect 5 0 7 0;
+#X connect 6 0 7 1;
+#X connect 7 0 8 0;
+#X connect 8 0 9 0;
+#X connect 10 0 9 0;
+#X connect 11 0 4 0;
+#X connect 12 0 11 1;
+#X connect 14 0 15 0;
+#X connect 15 0 39 0;
+#X connect 16 0 17 0;
+#X connect 17 0 18 0;
+#X connect 18 0 19 0;
+#X connect 20 0 16 1;
+#X connect 22 0 25 0;
+#X connect 24 0 20 0;
+#X connect 24 0 14 0;
+#X connect 24 0 19 0;
+#X connect 25 0 24 0;
+#X connect 25 1 23 0;
+#X connect 29 0 30 0;
+#X connect 29 0 30 1;
+#X connect 29 1 31 0;
+#X connect 29 1 31 1;
+#X connect 30 0 32 0;
+#X connect 31 0 32 1;
+#X connect 32 0 33 0;
+#X connect 33 0 34 0;
+#X connect 35 0 34 0;
+#X connect 39 0 16 0;
+#X connect 42 0 44 0;
+#X connect 43 0 42 0;
+#X connect 44 0 0 0;

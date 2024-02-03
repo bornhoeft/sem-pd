@@ -1,0 +1,4 @@
+#N canvas 846 871 599 294 12;
+#X obj 100 111 pdcontrol;
+#X msg 100 76 browse file:///Users/bornhoeft/Desktop/CellularAutomaton.pdf;
+#X connect 1 0 0 0;

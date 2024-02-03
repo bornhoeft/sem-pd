@@ -1,23 +1,21 @@
-#N canvas 625 189 556 366 12;
+#N canvas 578 164 556 366 12;
 #X obj 49 269 *~;
 #X text 209 231 gain-scaler;
 #X obj 49 198 *~;
 #X obj 49 91 hip~ 20;
-#X obj 70 126 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X text 93 124 input on/off;
-#X obj 73 237 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+#X obj 67 126 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000 0 1;
+#X text 90 124 input on/off;
+#X obj 73 237 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 #fcfcfc #000000 #000000 0 1;
 #X text 118 90 very low highpass filter for impact-sound damping;
-#X msg 87 153 \; pd dsp \$1 \;;
+#X msg 84 153 \; pd dsp \$1 \;;
 #X obj 49 315 dac~;
 #X obj 165 315 dac~ 1 2;
 #X obj 394 62 adc~;
 #X text 104 63 signal from first microphone input;
 #X text 437 62 stereo;
 #X text 48 25 Audio in- and output;
-#X obj 49 64 adc~ 1;
 #X text 95 313 same as;
+#X obj 49 64 adc~ 1;
 #X connect 0 0 9 0;
 #X connect 0 0 9 1;
 #X connect 2 0 0 0;
@@ -25,5 +23,5 @@
 #X connect 4 0 8 0;
 #X connect 4 0 2 1;
 #X connect 6 0 0 1;
-#X connect 15 0 3 0;
+#X connect 16 0 3 0;
 #X coords 0 0 1 1 80 190 0;

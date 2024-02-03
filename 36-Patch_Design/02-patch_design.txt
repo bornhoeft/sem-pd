@@ -1,0 +1,28 @@
+1. Patch folder
+  ⁃ Copyright
+  ⁃ Readme File - Shortcuts
+  ⁃ Clear Starting patch
+  ⁃ All abstractions in subfolder
+  - (All cue-lists in subfolder)
+
+2. Patch start
+  ⁃ Initialization for immediate patch start 
+
+3. Design
+  ⁃ Visual clarity
+  ⁃ Font sizes, interactive objects
+  ⁃ Only Display and interaction
+  ⁃ Clear colours
+
+4.´Utilities
+  ⁃´Tester for Speakers
+  ⁃ Sine tone
+  ⁃ Mikrophone test
+  ⁃ In and out recording functionality for documentation/ production
+
+5. Simulation
+  ⁃ Simulation of the patch with recorded sound instead of microphone inputs
+
+6. Rehearsals
+  ⁃ Possibility for easy jumping between cues
+  ⁃ Score in PDF

@@ -1,0 +1,110 @@
+#N canvas 169 135 909 764 12;
+#X obj 519 508 qlist;
+#X msg 438 116 next;
+#X obj 653 312 loadbang;
+#X floatatom 460 664 5 0 0 0 - - -;
+#X obj 460 637 r send2;
+#X text 262 718 the corresponding send objects (send1 \, send2) are
+listed as the second argument in the qlist file;
+#X obj 396 175 bng 15 250 50 0 empty autobang empty 0 -6 0 8 -262144
+-1 -1;
+#X msg 717 277 tempo \$1;
+#X text 213 171 automatic sequencing;
+#X obj 770 378 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 770 400 openpanel;
+#X msg 770 427 read \$1;
+#X text 249 596 ___________________________________________________________
+;
+#X text 230 477 go to beginning (and stop);
+#X msg 448 476 rewind;
+#X msg 717 192 0.5;
+#X msg 739 247 2;
+#X text 220 214 relative tempo: multiplier for the first argument (delay
+until the next event in msecs) in the qlist file: 0.5 = half speed
+\, 2 = double speed;
+#X obj 462 688 hsl 128 15 0 8 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X floatatom 303 664 5 0 0 0 - - -;
+#X obj 305 688 hsl 128 15 0 8 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 303 637 r send1;
+#X obj 438 63 key;
+#X obj 438 89 sel 32;
+#X text 115 118 single-step forward with the space-bar;
+#X msg 729 219 1;
+#X text 288 339 read file (the file is called with its path);
+#X msg 570 148 print;
+#X text 623 149 print qlist to PD window;
+#X text 281 392 alternatively any qlist textfile can be opened via
+the file browser;
+#X msg 653 339 read step.txt;
+#X obj 173 312 loadbang;
+#X obj 196 367 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 196 388 openpanel;
+#X msg 196 415 read \$1;
+#X msg 157 198 0.5;
+#X msg 179 253 2;
+#X obj 64 64 key;
+#X obj 64 90 sel 32;
+#X msg 169 225 1;
+#X msg 173 339 read step.txt;
+#X msg 64 117 step;
+#X msg 82 169 auto;
+#X msg 157 283 tempo \$1 msec;
+#X msg 133 169 stop;
+#X msg 166 476 line 0;
+#X obj 173 446 text define -k steps;
+#A set 200 send1 0 \; send2 1 \; 1000 send1 1 \; send2 2 \; 1000 send1
+2 \; send2 3 \; 1000 send1 3 \; send2 4 \; 1000 send1 4 \; send2 5
+\; 2000 send1 5 \; send2 6 \; 1000 send1 6 \; send2 7 \; 1000 send1
+7 \; send2 8 \;;
+#X text 279 510 The right outlet gets a;
+#X text 279 529 bang when you hit the;
+#X text 282 547 end of the sequence.;
+#X obj 36 121 bng 15 250 50 0 empty autobang empty 0 -6 0 8 -262144
+-1 -1;
+#X obj 519 552 print qlist-wait;
+#X obj 64 547 print text-wait;
+#X text 141 30 [text] vs. [qlist] sequencing;
+#X obj 64 509 text sequence steps -g;
+#X connect 0 0 51 0;
+#X connect 0 1 14 0;
+#X connect 1 0 0 0;
+#X connect 2 0 30 0;
+#X connect 3 0 18 0;
+#X connect 4 0 3 0;
+#X connect 6 0 0 0;
+#X connect 7 0 0 0;
+#X connect 9 0 10 0;
+#X connect 10 0 11 0;
+#X connect 11 0 0 0;
+#X connect 14 0 0 0;
+#X connect 15 0 7 0;
+#X connect 16 0 7 0;
+#X connect 19 0 20 0;
+#X connect 21 0 19 0;
+#X connect 22 0 23 0;
+#X connect 23 0 1 0;
+#X connect 25 0 7 0;
+#X connect 27 0 0 0;
+#X connect 30 0 0 0;
+#X connect 31 0 40 0;
+#X connect 32 0 33 0;
+#X connect 33 0 34 0;
+#X connect 34 0 46 0;
+#X connect 35 0 43 0;
+#X connect 36 0 43 0;
+#X connect 37 0 38 0;
+#X connect 38 0 41 0;
+#X connect 39 0 43 0;
+#X connect 40 0 46 0;
+#X connect 41 0 54 0;
+#X connect 42 0 54 0;
+#X connect 43 0 54 0;
+#X connect 44 0 54 0;
+#X connect 45 0 54 0;
+#X connect 50 0 54 0;
+#X connect 54 0 52 0;
+#X connect 54 1 45 0;

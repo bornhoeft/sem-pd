@@ -1,40 +1,36 @@
-#N canvas 20 23 545 675 12;
-#X obj 56 97 tgl 15 0 empty empty Start-Stop 0 -8 0 10 -262144 -1 -1
-0 1;
+#N canvas 177 38 545 675 12;
+#X obj 56 97 tgl 15 0 empty empty Start-Stop 0 -8 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 96 422 + 1;
-#X floatatom 55 451 0 0 0 0 - - -;
+#X floatatom 55 451 0 0 0 0 - - - 0;
 #X text 86 453 Total Beat Count;
 #X obj 55 522 div 4;
 #X obj 188 524 mod 4;
-#X floatatom 187 583 0 0 0 0 - - -;
-#X floatatom 57 582 0 0 0 0 - - -;
+#X floatatom 187 583 0 0 0 0 - - - 0;
+#X floatatom 57 582 0 0 0 0 - - - 0;
 #X obj 56 554 + 1;
 #X obj 187 554 + 1;
 #X text 107 395 Reset;
 #X text 86 582 Bar number;
 #X text 217 585 Beat Count;
-#X floatatom 225 454 0 0 0 0 - - -;
+#X floatatom 225 454 0 0 0 0 - - - 0;
 #X text 257 455 Set beats per bar;
-#X floatatom 93 157 5 0 0 0 - - -, f 5;
+#X floatatom 93 157 5 0 0 0 - - - 0;
 #X obj 93 184 t b f;
 #X msg 93 217 60;
 #X obj 93 246 /;
 #X obj 93 305 * 1000;
-#X floatatom 93 335 5 0 0 0 - - -, f 5;
+#X floatatom 93 335 5 0 0 0 - - - 0;
 #X text 139 155 Beats per minute;
 #X text 141 336 Beats in milliseconds;
-#X text 53 33 A metronome which counts bar numbers and beat numbers:
-default time signature is 4/4 .;
+#X text 53 33 A metronome which counts bar numbers and beat numbers: default time signature is 4/4 .;
 #X text 142 274 Beat duration in seconds;
-#X floatatom 93 275 5 0 0 0 - - -, f 5;
+#X floatatom 93 275 5 0 0 0 - - - 0;
 #X obj 56 423 f;
 #X msg 74 393 0;
 #X obj 56 363 metro;
 #X obj 57 610 change;
-#X obj 57 637 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X obj 187 637 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 57 637 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
+#X obj 187 637 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
 #X obj 93 101 loadbang;
 #X msg 93 130 60;
 #X connect 0 0 28 0;

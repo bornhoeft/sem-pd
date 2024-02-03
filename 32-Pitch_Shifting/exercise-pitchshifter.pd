@@ -1,0 +1,7 @@
+#N canvas 651 235 1133 453 12;
+#X text 33 30 Create a 5 voice pitchshifter abstraction with setable
+frequencies/pitches (by variables) and [receive] objects for [qlist]
+messages.;
+#X text 33 110 Erstellen Sie eine 5stimmige Pitchshifter Abstraktion
+mit einstellbaren Frequencen/Tonhoehen (mit Variablen) und [receive]
+Objekten fuer [qlist] Messages.;

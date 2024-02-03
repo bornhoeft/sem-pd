@@ -1,9 +1,9 @@
-#N canvas 90 186 250 210 12;
-#X obj 60 37 inlet;
-#X obj 60 121 *;
-#X obj 60 64 t f b;
-#X obj 60 159 outlet;
-#X obj 105 93 samplerate~;
+#N canvas 259 294 553 471 12;
+#X obj 76 48 inlet;
+#X obj 76 132 *;
+#X obj 76 75 t f b;
+#X obj 76 170 outlet;
+#X obj 121 104 samplerate~;
 #X connect 0 0 2 0;
 #X connect 1 0 3 0;
 #X connect 2 0 1 0;

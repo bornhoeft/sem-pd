@@ -1,0 +1,101 @@
+#N canvas 85 226 656 495 10;
+#X floatatom 71 -127 5 0 0 0 - - -;
+#X obj 160 -189 keyup;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X array kbdmap 255 float 3;
+#A 0 0 63 0 0 0 0 0 0 77 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 93 0 0 0 0 0 0 158 0 0 0 0 72 0 74 76 63 0 49 51 0 54 56 58 0 61
+0 75 123 66 120 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 65 0 67 0 0 0 0 67 64 63 52 170 66 68 60 70 160 73 71 69 62 64
+48 53 61 55 59 65 50 62 57 60 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0;
+#X coords 0 0 255 255 200 50 1;
+#X restore 330 -138 graph;
+#X obj 62 -188 key;
+#X floatatom 71 -167 5 0 0 0 - - -;
+#X obj 62 -148 tabread kbdmap;
+#X obj 160 -148 tabread kbdmap;
+#X text 4 -188 Key down;
+#X text -32 -148 Convert to MIDI;
+#X text 205 -191 Key released;
+#X text 206 -104 Note off event;
+#X text 326 -191 Hand-build mapping from keycodes;
+#X text 324 -177 to midi note numbers;
+#X text -58 -246 Generate MIDI-like note events from the computer keyboard
+;
+#X text -17 182 2010-02-08 Dan Ellis dpwe@ee.columbia.edu;
+#X obj 342 31 key;
+#X obj 323 100 f;
+#X obj 352 100 + 1;
+#X floatatom 275 129 5 0 0 0 - - -;
+#X obj 323 180 tabwrite kbdmap;
+#X obj 323 155 pack 48 122;
+#X obj 342 74 t b b f;
+#X obj 323 131 f;
+#X floatatom 403 156 5 0 0 0 - - -;
+#X msg 304 -30 48;
+#X msg 304 -5 60;
+#X obj 380 31 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+999;
+#X obj 342 54 moses;
+#X msg 380 11 999;
+#X obj 349 -8 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 0 16 LEARN KEYBOARD MAPPING;
+#X text 398 31 Learning Active;
+#X text 178 129 Next MIDI note;
+#X text 440 155 Last key code;
+#X msg 304 21 0;
+#X text 151 20 Click to stop learning-->;
+#X text 151 -6 Click to start from C4-->;
+#X text 151 -32 Click to start from C3-->;
+#X text 0 39 Click a start note \,;
+#X text 0 54 then press keys in;
+#X text -1 106 Click stop when done.;
+#X text 0 68 a chromatic scale;
+#X text 0 83 to rewrite map table.;
+#X text -38 -212 ** REMEMBER TO TURN OFF KEYBOARD AUTO REPEAT **;
+#X obj 62 -30 outlet;
+#X obj 131 -103 pack 60 0;
+#X text -40 -231 Generates a single output as note/velocity pairs;
+#X text -80 -103 Construct note on event;
+#X obj 3 -77 notein;
+#X obj 3 -52 pack f f;
+#X text -65 -77 MIDI input;
+#X text -67 -60 also works;
+#X obj 62 -103 pack 60 80;
+#X connect 1 0 6 0;
+#X connect 3 0 4 0;
+#X connect 3 0 5 0;
+#X connect 5 0 0 0;
+#X connect 5 0 52 0;
+#X connect 6 0 45 0;
+#X connect 15 0 27 0;
+#X connect 16 0 17 0;
+#X connect 16 0 22 1;
+#X connect 16 0 18 0;
+#X connect 17 0 16 1;
+#X connect 20 0 19 0;
+#X connect 21 0 16 0;
+#X connect 21 1 22 0;
+#X connect 21 2 20 1;
+#X connect 21 2 23 0;
+#X connect 22 0 20 0;
+#X connect 24 0 16 0;
+#X connect 24 0 29 0;
+#X connect 25 0 16 0;
+#X connect 25 0 29 0;
+#X connect 26 0 27 1;
+#X connect 27 0 21 0;
+#X connect 28 0 26 0;
+#X connect 29 0 28 0;
+#X connect 34 0 26 0;
+#X connect 45 0 44 0;
+#X connect 48 0 49 0;
+#X connect 48 1 49 1;
+#X connect 49 0 44 0;
+#X connect 52 0 44 0;
+#X coords 0 495 1 494 0 0 0;

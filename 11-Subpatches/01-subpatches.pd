@@ -1,13 +1,8 @@
-#N canvas 326 89 706 625 12;
-#X text 12 199 To make a subpatch \, create an object that started
-with the word "pd" \, then type anything after that to identify it.
-;
-#X obj 34 406 bng 18 250 50 0 empty empty Count 0 -8 0 14 -262144 -1
--1;
-#X obj 34 463 nbx 4 18 -1e+37 1e+37 0 0 empty empty empty 0 30 0 16
--262144 -1 -1 0 256;
-#X obj 119 405 bng 18 250 50 0 empty empty Reset 0 -8 0 14 -262144
--1 -1;
+#N canvas 349 46 474 593 12;
+#X text 12 199 To make a subpatch \, create an object that started with the word "pd" \, then type anything after that to identify it.;
+#X obj 34 406 bng 18 250 50 0 empty empty Count 0 -8 0 14 #fcfcfc #000000 #000000;
+#X obj 34 463 nbx 4 18 -1e+37 1e+37 0 0 empty empty empty 0 30 0 16 #fcfcfc #000000 #000000 0 256;
+#X obj 108 405 bng 18 250 50 0 empty empty Reset 0 -8 0 14 #fcfcfc #000000 #000000;
 #N canvas 191 102 313 207 counter2 0;
 #X obj 58 32 inlet;
 #X obj 135 30 inlet;
@@ -22,29 +17,13 @@ with the word "pd" \, then type anything after that to identify it.
 #X connect 4 0 3 1;
 #X connect 5 0 3 0;
 #X restore 34 432 pd counter2;
-#N canvas 700 156 384 313 subpatch 1;
-#X obj 140 91 loadbang;
-#X obj 139 149 float;
-#X obj 198 149 + 1;
-#X floatatom 139 221 5 0 0 0 - - -, f 5;
-#X obj 30 149 delay 1000;
-#X text 39 39 just counting away in here...;
-#X connect 0 0 1 0;
-#X connect 1 0 2 0;
-#X connect 1 0 3 0;
-#X connect 1 0 4 0;
-#X connect 2 0 1 1;
-#X connect 4 0 1 0;
-#X restore 14 139 pd subpatch;
-#X obj 33 259 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0 1
-;
+#X obj 33 259 tgl 15 0 empty empty empty 0 -6 0 8 #fcfcfc #000000 #000000 0 1;
 #X obj 33 310 f;
 #X obj 79 310 + 1;
-#X floatatom 33 338 5 0 0 0 - - -, f 5;
+#X floatatom 33 338 5 0 0 0 - - - 0;
 #X obj 33 282 metro 1000;
-#X obj 151 261 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0
-1;
-#X floatatom 151 320 5 0 0 0 - - -, f 5;
+#X obj 151 261 tgl 15 0 empty empty empty 0 -6 0 8 #fcfcfc #000000 #000000 0 1;
+#X floatatom 151 320 5 0 0 0 - - - 0;
 #X text 123 282 ==;
 #N canvas 550 302 278 227 counter 0;
 #X obj 63 101 f;
@@ -58,24 +37,36 @@ with the word "pd" \, then type anything after that to identify it.
 #X connect 2 0 0 0;
 #X connect 3 0 2 0;
 #X restore 151 284 pd counter;
-#X text 30 498 A subpatch is part of the same file \, its just a way
-of organizing the logic of a program.;
+#X text 30 498 A subpatch is part of the same file \, its just a way of organizing the logic of a program.;
 #X text 28 547 A subpatch can be used for commentaries.;
 #X text 15 32 Subpatches;
 #X text 130 433 A subpatch with 2 inlets and 1 outlet;
-#X text 14 66 A process can be bundled in a subpatch to organize the
-logical hierarchy of a patch;
+#X text 14 66 A process can be bundled in a subpatch to organize the logical hierarchy of a patch;
 #X text 80 163 ^-- click or right-click here and select "Open";
-#N canvas 700 156 384 313 subpatch 0;
+#N canvas 871 80 298 286 metro 1;
+#X obj 140 91 loadbang;
+#X obj 139 149 float;
+#X obj 198 149 + 1;
+#X floatatom 139 221 5 0 0 0 - - - 0;
+#X obj 30 149 delay 1000;
+#X text 39 39 just counting away in here...;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 0 3 0;
+#X connect 1 0 4 0;
+#X connect 2 0 1 1;
+#X connect 4 0 1 0;
+#X restore 14 139 pd metro;
+#N canvas 847 450 247 113 empty_subpatch 1;
 #X text 39 39 just an empty patch;
-#X restore 201 139 pd subpatch;
+#X restore 201 139 pd empty_subpatch;
 #X connect 1 0 4 0;
 #X connect 3 0 4 1;
 #X connect 4 0 2 0;
-#X connect 6 0 10 0;
-#X connect 7 0 8 0;
-#X connect 7 0 9 0;
-#X connect 8 0 7 1;
-#X connect 10 0 7 0;
-#X connect 11 0 14 0;
-#X connect 14 0 12 0;
+#X connect 5 0 9 0;
+#X connect 6 0 7 0;
+#X connect 6 0 8 0;
+#X connect 7 0 6 1;
+#X connect 9 0 6 0;
+#X connect 10 0 13 0;
+#X connect 13 0 11 0;

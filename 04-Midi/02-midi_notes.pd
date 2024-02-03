@@ -1,24 +1,20 @@
-#N canvas 128 98 579 612 12;
-#X obj 51 187 vsl 15 128 0 127 0 0 empty empty pitch -10 -10 0 12 -262144
--1 -1 0 1;
-#X floatatom 51 327 5 0 0 0 - - -, f 5;
-#X obj 52 369 makenote 127 50;
-#X obj 126 188 vsl 15 128 0 127 0 0 empty empty velocity -10 -10 0
-12 -262144 -1 -1 0 1;
-#X floatatom 126 328 5 0 0 0 - - -, f 5;
-#X obj 200 189 vsl 15 127 10 3000 0 0 empty empty duration -10 -10
-0 12 -262144 -1 -1 0 1;
-#X floatatom 199 328 5 0 0 0 - - -, f 5;
-#X floatatom 199 405 5 0 0 1 velocity - -, f 5;
-#X floatatom 53 407 5 0 0 1 pitch - -, f 5;
-#X floatatom 478 398 5 0 0 3 - - -, f 5;
-#X floatatom 361 401 5 0 0 3 - - -, f 5;
+#N canvas 163 38 573 606 12;
+#X obj 51 187 vsl 15 128 0 127 0 0 empty empty pitch -10 -10 0 12 #fcfcfc #000000 #000000 0 1;
+#X floatatom 51 327 5 0 0 0 - - - 0;
+#X obj 126 188 vsl 15 128 0 127 0 0 empty empty velocity -10 -10 0 12 #fcfcfc #000000 #000000 0 1;
+#X floatatom 126 328 5 0 0 0 - - - 0;
+#X obj 200 189 vsl 15 127 10 3000 0 0 empty empty duration -10 -10 0 12 #fcfcfc #000000 #000000 0 1;
+#X floatatom 199 328 5 0 0 0 - - - 0;
+#X floatatom 199 405 5 0 0 1 velocity - - 0;
+#X floatatom 53 407 5 0 0 1 pitch - - 0;
+#X floatatom 478 398 5 0 0 3 - - - 0;
+#X floatatom 361 401 5 0 0 3 - - - 0;
 #X obj 361 367 makenote 64 250;
 #X msg 361 249 60;
 #X obj 406 460 noteout;
-#X msg 384 286 40 90 50;
+#X msg 411 290 40 90 50;
 #X msg 399 327 72 60 1500;
-#N canvas 0 22 673 624 notein 0;
+#N canvas 607 68 673 624 notein 0;
 #X obj 30 448 stripnote;
 #X obj 45 24 notein;
 #X text 106 138 inlets : none;
@@ -26,25 +22,18 @@
 #X text 119 198 middle: velocity;
 #X text 143 165 right: MIDI channel number;
 #X obj 47 137 notein;
-#X floatatom 47 223 5 0 0 0 - - -, f 5;
-#X floatatom 69 197 5 0 0 0 - - -, f 5;
-#X floatatom 92 166 5 0 0 0 - - -, f 5;
-#X text 45 55 The [notein] object reads incoming MIDI notes and reports
-their note number \, velocity and channel number. Without the argument
-it reads from all MIDI channels (omni).;
-#X text 27 260 Note: remember that a 'note-off' is a note with velocity=0.
-Therefore [notein] reports each note twice (note-on when a key on your
-keyboard is pressed and note-off when the key is released). This could
-be sometimes misleading when tracking notes.;
+#X floatatom 47 223 5 0 0 0 - - - 0;
+#X floatatom 69 197 5 0 0 0 - - - 0;
+#X floatatom 92 166 5 0 0 0 - - - 0;
+#X text 45 55 The [notein] object reads incoming MIDI notes and reports their note number \, velocity and channel number. Without the argument it reads from all MIDI channels (omni).;
+#X text 27 260 Note: remember that a 'note-off' is a note with velocity=0. Therefore [notein] reports each note twice (note-on when a key on your keyboard is pressed and note-off when the key is released). This could be sometimes misleading when tracking notes.;
 #X obj 47 137 notein;
 #X obj 30 377 notein;
-#X floatatom 30 477 5 0 0 0 - - -, f 5;
-#X floatatom 99 479 5 0 0 0 - - -, f 5;
+#X floatatom 30 477 5 0 0 0 - - - 0;
+#X floatatom 99 479 5 0 0 0 - - - 0;
 #X obj 30 416 pack f f;
 #X text 118 23 read incoming stream of MIDI notes.;
-#X text 21 515 Stripnote takes note-off (zero-velocity) messages out
-of a stream of MIDI-style note message and passes the others through
-unchanged.;
+#X text 21 515 Stripnote takes note-off (zero-velocity) messages out of a stream of MIDI-style note message and passes the others through unchanged.;
 #X connect 0 0 14 0;
 #X connect 0 1 15 0;
 #X connect 6 0 7 0;
@@ -55,30 +44,27 @@ unchanged.;
 #X connect 16 0 0 0;
 #X restore 165 568 pd notein;
 #X text 62 567 See also:;
-#X obj 111 466 noteout 11;
-#X text 37 496 According to the duration [makenote] creates a pair
-of values: The velocity for the Note On and the velocity 0 for the
-Note Off (at the end of the duration).;
-#X text 41 26 MIDI is a protocol of control data that can communicate
-(play) with keyboard based synthesizers. The object [makenote] creates
-midi notes \, velocities and durations to output via [noteout];
-#X text 42 100 Construction of midi notes with [makenote] and [noteout].
-The note gets executed only if the number in the leftmost inlet of
-makenote is changed.;
+#X text 37 496 According to the duration [makenote] creates a pair of values: The velocity for the Note On and the velocity 0 for the Note Off (at the end of the duration).;
+#X text 41 26 MIDI is a protocol of control data that can communicate (play) with keyboard based synthesizers. The object [makenote] creates midi notes \, velocities and durations to output via [noteout];
+#X text 42 100 Construction of midi notes with [makenote] and [noteout]. The note gets executed only if the number in the leftmost inlet of makenote is changed.;
+#X obj 111 466 noteout;
+#X msg 403 253 80 127 3000;
+#X obj 52 369 makenote 70 2000;
 #X connect 0 0 1 0;
-#X connect 1 0 2 0;
-#X connect 2 0 8 0;
-#X connect 2 1 7 0;
-#X connect 3 0 4 0;
-#X connect 4 0 2 1;
-#X connect 5 0 6 0;
-#X connect 6 0 2 2;
-#X connect 7 0 18 1;
-#X connect 8 0 18 0;
-#X connect 9 0 13 1;
-#X connect 10 0 13 0;
+#X connect 1 0 22 0;
+#X connect 2 0 3 0;
+#X connect 3 0 22 1;
+#X connect 4 0 5 0;
+#X connect 5 0 22 2;
+#X connect 6 0 20 1;
+#X connect 7 0 20 0;
+#X connect 8 0 12 1;
+#X connect 9 0 12 0;
+#X connect 10 0 9 0;
+#X connect 10 1 8 0;
 #X connect 11 0 10 0;
-#X connect 11 1 9 0;
-#X connect 12 0 11 0;
-#X connect 14 0 11 0;
-#X connect 15 0 11 0;
+#X connect 13 0 10 0;
+#X connect 14 0 10 0;
+#X connect 21 0 10 0;
+#X connect 22 0 7 0;
+#X connect 22 1 6 0;

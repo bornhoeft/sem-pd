@@ -1,0 +1,3 @@
+#N canvas 291 86 487 273 12;
+#X text 23 34 Erstellen Sie einen Patch mit einer der Möglichkeiten für die additive Synthese mit 8 bis 12 Harmonischen. Machen Sie mit [line] eine Abstraktion \, die weiche Übergänge der Grundfrequenz und der Obertonamplituden steuert. Spielen Sie einige dieser Abstraktionen mit unterschiedlichen Einstellungen und Timings.;
+#X text 24 154 Make a patch using one of the possibilities for Additive Synthesis with 8 to 12 harmonics. Make an abstraction which controls smooth transitions of the fundamental frequency and the overtone amplitudes with [line]. Play some of this abstractions with different settings and timings.;
