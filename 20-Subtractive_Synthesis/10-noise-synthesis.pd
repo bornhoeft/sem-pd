@@ -1,4 +1,4 @@
-#N canvas 462 148 1101 629 12;
+#N canvas 411 148 1101 629 12;
 #X obj 95 543 dac~;
 #X text 12 155 thump;
 #X text 516 22 pole;
@@ -6,10 +6,8 @@
 #X text 12 22 smack;
 #N canvas 393 245 372 352 eadenv 0;
 #X obj 91 273 *~;
-#X obj 7 31 vsl 12 32 0 200 0 0 empty empty A 0 -8 0 8 -241291 -1 -1
-0 1;
-#X obj 30 31 vsl 12 32 0 2000 0 0 empty empty D 0 -8 0 8 -260818 -1
--1 0 1;
+#X obj 7 31 vsl 12 32 0 200 0 0 empty empty A 0 -8 0 8 #e8e828 #000000 #000000 0 1;
+#X obj 30 31 vsl 12 32 0 2000 0 0 empty empty D 0 -8 0 8 #fcac44 #000000 #000000 0 1;
 #X obj 87 28 inlet~;
 #X obj 91 298 outlet~;
 #X obj 241 128 del 499;
@@ -36,84 +34,48 @@
 #X text 15 87 clink;
 #X text 516 84 metal;
 #X obj 148 401 r trig;
-#X msg 578 17 \; prog 2.7 862 32 0.619 446 32 0.79 587 20.2 0.76 \;
-trig bang;
-#X msg 62 76 \; prog 2.23 2229 64 0.761 3000 64 0.84 2503 64 0.88 \;
-trig bang;
-#X msg 578 75 \; prog 3 5000 64 0.33 2500 64 0.8 3750 64 0.7 \; trig
-bang;
-#X msg 577 132 \; prog 16 138 4.66 0.19 160 2.46 0.12 73.22 16.8 1
-\; trig bang;
-#X msg 57 137 \; prog 2.4 200 14 0.746 249 2.46 0.71 217 20.2 0.69
-\; trig bang;
-#X text 578 252 A quite simple but effective use of banded noise. Have
-a play with the controls and see if you can make a set of footsteps
-or other 'impact' noises. The best technique is to mute/solo each band
-\, think of the sound you want and decide whether the bit that is 'missing'
-should be higher or lower as you gradually mix in a new band.;
+#X msg 578 17 \; prog 2.7 862 32 0.619 446 32 0.79 587 20.2 0.76 \; trig bang;
+#X msg 62 76 \; prog 2.23 2229 64 0.761 3000 64 0.84 2503 64 0.88 \; trig bang;
+#X msg 578 75 \; prog 3 5000 64 0.33 2500 64 0.8 3750 64 0.7 \; trig bang;
+#X msg 577 132 \; prog 16 138 4.66 0.19 160 2.46 0.12 73.22 16.8 1 \; trig bang;
+#X msg 57 137 \; prog 2.4 200 14 0.746 249 2.46 0.71 217 20.2 0.69 \; trig bang;
+#X text 578 252 A quite simple but effective use of banded noise. Have a play with the controls and see if you can make a set of footsteps or other 'impact' noises. The best technique is to mute/solo each band \, think of the sound you want and decide whether the bit that is 'missing' should be higher or lower as you gradually mix in a new band.;
 #X text 180 559 Sound design introduction. Examples 1 ajf2005.;
-#X text 577 406 Try adding another 3 bands. It gets difficult to work
-with more than 6 as you will see. Later we will use analysis to get
-the parameters from real sounds and really speed up the process of
-designing a sound this way.;
-#X text 576 348 This instrument has a single envelope for all bands
-\, which is quite limiting. Perhaps you could redesign the noise generator
-to give you an envelope for each band.;
-#X msg 427 352 \; trig bang;
-#X text 577 486 Note for games designers. Synthesis can have the great
-advantage of never making two noises quite the same \, aleiviating
-that dreary feeling of hearing repeated samples over and over again.
-Noise based techniques like this one have that property built in \,
-if you notice each time you trigger one of the examples above it is
-subtley unique.;
-#X msg 577 189 \; prog 5.69 772 64 0.619 691 64 0.77 489 64 0.74 \;
-trig bang;
+#X text 577 406 Try adding another 3 bands. It gets difficult to work with more than 6 as you will see. Later we will use analysis to get the parameters from real sounds and really speed up the process of designing a sound this way.;
+#X text 576 348 This instrument has a single envelope for all bands \, which is quite limiting. Perhaps you could redesign the noise generator to give you an envelope for each band.;
+#X msg 426 345 \; trig bang;
+#X text 577 486 Note for games designers. Synthesis can have the great advantage of never making two noises quite the same \, aleiviating that dreary feeling of hearing repeated samples over and over again. Noise based techniques like this one have that property built in \, if you notice each time you trigger one of the examples above it is subtley unique.;
+#X msg 577 189 \; prog 5.69 772 64 0.619 691 64 0.77 489 64 0.74 \; trig bang;
 #X text 516 197 tincan;
 #N canvas 0 22 708 254 discuss 0;
-#X text 46 35 Noise gives great 'ballpark synthesis'. A great many
-sounds can be APPROXIMATED by clevery arranged noise bands.;
+#X text 46 35 Noise gives great 'ballpark synthesis'. A great many sounds can be APPROXIMATED by clevery arranged noise bands.;
 #X text 45 95 Advantages:;
 #X text 48 124 It's quick to build stuff.;
 #X text 48 155 It's quite easy to understand.;
 #X text 47 187 It's versatile.;
 #X text 290 90 Disadvantages:;
-#X text 293 119 Can get expensive on the CPU with so many filters.
-;
-#X text 293 144 Not very portable. Algorithms depend strongly on noise
-source quality and exact filter characters that may not sound the same
-from system to system. Contrast to sine additive synthesis which is
-very portable and instruments can be translated to work and sound exactly
-the same on other systems.;
+#X text 293 119 Can get expensive on the CPU with so many filters.;
+#X text 293 144 Not very portable. Algorithms depend strongly on noise source quality and exact filter characters that may not sound the same from system to system. Contrast to sine additive synthesis which is very portable and instruments can be translated to work and sound exactly the same on other systems.;
 #X restore 183 520 pd discuss;
 #N canvas 390 241 595 438 3bandnoise 0;
 #X obj 118 245 noise~;
 #X obj 32 286 bp~ 100 1;
 #X obj 31 312 *~;
-#X obj 107 55 vsl 12 64 0 1 0 0 empty empty l1 0 -8 0 8 -261689 -1
--1 0 1;
-#X obj 70 56 vsl 12 64 30 5000 1 0 empty empty f1 0 -8 0 8 -261681
--1 -1 0 1;
-#X obj 88 55 vsl 12 64 0.1 64 1 0 empty empty q1 0 -8 0 8 -262131 -1
--1 0 1;
+#X obj 107 55 vsl 12 64 0 1 0 0 empty empty l1 0 -8 0 8 #fce0e0 #000000 #000000 0 1;
+#X obj 70 56 vsl 12 64 30 5000 1 0 empty empty f1 0 -8 0 8 #fce0c0 #000000 #000000 0 1;
+#X obj 88 55 vsl 12 64 0.1 64 1 0 empty empty q1 0 -8 0 8 #fcfcc8 #000000 #000000 0 1;
 #X obj 117 285 bp~ 100 1;
-#X obj 138 56 vsl 12 64 30 3000 1 0 empty empty f2 0 -8 0 8 -261681
--1 -1 0 1;
-#X obj 156 55 vsl 12 64 0.1 64 1 0 empty empty q2 0 -8 0 8 -262131
--1 -1 0 1;
+#X obj 138 56 vsl 12 64 30 3000 1 0 empty empty f2 0 -8 0 8 #fce0c0 #000000 #000000 0 1;
+#X obj 156 55 vsl 12 64 0.1 64 1 0 empty empty q2 0 -8 0 8 #fcfcc8 #000000 #000000 0 1;
 #X obj 205 284 bp~ 100 1;
-#X obj 203 56 vsl 12 64 10 3000 1 0 empty empty f3 0 -8 0 8 -261681
--1 -1 0 1;
-#X obj 221 55 vsl 12 64 0.1 64 1 0 empty empty q3 0 -8 0 8 -262131
--1 -1 0 1;
+#X obj 203 56 vsl 12 64 10 3000 1 0 empty empty f3 0 -8 0 8 #fce0c0 #000000 #000000 0 1;
+#X obj 221 55 vsl 12 64 0.1 64 1 0 empty empty q3 0 -8 0 8 #fcfcc8 #000000 #000000 0 1;
 #X obj 118 316 *~;
-#X obj 173 56 vsl 12 64 0 1 0 0 empty empty l2 0 -8 0 8 -261689 -1
--1 0 1;
+#X obj 173 56 vsl 12 64 0 1 0 0 empty empty l2 0 -8 0 8 #fce0e0 #000000 #000000 0 1;
 #X obj 204 317 *~;
-#X obj 239 56 vsl 12 64 0 1 0 0 empty empty l3 0 -8 0 8 -261689 -1
--1 0 1;
+#X obj 239 56 vsl 12 64 0 1 0 0 empty empty l3 0 -8 0 8 #fce0e0 #000000 #000000 0 1;
 #X obj 118 353 *~ 2;
-#X obj 36 56 vsl 12 64 0.04 16 1 0 empty empty amp 0 -8 0 8 -260818
--1 -1 0 1;
+#X obj 36 56 vsl 12 64 0.04 16 1 0 empty empty amp 0 -8 0 8 #fcac44 #000000 #000000 0 1;
 #X obj 117 382 outlet~;
 #X obj 51 5 unpack 1 2 3 4 5 6 7 8 9 10;
 #X text 293 5 program in;
@@ -180,26 +142,16 @@ the same on other systems.;
 #X restore 96 264 pd 3bandnoise;
 #N canvas 0 22 374 183 show16float 0;
 #X obj 6 6 inlet;
-#X obj 7 78 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -6 0 10 -262144
--1 -1 0 256;
-#X obj 21 103 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -6 0 10
--262144 -1 -1 0 256;
-#X obj 21 121 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -6 0 10
--262144 -1 -1 0 256;
-#X obj 20 138 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -6 0 10
--262144 -1 -1 0 256;
-#X obj 81 101 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -6 0 10
--262144 -1 -1 0 256;
-#X obj 80 119 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -6 0 10
--262144 -1 -1 0 256;
-#X obj 79 137 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -6 0 10
--262144 -1 -1 0 256;
-#X obj 139 102 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -6 0 10
--262144 -1 -1 0 256;
-#X obj 138 120 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -6 0 10
--262144 -1 -1 0 256;
-#X obj 137 137 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -6 0 10
--262144 -1 -1 0 256;
+#X obj 7 78 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -6 0 10 #fcfcfc #000000 #000000 0 256;
+#X obj 21 103 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -6 0 10 #fcfcfc #000000 #000000 0 256;
+#X obj 21 121 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -6 0 10 #fcfcfc #000000 #000000 0 256;
+#X obj 20 138 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -6 0 10 #fcfcfc #000000 #000000 0 256;
+#X obj 81 101 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -6 0 10 #fcfcfc #000000 #000000 0 256;
+#X obj 80 119 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -6 0 10 #fcfcfc #000000 #000000 0 256;
+#X obj 79 137 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -6 0 10 #fcfcfc #000000 #000000 0 256;
+#X obj 139 102 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -6 0 10 #fcfcfc #000000 #000000 0 256;
+#X obj 138 120 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -6 0 10 #fcfcfc #000000 #000000 0 256;
+#X obj 137 137 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -6 0 10 #fcfcfc #000000 #000000 0 256;
 #X text 63 7 display a list of 16 float values ajf2005;
 #X obj 6 33 unpack 1 2 3 4 5 6 7 8 9 10;
 #X connect 0 0 12 0;
@@ -215,12 +167,10 @@ the same on other systems.;
 #X connect 12 9 10 0;
 #X coords 0 0 1 1 200 90 2 0 70;
 #X restore 319 427 pd show16float;
-#X obj 427 267 key;
-#X obj 426 294 sel 32;
-#X obj 426 324 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X msg 64 17 \; prog 1 3000 14 0.888 2591 20.2 1 1742 22.1 0.76 \;
-trig bang;
+#X obj 427 271 key;
+#X obj 426 298 sel 32;
+#X obj 426 324 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
+#X msg 64 17 \; prog 1 3000 14 0.888 2591 20.2 1 1742 22.1 0.76 \; trig bang;
 #X connect 5 0 0 0;
 #X connect 5 0 0 1;
 #X connect 6 0 24 0;

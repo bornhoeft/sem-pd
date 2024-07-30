@@ -136,6 +136,8 @@
 #X restore 354 458 pd ran-sin;
 #X obj 354 410 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
 #X obj 69 247 tgl 19 0 empty empty empty 0 -10 0 12 #c6ffc7 #ff0400 #000000 0 1;
+#X obj 322 97 tgl 19 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000 0 1;
+#X msg 322 121 \; pd dsp \$1;
 #X connect 0 0 14 0;
 #X connect 1 0 0 0;
 #X connect 1 0 2 0;
@@ -174,3 +176,4 @@
 #X connect 29 0 15 1;
 #X connect 30 0 29 0;
 #X connect 31 0 4 0;
+#X connect 32 0 33 0;

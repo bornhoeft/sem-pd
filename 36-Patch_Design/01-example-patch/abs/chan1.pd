@@ -1,8 +1,0 @@
-#N canvas 400 23 1038 928 10;
-#X obj 0 191 delmod \$1;
-#X obj 0 292 panning \$1;
-#X obj 0 0 input \$1 \$2;
-#X obj 0 340 qlstp \$1 qlist.txt;
-#X connect 0 0 1 0;
-#X connect 2 0 0 0;
-#X coords 0 -1 1 1 160 440 2 0 0;

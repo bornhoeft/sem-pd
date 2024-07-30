@@ -1,4 +1,5 @@
-#N canvas 681 447 407 628 12;
+#N canvas 625 64 407 628 12;
+#X declare -path abs;
 #X obj 33 14 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 #fcfcfc #000000 #000000 0 1;
 #N canvas 0 22 450 300 show 0;
 #X obj 41 39 inlet;
@@ -43,7 +44,6 @@
 #X obj 71 248 + 1;
 #X obj 31 275 make_pathname ../snd floete;
 #X text 234 274 args: <path names>;
-#X msg 42 44 set /Users/born/Desktop/%d-newsound.wav;
 #X text 123 74 Pathename with relative path;
 #X text 169 14 Pathename with absolute path;
 #X text 63 369 Pathname with keyboard;
@@ -104,6 +104,8 @@
 #X restore 30 590 pd concatenate pathnames;
 #X text 67 398 convert number to list;
 #X text 110 248 Pathname abstraction variables;
+#X obj 255 303 declare -path abs;
+#X msg 42 44 set /Users/bornhoeft/Desktop/%d-newsound.wav;
 #X connect 0 0 3 0;
 #X connect 1 0 2 0;
 #X connect 3 0 1 0;
@@ -119,4 +121,4 @@
 #X connect 16 0 18 0;
 #X connect 17 0 16 1;
 #X connect 18 0 14 0;
-#X connect 20 0 3 0;
+#X connect 27 0 3 0;

@@ -1,0 +1,3 @@
+#N canvas 347 130 486 250 12;
+#X text 28 25 Take the last homework [exercise_playing_samples.pd] and add one or more delays with feedback. Include the settings for these parameters in the qlist. Think about which parts have to be in an abstraction (individually playable) and which not.;
+#X text 27 125 Nehmen Sie Ihre letzte Hausaufgabe [exercise_playing_samples.pd] und fügen Sie ein oder mehrere Delays mit Feedback hinzu. Steuern Sie die Einstellungen für diese Parameter aus der existierenden [qlist]. Ueberlegen Sie dabei \, welche Funktionen in einer Abstraktion also individuell steuerbar sein sollen und welche nicht.;

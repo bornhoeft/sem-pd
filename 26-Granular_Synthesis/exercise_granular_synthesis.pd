@@ -1,0 +1,3 @@
+#N canvas 646 460 503 234 12;
+#X text 36 34 Add random transposition to the granular-synthesis patch and make some settings e.g. with a qlist for different parameters: grain speed \, random output hop \, random input hop \, grain duration and transposition, f 62;
+#X text 37 129 Fügen sie dem granular-synthesis patch zufällige Transpositionen hinzu und speichern Sie einige Einstellungen z.B. mit einer qlist für verschiedene Parameter: grain speed \, random output hop \, random input hop \, grain duration and transposition, f 61;

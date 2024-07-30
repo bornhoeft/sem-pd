@@ -2,18 +2,14 @@
 #X obj 213 489 *~;
 #X obj 158 451 *~;
 #X obj 86 410 *~;
-#X obj 31 209 vsl 15 128 0.25 2048 0 0 empty empty 1 0 -8 0 8 -262144
--1 -1 0 1;
-#X obj 129 214 vsl 15 128 0.25 512 0 0 empty empty 2 0 -8 0 8 -262144
--1 -1 0 1;
-#X obj 221 213 vsl 15 128 0.25 512 0 0 empty empty 3 0 -8 0 8 -262144
--1 -1 0 1;
-#X obj 310 211 vsl 15 128 0.125 16 0 0 empty empty 4 0 -8 0 8 -262144
--1 -1 0 1;
-#X floatatom 31 349 5 0 0 0 - - -, f 5;
-#X floatatom 129 353 5 0 0 0 - - -, f 5;
-#X floatatom 221 351 5 0 0 0 - - -, f 5;
-#X floatatom 310 352 5 0 0 0 - - -, f 5;
+#X obj 31 209 vsl 15 128 0.25 2048 0 0 empty empty 1 0 -8 0 8 #fcfcfc #000000 #000000 0 1;
+#X obj 129 214 vsl 15 128 0.25 512 0 0 empty empty 2 0 -8 0 8 #fcfcfc #000000 #000000 0 1;
+#X obj 221 213 vsl 15 128 0.25 512 0 0 empty empty 3 0 -8 0 8 #fcfcfc #000000 #000000 0 1;
+#X obj 310 211 vsl 15 128 0.125 16 0 0 empty empty 4 0 -8 0 8 #fcfcfc #000000 #000000 0 1;
+#X floatatom 31 349 5 0 0 0 - - - 0;
+#X floatatom 129 353 5 0 0 0 - - - 0;
+#X floatatom 221 351 5 0 0 0 - - - 0;
+#X floatatom 310 352 5 0 0 0 - - - 0;
 #X obj 135 169 unpack 1 2 3 4;
 #X obj 135 143 r patch;
 #X msg 362 288 \; patch 1212 82 76 0.125;
@@ -22,19 +18,17 @@
 #X text 361 197 engine;
 #X msg 362 220 \; patch 193 11.35 36 9.1;
 #X msg 363 156 \; patch 1999 4.279 20.4 15.5;
-#X text 365 132 night critters;
+#X text 382 135 night critters;
 #X obj 31 380 osc~;
 #X obj 129 381 osc~;
 #X obj 221 378 osc~;
-#X obj 234 551 hsl 101 15 0 1 0 0 empty empty empty -2 -6 0 8 -262144
--1 -1 0 1;
+#X obj 234 551 hsl 101 15 0 1 0 0 empty empty empty -2 -6 0 8 #fcfcfc #000000 #000000 0 1;
 #X obj 213 523 *~ 0.25;
 #X obj 213 576 *~;
 #X obj 310 377 osc~;
 #X text 32 26 Complex serial amplitude modulation (RM);
-#X text 30 62 Modulating the amplitude (level) of each wave by the
-previous one is technically called a serial complex amplitude modulation.
-;
+#X text 30 62 Modulating the amplitude (level) of each wave by the previous one is technically called a serial complex amplitude modulation.;
+#X obj 363 115 loadbang;
 #X connect 0 0 24 0;
 #X connect 1 0 0 0;
 #X connect 2 0 1 0;
@@ -59,3 +53,4 @@ previous one is technically called a serial complex amplitude modulation.
 #X connect 25 0 14 1;
 #X connect 25 0 14 0;
 #X connect 26 0 0 1;
+#X connect 29 0 18 0;

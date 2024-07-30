@@ -1,4 +1,4 @@
-#N canvas 337 37 940 646 12;
+#N canvas 217 25 800 605 12;
 #X floatatom 243 96 5 40 80 0 - init - 0;
 #X obj 243 123 t b f;
 #X obj 243 147 f;
@@ -18,7 +18,7 @@
 #X text 434 247 "this" forwards a message to the previous instance sent to by "this" or "next", f 30;
 #X text 421 314 "set" sets the "next"/"this" counter;
 #X text 453 372 "all" broadcasts a message to all instances;
-#N canvas 4 25 589 376 README 1;
+#N canvas 4 25 589 376 README 0;
 #X text 60 32 clone - make multiple copies of a patch;
 #X text 56 194 clone's inlets and outlets correspond to those of the contained patch \, and may be signal and/or control inlets and outlets. (In this example there's one control inlet and one signal outlet). You can click on the clone~ object to see the first of the created instances., f 72;
 #X text 55 271 Signal inlets are copied to all the instances. Control inlets forward messages as shown below. Signal outlets output the sum of all instances' outputs \, and control outlets forward messages with the number of the instance prepended to them., f 67;

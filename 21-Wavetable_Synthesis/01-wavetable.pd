@@ -1,116 +1,92 @@
-#N canvas 129 22 972 816 12;
-#X obj 330 525 soundfiler;
-#X text 84 49 Read a (portion of a) soundfile into an array \, and
-use it as a wavetable (one cycle of a waveform) for an oscillator.
-;
+#N canvas 88 120 994 765 12;
+#X declare -path abs;
+#X obj 322 452 soundfiler;
+#X text 85 49 Read a (portion of a) soundfile into an array \, and use it as a wavetable (one cycle of a waveform) for an oscillator., f 59;
 #N canvas 0 22 450 300 (subpatch) 0;
-#X array waveform 11 float 1;
-#A 0 0 0 0 0 0 0 0 0 0 0 0;
-#X coords 0 1 10 -1 258 201 1;
-#X restore 551 582 graph;
-#X text 535 169 The purpose of the soundfiler object is to read sound
-from a soundfile on the hard disk and put it in an array \, or to get
-the sound from an array and write it to a soundfile on the hard disk.
-This message gives the command 'read' \, the name of the file (which
-must be in a findable directory) \, and the name of the array in which
-to put the sound data.;
-#X text 417 419 In order to be used by tabosc4~ as a wavetable \, the
-array must have a number of samples that is a power of 2 \, plus 3
-This array has 515 samples (2 to the 9th power plus 3).;
+#X array waveform 515 float 1;
+#A 0 -0.00170898 0.0333557 0.0577698 0.0663757 0.0648499 0.0733643 0.117523 0.165833 0.196289 0.200165 0.190338 0.223541 0.292755 0.371094 0.432159 0.443756 0.461578 0.514679 0.566833 0.569977 0.479401 0.387512 0.346161 0.355316 0.390259 0.36795 0.277863 0.175781 0.103607 0.0958862 0.15329 0.213379 0.265991 0.302063 0.312714 0.274841 0.266876 0.308624 0.380768 0.390808 0.303589 0.236206 0.228027 0.295776 0.422241 0.533722 0.566833 0.52597 0.444122 0.430817 0.487183 0.542694 0.569885 0.557281 0.526459 0.488892 0.459106 0.438019 0.417358 0.365967 0.310577 0.289246 0.325958 0.436188 0.58371 0.699371 0.74118 0.696503 0.588776 0.573822 0.639862 0.728363 0.780823 0.735992 0.650543 0.616577 0.628448 0.658905 0.652374 0.619934 0.607941 0.625854 0.662476 0.636169 0.566925 0.536957 0.561249 0.624451 0.678284 0.669312 0.608429 0.505768 0.377411 0.259583 0.215607 0.22229 0.25061 0.258881 0.257385 0.308563 0.40332 0.506256 0.540192 0.449951 0.332794 0.241425 0.214661 0.26474 0.275757 0.185242 0.0273743 -0.133118 -0.181458 -0.135193 -0.0679016 -0.00231934 0.0471802 0.0643921 0.0552979 0.0951538 0.211151 0.400208 0.560516 0.616089 0.606384 0.562958 0.518402 0.455658 0.40744 0.393921 0.422485 0.48703 0.489471 0.437012 0.394501 0.411469 0.505737 0.589203 0.638763 0.671783 0.702393 0.722931 0.715851 0.704163 0.695648 0.693878 0.691071 0.684174 0.675568 0.666168 0.656464 0.641724 0.617218 0.576508 0.53009 0.50174 0.51651 0.460297 0.33725 0.185547 0.0888367 0.113098 0.21402 0.346161 0.466675 0.518372 0.518005 0.500946 0.475128 0.449799 0.447968 0.475189 0.483704 0.455261 0.382996 0.289551 0.220581 0.17215 0.13147 0.0877686 0.0796204 0.127563 0.224579 0.357025 0.505402 0.559692 0.527313 0.468201 0.430237 0.455841 0.508453 0.520355 0.507019 0.485077 0.472229 0.464417 0.454224 0.440887 0.4245 0.407715 0.39563 0.389313 0.385773 0.381653 0.378418 0.36731 0.345917 0.311432 0.255371 0.194611 0.137512 0.0965576 0.0799255 0.0592957 0.0313416 0.0433044 0.0942993 0.157501 0.189026 0.196106 0.183289 0.160797 0.14566 0.165955 0.173828 0.13559 0.0361633 -0.122833 -0.217102 -0.191071 -0.0806885 0.0610962 0.168304 0.214233 0.222595 0.195129 0.132843 0.0223083 -0.0670776 -0.106537 -0.105621 -0.08255 -0.00662231 0.118805 0.237488 0.308472 0.301819 0.226105 0.186157 0.170532 0.166718 0.158203 0.145081 0.0990295 0.0331116 -0.0173645 0.0107422 0.0979004 0.123505 0.104187 0.059967 0.00967407 -0.00610352 0.0242004 0.0696411 0.0989685 0.0918579 0.0583801 0.0289612 0.0317078 0.0798035 0.109772 0.0793762 0.0429382 0.0171204 0.00827026 0.00323486 -0.0116272 -0.0478821 -0.103058 -0.16333 -0.175354 -0.129303 -0.0481567 0.0339966 0.0643005 0.0131226 -0.0392151 -0.087677 -0.130219 -0.163696 -0.139893 -0.105591 -0.0848694 -0.0919189 -0.121582 -0.156219 -0.177795 -0.193207 -0.215118 -0.270142 -0.340851 -0.373077 -0.3573 -0.297485 -0.21994 -0.160858 -0.146698 -0.176544 -0.234192 -0.253479 -0.264954 -0.289795 -0.32254 -0.338379 -0.304962 -0.319916 -0.402985 -0.531708 -0.629883 -0.598358 -0.529694 -0.472504 -0.458954 -0.506165 -0.517731 -0.483276 -0.454498 -0.480408 -0.603607 -0.708252 -0.732727 -0.688965 -0.612396 -0.596954 -0.700531 -0.835968 -0.949005 -0.999969 -0.978058 -0.928955 -0.879486 -0.844482 -0.832306 -0.84491 -0.880035 -0.916077 -0.937622 -0.933136 -0.890228 -0.827515 -0.776611 -0.758514 -0.784943 -0.811462 -0.824585 -0.831665 -0.840057 -0.854431 -0.850983 -0.836304 -0.819672 -0.810089 -0.817871 -0.830719 -0.837311 -0.831024 -0.807495 -0.767975 -0.735626 -0.70874 -0.686005 -0.664795 -0.651154 -0.605133 -0.543823 -0.48465 -0.444092 -0.410065 -0.34903 -0.265625 -0.182983 -0.141205 -0.133972 -0.0975647 -0.0381775 0.0177917 0.0107727 -0.106384 -0.253601 -0.388245 -0.482086 -0.532959 -0.546509 -0.539642 -0.52063 -0.500183 -0.501099 -0.529053 -0.556396 -0.58371 -0.619354 -0.676483 -0.716858 -0.730072 -0.720093 -0.700775 -0.687042 -0.678314 -0.670013 -0.659882 -0.647064 -0.641785 -0.637878 -0.632812 -0.627075 -0.611176 -0.574005 -0.522095 -0.473419 -0.468445 -0.513458 -0.545624 -0.551392 -0.529938 -0.505646 -0.511078 -0.52005 -0.516724 -0.491272 -0.457275 -0.431335 -0.396667 -0.34082 -0.260529 -0.222504 -0.256683 -0.319946 -0.384888 -0.42511 -0.40863 -0.370331 -0.356445 -0.388123 -0.466522 -0.518372 -0.518188 -0.485382 -0.437927 -0.395477 -0.355621 -0.335114 -0.325775 -0.315674 -0.284302 -0.250671 -0.244019 -0.273224 -0.331818 -0.360535 -0.319061 -0.247131 -0.170685 -0.117523 -0.121796 -0.177307 -0.233887 -0.264099 -0.247772 -0.205658 -0.144226 -0.0855408 -0.0514526 -0.0681763 -0.037323 0.0908813 0.25116 0.387115 0.432648 0.411865 0.39447 0.378235 0.346985 0.259155 0.109711 -0.0410156 -0.161224 -0.229553 -0.223694 -0.212128 -0.221619 -0.249207 -0.286377 -0.322357 -0.330566 -0.316376 -0.290924 -0.266815 -0.248016 -0.229156 -0.211517 -0.19574 -0.182037 -0.175232 -0.157623 -0.142365 -0.119934 -0.101654 -0.0861511 -0.056366 -0.0162048 -0.000762939 -0.00170898 0.0333557 0.0577698;
+#X coords 0 1 514 -1 360 201 1;
+#X restore 497 525 graph;
+#X text 403 426 The purpose of the soundfiler object is to read sound from a soundfile on the hard disk and put it in an array \, or to get the sound from an array and write it to a soundfile on the hard disk. This message gives the command 'read' \, the name of the file (which must be in a findable directory) \, and the name of the array in which to put the sound data., f 73;
+#X text 411 314 In order to be used by tabosc4~ as a wavetable \, the array must have a number of samples that is a power of 2 \, plus 3 This array has 515 samples (2 to the 9th power plus 3).;
 #X obj 85 169 tabosc4~ waveform;
 #X obj 74 281 dac~;
 #X obj 85 254 *~;
-#X text 319 97 We've made a small soundfile in advance that has 512
-samples representing one cycle of a recorded electric guitar note \,
-plus 3 extra samples for use in the four-point interpolation of tabosc4~.
-;
-#X obj 596 11 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X msg 596 36 \; pd dsp \$1;
-#X obj 88 109 hsl 128 15 1 2000 1 0 empty empty empty -2 -8 0 10 -262144
--1 -1 2100 1;
-#X floatatom 85 139 5 0 0 0 - - -, f 5;
-#X obj 76 425 osc~ 6;
-#X obj 57 476 +~;
-#X obj 58 530 tabosc4~ waveform;
-#X obj 142 427 tabosc4~ waveform;
-#X obj 47 636 dac~;
-#X obj 58 609 *~;
-#X obj 56 391 sig~ 220;
-#X obj 75 450 *~ 5;
-#X obj 58 498 *~;
-#X text 189 530 carrier oscillator;
-#X obj 103 201 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 103 222 * 0.7;
-#X obj 77 560 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
-1;
-#X obj 77 581 * 0.7;
-#X obj 58 346 hsl 128 15 2 2000 1 0 empty empty empty -2 -8 0 10 -262144
--1 -1 9400 1;
-#X obj 363 391 pow;
-#X obj 362 340 t b f;
-#X msg 362 366 2;
-#X obj 363 421 + 3;
-#X floatatom 362 450 5 0 0 0 - - -, f 5;
-#X msg 363 477 \; waveform resize \$1;
-#X msg 354 220 8;
+#X text 319 97 We've made a small soundfile in advance that has 512 samples representing one cycle of a recorded electric guitar note \, plus 3 extra samples for use in the four-point interpolation of tabosc4~.;
+#X obj 639 170 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000 0 1;
+#X msg 639 195 \; pd dsp \$1;
+#X obj 88 109 hsl 128 15 1 2000 1 0 empty empty empty -2 -8 0 10 #fcfcfc #000000 #000000 0 1;
+#X floatatom 85 139 5 0 0 0 - - - 0;
+#X obj 73 540 +~;
+#X obj 73 566 tabosc4~ waveform;
+#X obj 63 666 dac~;
+#X obj 74 639 *~;
+#X obj 73 373 sig~ 220;
+#X obj 103 201 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 93 590 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 76 328 hsl 128 15 2 2000 1 0 empty empty empty -2 -8 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 355 299 pow;
+#X obj 354 248 t b f;
+#X msg 354 274 2;
+#X obj 355 329 + 3;
+#X floatatom 354 358 6 0 0 0 - - - 0;
+#X msg 355 385 \; waveform resize \$1;
 #X obj 322 195 t a b;
-#X obj 334 273 t a b;
-#X obj 145 376 hsl 128 15 0.2 200 1 0 empty empty empty -2 -8 0 10
--262144 -1 -1 8500 1;
-#X floatatom 142 399 5 0 0 0 - - -, f 5;
-#X text 44 662 This instrument has a carrier oscillator reading through
-the array cyclically to create a complex tone. The frequency of that
-oscillator is modulated by a sinusoid at 6 Hz to create a vibrato effect.
-The amplitude of the waveform is modulated with the same table from
-sub-audio to audio rate;
-#X msg 542 323 \; waveform sinesum 512 0.2 0.2 0.4 0.2;
-#X msg 543 375 \; waveform cosinesum 512 0.2 0.2 0.2 0.2;
-#X msg 322 171 read snd/gtr515.aif waveform;
-#X msg 334 247 read snd/1-4.wav waveform;
-#X msg 542 273 \; waveform cosinesum 512 0.1 -0.1 0.1 -0.1 0.1 -0.1
-0.1;
-#X text 753 513 read values from file;
-#X msg 550 490 \; waveform const 0 \; waveform read file.txt \; waveform
-resize 11 \;;
 #X text 84 21 Wavetable Synthesis;
-#X text 104 477 fm;
-#X text 103 497 am;
-#X msg 366 304 17;
+#X text 105 541 fm;
+#X msg 322 171 read ../Sounds/gtr515.aif waveform;
+#X msg 354 220 9;
+#N canvas 947 103 499 277 other 0;
+#X msg 53 92 \; waveform sinesum 512 0.2 0.2 0.4 0.2;
+#X msg 54 144 \; waveform cosinesum 512 0.2 0.2 0.2 0.2;
+#X msg 53 43 \; waveform cosinesum 512 0.1 -0.1 0.1 -0.1 0.1 -0.1 0.1;
+#X msg 54 192 \; waveform const 0 \; waveform read file.txt \; waveform resize 11 \;;
+#X text 245 216 read values from file;
+#X restore 636 265 pd other waveforms;
+#X floatatom 73 348 5 0 0 0 - - - 0;
+#X obj 94 401 hsl 128 15 2 100 1 0 empty empty empty -2 -8 0 10 #fcfcfc #000000 #000000 0 1;
+#X floatatom 91 421 5 0 0 0 - - - 0;
+#X obj 111 471 hsl 128 15 2 2000 1 0 empty empty empty -2 -8 0 10 #fcfcfc #000000 #000000 0 1;
+#X floatatom 108 491 5 0 0 0 - - - 0;
+#X obj 90 444 osc~;
+#X obj 90 514 *~;
+#X text 162 602 This instrument has a carrier oscillator reading through the array cyclically to create a complex tone. The frequency of that oscillator is modulated by a sinusoid to create a vibrato effect., f 40;
+#X text 149 491 index;
+#X text 132 421 modulator;
+#X text 203 565 carrier;
+#X obj 568 58 declare -path abs;
+#X obj 93 611 * 0.3;
+#X obj 103 222 * 0.3;
 #X connect 5 0 7 0;
 #X connect 7 0 6 0;
 #X connect 7 0 6 1;
 #X connect 9 0 10 0;
 #X connect 11 0 12 0;
 #X connect 12 0 5 0;
-#X connect 13 0 20 0;
-#X connect 14 0 21 0;
-#X connect 15 0 18 0;
-#X connect 16 0 21 1;
-#X connect 18 0 17 0;
-#X connect 18 0 17 1;
-#X connect 19 0 14 0;
-#X connect 20 0 14 1;
-#X connect 21 0 15 0;
-#X connect 23 0 24 0;
-#X connect 24 0 7 1;
+#X connect 13 0 14 0;
+#X connect 14 0 16 0;
+#X connect 16 0 15 0;
+#X connect 16 0 15 1;
+#X connect 17 0 13 0;
+#X connect 18 0 46 0;
+#X connect 19 0 45 0;
+#X connect 20 0 33 0;
+#X connect 21 0 24 0;
+#X connect 22 0 23 0;
+#X connect 22 1 21 1;
+#X connect 23 0 21 0;
+#X connect 24 0 25 0;
 #X connect 25 0 26 0;
-#X connect 26 0 18 1;
-#X connect 27 0 19 0;
-#X connect 28 0 31 0;
-#X connect 29 0 30 0;
-#X connect 29 1 28 1;
-#X connect 30 0 28 0;
-#X connect 31 0 32 0;
-#X connect 32 0 33 0;
-#X connect 34 0 29 0;
-#X connect 35 0 0 0;
-#X connect 35 1 34 0;
-#X connect 36 0 0 0;
-#X connect 36 1 50 0;
-#X connect 37 0 38 0;
-#X connect 38 0 16 0;
-#X connect 42 0 35 0;
-#X connect 43 0 36 0;
-#X connect 50 0 29 0;
+#X connect 27 0 0 0;
+#X connect 27 1 31 0;
+#X connect 30 0 27 0;
+#X connect 31 0 22 0;
+#X connect 33 0 17 0;
+#X connect 34 0 35 0;
+#X connect 35 0 38 0;
+#X connect 36 0 37 0;
+#X connect 37 0 39 1;
+#X connect 38 0 39 0;
+#X connect 39 0 13 1;
+#X connect 45 0 16 1;
+#X connect 46 0 7 1;

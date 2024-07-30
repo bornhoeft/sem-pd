@@ -1,0 +1,73 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="marius schebella">
+   <title>introduction</title>
+</head>
+<body>
+
+<blockquote>
+  <blockquote>
+  <blockquote>
+    <h2>&nbsp;</h2>
+    <h2>4. Conversion Polar to Rectangular View</h2>
+  </blockquote>
+
+<p>&nbsp;
+
+  <p>In Pd there are three (at least) three possibilities to perform these conversions:
+<p><img SRC="rec2pol~.jpg" height=26 width=71>
+<p><font size="-1">Fig. 10</font>
+<br><font size="-1">The object "rec2pol~"</font>
+<br>&nbsp;<p>"rec2pol~" assumes the conversion of complex numbers into
+amplitudes and phases. The inlets are Real and Imaginary Part, the outlets are
+phase values (ranging from -Pi to +Pi) at the left side and amplitudes at the
+right.
+<p><img SRC="pol2rec~.jpg" height=26 width=71>
+<p><font size="-1">Fig. 11</font>
+<br><font size="-1">The object "pol2rec~"</font>
+<br>&nbsp;<p>The other way round phase and amplitude conversion to complex
+numbers is manged by "pol2rec~". Phasevalues at the inlets have to be between -Pi
+and +Pi. Both objects are included in the library of Ian Mott (motex). <a href="http://www.reverberant.com/Pd">http://www.reverberant.com/Pd</a>
+<p>&nbsp;
+<p>Alternatively you can build the conversions yourself with Pd-objects,
+therefore there is an object &quot;atan2~&quot; from Günter Geiger´s library (ggee). <a href="http://gige.xdv.org/pages/pd/pages/download">http://gige.xdv.org/pages/pd/pages/download</a>
+<p><img SRC="atan2~.jpg" height=25 width=53>
+<p><font size="-1">Fig. 12</font>
+<br><font size=-1>"atan2~" from the library of G&uuml;nter Geiger</font>
+<p>But beware, you have to connect the Real Part to the right inlet
+and the Imag to the left. The output-values range from -0.5 to 0.5. This object also checks the signs of all cases with negative real-part and shows
+the angles correctly.<p>Re-converting is tricky, because there is no &quot;sin~&quot;-object,
+just add 0.75 to the phase angle and you will get the sine.<p><a href="reconvert.htm">Fig.
+13<br>Building the Re-Conversion with
+Pd-objects</a><p>&nbsp;<p>And the third way is to use the &quot;expr~&quot;-object
+    from the extras-pd-directory.<p><img border="0" src="../../abschluss/expr1.jpg" width="160" height="27">&nbsp;<p><img border="0" src="../../abschluss/expr2.jpg" width="177" height="29"><p><font size="2">Fig.
+13 and 14<br>How to use the &quot;expr~&quot; object</font><p>Here you can
+    connect the real part to the left inlet, and the imag to the right.
+<br>&nbsp;
+<br>&nbsp;
+  <p>
+
+<br><a href="fft_und_pd_en.htm">Contents</a>
+<br><a href="introduction.htm">1. Introduction</a>
+<br><a href="ft.htm">2. Fourier Transformation</a>
+<br><a href="basefreq.htm">3. Base Frequencies</a>
+<br><a href="conversion.htm">4. Conversions Polar to Rectangular View</a>
+<br><a href="convolution.htm">5. Convolution</a>
+<br><a href="hannings.htm">6. Effects of Hanning-Windows</a>
+<br><a href="frequencies.htm">7. &quot;Frequencies between&quot;</a>
+<br><a href="pvoc.htm">8. Phase-Vocoder</a>
+<br><a href="phlocked.htm">9. Phase-locked Vocoder</a>
+<br><a href="convo_filter.htm">10. Convolution-Filter</a>
+<br><a href="random_pha.htm">11. Randomgenerated Phases</a>
+<br><a href="literature.htm">12. Literature</a>
+
+
+  </p>
+  </blockquote>
+</blockquote>
+
+
+</body>
+</html>

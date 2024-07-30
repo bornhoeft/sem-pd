@@ -2,7 +2,7 @@
 #X obj 48 353 random 10;
 #X msg 46 206 10;
 #X obj 48 417 list trim;
-#X msg 48 497 4 4 4 1 9 6 3 3 1 7;
+#X msg 48 497 1 1 1 4 7 7 7 8 8 6;
 #X obj 48 385 list prepend;
 #X msg 141 353 add2;
 #X obj 47 299 until;

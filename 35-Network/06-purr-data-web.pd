@@ -1,0 +1,7 @@
+#N canvas 651 286 463 216 12;
+#X obj 35 154 pdcontrol;
+#X msg 35 86 browse https://purrdata.glitch.me/;
+#X msg 49 120 browse https://youtu.be/DVU-tz8Wxl4?feature=shared;
+#X text 32 32 Pure Data is running in the browser \, for free Web-based sound patching;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;

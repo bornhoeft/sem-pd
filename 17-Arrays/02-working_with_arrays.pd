@@ -4,7 +4,7 @@
 #A 0 4.5 2.5 4 1 3;
 #X coords 0 5 5 0 200 140 1 0 0;
 #X restore 317 339 graph;
-#N canvas 258 192 475 264 Setting_the_size_of_an_array 1;
+#N canvas 258 192 475 264 Setting_the_size_of_an_array 0;
 #X floatatom 44 66 5 0 0 0 - - - 0;
 #X text 15 65 2;
 #X text 231 91 same as;
@@ -120,7 +120,7 @@
 #X connect 14 0 9 0;
 #X restore 25 478 pd Display_arrays;
 #X text 26 22 Working with arrays;
-#N canvas 86 53 529 613 write_and_change_arrays 1;
+#N canvas 86 53 529 613 write_and_change_arrays 0;
 #X text 43 41 An array in Pd is primarily a storage device for numbers. The result is a series of numbers that you can do with whatever you wish...but how does one populate an array?;
 #X text 40 544 Note that if your array is larger than your list \, then only the first elements will be effected. If your array is smaller than your list \, then your list will be truncated.;
 #X text 41 98 Advanced techniques using text or audio files is described later \, but for now it's important to know that you can send an array a list. Each element in the list will be assigned to the corresponding element in the array. Note that the first position in an array is always zero!;
@@ -146,7 +146,7 @@
 #X msg 292 136 \; george rename exampleArray;
 #X text 47 55 This is only temporal and the new name is not displayed! When the patch is reopened the old name will be used When the patch is saved with the new name than this new name is displayed when the patch is reopened.;
 #X restore 25 506 pd Rename_arrays;
-#N canvas 315 76 803 332 Audio_and_arrays 0;
+#N canvas 315 76 803 332 Audio_and_arrays 1;
 #X text 61 43 Audio files can be treated in similar ways by incorporating the [soundfiler] object. The soundfiler object provides Pd with tools to automatically resize arrays \, and read/write audio files in a variety of formats.;
 #X obj 62 222 soundfiler;
 #X floatatom 62 252 10 0 0 1 length_in_samples - - 0;

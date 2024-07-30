@@ -2,32 +2,24 @@
 #X obj 519 508 qlist;
 #X msg 438 116 next;
 #X obj 653 312 loadbang;
-#X floatatom 460 664 5 0 0 0 - - -;
+#X floatatom 460 664 5 0 0 0 - - - 0;
 #X obj 460 637 r send2;
-#X text 262 718 the corresponding send objects (send1 \, send2) are
-listed as the second argument in the qlist file;
-#X obj 396 175 bng 15 250 50 0 empty autobang empty 0 -6 0 8 -262144
--1 -1;
+#X text 262 718 the corresponding send objects (send1 \, send2) are listed as the second argument in the qlist file;
+#X obj 396 175 bng 15 250 50 0 empty autobang empty 0 -6 0 8 #fcfcfc #000000 #000000;
 #X msg 717 277 tempo \$1;
 #X text 213 171 automatic sequencing;
-#X obj 770 378 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
--1;
+#X obj 770 378 bng 15 250 50 0 empty empty empty 0 -6 0 8 #fcfcfc #000000 #000000;
 #X obj 770 400 openpanel;
 #X msg 770 427 read \$1;
-#X text 249 596 ___________________________________________________________
-;
+#X text 249 596 ___________________________________________________________;
 #X text 230 477 go to beginning (and stop);
-#X msg 448 476 rewind;
+#X msg 592 510 rewind;
 #X msg 717 192 0.5;
 #X msg 739 247 2;
-#X text 220 214 relative tempo: multiplier for the first argument (delay
-until the next event in msecs) in the qlist file: 0.5 = half speed
-\, 2 = double speed;
-#X obj 462 688 hsl 128 15 0 8 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
-#X floatatom 303 664 5 0 0 0 - - -;
-#X obj 305 688 hsl 128 15 0 8 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+#X text 220 214 relative tempo: multiplier for the first argument (delay until the next event in msecs) in the qlist file: 0.5 = half speed \, 2 = double speed;
+#X obj 462 688 hsl 128 15 0 8 0 0 empty empty empty -2 -8 0 10 #fcfcfc #000000 #000000 0 1;
+#X floatatom 303 664 5 0 0 0 - - - 0;
+#X obj 305 688 hsl 128 15 0 8 0 0 empty empty empty -2 -8 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 303 637 r send1;
 #X obj 438 63 key;
 #X obj 438 89 sel 32;
@@ -36,12 +28,10 @@ until the next event in msecs) in the qlist file: 0.5 = half speed
 #X text 288 339 read file (the file is called with its path);
 #X msg 570 148 print;
 #X text 623 149 print qlist to PD window;
-#X text 281 392 alternatively any qlist textfile can be opened via
-the file browser;
+#X text 281 392 alternatively any qlist textfile can be opened via the file browser;
 #X msg 653 339 read step.txt;
 #X obj 173 312 loadbang;
-#X obj 196 367 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
--1;
+#X obj 196 367 bng 15 250 50 0 empty empty empty 0 -6 0 8 #fcfcfc #000000 #000000;
 #X obj 196 388 openpanel;
 #X msg 196 415 read \$1;
 #X msg 157 198 0.5;
@@ -56,15 +46,11 @@ the file browser;
 #X msg 133 169 stop;
 #X msg 166 476 line 0;
 #X obj 173 446 text define -k steps;
-#A set 200 send1 0 \; send2 1 \; 1000 send1 1 \; send2 2 \; 1000 send1
-2 \; send2 3 \; 1000 send1 3 \; send2 4 \; 1000 send1 4 \; send2 5
-\; 2000 send1 5 \; send2 6 \; 1000 send1 6 \; send2 7 \; 1000 send1
-7 \; send2 8 \;;
+#A set 200 send1 0 \; send2 1 \; 1000 send1 1 \; send2 2 \; 1000 send1 2 \; send2 3 \; 1000 send1 3 \; send2 4 \; 1000 send1 4 \; send2 5 \; 2000 send1 5 \; send2 6 \; 1000 send1 6 \; send2 7 \; 1000 send1 7 \; send2 8 \;;
 #X text 279 510 The right outlet gets a;
 #X text 279 529 bang when you hit the;
 #X text 282 547 end of the sequence.;
-#X obj 36 121 bng 15 250 50 0 empty autobang empty 0 -6 0 8 -262144
--1 -1;
+#X obj 36 121 bng 15 250 50 0 empty autobang empty 0 -6 0 8 #fcfcfc #000000 #000000;
 #X obj 519 552 print qlist-wait;
 #X obj 64 547 print text-wait;
 #X text 141 30 [text] vs. [qlist] sequencing;

@@ -1,20 +1,17 @@
-#N canvas 817 550 523 431 12;
+#N canvas 217 514 579 415 12;
 #X declare -path abs;
 #X text 32 31 Bandpass construction;
 #X obj 35 71 noise~;
 #N canvas 0 22 450 300 (subpatch) 0;
 #X array \$0-wavetable1 128 float 1;
-#A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+#A 0 0.00601461 0.00569719 0.00512364 0.00433955 0.00339993 0.00236554 0.00129773 0.000251503 -0.000725925 -0.0015988 -0.00234436 -0.00295634 -0.00343887 -0.00380715 -0.00408204 -0.0042816 -0.00441704 -0.00448721 -0.00447774 -0.00436115 -0.00410135 -0.00366554 -0.0030301 -0.00219762 -0.00119771 -9.12266e-05 0.00104508 0.00211948 0.00304474 0.00375175 0.00419167 0.00434818 0.00423316 0.00387529 0.0033235 0.00263178 0.00185022 0.00103517 0.00023403 -0.000502325 -0.00112665 -0.00159561 -0.00187381 -0.00193855 -0.00178238 -0.00141917 -0.000878454 -0.000207409 0.000538583 0.00129608 0.00200197 0.00259448 0.00301858 0.00323291 0.00321231 0.00295081 0.00245973 0.00176586 0.0009119 -5.32915e-05 -0.0010626 -0.00204355 -0.00292175 -0.00362461 -0.00409864 -0.00429678 -0.00421529 -0.00386274 -0.00328684 -0.00256203 -0.00176138 -0.000973221 -0.000269 0.000308835 0.000732699 0.00101463 0.00118491 0.00127741 0.00132148 0.00133273 0.0013063 0.00120519 0.000982761 0.000594754 1.65323e-05 -0.000738339 -0.00162329 -0.0025352 -0.00334372 -0.0038968 -0.00405761 -0.00372442 -0.00285374 -0.00147377 0.000305722 0.00231221 0.00434751 0.00619265 0.00765464 0.00858789 0.0089058 0.00859056 0.0076795 0.00626879 0.00447936 0.00244676 0.000320129 -0.00174651 -0.003606 -0.00511784 -0.00616492 -0.0066679 -0.00660685 -0.00601821 -0.00499827 -0.00369312 -0.00226803 -0.000889955 0.000287797 0.00114588 0.00160241 0.00162411 0.00122374 0.000459607 -0.000576611 -0.00176457 -0.00296847 -0.00404575;
 #X coords 0 1 127 -1 200 140 1;
-#X restore 273 87 graph;
+#X restore 353 87 graph;
 #N canvas 0 22 450 300 (subpatch) 0;
 #X array \$0-frequencies 256 float 0;
 #X coords 0 100 255 0 200 140 1;
-#X restore 272 257 graph;
-#N canvas 0 22 325 269 display 0;
+#X restore 352 257 graph;
+#N canvas 208 246 325 269 display 0;
 #X obj 54 124 tabwrite~ \$0-wavetable1;
 #X obj 117 86 metro 30;
 #N canvas 45 83 488 322 fft 0;
@@ -29,9 +26,7 @@
 #X text 93 93 Fourier series;
 #X text 98 146 magnitude;
 #X text 96 131 calculate;
-#X text 21 3 This subpatch computes the spectrum of the incoming signal
-with a (rectangular windowed) FFT. FFTs aren't properly introduced
-until much later.;
+#X text 21 3 This subpatch computes the spectrum of the incoming signal with a (rectangular windowed) FFT. FFTs aren't properly introduced until much later.;
 #X text 83 61 signal to analyze;
 #X text 192 166 delay two samples;
 #X text 191 182 for better graphing;
@@ -54,8 +49,7 @@ until much later.;
 #X text 110 165 graph frequencies;
 #X obj 88 195 metro 30;
 #X obj 118 28 loadbang;
-#X obj 118 60 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
-1;
+#X obj 118 60 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 27 28 catch~ wave;
 #X connect 1 0 0 0;
 #X connect 4 0 2 1;
@@ -65,30 +59,33 @@ until much later.;
 #X connect 7 0 0 0;
 #X connect 7 0 2 0;
 #X restore 223 29 pd display;
-#X obj 121 156 hsl 128 15 100 2000 0 0 empty empty empty -2 -8 0 10
--262144 -1 -1 0 1;
+#X obj 121 130 hsl 128 15 100 2000 0 0 empty empty empty -2 -8 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 36 332 dac~;
-#X obj 36 270 60db-chain-bp 300 400;
+#X obj 36 270 60db-chain-bp 300 400, f 23;
 #X obj 88 330 throw~ wave;
 #X obj 36 245 *~ 1;
-#X obj 69 102 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
-#X obj 66 123 * 100;
-#X obj 201 197 + 100;
-#X floatatom 118 223 5 0 0 0 - - -, f 5;
-#X floatatom 201 223 5 0 0 0 - - -, f 5;
-#X floatatom 65 147 5 0 0 0 - - -, f 5;
-#X obj 329 30 declare -path abs;
+#X obj 65 105 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 62 126 * 100;
+#X floatatom 117 162 5 0 0 0 - - - 0;
+#X floatatom 61 150 5 0 0 0 - - - 0;
+#X obj 354 30 declare -path abs;
+#X obj 196 166 hsl 128 15 10 1000 0 0 empty empty empty -2 -8 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 193 242 +;
+#X floatatom 193 186 5 0 0 1 band\ width - - 0;
+#X obj 193 209 t b f;
 #X connect 1 0 9 0;
 #X connect 5 0 12 0;
-#X connect 5 0 13 0;
 #X connect 7 0 6 0;
 #X connect 7 0 6 1;
 #X connect 7 0 8 0;
 #X connect 9 0 7 0;
 #X connect 10 0 11 0;
-#X connect 11 0 15 0;
-#X connect 12 0 14 0;
-#X connect 13 0 7 1;
-#X connect 14 0 7 2;
-#X connect 15 0 9 1;
+#X connect 11 0 13 0;
+#X connect 12 0 7 1;
+#X connect 12 0 16 0;
+#X connect 13 0 9 1;
+#X connect 15 0 17 0;
+#X connect 16 0 7 2;
+#X connect 17 0 18 0;
+#X connect 18 0 16 0;
+#X connect 18 1 16 1;

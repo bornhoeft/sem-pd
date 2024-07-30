@@ -1,8 +1,0 @@
-#N canvas 393 375 450 300 10;
-#X obj 91 46 inlet;
-#X obj 91 83 retrograde;
-#X obj 91 120 inversion;
-#X obj 91 159 outlet;
-#X connect 0 0 1 0;
-#X connect 1 0 2 0;
-#X connect 2 0 3 0;

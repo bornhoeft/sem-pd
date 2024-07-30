@@ -1,4 +1,4 @@
-#N canvas 497 25 557 667 12;
+#N canvas 497 38 575 813 12;
 #X msg 54 183 bang;
 #X floatatom 149 270 3 0 5 0 - - - 0;
 #X msg 68 214 1;
@@ -28,7 +28,7 @@
 #X floatatom 111 358 5 0 0 0 - - - 0;
 #X obj 59 542 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
 #X obj 98 712 makenote 100 500;
-#X obj 98 736 noteout;
+#X obj 133 747 noteout;
 #X floatatom 133 591 5 0 0 0 - - - 0;
 #X obj 58 661 list split 0;
 #X obj 54 688 print;

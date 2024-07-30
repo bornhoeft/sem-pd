@@ -1,38 +1,28 @@
-#N canvas 167 126 755 757 12;
+#N canvas 266 25 755 667 12;
 #X obj 37 515 qlist;
 #X msg 37 155 next;
 #X obj 147 319 loadbang;
-#X text 140 546 This outlet gets a bang when you hit the end of the
-sequence.;
-#X floatatom 223 637 5 0 0 0 - - -, f 5;
+#X text 98 532 This outlet gets a bang when you hit the end of the sequence.;
+#X floatatom 223 637 5 0 0 0 - - - 0;
 #X obj 223 610 r send2;
-#X text 25 691 the corresponding send objects (send1 \, send2) are
-listed as the second argument in the qlist file;
-#X obj 107 183 bng 15 250 50 0 empty autobang empty 0 -6 0 8 -262144
--1 -1;
+#X text 25 691 the corresponding send objects (send1 \, send2) are listed as the second argument in the qlist file;
+#X obj 107 183 bng 15 250 50 0 empty autobang empty 0 -6 0 8 #fcfcfc #000000 #000000;
 #X msg 131 290 tempo \$1;
 #X text 130 180 automatic sequencing;
-#X obj 144 390 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
--1;
+#X obj 144 390 bng 15 250 50 0 empty empty empty 0 -6 0 8 #fcfcfc #000000 #000000;
 #X obj 144 412 openpanel;
 #X msg 144 439 read \$1;
-#X text 30 576 ___________________________________________________________
-;
+#X text 30 576 ___________________________________________________________;
 #X text 206 477 go to beginning (and stop);
 #X msg 144 480 rewind;
 #X msg 131 205 0.5;
 #X msg 153 260 2;
-#X text 198 219 relative tempo: multiplier for the first argument (delay
-until the next event in msecs) in the qlist file: 0.5 = half speed
-\, 2 = double speed;
+#X text 198 219 relative tempo: multiplier for the first argument (delay until the next event in msecs) in the qlist file: 0.5 = half speed \, 2 = double speed;
 #X text 36 23 Stepping sequences with [qlist];
-#X text 36 61 The [qlist] object reads text files containing time-tagged
-Pd messages.;
-#X obj 225 661 hsl 128 15 0 8 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 6350 1;
-#X floatatom 66 637 5 0 0 0 - - -, f 5;
-#X obj 68 661 hsl 128 15 0 8 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 4762 1;
+#X text 36 61 The [qlist] object reads text files containing time-tagged Pd messages.;
+#X obj 225 661 hsl 128 15 0 8 0 0 empty empty empty -2 -8 0 10 #fcfcfc #000000 #000000 0 1;
+#X floatatom 66 637 5 0 0 0 - - - 0;
+#X obj 68 661 hsl 128 15 0 8 0 0 empty empty empty -2 -8 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 66 610 r send1;
 #X obj 37 102 key;
 #X obj 37 128 sel 32;
@@ -41,21 +31,14 @@ Pd messages.;
 #X text 290 347 read file (the file is called with its path);
 #X msg 88 155 print;
 #X text 141 156 print qlist to PD window;
-#X obj 73 569 bng 15 250 50 0 autobang empty empty 17 7 0 10 -262144
--1 -1;
-#X text 223 411 alternatively any qlist textfile can be opened via
-the file browser;
-#X obj 74 543 spigot;
-#X obj 119 520 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
+#X obj 69 543 bng 15 250 50 0 autobang empty empty 17 7 0 10 #fcfcfc #000000 #000000;
+#X text 223 411 alternatively any qlist textfile can be opened via the file browser;
 #X msg 147 346 read 01-step.txt;
-#X connect 0 1 15 0;
-#X connect 0 1 34 0;
+#X connect 0 1 32 0;
 #X connect 1 0 0 0;
-#X connect 2 0 36 0;
+#X connect 2 0 34 0;
 #X connect 4 0 21 0;
 #X connect 5 0 4 0;
-#X connect 7 0 0 0;
 #X connect 8 0 0 0;
 #X connect 10 0 11 0;
 #X connect 11 0 12 0;
@@ -69,6 +52,5 @@ the file browser;
 #X connect 26 0 1 0;
 #X connect 28 0 8 0;
 #X connect 30 0 0 0;
-#X connect 34 0 32 0;
-#X connect 35 0 34 1;
-#X connect 36 0 0 0;
+#X connect 32 0 15 0;
+#X connect 34 0 0 0;

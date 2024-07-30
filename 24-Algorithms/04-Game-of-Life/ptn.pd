@@ -1,6 +1,0 @@
-#N canvas 353 133 450 300 10;
-#X obj -257 102 prepend set;
-#X obj -257 161 outlet;
-#X obj -257 74 r s_row_\$1;
-#X connect 0 0 1 0;
-#X connect 2 0 0 0;

@@ -1,0 +1,3 @@
+#N canvas 448 457 571 302 12;
+#X text 77 45 Record the micro input on your harddisk. Control the recording duration with an amplitude threshold p.e. as long as the dynamic input level is higher than a given threshold the soundfile is recorded.;
+#X text 79 134 Nehmen Sie den Mikrophoneingang zur Aufnahme in Ihre Tables. Rotieren Sie zwischen den Tables für jede neue Aufnahme. Kontrollieren Sie dabei die Aufnahmedauer mit einem dynamischen Schwellwert z.B. solange die Eingangsdynamik hoeher ist als dieser Schwellwert wird der Input aufgenommen.;

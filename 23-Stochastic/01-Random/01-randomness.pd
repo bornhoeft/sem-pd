@@ -1,27 +1,25 @@
-#N canvas 467 175 606 567 12;
-#X obj 47 95 tgl 15 0 empty empty empty 0 -6 0 10 -262144 -1 -1 1 1
-;
+#N canvas 405 64 606 567 12;
+#X obj 47 95 tgl 15 0 empty empty empty 0 -6 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 47 119 metro 1000;
-#X floatatom 69 230 5 0 0 0 - - -, f 5;
+#X floatatom 69 230 5 0 0 0 - - - 0;
 #X obj 47 319 + 10;
-#X floatatom 47 353 5 0 0 0 - - -, f 5;
+#X floatatom 47 353 5 0 0 0 - - - 0;
 #X text 139 120 each second a new random number;
 #X obj 69 256 - 5;
-#X floatatom 69 283 5 0 0 0 - - -, f 5;
+#X floatatom 69 283 5 0 0 0 - - - 0;
 #X text 117 281 centered random between -5 and 5;
 #X text 44 45 random numbers;
 #X obj 47 385 / 10;
-#X floatatom 46 415 5 0 0 0 - - -, f 5;
-#X msg 116 154 100;
-#X text 154 153 set a new random range;
+#X floatatom 46 415 5 0 0 0 - - - 0;
+#X msg 107 156 100;
+#X text 145 155 set a new random range;
 #X obj 47 186 random 11;
 #X text 117 228 numbers between 0 and 10;
 #X text 92 319 random numbers between 10 and 20;
-#X floatatom 46 473 5 0 0 0 - - -, f 5;
+#X floatatom 46 473 5 0 0 0 - - - 0;
 #X obj 46 441 / 10;
 #X text 96 414 random decimal numbers between 1 and 2;
-#X text 101 467 random decimal numbers between 0.1 and 0.2 with 2 digits
-(one digit per decimal);
+#X text 101 467 random decimal numbers between 0.1 and 0.2 with 2 digits (one digit per decimal);
 #X connect 0 0 1 0;
 #X connect 1 0 14 0;
 #X connect 2 0 6 0;

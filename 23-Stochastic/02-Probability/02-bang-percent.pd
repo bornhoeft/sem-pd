@@ -1,24 +1,21 @@
-#N canvas 921 295 237 468 12;
-#X msg 99 221 50;
-#X obj 99 264 t b f;
-#X obj 99 358 <;
-#X obj 99 389 sel 1;
-#X obj 99 423 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X obj 99 303 random 100;
-#X floatatom 99 333 5 0 0 0 - - -, f 5;
-#X obj 77 26 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
-;
+#N canvas 921 295 367 478 12;
+#X msg 97 214 50;
+#X obj 97 257 t b f;
+#X obj 97 351 <;
+#X obj 97 382 sel 1;
+#X obj 97 416 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
+#X obj 97 296 random 100;
+#X floatatom 97 326 5 0 0 0 - - - 0;
+#X obj 77 26 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 77 52 metro 500;
-#X obj 98 96 hradio 15 1 0 3 empty empty empty 0 -8 0 10 -262144 -1
--1 0;
-#X floatatom 77 146 5 0 0 0 - - -, f 5;
+#X obj 95 99 hradio 15 1 0 3 empty empty empty 0 -8 0 10 #fcfcfc #000000 #000000 0;
+#X floatatom 77 146 5 0 0 0 - - - 0;
 #X obj 77 120 f 0;
 #X obj 77 175 sel 0 1 2;
-#X obj 77 83 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X msg 54 221 100;
-#X msg 143 221 5;
+#X obj 77 78 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
+#X msg 52 214 100;
+#X msg 141 214 5;
+#X text 174 213 percent;
 #X connect 0 0 1 0;
 #X connect 1 0 5 0;
 #X connect 1 1 2 1;
