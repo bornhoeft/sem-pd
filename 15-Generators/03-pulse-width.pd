@@ -22,7 +22,7 @@
 #X msg 39 192 100;
 #X obj 40 158 loadbang;
 #X obj 39 289 expr~ if($v1 > $v2 \, 1 \, -1);
-#X text 237 290 if wave > width value \, then 1 \, if else (lower) -1;
+#X text 232 290 if wave > width value \, then 1 \, if else (lower) -1;
 #X obj 219 135 *~ 0.99;
 #X obj 218 217 snapshot~;
 #X floatatom 218 252 5 -0.99 0.99 0 - - - 0;

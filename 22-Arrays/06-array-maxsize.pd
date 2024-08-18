@@ -1,0 +1,14 @@
+#N canvas 563 305 606 373 12;
+#N canvas 295 333 450 278 (subpatch) 0;
+#X array array1 4.3e+06 float 2;
+#X coords 0 1 4.3e+06 -1 200 140 1 0 0;
+#X restore 45 124 graph;
+#X obj 275 228 soundfiler;
+#X obj 275 163 openpanel;
+#X obj 275 134 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
+#X msg 275 197 read -resize -maxsize 4.3e+07 \$1 array1;
+#X text 40 43 The resize command changes the array's size to match that of the sample (this is limited to 4e+06 samples - about 90 seconds \, though this can be changed with "maxsize").;
+#X text 42 301 4 \, 300 \, 0 = 4 \, 300 \, 0 / 48000 = 89 \, 5 seconds 4.3e+07= 43 \, 0 \, 0 / 48000 = 895 seconds = 14 min 55 secs;
+#X connect 2 0 4 0;
+#X connect 3 0 2 0;
+#X connect 4 0 1 0;
