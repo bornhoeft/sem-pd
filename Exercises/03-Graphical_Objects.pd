@@ -1,0 +1,2 @@
+#N canvas 516 282 526 152 12;
+#X text 52 45 Make a patch with two sliders ranged between 0 and 100 \, one as a cold and one as a hot inlet to a multiplication object. Collect the result in a number object;
