@@ -1,4 +1,4 @@
-Exercises
+**Exercises**
 
 - Copy the exercise, leave the name and add your name to it.
 - Complete the homework in this patch.
