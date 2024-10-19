@@ -3,7 +3,7 @@
 #X obj 58 295 wrap;
 #X floatatom 58 325 5 0 0 0 - - - 0;
 #X floatatom 58 269 5 0 0 0 - - - 0;
-#X obj 368 276 wrap~;
+#X obj 350 278 wrap~;
 #X text 202 278 for audio see also:;
 #X text 52 22 Wrapping numbers;
 #X obj 58 185 loadbang;

@@ -1,12 +1,11 @@
 #N canvas 838 72 483 544 12;
-#X obj 57 197 tgl 15 0 empty empty empty 0 -6 0 10 -262144 -1 -1 0
-1;
-#X obj 188 92 notein 1;
-#X floatatom 187 119 5 0 0 0 - - -, f 5;
-#X obj 56 341 noteout 1;
+#X obj 57 197 tgl 15 0 empty empty empty 0 -6 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 187 89 notein 1;
+#X floatatom 187 119 5 0 0 0 - - - 0;
+#X obj 57 364 noteout 1;
 #X text 195 144 c4 d4 e4 f4 g4 - tempi;
-#X msg 57 293 40;
-#X obj 57 315 makenote 7 300;
+#X msg 57 298 40;
+#X obj 57 331 makenote 7 300;
 #X msg 211 201 700;
 #X msg 249 201 900;
 #X msg 176 200 500;
@@ -15,7 +14,7 @@
 #X msg 329 201 1400;
 #X obj 187 162 sel 96 98 100 101 103;
 #X obj 54 91 ctlin 64;
-#X floatatom 55 117 5 0 0 0 - - -, f 5;
+#X floatatom 55 117 5 0 0 0 - - - 0;
 #X obj 58 164 sel 127;
 #X text 64 145 sustainpedal;
 #X text 35 37 controlling a pd-patch with the midi-piano;

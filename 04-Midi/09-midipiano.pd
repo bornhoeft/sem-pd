@@ -1,4 +1,4 @@
-#N canvas 181 207 1136 486 10;
+#N canvas 135 444 1136 486 12;
 #X text 166 266 random zw. 30-70;
 #X text 172 238 anschlagsstärke;
 #X floatatom 115 304 5 0 0 0 - - - 0;

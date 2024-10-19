@@ -1,29 +1,26 @@
 #N canvas 279 63 658 598 12;
 #X obj 154 319 +;
-#X floatatom 154 348 7 0 0 0 - - -, f 7;
+#X floatatom 154 348 7 0 0 0 - - - 0;
 #X obj 154 253 pow 2;
-#X obj 175 287 pow 2;
-#X floatatom 238 145 5 0 0 0 y - -, f 5;
-#X floatatom 154 146 5 0 0 0 x - -, f 5;
-#X floatatom 238 348 7 0 0 0 - - -, f 7;
+#X obj 172 288 pow 2;
+#X floatatom 238 145 5 0 0 0 y - - 0;
+#X floatatom 154 146 5 0 0 0 x - - 0;
+#X floatatom 238 348 7 0 0 0 - - - 0;
 #X obj 238 180 trigger bang float;
-#X text 15 56 The [expr] object allows you to write out formulas in
-the standard style of many programming languages.;
+#X text 15 56 The [expr] object allows you to write out formulas in the standard style of many programming languages.;
 #X text 17 21 Mathematical functions as expressions;
-#X obj 51 428 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
+#X obj 51 428 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 51 455 expr 1-$f1;
-#X obj 51 490 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
+#X obj 51 490 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000 0 1;
 #X text 48 399 Reverse switch:;
 #X obj 243 517 pow 2;
 #X obj 280 490 / 12;
 #X obj 243 465 t b f;
 #X msg 243 490 2;
-#X floatatom 361 543 5 0 0 0 - - -, f 5;
+#X floatatom 361 543 5 0 0 0 - - - 0;
 #X obj 361 492 expr pow(2 \, ($f1/12));
-#X floatatom 307 422 5 0 0 0 - - -, f 5;
-#X floatatom 242 543 5 0 0 0 - - -, f 5;
+#X floatatom 307 422 5 0 0 0 - - - 0;
+#X floatatom 242 543 5 0 0 0 - - - 0;
 #X text 215 399 Calculate semitones in sampling rate conversion:;
 #X obj 238 290 expr pow($f1 \, 2) + pow($f2 \, 2);
 #X text 156 115 (x^2 + y^2);
