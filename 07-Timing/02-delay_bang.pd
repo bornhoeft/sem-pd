@@ -1,53 +1,34 @@
-#N canvas 409 53 573 697 12;
+#N canvas 376 25 577 667 12;
 #X msg 22 404 bang;
-#X floatatom 99 476 0 0 0 0 - - -;
+#X floatatom 89 476 0 0 0 0 - - - 0;
 #X text 111 501 <-- creation argument initializes delay time;
 #X obj 22 503 delay 1000;
 #X text 74 430 Click here to CANCEL delay's action;
 #X msg 33 429 stop;
 #X msg 47 453 2000;
 #X text 136 475 <-- scroll to change delay time in milliseconds;
-#X obj 27 119 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
--1;
+#X obj 27 119 bng 15 250 50 0 empty empty empty 0 -6 0 8 #fcfcfc #000000 #000000;
 #X obj 27 140 delay 2000;
-#X obj 27 168 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
--1;
-#X text 26 52 The [delay] object sends a bang to its outlet after a
-delay in milliseconds specified by its right inlet or its creation
-argument.;
-#X obj 22 528 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
--1;
+#X obj 27 168 bng 15 250 50 0 empty empty empty 0 -6 0 8 #fcfcfc #000000 #000000;
+#X text 26 52 The [delay] object sends a bang to its outlet after a delay in milliseconds specified by its right inlet or its creation argument.;
+#X obj 22 528 bng 15 250 50 0 empty empty empty 0 -6 0 8 #fcfcfc #000000 #000000;
 #X text 68 406 "bang" to schedule the action;
 #X msg 145 113 2000;
 #X obj 145 141 del;
-#X obj 145 170 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
--1;
-#X text 95 451 Number in left inlet sets time and schedules the action.
-;
+#X obj 145 170 bng 15 250 50 0 empty empty empty 0 -6 0 8 #fcfcfc #000000 #000000;
+#X text 95 451 Number in left inlet sets time and schedules the action.;
 #X text 26 24 Delay;
-#X text 23 202 [delay]'s left inlet accepts a number \, or one of two
-messages: "bang" or "stop". The metro object sends a series of bangs
-at a constant rate which is defined in milliseconds at the right inlet
-or in the creation argument. The metro object sends a series of bangs
-at a constant rate which is defined in milliseconds at the right inlet
-or in the creation argument. The metro object sends a series of bangs
-at a constant rate which is defined in milliseconds at the right inlet
-or in the creation argument. The metro object sends a series of bangs
-at a constant rate which is defined in milliseconds at the right inlet
-or in the creation argument.;
+#X text 23 202 [delay]'s left inlet accepts a number \, or one of two messages: "bang" or "stop". The metro object sends a series of bangs at a constant rate which is defined in milliseconds at the right inlet or in the creation argument. The metro object sends a series of bangs at a constant rate which is defined in milliseconds at the right inlet or in the creation argument. The metro object sends a series of bangs at a constant rate which is defined in milliseconds at the right inlet or in the creation argument. The metro object sends a series of bangs at a constant rate which is defined in milliseconds at the right inlet or in the creation argument.;
 #X text 111 140 <=>;
-#X obj 87 650 bng 15 50 10 0 empty empty empty 0 -6 0 8 -262144 -1
--1;
+#X obj 87 650 bng 15 50 10 0 empty empty empty 0 -6 0 8 #fcfcfc #000000 #000000;
 #X obj 87 620 delay 1000;
 #X msg 25 582 bang;
 #X msg 87 583 stop;
 #X obj 327 619 metro 1000;
-#X obj 327 651 bng 15 50 10 0 empty empty empty 0 -6 0 8 -262144 -1
--1;
-#X obj 327 595 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0
-1;
-#X floatatom 404 593 5 0 0 0 - - -, f 5;
-#X floatatom 164 594 5 0 0 0 - - -, f 5;
+#X obj 327 651 bng 15 50 10 0 empty empty empty 0 -6 0 8 #fcfcfc #000000 #000000;
+#X obj 327 595 tgl 15 0 empty empty empty 0 -6 0 8 #fcfcfc #000000 #000000 0 1;
+#X floatatom 395 595 5 0 0 0 - - - 0;
+#X floatatom 154 594 5 0 0 0 - - - 0;
 #X text 200 620 is the same as;
 #X text 21 550 for example:;
 #X connect 0 0 3 0;

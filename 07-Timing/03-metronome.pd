@@ -1,4 +1,4 @@
-#N canvas 177 38 545 675 12;
+#N canvas 317 25 545 667 12;
 #X obj 56 97 tgl 15 0 empty empty Start-Stop 0 -8 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 96 422 + 1;
 #X floatatom 55 451 0 0 0 0 - - - 0;
@@ -12,8 +12,8 @@
 #X text 107 395 Reset;
 #X text 86 582 Bar number;
 #X text 217 585 Beat Count;
-#X floatatom 225 454 0 0 0 0 - - - 0;
-#X text 257 455 Set beats per bar;
+#X floatatom 220 454 0 0 0 0 - - - 0;
+#X text 252 455 Set beats per bar;
 #X floatatom 93 157 5 0 0 0 - - - 0;
 #X obj 93 184 t b f;
 #X msg 93 217 60;

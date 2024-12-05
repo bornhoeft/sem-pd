@@ -1,8 +1,7 @@
 #N canvas 652 281 337 208 12;
 #X obj 53 76 inlet;
-#X obj 53 160 outlet;
+#X obj 53 154 outlet;
 #X obj 53 118 * \$1;
-#X text 45 25 (This abstraction is used by [abstractions_with_arguemtns.pd)
-;
+#X text 45 25 (This abstraction is used by [abstractions_with_arguemtns.pd);
 #X connect 0 0 2 0;
 #X connect 2 0 1 0;

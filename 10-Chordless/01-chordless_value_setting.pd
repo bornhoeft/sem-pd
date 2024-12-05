@@ -1,22 +1,21 @@
-#N canvas 170 123 558 279 12;
-#X floatatom 348 229 5 0 0 0 - - -, f 5;
+#N canvas 339 101 558 279 12;
+#X floatatom 348 229 5 0 0 0 - - - 0;
 #X msg 68 151 50;
-#X floatatom 115 153 5 0 0 0 - - -, f 5;
-#X obj 68 186 value val1;
-#X obj 348 154 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
--1;
+#X floatatom 115 153 5 0 0 0 - - - 0;
+#X obj 68 198 value val1;
+#X obj 348 154 bng 15 250 50 0 empty empty empty 0 -6 0 8 #fcfcfc #000000 #000000;
 #X text 29 32 chordless value setting;
-#X text 29 75 [value] \, [v] ist similar to receive and send but values
-are stored like [float] and can be executed with a bang.;
+#X text 29 75 [value] \, [v] ist similar to receive and send but values are stored like [float] and can be executed with a bang.;
 #X obj 348 187 v val1;
-#X floatatom 217 228 5 0 0 0 - - -, f 5;
-#X obj 217 153 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
--1;
+#X floatatom 217 228 5 0 0 0 - - - 0;
+#X obj 217 153 bng 15 250 50 0 empty empty empty 0 -6 0 8 #fcfcfc #000000 #000000;
 #X obj 217 186 value val1;
 #X text 313 187 ==;
+#X obj 68 112 loadbang;
 #X connect 1 0 3 0;
 #X connect 2 0 3 0;
 #X connect 4 0 7 0;
 #X connect 7 0 0 0;
 #X connect 9 0 10 0;
 #X connect 10 0 8 0;
+#X connect 12 0 1 0;

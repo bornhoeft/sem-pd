@@ -1,4 +1,4 @@
-#N canvas 51 25 503 473 12;
+#N canvas 811 67 499 525 12;
 #X declare -path subfolder;
 #X floatatom 31 191 10 0 0 0 - - - 0;
 #X floatatom 31 76 10 0 0 0 - - - 0;
@@ -11,11 +11,13 @@
 #X text 86 125 Click!;
 #X text 28 27 Abstractions;
 #X text 20 236 If a process or calculation is needed in different patches or more than once in a patch it should be seperated in an independend pd file with inlets and outlets. This abstraction is accessed with its name (as an object without the .pd extension \, in this example [sec2sr]). BE CAREFUL with naming the abstraction not to get into conflicts with existing objects already loaded to PD!;
-#X obj 273 28 declare -path subfolder;
 #X text 19 349 If the abstraction is not in the same folder as the parent patch \, it must be called with a path name relative to the parent patch (see right example aboce). Alternativeley use the [declare] object to generally point to a specific search directory either with the full or the relative pathname.;
 #X obj 273 117 subfolder/sec2sr;
+#X obj 26 446 ../01-Basics/00-pd-apps;
+#X obj 273 28 declare -path subfolder;
+#X text 203 447 patch on a higher level;
 #X connect 1 0 4 0;
-#X connect 3 0 13 0;
+#X connect 3 0 12 0;
 #X connect 4 0 0 0;
 #X connect 5 0 2 0;
-#X connect 13 0 5 0;
+#X connect 12 0 5 0;

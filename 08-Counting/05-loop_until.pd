@@ -1,49 +1,41 @@
-#N canvas 567 169 572 708 12;
-#X text 46 108 If you start [until] with a "bang" \, it will begin
-an infinite loop! Please plan ahead in this case so that there is a
-mechanism in place to stop the loop - otherwise Pd will effectively
-freeze.;
-#X text 46 181 HOW TO FREEZE Pd;
-#X msg 47 214 bang;
-#X obj 47 242 until;
-#X obj 47 270 print;
-#X text 111 219 DO NOT CLICK. DO NOT CLICK. DO NOT CLICK.;
-#X text 49 534 If you start [until] with a number \, it iterates that
-number of times. The [uzi] object in MAX works the same way.;
-#X obj 107 622 until;
-#X msg 108 577 100;
-#X obj 107 650 print i;
-#X msg 150 577 3;
-#X msg 193 577 42;
-#X text 47 297 The [until] object's left inlet starts a loop in which
-it outputs "bang" until its right inlet gets a "bang" which stops it.
-;
-#X msg 46 388 bang;
-#X obj 46 416 until;
-#X text 98 392 start;
-#X obj 46 444 f;
-#X obj 94 448 + 1;
-#X obj 152 448 sel 0;
-#X obj 45 507 print;
-#X obj 94 476 mod 10;
-#X text 111 244 If you click \, kill Pd or reboot the computer.;
-#X text 46 346 The example below includes a method to stop the loop
-to prevent Pd from looping infinitely.;
-#X text 283 627 (C) Copyright Dave Sabine;
-#X text 47 76 Looping in Pd can be done by using the [until] object.
-;
-#X text 51 29 Looping;
-#X connect 2 0 3 0;
-#X connect 3 0 4 0;
-#X connect 7 0 9 0;
-#X connect 8 0 7 0;
-#X connect 10 0 7 0;
-#X connect 11 0 7 0;
-#X connect 13 0 14 0;
-#X connect 14 0 16 0;
-#X connect 16 0 17 0;
-#X connect 16 0 19 0;
-#X connect 17 0 20 0;
-#X connect 18 0 14 1;
-#X connect 20 0 16 1;
-#X connect 20 0 18 0;
+#N canvas 567 25 572 667 12;
+#X text 43 81 If you start [until] with a "bang" \, it will begin an infinite loop! Please plan ahead in this case so that there is a mechanism in place to stop the loop - otherwise Pd will effectively freeze.;
+#X text 43 154 HOW TO FREEZE Pd;
+#X msg 44 187 bang;
+#X obj 44 243 print;
+#X text 108 192 DO NOT CLICK. DO NOT CLICK. DO NOT CLICK.;
+#X text 46 507 If you start [until] with a number \, it iterates that number of times. The [uzi] object in MAX works the same way.;
+#X obj 104 595 until;
+#X msg 105 550 100;
+#X obj 104 623 print i;
+#X msg 147 550 3;
+#X msg 190 550 42;
+#X text 44 270 The [until] object's left inlet starts a loop in which it outputs "bang" until its right inlet gets a "bang" which stops it.;
+#X msg 43 361 bang;
+#X obj 43 389 until;
+#X text 95 365 start;
+#X obj 43 417 f;
+#X obj 91 421 + 1;
+#X obj 149 421 sel 0;
+#X obj 42 480 print;
+#X text 108 217 If you click \, kill Pd or reboot the computer.;
+#X text 43 319 The example below includes a method to stop the loop to prevent Pd from looping infinitely.;
+#X text 280 600 (C) Copyright Dave Sabine;
+#X text 44 49 Looping in Pd can be done by using the [until] object.;
+#X text 44 12 Looping;
+#X obj 44 215 until;
+#X obj 91 449 mod 0;
+#X connect 2 0 24 0;
+#X connect 6 0 8 0;
+#X connect 7 0 6 0;
+#X connect 9 0 6 0;
+#X connect 10 0 6 0;
+#X connect 12 0 13 0;
+#X connect 13 0 15 0;
+#X connect 15 0 16 0;
+#X connect 15 0 18 0;
+#X connect 16 0 25 0;
+#X connect 17 0 13 1;
+#X connect 24 0 3 0;
+#X connect 25 0 15 1;
+#X connect 25 0 17 0;

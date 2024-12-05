@@ -1,4 +1,4 @@
-#N canvas 532 152 511 540 12;
+#N canvas 532 152 535 639 12;
 #X floatatom 217 247 5 0 0 0 - - - 0;
 #X obj 217 218 + 50;
 #X obj 217 192 random 21;
@@ -13,6 +13,7 @@
 #X obj 312 301 + 7;
 #X obj 217 142 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000 0 1;
 #X text 42 31 Take the solution of hw03 (see below) and make an abstraction from it. Make one or more parameters e.g. the random choice \, the rhythms or the durations setable via \$1 \, \$2 \, etc. variable. Make three different instances of it (in a parent patch) which all play at the same time.;
+#X text 52 547 Make the same with controlling pitches \, durations \, rhythms and velocity with different random choices using 4 variables in the abstraction.;
 #X connect 0 0 11 0;
 #X connect 0 0 7 0;
 #X connect 0 0 9 0;

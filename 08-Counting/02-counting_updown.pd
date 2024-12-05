@@ -1,6 +1,6 @@
-#N canvas 372 394 509 389 12;
+#N canvas 423 138 585 535 12;
 #X obj 132 312 f;
-#X msg 214 265 1;
+#X msg 211 265 1;
 #X msg 267 265 -1;
 #X floatatom 132 348 5 0 0 0 - - - 0;
 #X obj 193 312 + 1;
@@ -16,10 +16,14 @@
 #X obj 306 103 loadbang;
 #X msg 267 151 1;
 #X msg 306 177 10;
+#X obj 132 373 + 60;
+#X obj 132 400 makenote 80 200;
+#X obj 132 429 noteout;
 #X connect 0 0 3 0;
 #X connect 0 0 4 0;
 #X connect 1 0 4 1;
 #X connect 2 0 4 1;
+#X connect 3 0 17 0;
 #X connect 4 0 7 0;
 #X connect 5 0 11 1;
 #X connect 6 0 12 1;
@@ -34,3 +38,6 @@
 #X connect 14 0 15 0;
 #X connect 15 0 5 0;
 #X connect 16 0 6 0;
+#X connect 17 0 18 0;
+#X connect 18 0 19 0;
+#X connect 18 1 19 1;
