@@ -1,11 +1,11 @@
-#N canvas 346 246 613 367 12;
-#X text 76 293 https://forum.pdpatchrepo.info/topic/805/send-receive-problem;
+#N canvas 702 115 613 367 12;
+#X text 76 293 https://forum.pdpatchrepo.info/topic/805/send-receive-problem, f 63;
 #X text 76 274 https://forum.pdpatchrepo.info/topic/6537/throw-and-catch;
 #X text 46 16 Differences throw~/catch~ vs. send~/receive~;
 #X text 77 180 [send~]/[receive~] is computationally more efficient as you can just point to the [send~] input buffer. But with [throw~]/[catch~] you have to multiplex the signals together.;
 #X text 194 100 One [send~] to multiple [receive~]s with the same name.;
 #X text 193 136 Multiple [throw~]s to one [catch~] with the same name.;
-#N canvas 1143 863 450 300 throw~/catch~ 0;
+#N canvas 1143 752 450 300 throw~/catch~ 1;
 #X obj 59 49 sig~;
 #X obj 62 20 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 176 177 bang~;
@@ -24,7 +24,7 @@
 #X connect 7 0 6 0;
 #X connect 9 0 3 0;
 #X restore 49 134 pd throw~/catch~;
-#N canvas 1062 654 450 300 send~/receive~ 0;
+#N canvas 969 300 450 300 send~/receive~ 0;
 #X obj 59 49 sig~;
 #X obj 62 20 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 59 77 send~ val1;

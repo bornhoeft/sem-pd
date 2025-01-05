@@ -1,4 +1,4 @@
-#N canvas 513 149 563 657 12;
+#N canvas 688 184 563 657 12;
 #X text 12 193 2 Frequency (Pitch);
 #X text 12 132 1 Amplitude (Volume);
 #X text 26 210 The speed at which the sound wave repeats. Our ears interpret this as pitch.;
@@ -8,9 +8,9 @@
 #X obj 22 270 tgl 15 0 audio_on empty audio_on 18 8 0 12 #fcfcfc #000000 #000000 0 1;
 #X obj 116 291 vsl 15 128 100 2000 0 0 empty frequency-set empty 0 -8 0 12 #fcfcfc #000000 #000000 0 1;
 #X floatatom 22 426 5 0 0 3 amplitude - amplitude 0;
-#N canvas 0 22 450 300 (subpatch) 0;
-#X array display-01 110 float 2;
-#X coords 0 1 110 -1 200 140 1;
+#N canvas 295 320 450 300 (subpatch) 0;
+#X array display-01 110 float 0;
+#X coords 0 1 109 -1 200 140 1;
 #X restore 243 294 graph;
 #X text 258 438 time;
 #X text 208 405 amp;

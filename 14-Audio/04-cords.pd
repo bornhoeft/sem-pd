@@ -1,4 +1,4 @@
-#N canvas 461 260 535 420 12;
+#N canvas 751 331 535 420 12;
 #X obj 269 253 *~;
 #X obj 269 195 osc~ 500;
 #X msg 270 145 250;
@@ -6,15 +6,10 @@
 #X msg 220 145 125;
 #X text 76 225 audio (thick cord) -->;
 #X text 27 173 messages (thin cord) -->;
-#X obj 290 229 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-0.2;
+#X obj 287 229 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000 0 0.2;
 #X text 14 21 Cords;
-#X text 14 52 Pure Data makes a difference between control and audio
-objects. For audio \, pd has a specific data type. Audio objects all
-have a trailing tilde ("~"). Audio cords are thicker than control cords..
-;
-#X text 22 342 Note that in audio objects there are no hot and cold
-inlets. They are all processed immediately.;
+#X text 14 52 Pure Data makes a difference between control and audio objects. For audio \, pd has a specific data type. Audio objects all have a trailing tilde ("~"). Audio cords are thicker than control cords..;
+#X text 22 342 Note that in audio objects there are no hot and cold inlets. They are all processed immediately.;
 #X obj 256 303 dac~;
 #X connect 0 0 11 0;
 #X connect 0 0 11 1;

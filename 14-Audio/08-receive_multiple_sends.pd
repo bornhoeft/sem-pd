@@ -1,4 +1,4 @@
-#N canvas 259 120 524 466 12;
+#N canvas 863 282 524 466 12;
 #X obj 311 337 dac~;
 #X obj 45 170 hsl 101 15 0 100 0 0 empty empty empty -2 -6 0 8 #fcfcfc #000000 #000000 0 1;
 #X floatatom 42 227 5 0 0 0 - - - 0;
@@ -12,8 +12,8 @@
 #X obj 315 138 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000 0 1;
 #X msg 315 169 \; pd dsp \$1;
 #X obj 311 250 *~ 0.3;
-#X obj 340 310 *~ 0.3;
-#X obj 340 281 catch~ bus2;
+#X obj 336 310 *~ 0.3;
+#X obj 336 281 catch~ bus2;
 #X msg 176 295 set bus1;
 #X msg 187 331 set bus2;
 #X obj 41 363 throw~ bus1;
