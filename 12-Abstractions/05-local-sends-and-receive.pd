@@ -14,8 +14,8 @@
 #X floatatom 313 114 0 0 0 0 - - - 0;
 #X floatatom 406 114 0 0 0 0 - - - 0;
 #X text 31 19 named local [send]s and [receive]s;
-#X obj 56 141 local_send one;
-#X obj 312 142 local_send two;
+#X obj 56 141 local-send one;
+#X obj 312 142 local-send two;
 #X connect 3 0 0 0;
 #X connect 4 0 1 0;
 #X connect 7 0 5 0;
