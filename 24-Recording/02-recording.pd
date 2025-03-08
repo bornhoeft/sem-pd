@@ -1,4 +1,4 @@
-#N canvas 407 182 723 666 12;
+#N canvas 542 141 706 836 12;
 #X msg 146 143 \; pd dsp 1;
 #X msg 162 386 print;
 #X msg 100 63 bang;

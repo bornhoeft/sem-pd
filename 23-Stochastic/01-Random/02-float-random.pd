@@ -1,4 +1,4 @@
-#N canvas 448 25 537 661 12;
+#N canvas 448 38 537 661 12;
 #X obj 85 437 random;
 #X floatatom 172 177 5 0 0 0 - - - 0;
 #X floatatom 172 286 5 0 0 0 - - - 0;
@@ -19,7 +19,7 @@
 #X msg 85 541 add2 \$1;
 #X obj 28 149 unpack f f f f, f 21;
 #X msg 239 309 set;
-#X msg 84 578 192.91 166.39 110.73 173.68 138.77 144.12 158.37 185.4 125.57 177.34;
+#X msg 84 578 199.67 127.6 181.31 180.24 122.54 171.05 170.01 188.98 146.56 123.16;
 #X text 41 36 float random numbers between min and max (including) with defined decimals.;
 #X text 78 622 (c) 2010/2018 Achim Bornhoeft;
 #X text 127 511 shift values between min and max;
