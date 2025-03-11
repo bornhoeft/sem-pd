@@ -1,4 +1,4 @@
-#N canvas 1403 736 527 576 10;
+#N canvas 1403 736 527 576 12;
 #X declare -path abs;
 #X obj 102 330 euclid 5 0 8;
 #X obj 102 45 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000 0 1;
@@ -19,7 +19,14 @@
 #X obj 102 409 makenote 100 100;
 #X obj 125 225 min;
 #X obj 327 29 declare -path abs;
-#X text 98 481 Generates 'euclidean rhythms' (see cgm.cs.mcgill.ca/~godfried/publications/banff.pdf). Ideally to be used with a [metro]-powered [f ]x[+ 1] counter attached to the first inlet. Hits per bar \, offset and bar length can be set by the first three arguments respectively.;
+#X obj 358 109 bng 16 250 50 0 empty empty empty 0 -8 0 10 #fcfcfc #000000 #000000;
+#N canvas 266 291 534 172 info 1;
+#X obj 37 37 inlet;
+#X msg 37 65 browse https://cgm.cs.mcgill.ca/~godfried/publications/banff.pdf;
+#X obj 37 103 pdcontrol;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X restore 358 130 pd info;
 #X connect 0 0 9 0;
 #X connect 1 0 4 0;
 #X connect 2 0 3 0;
@@ -40,3 +47,4 @@
 #X connect 16 0 15 0;
 #X connect 16 1 15 1;
 #X connect 17 0 6 0;
+#X connect 19 0 20 0;

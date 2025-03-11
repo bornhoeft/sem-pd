@@ -1,0 +1,35 @@
+adc~ $1
+|
+[input-matrix]
+|
+s~ $1-in
+--------------
+r~ $1-in
+|
+[input~ $1]
+|	
+s~ $1-le / s~$1-dir / (outlet~)
+--------------
+r~ $1-le
+|
+<modules>
+|
+s~ $1-chan / (outlet~)
+--------------
+r~ $1-chan / r~ $1-dir
+|
+[outlet~ $1]
+|
+s~ $1-sig / (outlet~)
+--------------
+r~ $1-sig
+|
+[spat-control]
+|
+throw~ $1-out
+--------------
+catch~ $1-out
+|
+[output-matrix]
+|
+dac~ $1

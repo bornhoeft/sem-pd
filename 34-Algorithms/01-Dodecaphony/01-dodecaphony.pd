@@ -739,12 +739,14 @@
 #X text 513 294 pitch class;
 #X text 512 344 midi;
 #X obj 468 450 *~;
-#N canvas 92 130 467 114 info 1;
-#X obj 18 67 pdcontrol;
-#X msg 18 42 browse https://en.wikipedia.org/wiki/Twelve-tone_technique;
+#N canvas 92 130 457 151 info 0;
+#X obj 19 100 pdcontrol;
+#X msg 19 75 browse https://en.wikipedia.org/wiki/Twelve-tone_technique;
 #X text 16 18 Info:;
+#X obj 19 47 inlet;
 #X connect 1 0 0 0;
-#X restore 300 60 pd info;
+#X connect 3 0 1 0;
+#X restore 300 72 pd info;
 #X listbox 40 168 27 0 0 0 - - - 0;
 #X msg 66 129 2 1 5 6 10 9 11 7 8 3 4 0;
 #X obj 39 63 loadbang;
@@ -756,6 +758,7 @@
 #X text 36 42 Anton Webern \, Concerto op. 24;
 #X connect 0 0 1 0;
 #X restore 260 130 pd Webern op-24;
+#X obj 300 48 bng 19 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
 #X connect 0 0 32 1;
 #X connect 2 0 15 0;
 #X connect 3 0 2 0;
@@ -791,3 +794,4 @@
 #X connect 37 1 9 0;
 #X connect 37 2 4 1;
 #X connect 38 0 34 0;
+#X connect 40 0 33 0;

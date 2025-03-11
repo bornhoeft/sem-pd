@@ -6,7 +6,7 @@
 #X msg 125 157 seed 10;
 #X msg 127 183 clear;
 #X floatatom 214 184 5 0 100 0 - - - 0;
-#X text 78 35 generates random numbers without repetition;
+#X text 69 37 generates random numbers without repetition;
 #X text 338 233 bang: output next random number without repetitions.;
 #X text 337 256 clear: put all numbers back into urn.;
 #X text 337 280 seed NUM: seed random number generator;
@@ -127,7 +127,7 @@
 #X text 73 75 Clone of the Max object [urn] and RTC/urne. Stops when all values have been chosen and bangs right outlet. Send "clear" message to make it start over.;
 #X obj 81 230 urn 10;
 #X obj 83 456 urn 10;
-#X text 78 17 Unique Random Number generator;
+#X text 69 19 Unique Random Number generator;
 #X text 317 213 Inlet 1:;
 #X text 318 314 Inlet 2:;
 #X text 321 375 Outlet 1:;
