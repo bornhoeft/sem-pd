@@ -1,4 +1,4 @@
-#N canvas 947 770 491 572 12;
+#N canvas 697 257 529 675 12;
 #X obj 36 101 tgl 19 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000 0 1;
 #X obj 36 173 sel 0;
 #X obj 36 197 t b b;
@@ -18,7 +18,7 @@
 #X text 104 140 randomly decision wheter a new value is created or not., f 19;
 #X text 42 276 random values between 0 and 1000, f 19;
 #X floatatom 212 328 5 0 0 0 - - - 0;
-#X text 24 519 (c) 2024 https://www.youtube.com/watch?v=fKMM5aONlmA;
+#X text 23 604 (c) 2024 https://www.youtube.com/watch?v=fKMM5aONlmA;
 #X obj 294 157 hsl 162 19 100 1000 0 0 empty empty empty -2 -10 0 12 #fcfcfc #000000 #000000 0 1;
 #X floatatom 292 182 5 0 0 0 - - - 0;
 #X obj 36 125 metro;
@@ -28,6 +28,9 @@
 #X obj 291 103 loadbang;
 #X msg 291 127 500;
 #X text 32 22 Random system that produces random values and decides whether or not to interpolate them based on a binary condition (also random).;
+#X obj 141 506 osc~;
+#X obj 141 530 *~ 0.2;
+#X obj 141 563 dac~;
 #X connect 0 0 22 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
@@ -42,6 +45,7 @@
 #X connect 10 0 11 0;
 #X connect 11 0 13 0;
 #X connect 12 0 1 0;
+#X connect 13 0 29 0;
 #X connect 18 0 8 1;
 #X connect 20 0 21 0;
 #X connect 21 0 23 0;
@@ -50,3 +54,6 @@
 #X connect 25 0 18 0;
 #X connect 26 0 27 0;
 #X connect 27 0 20 0;
+#X connect 29 0 30 0;
+#X connect 30 0 31 0;
+#X connect 30 0 31 1;
