@@ -1,4 +1,4 @@
-#N canvas 294 68 219 398 12;
+#N canvas 294 68 292 461 12;
 #N canvas 562 153 738 438 snare 0;
 #X obj 128 33 inlet;
 #X obj 128 171 vline~;
@@ -149,6 +149,7 @@
 #X obj 119 316 *~ 0.2;
 #X obj 108 356 dac~;
 #X obj 41 93 metro 140;
+#X text 32 405 (C) 2024 Alexander Bauer;
 #X connect 0 0 9 0;
 #X connect 1 0 6 0;
 #X connect 1 1 7 0;

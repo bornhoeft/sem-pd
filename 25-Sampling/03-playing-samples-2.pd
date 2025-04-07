@@ -60,7 +60,6 @@
 #X obj 21 368 t b f;
 #X floatatom 22 445 10 0 0 1 base_frequency - - 0;
 #X obj 21 395 1;
-#X obj 21 317 / 44100;
 #X floatatom 21 344 10 0 0 1 length_in_seconds - - 0;
 #X obj 37 289 s len_samples;
 #X obj 22 469 s base_freq;
@@ -68,9 +67,10 @@
 #X text 239 224 sample-07 and resize the array;
 #X obj 11 506 cnv 15 545 220 empty empty empty 20 12 0 14 #dcdcdc #404040 0;
 #N canvas 0 22 454 304 (subpatch) 0;
-#X array sample-07 219044 float 0;
-#X coords 0 2 219043 -2 200 140 1;
+#X array sample-07 169413 float 0;
+#X coords 0 2 169412 -2 200 140 1;
 #X restore 191 554 graph;
+#X obj 21 317 / 48000;
 #X connect 5 0 7 0;
 #X connect 6 0 13 0;
 #X connect 7 0 8 0;
@@ -114,12 +114,12 @@
 #X connect 52 0 53 0;
 #X connect 53 0 55 0;
 #X connect 55 0 56 0;
-#X connect 56 0 61 0;
-#X connect 56 0 63 0;
+#X connect 56 0 62 0;
+#X connect 56 0 68 0;
 #X connect 57 0 59 0;
 #X connect 58 0 60 0;
 #X connect 58 1 57 1;
-#X connect 59 0 64 0;
+#X connect 59 0 63 0;
 #X connect 60 0 57 0;
-#X connect 61 0 62 0;
-#X connect 62 0 58 0;
+#X connect 61 0 58 0;
+#X connect 68 0 61 0;
