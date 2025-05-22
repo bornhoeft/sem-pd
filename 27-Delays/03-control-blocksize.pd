@@ -1,4 +1,4 @@
-#N canvas 416 25 650 667 12;
+#N canvas 416 25 671 891 12;
 #N canvas 0 25 576 558 delay-writer 1;
 #X obj 85 230 inlet~;
 #X obj 85 518 outlet~;

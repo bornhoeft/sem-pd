@@ -1,4 +1,4 @@
-#N canvas 255 49 725 619 12;
+#N canvas 602 177 725 619 12;
 #X obj 30 475 *~;
 #X obj 91 475 *~;
 #X obj 51 328 vsl 15 128 0 1 0 0 empty empty empty 0 -8 0 8 #fcfcfc #000000 #000000 0 1;
@@ -50,7 +50,7 @@
 #X floatatom 167 259 5 0 0 1 height height - 0;
 #X text 124 33 Room echo;
 #X msg 66 86 open ../Sounds/1-4.wav;
-#X msg 508 71 \; height 79 \; width 93 \; length 177 \; feedback 0.07 \; xfade 0 \;;
+#X msg 508 71 \; height 79 \; width 97 \; length 177 \; feedback 0.07 \; xfade 0 \;;
 #X connect 0 0 5 0;
 #X connect 1 0 5 1;
 #X connect 2 0 0 1;

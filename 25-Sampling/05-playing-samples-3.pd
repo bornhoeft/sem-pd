@@ -89,8 +89,8 @@
 #X obj 426 402 r duration;
 #X obj 254 46 cnv 15 583 200 empty empty empty 20 12 0 14 #dcdcdc #404040 0;
 #N canvas 0 22 450 278 (subpatch) 0;
-#X array sample-08 169413 float 2;
-#X coords 0 1 169413 -1 200 140 1 0 0;
+#X array sample-08 155648 float 2;
+#X coords 0 1 155648 -1 200 140 1 0 0;
 #X restore 358 89 graph;
 #X obj 89 566 r srate;
 #X obj 640 85 loadbang;
@@ -101,7 +101,7 @@
 #X text 173 667 segment duration (samples), f 17;
 #X text 240 376 comment;
 #X text 182 349 1 = end of sample;
-#X text 683 356 transposition in semitones;
+#X text 671 362 transposition in semitones;
 #X text 660 536 scale to duration;
 #X text 662 590 start offset;
 #X obj 43 596 / 48000;

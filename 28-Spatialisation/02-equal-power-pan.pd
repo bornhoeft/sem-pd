@@ -29,12 +29,12 @@
 #X obj 214 228 t f b;
 #X text 274 165 0 = left \, 1 = right;
 #X obj 130 184 / 4;
-#X text 378 430 (C) 2005 Christopher Burns;
 #X obj 24 93 *~ 0.05;
 #X obj 484 63 loadbang;
 #X msg 484 90 \; pd dsp 1 \; set-pan 0.5 \;;
 #X text 33 21 Equal power panning;
-#X connect 0 0 31 0;
+#X text 378 430 (c) 2005 Christopher Burns;
+#X connect 0 0 30 0;
 #X connect 2 0 3 1;
 #X connect 3 0 7 0;
 #X connect 3 0 8 0;
@@ -58,5 +58,5 @@
 #X connect 27 1 17 0;
 #X connect 29 0 14 0;
 #X connect 29 0 27 0;
-#X connect 31 0 3 0;
-#X connect 32 0 33 0;
+#X connect 30 0 3 0;
+#X connect 31 0 32 0;
