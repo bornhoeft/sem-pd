@@ -1,4 +1,4 @@
-#N canvas 494 31 495 667 12;
+#N canvas 494 31 495 672 12;
 #X floatatom 39 535 5 0 0 0 - - - 0;
 #X floatatom 58 513 5 0 0 0 - - - 0;
 #X floatatom 77 491 5 0 0 0 - - - 0;
@@ -15,7 +15,7 @@
 #X text 36 56 bonk~ is for transient detection (especially of noisy \, percussive signals) when bonk~ detects a transient it outputs the amplitude of 11 spectral regions.;
 #X floatatom 145 205 5 0 0 0 - - - 0;
 #X text 20 563 Bonk's two outputs are the raw spectrum of the attack (provided as a list of 11 numbers giving the signal "loudness" in the 11 frequency bands used) \, and the "cooked" output which gives only an instrument number (counting up from zero) and a "velocity". The instrumnent number is significant only if Bonk has a "template set" in memory.;
-#X text 278 289 raw;
+#X text 255 289 raw;
 #X text 192 205 cooked;
 #X obj 390 298 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000 0 1;
 #X msg 390 319 \; pd dsp \$1;
