@@ -1,0 +1,51 @@
+1 soft-noizy-gtr;
+2 plain-gtr1;
+3 gitty;
+4 dirty-gtr-1;
+5 el-gtr-plain;
+6 metalbox-gtr;
+7 pitow;
+8 Zimble-1B;
+9 percomelo-2;
+10 soft-el-piano-2 also try wave '60';
+11 krakology-2;
+12 pizz-low: play midi pitches in bass range;
+13 disto-bass: play midi pitches in bass range;
+14 pizz-low2: play midi pitches in bass range;
+15 soft-fluty-FB-organ-2:;
+16 fluffy;
+17 steamstring-soft;
+18 synth-strings-2;
+19 click-organ;
+20 tennis-organ-1;
+21 woodtom;
+22 digi-snare snare drum sounds;
+107;
+108;
+109 demonstration presets (a.o. for tuning) starting from preset nr
+110;
+110 tune-main : only the main wave impulse going through the main and
+APF delay;
+111 T-mainwave-reso : main wave impuilse going through the main and
+APF delay with resonator;
+112 T-mainnoiseimp : main noise impulse without main wave impulse going
+through the main delay (no APF delay);
+113 T-mainnoiseimp-reso main noise impulse without main wave impulse
+going through the main delay (no APF delay) with resonator;
+114 T-noiseburst: noise burst (no main wave impulse) going through
+the main delay (no APF delay);
+115 T-noiseburst-reso: noise burst (no main wave impulse) going through
+the main delay (no APF delay) with resonator;
+116 T-reso: only the resonator, inaudibly triggered by the main wave
+impulse;
+117 T-reso-burst only the resonator, inaudibly getriggered by the
+noise burst impulse;
+118 all three impulses going through the main and APF delay with resonator
+119 only the main wave impulse going through the main delay;
+120 the main wave impulse with resonator going through the main and
+APF delay PLUS straigth feedback;
+123 main wave impuilse going through the main delay with resonator
+with duration = 8;
+125 T-noisebursta: noise burst (no main wave impulse) going through
+the main delay and APF delay;
+;

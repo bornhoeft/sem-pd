@@ -1,4 +1,4 @@
-#N canvas 255 97 382 570 12;
+#N canvas 755 318 382 570 12;
 #X floatatom 30 433 0 0 0 0 - - - 0;
 #N canvas 459 116 490 492 info 0;
 #X text 33 24 The rotating tape heads read the signal at a speed independent from the tape playback speed. The tape speed relative to the machine determines the time duration \, while the playback head speed relative to the tape determines the pitch.;
@@ -217,7 +217,7 @@
 #X connect 11 1 9 0;
 #X connect 12 0 4 0;
 #X restore 102 225 pd buffer-read;
-#N canvas 713 350 616 270 semitones 1;
+#N canvas 713 350 616 270 semitones 0;
 #X obj 29 14 inlet;
 #X obj 29 68 exp;
 #X floatatom 29 94 6 0 0 0 - - - 0;

@@ -5,10 +5,10 @@
 #X obj 49 294 select 1;
 #X obj 49 324 outlet;
 #X obj 162 185 inlet;
-#X text 145 130 specify desired number of hits per bar;
-#X text 208 182 specify length of bar;
-#X text 172 156 rhythm offset/rotation;
-#X text 88 66 <-- send an integer to find out if there should be a hit on that beat;
+#X text 154 130 specify desired number of hits per bar;
+#X text 209 186 specify length of bar;
+#X text 189 158 rhythm offset/rotation;
+#X text 101 65 <-- send an integer to find out if there should be a hit on that beat;
 #X obj 49 202 % \$3;
 #X text 47 352 Generates 'euclidean rhythms' (see cgm.cs.mcgill.ca/~godfried/publications/banff.pdf). Ideally to be used with a [metro]-powered [f ]x[+ 1] counter attached to the first inlet. Hits per bar \, offset and bar length can be set by the first three arguments respectively.;
 #X text 111 293 <-- bang out on each hit. (Silent on rest.);

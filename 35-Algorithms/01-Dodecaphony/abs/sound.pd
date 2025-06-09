@@ -19,7 +19,7 @@
 #X floatatom 376 325 5 0 0 0 - - - 0;
 #X text 218 291 exponential curve;
 #X text 30 39 This is the subpatch for the cloning patch. It plays tones at pitches sent to its inlet.;
-#X obj 206 226 pack 0 300;
+#X obj 206 226 pack 0 350;
 #X connect 0 0 8 0;
 #X connect 1 0 3 0;
 #X connect 3 0 2 0;

@@ -1,0 +1,23 @@
+#N canvas 606 306 598 366 16;
+#X obj 50 25 notein;
+#X obj 50 217 dac~;
+#X obj 104 146 reverb 1;
+#X obj 50 96 mimba 1;
+#X obj 302 28 loadbang;
+#X obj 302 80 1;
+#X obj 302 54 del 400;
+#X text 323 224 22 presets;
+#X text 11 268 [mimba] & [mba] (2022-23) by Hans Roels www.hansroels.be
+\; partly based on [my-membrane~] by Mike Moreno \; [reverb] based
+on [rev3~] by Miller Puckette.;
+#X obj 302 111 presets mimbaset092b;
+#X connect 0 0 3 0;
+#X connect 0 1 3 1;
+#X connect 2 0 1 0;
+#X connect 2 0 1 1;
+#X connect 3 0 1 0;
+#X connect 3 0 1 1;
+#X connect 3 4 2 0;
+#X connect 4 0 6 0;
+#X connect 5 0 9 0;
+#X connect 6 0 5 0;
