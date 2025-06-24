@@ -14,8 +14,8 @@
 #X obj 296 201 loadbang;
 #X obj 311 228 r \$0-n-out;
 #X obj 296 334 s \$0-n-in;
-#X msg 53 318 45;
-#X msg 296 312 42;
+#X msg 53 318 70;
+#X msg 296 312 63;
 #X obj 67 266 list prepend;
 #X msg 67 291 set \$1;
 #X obj 311 255 list prepend;

@@ -1,0 +1,4 @@
+#N canvas 824 485 263 278 10;
+#X obj 65 133 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -258113
+-1;
+#X obj 65 78 clock;

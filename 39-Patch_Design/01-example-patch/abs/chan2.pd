@@ -1,8 +1,0 @@
-#N canvas 919 624 190 459 10;
-#X obj 0 0 input \$1 \$2;
-#X obj 0 189 5tape_pitchshifter \$1 0 100 1;
-#X obj 0 340 qlstp \$1 qlist.txt;
-#X obj 0 290 panning \$1;
-#X connect 0 0 1 0;
-#X connect 1 0 3 0;
-#X coords 0 -1 1 1 160 440 2 0 0;

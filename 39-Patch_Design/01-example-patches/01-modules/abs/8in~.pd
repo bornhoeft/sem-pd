@@ -1,0 +1,49 @@
+#N canvas 758 365 688 585 10;
+#X obj 50 87 adc~ 1;
+#X obj 67 108 adc~ 2;
+#X obj 82 128 adc~ 3;
+#X obj 99 149 adc~ 4;
+#X obj 115 168 adc~ 5;
+#X obj 132 191 adc~ 6;
+#X obj 148 213 adc~ 7;
+#X obj 165 234 adc~ 8;
+#X obj 50 257 8in-out~ \$0 in;
+#X text 48 42 rows top-to-bottom correspond to the microphone inputs
+1-8;
+#X text 48 60 columns left-to-right correspond to the patch inputs
+1-8.;
+#X text 49 21 8 x 8 hardware input matrix;
+#X obj 250 220 s in-chans;
+#X msg 250 162 1 0 0 \, 1 1 1 \, 1 0 2 \, 1 1 3 \, 1 0 4 \, 1 1 5 \,
+1 0 6 \, 1 1 7 \;;
+#X msg 262 190 0 0 0 \, 0 1 1 \, 0 0 2 \, 0 1 3 \, 0 0 4 \, 0 1 5 \,
+0 0 6 \, 0 1 7 \;;
+#X msg 247 281 1 0 0 \, 1 1 1 \, 1 2 2 \, 1 3 3 \, 1 4 4 \, 1 5 5 \,
+1 6 6 \, 1 7 7 \;;
+#X obj 247 352 s in-chans;
+#X msg 267 312 0 0 0 \, 0 1 1 \, 0 2 2 \, 0 3 3 \, 0 4 4 \, 0 5 5 \,
+0 6 6 \, 0 7 7 \;;
+#X obj 115 444 s~ 5-in;
+#X obj 100 465 s~ 4-in;
+#X obj 82 485 s~ 3-in;
+#X obj 66 505 s~ 2-in;
+#X obj 50 526 s~ 1-in;
+#X obj 247 256 loadbang;
+#X connect 0 0 8 0;
+#X connect 1 0 8 1;
+#X connect 2 0 8 2;
+#X connect 3 0 8 3;
+#X connect 4 0 8 4;
+#X connect 5 0 8 5;
+#X connect 6 0 8 6;
+#X connect 7 0 8 7;
+#X connect 8 0 22 0;
+#X connect 8 1 21 0;
+#X connect 8 2 20 0;
+#X connect 8 3 19 0;
+#X connect 8 4 18 0;
+#X connect 13 0 12 0;
+#X connect 14 0 12 0;
+#X connect 15 0 16 0;
+#X connect 17 0 16 0;
+#X connect 23 0 15 0;

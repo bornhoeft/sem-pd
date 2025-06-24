@@ -1,44 +1,35 @@
 #N canvas 657 379 725 476 12;
 #X obj 70 171 key;
-#X floatatom 70 203 5 0 0 0 - - -;
+#X floatatom 70 203 5 0 0 0 - - - 0;
 #X text 249 258 This times how long between each;
-#X floatatom 170 203 5 0 0 0 - - -;
+#X floatatom 170 203 5 0 0 0 - - - 0;
 #X obj 170 172 keyup;
-#X floatatom 264 204 5 0 0 0 - - -;
+#X floatatom 264 204 5 0 0 0 - - - 0;
 #X obj 264 173 keyname;
-#X symbolatom 317 203 10 0 0 0 - - -;
+#X symbolatom 317 203 10 0 0 0 - - - 0;
 #X text 33 263 't' key as toggle:;
 #X obj 68 324 select 116;
 #X obj 68 293 keyup;
-#X floatatom 341 330 5 0 0 0 - - -;
+#X floatatom 341 330 5 0 0 0 - - - 0;
 #X obj 421 303 keyup;
 #X obj 341 354 select 97;
 #X obj 421 354 select 97;
 #X obj 341 395 timer;
-#X floatatom 341 421 5 0 0 0 - - -;
+#X floatatom 341 421 5 0 0 0 - - - 0;
 #X text 36 30 Grabbing keystrokes;
-#X obj 68 354 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
-1;
+#X obj 68 354 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 341 305 key;
-#X text 37 68 Pd provides a set of objects for getting events from
-the keyboard. [key] outputs on key down \, [keyup] outputs on key up
-(automatically if the key is pressed longer than 1 sec.) \, and [keyname]
-outputs both key up and key down \, and gives a symbolic name for the
-current key.;
-#X obj 70 233 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X obj 170 232 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 317 230 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#N canvas 532 217 646 886 list-step 0;
-#X obj 89 106 bng 15 250 50 0 empty empty step 0 -6 0 8 -262144 -1
--1;
+#X text 37 68 Pd provides a set of objects for getting events from the keyboard. [key] outputs on key down \, [keyup] outputs on key up (automatically if the key is pressed longer than 1 sec.) \, and [keyname] outputs both key up and key down \, and gives a symbolic name for the current key.;
+#X obj 70 233 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
+#X obj 170 232 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
+#X obj 317 230 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
+#N canvas 532 68 306 422 list-step 1;
+#X obj 89 106 bng 15 250 50 0 empty empty step 0 -6 0 8 #fcfcfc #000000 #000000;
 #X msg 127 162 1 23 34 40;
 #X obj 124 281 + 1;
-#X floatatom 89 308 5 0 0 1 split_point - -;
+#X floatatom 89 308 5 0 0 1 split_point - - 0;
 #X obj 89 130 t b b;
-#X floatatom 45 364 5 0 0 1 list_entries - -;
+#X floatatom 45 364 5 0 0 1 list_entries - - 0;
 #X obj 184 225 list length;
 #X obj 163 282 mod;
 #X obj 89 281 f;
@@ -61,17 +52,16 @@ current key.;
 #X connect 11 0 0 0;
 #X connect 12 1 5 0;
 #X restore 96 398 pd list-step;
-#X floatatom 521 329 5 0 0 0 - - -;
+#X floatatom 521 329 5 0 0 0 - - - 0;
 #X obj 521 353 select 97;
 #X obj 521 394 timer;
-#X floatatom 521 420 5 0 0 0 - - -;
+#X floatatom 521 420 5 0 0 0 - - - 0;
 #X obj 521 304 key;
 #X obj 605 353 select 101;
-#X floatatom 604 328 5 0 0 0 - - -;
+#X floatatom 604 328 5 0 0 0 - - - 0;
 #X obj 604 303 key;
 #X text 249 274 press of the 'a' key and between 'a' and 'e'.;
-#X obj 264 229 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
-1;
+#X obj 264 229 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000 0 1;
 #X connect 0 0 1 0;
 #X connect 1 0 21 0;
 #X connect 3 0 22 0;

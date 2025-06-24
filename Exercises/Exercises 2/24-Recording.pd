@@ -1,12 +1,3 @@
-#N canvas 347 130 587 334 12;
-#X text 52 80 2) Zusatz: Integrieren Sie in das Patch einen Sekundenz‰hler
-\, der die Zeit zwischen dem Ende der Aufnahme und dem Beginn des Abspielens
-des Klangs anzeigt.;
-#X text 51 225 2) Additionaly integrate a counter which displays the
-time between the end of the recording and the start of the playback.
-;
-#X text 54 25 1) Erstellen Sie ein Patch \, das ¸ber den Mikrophoneingang
-aufnimmt und das Aufgenommene zu einem zuf√§lligen sp‰teren Zeitpunkt
-wieder abspielt.;
-#X text 51 171 1) Create a patch that records the sound from the microphone
-input and playback this sound a randomised time later.;
+#N canvas 347 130 491 296 12;
+#X text 44 34 Create a patch that records the sound from the microphone input and playback this sound a randomised time later. Additionally integrate a counter which displays the time between the end of the recording and the start of the playback.;
+#X text 42 149 Erstellen Sie ein Patch \, das √ºber den Mikrofoneingang aufnimmt und das Aufgenommene zu einem zuf√§lligen sp√§teren Zeitpunkt wieder abspielt. Zusatz: Integrieren Sie in das Patch einen Sekundenz√§hler \, der die Zeit zwischen dem Ende der Aufnahme und dem Beginn des Abspielens des Klangs anzeigt.;

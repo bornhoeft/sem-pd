@@ -1,9 +1,0 @@
-#N canvas 396 175 255 363 10;
-#X obj 52 309 dac~;
-#X text 56 50 creation: [input <chan#>];
-#X obj 53 279 *~ 0.1;
-#X text 56 29 [input] module;
-#X obj 53 79 input 1 E-Git_1;
-#X connect 2 0 0 0;
-#X connect 2 0 0 1;
-#X connect 4 0 2 0;

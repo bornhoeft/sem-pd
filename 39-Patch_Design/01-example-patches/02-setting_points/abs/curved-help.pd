@@ -1,0 +1,14 @@
+#N canvas 867 583 321 228 10;
+#X text 20 37 arg: curve between -1 and 1 (0 =linear);
+#X obj 152 108 hsl 128 15 -1 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 7303 1;
+#X floatatom 149 131 5 0 0 0 - - -, f 5;
+#X obj 89 75 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 89 181 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 86 152 curved 0.15;
+#X connect 1 0 2 0;
+#X connect 2 0 5 1;
+#X connect 3 0 5 0;
+#X connect 5 0 4 0;

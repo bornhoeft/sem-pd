@@ -1,9 +1,0 @@
-#N canvas 641 278 467 498 10;
-#X obj 75 108 output 1;
-#X obj 75 79 osc~ 440;
-#X obj 140 79 osc~ 550;
-#X text 60 23 audio output with compressor;
-#X text 62 48 creation: [output <chan#>];
-#X obj 140 107 output 2;
-#X connect 1 0 0 0;
-#X connect 2 0 5 0;

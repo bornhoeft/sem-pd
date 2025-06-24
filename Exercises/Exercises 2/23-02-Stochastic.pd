@@ -1,12 +1,3 @@
 #N canvas 477 373 603 342 12;
-#X text 64 45 Make a patch with two independent line generators forming
-a tendency mask for pitches. Make this process continuosly playing
-via midi. Add a qlist which changes the parameters for the min and
-the max limit of the tendency mask and their envelope speed. Additionaly
-add different rhythms or speed changes to the midi player.;
-#X text 63 167 Erstellen Sie ein patch mit einer Tendenzmaske für
-Tonhöhen aus zwei unabhaengigen [line] Generatoren. Spielen sie diesen
-Prozess kontinuierlich ueber Midi. Fuegen Sie eine [qlist] hinzu \,
-mit der die obere und die untere Grenze der Tendenzmaske und die Geschwindigkeit
-ihrer Veraenderung veraendert werden. Zusaetzlich koennen Sie noch
-verschiedene Rhythmen oder Abspielgeschwindigkeiten hinzufuegen.;
+#X text 63 167 Erstellen Sie ein patch mit einer Tendenzmaske für Tonhöhen aus zwei unabhaengigen [line] Generatoren. Spielen sie diesen Prozess kontinuierlich ueber Midi. Fuegen Sie eine [qlist] hinzu \, mit der die obere und die untere Grenze der Tendenzmaske und die Geschwindigkeit ihrer Veraenderung veraendert werden. Zusaetzlich koennen Sie noch verschiedene Rhythmen oder Abspielgeschwindigkeiten hinzufuegen.;
+#X text 64 45 Make a patch with two independent line generators forming a tendency mask for pitches. Make this process continuously playing via midi. Add a qlist which changes the parameters for the min and the max limit of the tendency mask and their envelope speed. Additionally add different rhythms or speed changes to the midi player.;
