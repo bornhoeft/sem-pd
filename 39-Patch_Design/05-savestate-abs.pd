@@ -1,8 +1,8 @@
-#N canvas 365 190 811 397 12;
+#N canvas 469 289 880 567 12;
 #X obj 435 173 savestate-ex1;
-#A saved 58 306;
+#A saved 58 734;
 #X obj 600 173 savestate-ex1;
-#A saved 175 706;
+#A saved 175 673;
 #X obj 435 288 *~;
 #X obj 435 337 dac~;
 #X obj 456 234 hsl 120 19 0 1 0 0 empty empty empty -2 -10 0 12 #fcfcfc #000000 #000000 0 1;
@@ -14,8 +14,8 @@
 #X obj 296 201 loadbang;
 #X obj 311 228 r \$0-n-out;
 #X obj 296 334 s \$0-n-in;
-#X msg 53 318 70;
-#X msg 296 312 63;
+#X msg 53 318 80;
+#X msg 296 312 130;
 #X obj 67 266 list prepend;
 #X msg 67 291 set \$1;
 #X obj 311 255 list prepend;
