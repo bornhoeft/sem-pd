@@ -1,4 +1,4 @@
-## Pure Data Tutorial
+# Pure Data Tutorial
 
 This is a collection of patches for Pure Data (Vanilla) used as a tutorial
 at the Studio Electronic Music (SEM) at the University Mozarteum, Salzburg, Austria
