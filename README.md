@@ -1,9 +1,9 @@
-# Pure Data Tutorial
+## Pure Data Tutorial
 
 This is a collection of patches for Pure Data (Vanilla) used as a tutorial
 at the Studio Electronic Music (SEM) at the University Mozarteum, Salzburg, Austria
 
-# Installation / Usage (Mac & Windows)
+## Installation / Usage (Mac & Windows)
 
 1. Download the ZIP archive of this tutorial (Copy → Download ZIP or https://github.com/bornhoeft/sem-pd/zipball/master) and unpack it.
 
@@ -18,3 +18,9 @@ at the Studio Electronic Music (SEM) at the University Mozarteum, Salzburg, Aust
 6. Close the windows and start the application.
 
 7. The tutorial can now be found in the menu "Help/Browser" under "Pure Data/sem-pd".
+
+## Maintainers and Contributors
+
+The current maintainer of this repository is:
+
+* Achim Bornhoeft <achim.bornhoeft@moz.ac.at>
