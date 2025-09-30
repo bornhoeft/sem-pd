@@ -12,7 +12,6 @@ at the Studio Electronic Music (SEM) at the University Mozarteum, Salzburg, Aust
 3. Navigate to the Help menu. Choose "Browser".
 
 <img width="697" height="487" alt="Bildschirmfoto 2025-09-30 um 10 18 02" src="https://github.com/user-attachments/assets/4c89c77c-d25d-46f3-8491-b555bcbf8961" />
-
 4. Double click on "Pure Data" → the file browser opens.
 
 <img width="353" height="490" alt="Bildschirmfoto 2025-09-30 um 10 19 14" src="https://github.com/user-attachments/assets/ab28989a-117a-480e-bb8f-0be2f65242c9" />
