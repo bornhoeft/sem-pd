@@ -1,4 +1,4 @@
-#N canvas 469 289 880 567 12;
+#N canvas 469 289 800 380 12;
 #X obj 435 173 savestate-ex1;
 #A saved 58 734;
 #X obj 600 173 savestate-ex1;
