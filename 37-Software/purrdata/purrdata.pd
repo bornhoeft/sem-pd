@@ -1,0 +1,16 @@
+#N canvas 809 516 806 377 12;
+#X obj 74 319 pdcontrol;
+#X msg 132 220 browse https://purrdata.glitch.me/;
+#X msg 148 268 browse https://youtu.be/DVU-tz8Wxl4?feature=shared;
+#X text 106 131 Pure Data is running in the browser \, for free Web-based sound patching;
+#X msg 108 173 browse https://github.com/cuinjune/purr-data;
+#X text 440 175 cuinjune/purrdata at github;
+#X text 517 269 short intro on YouTube;
+#X text 389 219 purr data web interface;
+#X msg 74 95 browse https://www.purrdata.net;
+#X msg 44 38 browse https://agraef.github.io/purr-data/;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;
+#X connect 4 0 0 0;
+#X connect 8 0 0 0;
+#X connect 9 0 0 0;

@@ -1,0 +1,4 @@
+#N canvas 952 792 501 448 12;
+#X obj 44 67 pdcontrol;
+#X msg 44 41 browse https://danieliglesia.com/mobmuplat/;
+#X connect 1 0 0 0;
